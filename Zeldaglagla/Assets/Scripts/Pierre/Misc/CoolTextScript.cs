@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class CoolTextScript : MonoBehaviour
 {
+    /* Script pour afficher les textes lettre par lettre.
+     * Mettez-le sur un objet UI contenant un cartouche de texte, précisez un texte par défaut et normalement vous devriez être parrés.
+     * Vous pouvez ensuite utiliser Read() avec un string ou un char[] (au choix), ou le laisser vide pour afficher le texte par défaut.
+     */
+
+
     [SerializeField]
     string defaultText; 
     int currentChar = 0;
@@ -62,7 +68,7 @@ public class CoolTextScript : MonoBehaviour
         if (currentChar < textToRead.Length)
         {
             reading = true;
-            //SOUND TEXT BLEEP
+            //Si vous voulez émettre un son lorsqu'une lettre apparaît, ajoutez-le par ici !
             yield return new WaitForSeconds(0.075f);
             text.text += textToRead[currentChar];
             currentChar++;

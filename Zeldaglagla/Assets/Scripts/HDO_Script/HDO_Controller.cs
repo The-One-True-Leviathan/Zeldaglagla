@@ -11,9 +11,15 @@ public class HDO_Controller : MonoBehaviour
     HDO_CharacterCollision collision;
 
     [Header("Movement Stats")]
-    public int baseSpeed;
-    int actualSpeed, bonusSpeed;
+    public int baseSpeed, dodgeSpeed;
+    public float dodgeTime, dodgeSpeedDecreasePerFrame, dodgeCooldown;
+    int actualSpeed, bonusSpeed, dodgeDivider;
+    float dodgeElapse, dodgeCdElapsed;
     Vector2 movementVector;
+    Vector3 inputVector, dodgeVector;
+
+    bool dodging;
+    public bool freeMovement;
 
     private void Awake()
     {
@@ -21,6 +27,8 @@ public class HDO_Controller : MonoBehaviour
 
         controls.UsualControls.Movement.performed += ctx => movementVector = ctx.ReadValue<Vector2>();
         controls.UsualControls.Movement.canceled += ctx => movementVector = Vector2.zero;
+
+        controls.UsualControls.Dodge.performed += ctx => Dodge();
     }
 
 
@@ -33,15 +41,45 @@ public class HDO_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (dodgeCdElapsed > 0) dodgeCdElapsed -= Time.deltaTime;
         Movement();
+    }
+
+    void Dodge()
+    {
+        if(dodgeCdElapsed > 0)
+        {
+            return;
+        }
+
+        dodgeElapse = dodgeTime;
+        dodgeDivider = 0;
+        freeMovement = false;
+        dodgeVector = new Vector3(movementVector.x, movementVector.y);
     }
 
     void Movement()
     {
-        Vector3 inputVector;
         actualSpeed = baseSpeed + bonusSpeed;
 
-        inputVector = Vector3.ClampMagnitude((new Vector3(movementVector.x, movementVector.y, 0) * actualSpeed * Time.deltaTime), 1);
+        if (freeMovement)
+        {
+            inputVector = Vector3.ClampMagnitude((new Vector3(movementVector.x, movementVector.y, 0) * actualSpeed * Time.deltaTime), 1);
+        }
+        else
+        {
+            if(dodgeElapse > 0)
+            {
+                inputVector = Vector3.ClampMagnitude(dodgeVector * (dodgeSpeed - dodgeSpeedDecreasePerFrame * dodgeDivider) * Time.deltaTime, 1);
+                dodgeDivider++;
+                dodgeElapse -= Time.deltaTime;
+            }
+            else
+            {
+                dodgeCdElapsed = dodgeCooldown;
+                freeMovement = true;
+            }
+        }
         inputVector = collision.RecalculateVector(inputVector);
         
         transform.position = transform.position + inputVector;

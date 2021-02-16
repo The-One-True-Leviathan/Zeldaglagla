@@ -996,7 +996,7 @@ MonoBehaviour:
   gunPoint: {fileID: 601573991}
   torchDirectDamage: 10
   torchExplosionDamage: 5
-  torchHeatCost: 15
+  torchHeatCost: 0
   torchCooldown: 1
 --- !u!1 &1828931767
 GameObject:

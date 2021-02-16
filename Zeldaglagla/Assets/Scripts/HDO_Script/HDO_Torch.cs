@@ -10,11 +10,12 @@ public class HDO_Torch : MonoBehaviour
     public float explosionDuration;
     [System.NonSerialized] public int torchDamage, explosionDamage;
     bool wallHit;
+    int results;
 
     [SerializeField]
     CircleCollider2D ExplosionCollider;
     CircleCollider2D self;
-    CircleCollider2D[] result = new CircleCollider2D[0];
+    Collider2D[] result = new Collider2D[0];
     [SerializeField]
     ContactFilter2D obstacles, enemy;
 
@@ -40,7 +41,14 @@ public class HDO_Torch : MonoBehaviour
 
     void CheckCollision()
     {
-        int results = Physics2D.OverlapCollider(self, obstacles, result);
+        results = Physics2D.OverlapCollider(self, obstacles, result);
+        result = Physics2D.OverlapCircleAll(transform.position, self.radius, obstacles.layerMask);
+
+        foreach (Collider2D nik in result)
+        {
+            Explosion();
+        }
+        
 
         Debug.Log(Physics2D.OverlapCollider(self, obstacles, result));
         if (results != 0)
@@ -52,8 +60,8 @@ public class HDO_Torch : MonoBehaviour
 
     void Explosion()
     {
+        Debug.Log("boom");
         ExplosionCollider.enabled = true;
-        Destroy(this.gameObject);
         StartCoroutine(Death());
     }
 

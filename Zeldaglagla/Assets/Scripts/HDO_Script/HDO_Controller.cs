@@ -9,6 +9,8 @@ public class HDO_Controller : MonoBehaviour
 
     [SerializeField]
     HDO_CharacterCollision collision;
+    [SerializeField]
+    GameObject gunPoint;
 
     [Header("Movement Stats")]
     public int baseSpeed, dodgeSpeed;
@@ -28,7 +30,12 @@ public class HDO_Controller : MonoBehaviour
         controls.UsualControls.Movement.performed += ctx => movementVector = ctx.ReadValue<Vector2>();
         controls.UsualControls.Movement.canceled += ctx => movementVector = Vector2.zero;
 
+        controls.KBControlsWASD.Movement.performed += ctx => movementVector = ctx.ReadValue<Vector2>();
+        controls.KBControlsWASD.Movement.canceled += ctx => movementVector = Vector2.zero;
+
         controls.UsualControls.Dodge.performed += ctx => Dodge();
+
+        controls.KBControlsWASD.Dodge.performed += ctx => Dodge();
     }
 
 
@@ -83,15 +90,19 @@ public class HDO_Controller : MonoBehaviour
         inputVector = collision.RecalculateVector(inputVector);
         
         transform.position = transform.position + inputVector;
+
+        if(inputVector != Vector3.zero) gunPoint.transform.localPosition = Vector3.Normalize(inputVector);
     }
 
     private void OnDisable()
     {
         controls.UsualControls.Disable();
+        controls.KBControlsWASD.Disable();
     }
 
     private void OnEnable()
     {
         controls.UsualControls.Enable();
+        controls.KBControlsWASD.Enable();
     }
 }

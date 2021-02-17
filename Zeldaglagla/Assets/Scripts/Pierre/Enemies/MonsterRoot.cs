@@ -7,7 +7,6 @@ using Combat;
 
 namespace Monsters
 {
-    enum monsterStates { IDLE, APPROACH, ATTACK, HARASS, FLEE, OBSERVE };
 
     public abstract class MonsterRoot : MonoBehaviour
     {
@@ -47,8 +46,11 @@ namespace Monsters
         // Résumé :
         //      Knockback Threshold of the monster. Knockback with a strength that is less than this value will not affect the monster.
         public float kbThreshold = 0;
-        monsterStates monsterState;
-        bool stunned, isInAttack, isInBuildup, isInRecover, isInKnockback, dead = false;
+        public bool stunned, isInAttack, isInBuildup, isInRecover, isInHitSpan, isInKnockback, dead = false;
+
+        public Collider2D boundBox, hurtBox, attackZone;
+        [NonSerialized]
+        public Collider2D playerCollider;
 
         public Action<CombatEvents.StunContext> stunnedEvent;
         public Action<CombatEvents.StunContext> stunRecoveredEvent;
@@ -109,6 +111,7 @@ namespace Monsters
             CombatEvents.monsterWasStunned.Invoke();
             stunTaken.lgt /= stunResist;
             StartCoroutine(StunCoroutine(stunTaken));
+            isInAttack = isInBuildup = isInHitSpan = isInRecover = false;
         }
 
         IEnumerator StunCoroutine(StunStruct stunTaken)

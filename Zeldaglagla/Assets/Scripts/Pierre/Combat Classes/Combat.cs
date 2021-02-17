@@ -90,4 +90,17 @@ namespace Combat
         }
         
     }
+
+    public struct AttackProfile
+    {
+        public DamageStruct dmg;
+        public float buildup, recover, hitSpan;
+        public AttackProfile(DamageStruct damage, float atkBuildup, float atkRecover, float atkHitSpan = 0)
+        {
+            dmg = damage;
+            buildup = atkBuildup;
+            recover = atkRecover;
+            hitSpan = atkHitSpan;
+        }
+    }
 }

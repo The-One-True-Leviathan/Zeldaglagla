@@ -2,13 +2,14 @@ using Combat;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class BaseWolf : WolfRoot
 {
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Animator>().GetBehaviour<SMBTest>().baseWolf = this;
+        GetComponent<Animator>().GetBehaviour<BaseWolfSMBWander>().baseWolf = this;
     }
 
     private void Update()

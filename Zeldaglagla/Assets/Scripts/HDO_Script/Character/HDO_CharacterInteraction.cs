@@ -30,13 +30,8 @@ public class HDO_CharacterInteraction : MonoBehaviour
     CoolTextScript cts;
 
     [SerializeField]
-    Text EVAADialog;
+    Text EVAADialog, innerDialog;
 
-
-    private void Awake()
-    {
-
-    }
 
     private void Start()
     {
@@ -56,8 +51,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
 
     public void Interact()
     {
-
-        if(interactObject = null)
+        if(interactObject == null)
         {
             return;
         }
@@ -73,7 +67,18 @@ public class HDO_CharacterInteraction : MonoBehaviour
 
         if (ad.type == HDO_AssociatedDialog.dialogType.inner)
         {
-
+            if (ad.number == HDO_AssociatedDialog.dialogNum.one)
+            {
+                cts = innerDialog.GetComponent<CoolTextScript>();
+                cts.defaultText = ad.dialogs[0];
+                cts.Read();
+            }
+            else
+            {
+                cts = innerDialog.GetComponent<CoolTextScript>();
+                cts.defaultText = ad.dialogs[Random.Range(0, ad.dialogs.Count)];
+                cts.Read();
+            }
         }
         else
         {
@@ -86,7 +91,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
             else
             {
                 cts = EVAADialog.GetComponent<CoolTextScript>();
-                cts.defaultText = ad.dialogs[Random.Range(0, ad.dialogs.Count - 1)];
+                cts.defaultText = ad.dialogs[Random.Range(0, ad.dialogs.Count)];
                 cts.Read();
             }
 
@@ -144,7 +149,6 @@ public class HDO_CharacterInteraction : MonoBehaviour
         if(detectedObjs == 0)
         {
             selectorSr.color = new Color(selectorSr.color.r, selectorSr.color.g, selectorSr.color.b, selectorSr.color.a / 1.05f);
-            Debug.Log("passed");
         }
         yield return new WaitForSeconds(1f);
         if(selectorSr.color.a > 0)

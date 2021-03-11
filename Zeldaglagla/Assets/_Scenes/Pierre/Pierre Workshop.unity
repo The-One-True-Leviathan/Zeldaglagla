@@ -1048,6 +1048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wolves: []
   leader: {fileID: 0}
+  circleDistance: 50
 --- !u!4 &308090478
 Transform:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class PackManager : MonoBehaviour
     public List<WolfRoot> wolves;
     bool leaderIsAlive;
     public WolfRoot leader;
+    public float circleDistance = 50;
 
     private void Start()
     {

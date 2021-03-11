@@ -12,14 +12,12 @@ public class BaseWolfSMBApproach : StateMachineBehaviour
     {
         if (baseWolf.isPackLeader)
         {
-            Repath();
-        } else
-        {
-            baseWolf.GetComponent<AIDestinationSetter>().target = baseWolf.pack.leader.transform;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPackCircle>().CreateCircle(baseWolf.pack);
         }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
+    /*
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (baseWolf.isPackLeader)
@@ -29,22 +27,8 @@ public class BaseWolfSMBApproach : StateMachineBehaviour
                 Repath();
             }
         }
-    }
+    }*/
 
-    void Repath()
-    {
-        float rngx = (Random.Range(10f, 20f) + Random.Range(10f, 20f)) / 2;
-        if (Random.Range(0f, 1f) < 0.5)
-        {
-            rngx *= -1;
-        }
-        float rngy = (Random.Range(10f, 20f) + Random.Range(10f, 20f)) / 2;
-        if (Random.Range(0f, 1f) < 0.5)
-        {
-            rngy *= -1;
-        }
-        baseWolf.pather.destination = new Vector2(baseWolf.transform.position.x + rngx, baseWolf.transform.position.y + rngy);
-    }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

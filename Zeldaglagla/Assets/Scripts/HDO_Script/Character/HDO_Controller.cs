@@ -10,6 +10,8 @@ public class HDO_Controller : MonoBehaviour
     [SerializeField]
     HDO_CharacterCollision collision;
     [SerializeField]
+    HDO_CharacterInteraction interact;
+    [SerializeField]
     GameObject gunPoint;
 
     [Header("Movement Stats")]
@@ -36,6 +38,10 @@ public class HDO_Controller : MonoBehaviour
         controls.UsualControls.Dodge.performed += ctx => Dodge();
 
         controls.KBControlsWASD.Dodge.performed += ctx => Dodge();
+
+        controls.UsualControls.Interact.performed += ctx => interact.Interact();
+
+        controls.KBControlsWASD.Interact.performed += ctx => interact.Interact();
     }
 
 

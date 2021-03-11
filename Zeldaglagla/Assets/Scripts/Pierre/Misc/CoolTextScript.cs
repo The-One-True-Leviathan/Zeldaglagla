@@ -12,7 +12,7 @@ public class CoolTextScript : MonoBehaviour
 
 
     [SerializeField]
-    string defaultText; 
+    public string defaultText; 
     int currentChar = 0;
     string currentText;
     bool reading;

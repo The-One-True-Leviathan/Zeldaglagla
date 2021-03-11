@@ -28,7 +28,29 @@ public class BaseWolfSMBWander : StateMachineBehaviour
             {
                 Repath();
             }
+        } 
+        else
+        {
+            bool tooclose = false;
+            foreach (WolfRoot other in baseWolf.pack.wolves)
+            {
+                if (other != this.baseWolf)
+                {
+                    if (Vector2.Distance(other.transform.position, this.baseWolf.transform.position) < 1)
+                    {
+                        baseWolf.GetComponent<AIPath>().destination = this.baseWolf.transform.position + (this.baseWolf.transform.position - other.transform.position);
+                        baseWolf.GetComponent<AIDestinationSetter>().enabled = false;
+                        tooclose = true;
+                    }
+                }
+            }
+            if (!tooclose && !baseWolf.GetComponent<AIDestinationSetter>().enabled)
+            {
+                baseWolf.GetComponent<AIDestinationSetter>().enabled = true;
+                baseWolf.GetComponent<AIDestinationSetter>().target = baseWolf.pack.leader.transform;
+            }
         }
+
     }
 
     void Repath()

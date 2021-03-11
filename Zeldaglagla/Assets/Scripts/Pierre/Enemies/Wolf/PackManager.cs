@@ -10,22 +10,20 @@ public class PackManager : MonoBehaviour
     bool leaderIsAlive;
     public WolfRoot leader;
 
+    private void Start()
+    {
+        foreach (WolfRoot wolf in GetComponentsInChildren<WolfRoot>())
+        {
+            wolves.Add(wolf);
+        }
+        DetermineLeader();
+    }
+
     public void DetermineLeader()
     {
         leaderIsAlive = false;
-        foreach(WolfRoot wolf in wolves)
-        {
-            if (wolf.isPackLeader)
-            {
-                leaderIsAlive = true;
-                return;
-            }
-        }
-        if (!leaderIsAlive)
-        {
-            int rng = Random.Range(1, wolves.Count);
-            wolves[rng].isPackLeader = true;
-        }
-
+        int rng = Random.Range(0, wolves.Count);
+        wolves[rng].isPackLeader = true;
+        leader = wolves[rng];
     }
 }

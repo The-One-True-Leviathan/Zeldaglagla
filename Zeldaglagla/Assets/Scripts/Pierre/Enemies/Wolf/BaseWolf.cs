@@ -10,6 +10,7 @@ public class BaseWolf : WolfRoot
     void Start()
     {
         GetComponent<Animator>().GetBehaviour<BaseWolfSMBWander>().baseWolf = this;
+        GetComponent<Animator>().GetBehaviour<BaseWolfSMBApproach>().baseWolf = this;
     }
 
     private void Update()
@@ -18,16 +19,6 @@ public class BaseWolf : WolfRoot
         {
             HitSpanResolve();
         }
-    }
-
-    void Approach()
-    {
-        //pather.destination = player.transform.position
-    }
-
-    void Attack()
-    {
-
     }
 
     void Pounce()

@@ -5,6 +5,6 @@ using Monsters;
 
 public class WolfHolder : MonoBehaviour
 {
-    public WolfRoot wolf;
+    public GameObject wolf;
     public bool isHoldingAWolf;
 }

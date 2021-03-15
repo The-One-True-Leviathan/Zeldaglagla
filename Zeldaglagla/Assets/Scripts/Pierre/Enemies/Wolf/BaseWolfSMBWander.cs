@@ -38,8 +38,8 @@ public class BaseWolfSMBWander : StateMachineBehaviour
                 {
                     if (Vector2.Distance(other.transform.position, this.baseWolf.transform.position) < 1)
                     {
-                        baseWolf.GetComponent<AIPath>().destination = this.baseWolf.transform.position + (this.baseWolf.transform.position - other.transform.position);
-                        baseWolf.GetComponent<AIDestinationSetter>().enabled = false;
+                        baseWolf.transform.position += (this.baseWolf.transform.position - other.transform.position) * 1/ Vector2.Distance(other.transform.position, this.baseWolf.transform.position) * Time.deltaTime;
+                        //baseWolf.GetComponent<AIDestinationSetter>().enabled = false;
                         tooclose = true;
                     }
                 }
@@ -50,7 +50,10 @@ public class BaseWolfSMBWander : StateMachineBehaviour
                 baseWolf.GetComponent<AIDestinationSetter>().target = baseWolf.pack.leader.transform;
             }
         }
-
+        if(Vector2.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, this.baseWolf.transform.position) < baseWolf.viewDistance)
+        {
+            baseWolf.pack.AllGoToApproach();
+        }
     }
 
     void Repath()

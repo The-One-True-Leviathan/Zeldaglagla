@@ -38,6 +38,13 @@ public class HDO_Piolet : MonoBehaviour
     public bool resetFF;
     int checker;
 
+    [Header("Shield")]
+    [SerializeField]
+    GameObject shield;
+    [SerializeField]
+    float perfectShieldTiming, shieldDecreaseRate, shieldRegrowRate, shieldMin;
+    float elapsedTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,15 +67,48 @@ public class HDO_Piolet : MonoBehaviour
 
     void Positioning()
     {
-        if (gp.up) transform.localPosition = new Vector3(0.5f, 0.25f, 0);
-        if (gp.down) transform.localPosition = new Vector3(-0.5f, -0.25f, 0);
-        if (gp.right) transform.localPosition = new Vector3(0.25f, -0.5f, 0);
-        if (gp.left) transform.localPosition = new Vector3(-0.25f, 0.5f, 0);
+        if (gp.up)
+        {
+            transform.localPosition = new Vector3(0.5f, 0.25f, 0);
+            shield.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
 
-        if(gp.up && gp.left) transform.localPosition = new Vector3(0.25f, 0.5f, 0);
-        if(gp.up && gp.right) transform.localPosition = new Vector3(0.5f, - 0.25f, 0);
-        if(gp.down && gp.left) transform.localPosition = new Vector3(- 0.5f, 0.25f, 0);
-        if(gp.down && gp.right) transform.localPosition = new Vector3(-0.25f, - 0.5f, 0);
+        if (gp.down) 
+        { 
+            transform.localPosition = new Vector3(-0.5f, -0.25f, 0);
+            shield.transform.rotation = Quaternion.Euler(0, 0, 180);
+        }
+        if (gp.right) 
+        { 
+            transform.localPosition = new Vector3(0.25f, -0.5f, 0);
+            shield.transform.rotation = Quaternion.Euler(0, 0, -90);
+        }
+        if (gp.left)
+        { 
+            transform.localPosition = new Vector3(-0.25f, 0.5f, 0);
+            shield.transform.rotation = Quaternion.Euler(0, 0, 90);
+        }
+
+        if (gp.up && gp.left) 
+        { 
+            transform.localPosition = new Vector3(0.25f, 0.5f, 0);
+            shield.transform.rotation = Quaternion.Euler(0, 0, 45);
+        }
+        if (gp.up && gp.right) 
+        {
+            transform.localPosition = new Vector3(0.5f, -0.25f, 0);
+            shield.transform.rotation = Quaternion.Euler(0, 0, -45);
+        }
+        if (gp.down && gp.left) 
+        { 
+            transform.localPosition = new Vector3(-0.5f, 0.25f, 0);
+            shield.transform.rotation = Quaternion.Euler(0, 0, 135);
+        }
+        if (gp.down && gp.right) 
+        { 
+            transform.localPosition = new Vector3(-0.25f, -0.5f, 0);
+            shield.transform.rotation = Quaternion.Euler(0, 0, -135);
+        }
 
     }
 

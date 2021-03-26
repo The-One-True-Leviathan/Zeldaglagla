@@ -14,7 +14,10 @@ public class HDO_HeatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        heatBar.rectTransform.localScale = new Vector2(heatValue / maxHeat, heatBar.rectTransform.localScale.y);
+        if (heatBar)
+        {
+            heatBar.rectTransform.localScale = new Vector2(heatValue / maxHeat, heatBar.rectTransform.localScale.y);
+        }
         heatValue += heatModifierPerSecond * Time.deltaTime;
 
         if(heatValue > maxHeat)

@@ -10,6 +10,7 @@ public class BaseWolfSMBWander : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        baseWolf.pather.maxSpeed = baseWolf.wanderSpeed;
         if (baseWolf.isPackLeader)
         {
             Repath();

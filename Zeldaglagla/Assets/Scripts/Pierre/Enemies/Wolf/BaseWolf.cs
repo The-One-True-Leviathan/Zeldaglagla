@@ -6,11 +6,14 @@ using Pathfinding;
 
 public class BaseWolf : WolfRoot
 {
+
+    public float wanderSpeed, approachSpeed, observeSpeed, rushSpeed;
     // Start is called before the first frame update
     void Start()
     {
         GetComponent<Animator>().GetBehaviour<BaseWolfSMBWander>().baseWolf = this;
         GetComponent<Animator>().GetBehaviour<BaseWolfSMBApproach>().baseWolf = this;
+        GetComponent<Animator>().GetBehaviour<BaseWolfSMBObserve>().baseWolf = this;
     }
 
     private void Update()

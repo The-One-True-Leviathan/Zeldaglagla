@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-public class BaseWolfSMBApproach : StateMachineBehaviour
+public class BaseWolfSMBObserve : StateMachineBehaviour
 {
     public BaseWolf baseWolf;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        baseWolf.pather.maxSpeed = baseWolf.approachSpeed;
+        baseWolf.pather.maxSpeed = baseWolf.observeSpeed;
         Debug.LogWarning("HEOOOO");
         foreach (GameObject holder in GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPackCircle>().holders)
         {
@@ -25,21 +25,10 @@ public class BaseWolfSMBApproach : StateMachineBehaviour
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        Transform player = GameObject.FindGameObjectWithTag("Player").transform;
-        if (Vector2.Distance(player.position, baseWolf.transform.position) < baseWolf.pack.avoidDistance)
-        {
-            Vector2 wolfToPlayer = baseWolf.transform.position - GameObject.FindGameObjectWithTag("Player").transform.position;
-            float adjust = baseWolf.pack.avoidDistance / Vector2.Distance(player.position, baseWolf.transform.position);
-            Vector2 displace = (wolfToPlayer) * (adjust * 1.2f) * Time.deltaTime;
-            baseWolf.transform.position += new Vector3(displace.x, displace.y);
-            Debug.LogWarning("Trying to avoid");
-            //(baseWolf.pack.circleDistance / Vector2.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, this.baseWolf.transform.position)) 
-            //* 
-            //baseWolf.GetComponent<AIDestinationSetter>().enabled = false;
-        }
-    }
+    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //
+    //}
 
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

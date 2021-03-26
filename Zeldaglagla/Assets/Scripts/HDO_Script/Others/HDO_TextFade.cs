@@ -35,7 +35,6 @@ public class HDO_TextFade : MonoBehaviour
             elapsedTime = timeToWaitBeforeFade;
             text.color = new Color(text.color.r, text.color.g, text.color.b, 1);
             fadeStarted = false;
-            Debug.Log("oui");
         }
         else if(text.text != "")
         {
@@ -52,7 +51,6 @@ public class HDO_TextFade : MonoBehaviour
     IEnumerator Fade()
     {
         text.color = new Color(text.color.r, text.color.g, text.color.b, text.color.a / 1.2f);
-        Debug.Log("fading" + text.color.a);
 
         yield return new WaitForSeconds(0.1f);
 

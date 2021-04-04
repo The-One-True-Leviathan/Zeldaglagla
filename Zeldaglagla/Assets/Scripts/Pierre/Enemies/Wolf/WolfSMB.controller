@@ -109,6 +109,25 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-197895622184289222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0650426be8f7182409e2da99f9f4d8c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseWolf: {fileID: 0}
+  buildupTime: 0.8
+  recoverTime: 0.4
+  numberDiceNextAtkTime: 2
+  valueDiceNextAtkTime: 0.5
+  modifierDiceNextAtkTime: 1
+  vectorToSprint: {x: 0, y: 0, z: 0}
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -171,6 +190,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseWolf: {fileID: 0}
+--- !u!114 &2722144100601462334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60757f16c86c174ebb558938711fde4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseWolf: {fileID: 0}
 --- !u!1102 &3564058132135635192
 AnimatorState:
   serializedVersion: 6
@@ -208,7 +240,8 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 6352270200901835532}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -261,7 +294,8 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -197895622184289222}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -276,6 +310,19 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &6352270200901835532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8ddfe277726bc143a6eab9652b92fb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseWolf: {fileID: 0}
 --- !u!1102 &7316662370438454880
 AnimatorState:
   serializedVersion: 6
@@ -287,7 +334,8 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 2722144100601462334}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

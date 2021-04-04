@@ -50,10 +50,21 @@ namespace Monsters
 
         public Collider2D boundBox, hurtBox, attackZone;
         [NonSerialized]
+        public GameObject player;
+        [NonSerialized]
         public Collider2D playerCollider;
+
+        public LayerMask blocksLOS;
+
 
         public Action<CombatEvents.StunContext> stunnedEvent;
         public Action<CombatEvents.StunContext> stunRecoveredEvent;
+
+        private void Awake()
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            playerCollider = player.GetComponent<Collider2D>();
+        }
 
         virtual public bool Damage(DamageStruct damageTaken)
         {

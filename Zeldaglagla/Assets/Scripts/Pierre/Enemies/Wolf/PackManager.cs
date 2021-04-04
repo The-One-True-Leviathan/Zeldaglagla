@@ -11,6 +11,8 @@ public class PackManager : MonoBehaviour
     public List<WolfRoot> wolves;
     bool leaderIsAlive;
     bool isApproaching = false;
+    public bool isInAttack = false;
+    public WolfRoot wolfInAttack;
     public WolfRoot leader;
     HDO_HeatManager heatManager;
     [Header("Approach")]
@@ -56,6 +58,49 @@ public class PackManager : MonoBehaviour
         }
     }
 
+    public void StartHarassing()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPackCircle>().SetCircleSize(rushCircleSize);
+        GoToState("Harass");
+    }
+
+    public void SetNextAttack(float time = 0)
+    {
+        if (time == 0)
+        {
+
+            int rng = Random.Range(0, wolves.Count);
+            if (wolfInAttack != wolves[rng] || wolves.Count == 1)
+            {
+                wolfInAttack = wolves[rng];
+            }
+            else
+            {
+                if (rng + 1 < wolves.Count)
+                {
+                    wolfInAttack = wolves[rng + 1];
+                }
+                else
+                {
+                    wolfInAttack = wolves[rng - 1];
+                }
+            }
+            Debug.LogWarning("Wolf Sent in Attack");
+            wolfInAttack.SMB.Play("Attack");
+        } else
+        {
+            StartCoroutine(NextAttackCoroutine(time));
+        }
+    }
+
+    IEnumerator NextAttackCoroutine(float time)
+    {
+        Debug.LogWarning("Next Attack Waiting");
+        yield return new WaitForSeconds(time);
+        Debug.LogWarning("Next Attack Launched");
+        SetNextAttack();
+    }
+
     void GoToState(string newStateName)
     {
 
@@ -78,7 +123,10 @@ public class PackManager : MonoBehaviour
         if (!isApproaching)
         {
             isApproaching = true;
-
+        }
+        foreach (WolfRoot wolf in wolves)
+        {
+            wolf.GoToApproach();
         }
     }
 

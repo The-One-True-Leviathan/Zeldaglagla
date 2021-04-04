@@ -10,6 +10,7 @@ public class BaseWolfSMBWander : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        baseWolf.baseWolfSMBState = BaseWolf.BaseWolfSMBState.WANDER;
         baseWolf.pather.maxSpeed = baseWolf.wanderSpeed;
         if (baseWolf.isPackLeader)
         {
@@ -51,7 +52,7 @@ public class BaseWolfSMBWander : StateMachineBehaviour
                 baseWolf.GetComponent<AIDestinationSetter>().target = baseWolf.pack.leader.transform;
             }
         }
-        if(Vector2.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, this.baseWolf.transform.position) < baseWolf.viewDistance)
+        if(Vector2.Distance(baseWolf.player.transform.position, this.baseWolf.transform.position) < baseWolf.viewDistance)
         {
             baseWolf.pack.AllGoToApproach();
         }

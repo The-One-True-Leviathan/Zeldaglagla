@@ -10,6 +10,7 @@ public class BaseWolfSMBObserve : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        baseWolf.baseWolfSMBState = BaseWolf.BaseWolfSMBState.OBSERVE;
         baseWolf.pather.maxSpeed = baseWolf.observeSpeed;
         Debug.LogWarning("HEOOOO");
         foreach (GameObject holder in GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPackCircle>().holders)

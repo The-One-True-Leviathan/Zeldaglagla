@@ -29,7 +29,7 @@ public class PlayerPackCircle : MonoBehaviour
             center.transform.rotation = Quaternion.Euler(0f, 0f, rotation);
             sizeMultiplier -= shrinkSpeed * Time.deltaTime;
             center.transform.localScale = Vector3.one * sizeMultiplier;
-            if (sizeMultiplier * pack.baseCircleDistance < pack.observeDistance)
+            if (sizeMultiplier * pack.baseCircleDistance < pack.observeDistance && shrinkSpeed > 0)
             {
                 StopShrinking();
             }

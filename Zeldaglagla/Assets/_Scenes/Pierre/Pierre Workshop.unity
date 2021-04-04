@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &121408985
 Transform:
   m_ObjectHideFlags: 0
@@ -249,7 +249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &135183305
 Transform:
   m_ObjectHideFlags: 0
@@ -357,7 +357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &154511041
 Transform:
   m_ObjectHideFlags: 0
@@ -465,7 +465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &169993068
 Transform:
   m_ObjectHideFlags: 0
@@ -748,20 +748,31 @@ MonoBehaviour:
   isInHitSpan: 0
   isInKnockback: 0
   dead: 0
-  boundBox: {fileID: 185448723}
-  hurtBox: {fileID: 185448722}
-  attackZone: {fileID: 185448721}
+  boundBox: {fileID: 1889767241}
+  hurtBox: {fileID: 1889767240}
+  attackZone: {fileID: 1889767239}
+  blocksLOS:
+    serializedVersion: 2
+    m_Bits: 64
   pounceDmg: 5
   pounceBuildup: 0.1
+  pounceHitSpan: 0
   pouceRecover: 0.5
-  pounceLength: 0.2
+  pounceLength: 5
   viewDistance: 20
-  pather: {fileID: 185448724}
+  attackDistance: 0.5
+  pather: {fileID: 1889767234}
   pack: {fileID: 308090477}
   SMB: {fileID: 0}
   thisGameObject: {fileID: 0}
-  isInPounce: 0
+  hasAttacked: 0
   isPackLeader: 0
+  baseWolfSMBState: 0
+  wanderSpeed: 5
+  approachSpeed: 10
+  observeSpeed: 5
+  rushSpeed: 7
+  pounceSpeed: 10
 --- !u!95 &185448727
 Animator:
   serializedVersion: 3
@@ -822,7 +833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &199994366
 Transform:
   m_ObjectHideFlags: 0
@@ -930,7 +941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &236235151
 Transform:
   m_ObjectHideFlags: 0
@@ -1050,17 +1061,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wolves: []
+  isInAttack: 0
+  wolfInAttack: {fileID: 0}
   leader: {fileID: 0}
   baseCircleDistance: 50
   currentCircleDistance: 0
   avoidDistance: 5
-  circleShrinkSpeed: 0.01
+  circleShrinkSpeed: 0.1
   rotationSpeed: 0.2
   observeDistance: 8
   observeTime: 10
   maxObserveTime: 10
   minObserveTime: 3
   isObserving: 0
+  rushCircleSize: 4
 --- !u!4 &308090478
 Transform:
   m_ObjectHideFlags: 0
@@ -1131,6 +1145,9 @@ MonoBehaviour:
   boundBox: {fileID: 0}
   hurtBox: {fileID: 0}
   attackZone: {fileID: 0}
+  blocksLOS:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &443580664
 Transform:
   m_ObjectHideFlags: 0
@@ -1227,7 +1244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &449776159
 Transform:
   m_ObjectHideFlags: 0
@@ -1335,7 +1352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &513995777
 Transform:
   m_ObjectHideFlags: 0
@@ -1692,20 +1709,31 @@ MonoBehaviour:
   isInHitSpan: 0
   isInKnockback: 0
   dead: 0
-  boundBox: {fileID: 589961129}
-  hurtBox: {fileID: 589961128}
-  attackZone: {fileID: 589961127}
+  boundBox: {fileID: 1889767241}
+  hurtBox: {fileID: 1889767240}
+  attackZone: {fileID: 1889767239}
+  blocksLOS:
+    serializedVersion: 2
+    m_Bits: 64
   pounceDmg: 5
   pounceBuildup: 0.1
+  pounceHitSpan: 0
   pouceRecover: 0.5
-  pounceLength: 0.2
+  pounceLength: 5
   viewDistance: 20
-  pather: {fileID: 589961130}
+  attackDistance: 0.5
+  pather: {fileID: 1889767234}
   pack: {fileID: 308090477}
   SMB: {fileID: 0}
   thisGameObject: {fileID: 0}
-  isInPounce: 0
+  hasAttacked: 0
   isPackLeader: 0
+  baseWolfSMBState: 0
+  wanderSpeed: 5
+  approachSpeed: 10
+  observeSpeed: 5
+  rushSpeed: 7
+  pounceSpeed: 10
 --- !u!95 &589961133
 Animator:
   serializedVersion: 3
@@ -1766,7 +1794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &621041257
 Transform:
   m_ObjectHideFlags: 0
@@ -1874,7 +1902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &659706851
 Transform:
   m_ObjectHideFlags: 0
@@ -1982,7 +2010,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &691271176
 Transform:
   m_ObjectHideFlags: 0
@@ -2090,7 +2118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &789049979
 Transform:
   m_ObjectHideFlags: 0
@@ -2198,7 +2226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &848594405
 Transform:
   m_ObjectHideFlags: 0
@@ -2306,7 +2334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &997151293
 Transform:
   m_ObjectHideFlags: 0
@@ -2414,7 +2442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1050424649
 Transform:
   m_ObjectHideFlags: 0
@@ -2697,20 +2725,31 @@ MonoBehaviour:
   isInHitSpan: 0
   isInKnockback: 0
   dead: 0
-  boundBox: {fileID: 1060608242}
-  hurtBox: {fileID: 1060608241}
-  attackZone: {fileID: 1060608240}
+  boundBox: {fileID: 1889767241}
+  hurtBox: {fileID: 1889767240}
+  attackZone: {fileID: 1889767239}
+  blocksLOS:
+    serializedVersion: 2
+    m_Bits: 64
   pounceDmg: 5
   pounceBuildup: 0.1
+  pounceHitSpan: 0
   pouceRecover: 0.5
-  pounceLength: 0.2
+  pounceLength: 5
   viewDistance: 20
-  pather: {fileID: 1060608243}
+  attackDistance: 0.5
+  pather: {fileID: 1889767234}
   pack: {fileID: 308090477}
   SMB: {fileID: 0}
   thisGameObject: {fileID: 0}
-  isInPounce: 0
+  hasAttacked: 0
   isPackLeader: 0
+  baseWolfSMBState: 0
+  wanderSpeed: 5
+  approachSpeed: 10
+  observeSpeed: 5
+  rushSpeed: 7
+  pounceSpeed: 10
 --- !u!95 &1060608246
 Animator:
   serializedVersion: 3
@@ -2836,7 +2875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1104699319
 Transform:
   m_ObjectHideFlags: 0
@@ -2944,7 +2983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1108207660
 Transform:
   m_ObjectHideFlags: 0
@@ -3416,20 +3455,31 @@ MonoBehaviour:
   isInHitSpan: 0
   isInKnockback: 0
   dead: 0
-  boundBox: {fileID: 1312209851}
-  hurtBox: {fileID: 1312209850}
-  attackZone: {fileID: 1312209849}
+  boundBox: {fileID: 1889767241}
+  hurtBox: {fileID: 1889767240}
+  attackZone: {fileID: 1889767239}
+  blocksLOS:
+    serializedVersion: 2
+    m_Bits: 64
   pounceDmg: 5
   pounceBuildup: 0.1
+  pounceHitSpan: 0
   pouceRecover: 0.5
-  pounceLength: 0.2
+  pounceLength: 5
   viewDistance: 20
-  pather: {fileID: 1312209852}
+  attackDistance: 0.5
+  pather: {fileID: 1889767234}
   pack: {fileID: 308090477}
   SMB: {fileID: 0}
   thisGameObject: {fileID: 0}
-  isInPounce: 0
+  hasAttacked: 0
   isPackLeader: 0
+  baseWolfSMBState: 0
+  wanderSpeed: 5
+  approachSpeed: 10
+  observeSpeed: 5
+  rushSpeed: 7
+  pounceSpeed: 10
 --- !u!95 &1312209855
 Animator:
   serializedVersion: 3
@@ -3490,7 +3540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1328836493
 Transform:
   m_ObjectHideFlags: 0
@@ -3659,7 +3709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1517731459
 Transform:
   m_ObjectHideFlags: 0
@@ -3767,7 +3817,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1531362328
 Transform:
   m_ObjectHideFlags: 0
@@ -3875,7 +3925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1599942224
 Transform:
   m_ObjectHideFlags: 0
@@ -3983,7 +4033,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1622159161
 Transform:
   m_ObjectHideFlags: 0
@@ -4091,7 +4141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1683038126
 Transform:
   m_ObjectHideFlags: 0
@@ -4199,7 +4249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1762417310
 Transform:
   m_ObjectHideFlags: 0
@@ -4423,7 +4473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1784120293
 Transform:
   m_ObjectHideFlags: 0
@@ -4531,7 +4581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1812610655
 Transform:
   m_ObjectHideFlags: 0
@@ -4741,17 +4791,28 @@ MonoBehaviour:
   boundBox: {fileID: 1889767241}
   hurtBox: {fileID: 1889767240}
   attackZone: {fileID: 1889767239}
+  blocksLOS:
+    serializedVersion: 2
+    m_Bits: 64
   pounceDmg: 5
   pounceBuildup: 0.1
+  pounceHitSpan: 0
   pouceRecover: 0.5
-  pounceLength: 0.2
+  pounceLength: 5
   viewDistance: 20
+  attackDistance: 0.5
   pather: {fileID: 1889767234}
   pack: {fileID: 308090477}
   SMB: {fileID: 0}
   thisGameObject: {fileID: 0}
-  isInPounce: 0
+  hasAttacked: 0
   isPackLeader: 0
+  baseWolfSMBState: 0
+  wanderSpeed: 5
+  approachSpeed: 10
+  observeSpeed: 5
+  rushSpeed: 7
+  pounceSpeed: 10
 --- !u!95 &1889767237
 Animator:
   serializedVersion: 3
@@ -5181,20 +5242,31 @@ MonoBehaviour:
   isInHitSpan: 0
   isInKnockback: 0
   dead: 0
-  boundBox: {fileID: 1928182502}
-  hurtBox: {fileID: 1928182501}
-  attackZone: {fileID: 1928182500}
+  boundBox: {fileID: 1889767241}
+  hurtBox: {fileID: 1889767240}
+  attackZone: {fileID: 1889767239}
+  blocksLOS:
+    serializedVersion: 2
+    m_Bits: 64
   pounceDmg: 5
   pounceBuildup: 0.1
+  pounceHitSpan: 0
   pouceRecover: 0.5
-  pounceLength: 0.2
+  pounceLength: 5
   viewDistance: 20
-  pather: {fileID: 1928182503}
+  attackDistance: 0.5
+  pather: {fileID: 1889767234}
   pack: {fileID: 308090477}
   SMB: {fileID: 0}
   thisGameObject: {fileID: 0}
-  isInPounce: 0
+  hasAttacked: 0
   isPackLeader: 0
+  baseWolfSMBState: 0
+  wanderSpeed: 5
+  approachSpeed: 10
+  observeSpeed: 5
+  rushSpeed: 7
+  pounceSpeed: 10
 --- !u!95 &1928182506
 Animator:
   serializedVersion: 3
@@ -5255,7 +5327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2001123387
 Transform:
   m_ObjectHideFlags: 0
@@ -5363,7 +5435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2026683567
 Transform:
   m_ObjectHideFlags: 0
@@ -5471,7 +5543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2131444639
 Transform:
   m_ObjectHideFlags: 0
@@ -5579,7 +5651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2142755353
 Transform:
   m_ObjectHideFlags: 0

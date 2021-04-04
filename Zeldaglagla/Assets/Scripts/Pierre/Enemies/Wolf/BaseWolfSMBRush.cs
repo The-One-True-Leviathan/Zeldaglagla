@@ -10,6 +10,7 @@ public class BaseWolfSMBRush : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        baseWolf.baseWolfSMBState = BaseWolf.BaseWolfSMBState.RUSH;
         baseWolf.pather.maxSpeed = baseWolf.rushSpeed;
         Debug.LogWarning("HEOOOO");
         baseWolf.GetComponent<AIDestinationSetter>().target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -18,10 +19,14 @@ public class BaseWolfSMBRush : StateMachineBehaviour
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     
-    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //
-    //}
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        if (Vector2.Distance(baseWolf.transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) < baseWolf.attackDistance)
+        {
+            baseWolf.pack.StartHarassing();
+            baseWolf.pack.SetNextAttack();
+        }
+    }
 
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -20,8 +20,6 @@ public class HDO_CharacterCombat : MonoBehaviour
     float elapsedTimeA;
     [SerializeField]
     Animator pioletAnim;
-    
-
 
     [Header("Torch Statistics")]
     [SerializeField]
@@ -42,6 +40,12 @@ public class HDO_CharacterCombat : MonoBehaviour
 
         controls.UsualControls.Attack.performed += ctx => Strike();
         controls.KBControlsWASD.Attack.performed += ctx => Strike();
+
+        controls.UsualControls.Deflect.performed += ctx => Deflect();
+        controls.KBControlsWASD.Deflect.performed += ctx => Deflect();
+        controls.UsualControls.Deflect.canceled += ctx => piolet.shielding = false;
+        controls.KBControlsWASD.Deflect.canceled += ctx => piolet.shielding = false;
+
     }
 
     // Start is called before the first frame update
@@ -72,6 +76,13 @@ public class HDO_CharacterCombat : MonoBehaviour
         }
 
         
+    }
+
+    void Deflect()
+    {
+        Debug.Log("Shield");
+        piolet.Defend();
+
     }
 
     void Strike()

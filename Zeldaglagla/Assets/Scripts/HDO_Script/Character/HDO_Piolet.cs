@@ -41,15 +41,17 @@ public class HDO_Piolet : MonoBehaviour
     [Header("Shield")]
     [SerializeField]
     GameObject shield;
+    BoxCollider2D shieldBox;
     [SerializeField]
-    float perfectShieldTiming, shieldDecreaseRate, shieldRegrowRate, shieldMin;
+    float perfectShieldTiming, shieldDecreaseRate, shieldRegrowRate, shieldMin, shieldMax;
     float elapsedTime;
+    public bool shielding;
 
     // Start is called before the first frame update
     void Start()
     {
         damage = cc.attackDamage;
-       
+        shieldBox = shield.GetComponentInChildren<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -60,6 +62,21 @@ public class HDO_Piolet : MonoBehaviour
         if (resetFF)
         {
             ffed.Clear();
+        }
+
+        if (!shielding && shieldBox.size.x < shieldMax)
+        {
+            elapsedTime = perfectShieldTiming;
+            shieldBox.size = new Vector2(shieldBox.size.x + shieldRegrowRate * Time.deltaTime, shieldBox.size.y);
+            if(shieldBox.size.x > shieldMax)
+            {
+                shieldBox.size = new Vector2(shieldMax, shieldBox.size.y);
+            }
+        }
+
+        if (shielding)
+        {
+            Defend();
         }
 
         Positioning();
@@ -112,13 +129,32 @@ public class HDO_Piolet : MonoBehaviour
 
     }
 
+    public void Defend()
+    {
+        if (!shielding)
+        {
+            shieldBox.enabled = true;
+            shielding = true;
+        }
+        else
+        {
+            shieldBox.size = new Vector2(shieldBox.size.x - shieldDecreaseRate * Time.deltaTime, shieldBox.size.y);
+            if(shieldBox.size.x < shieldMin)
+            {
+                shieldBox.size = new Vector2(shieldMin, shieldBox.size.y);
+            }
+            elapsedTime -= Time.deltaTime;
+        }
+        
+    }
+
     void CheckCollision()
     {
         int results = Physics2D.OverlapCollider(box, enemy, result);
 
         if(result != null)
         {
-            Debug.Log("touché");
+            //Debug.Log("touché");
 
             foreach(Collider2D e in result)
             {
@@ -136,8 +172,6 @@ public class HDO_Piolet : MonoBehaviour
                     ue.currentHealthPoints -= damage;
                     ffed.Add(e);
                 }
-
-                //CombatEvents.monsterWasHit(CombatEvents.hitNotStunned);
             }
         }
     }

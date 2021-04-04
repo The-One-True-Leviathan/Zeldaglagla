@@ -131,6 +131,7 @@ MonoBehaviour:
   shieldDecreaseRate: 0
   shieldRegrowRate: 0
   shieldMin: 0
+  shieldMax: 0
 --- !u!212 &7808011128689221643
 SpriteRenderer:
   m_ObjectHideFlags: 0

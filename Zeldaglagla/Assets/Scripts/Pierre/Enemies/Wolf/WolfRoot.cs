@@ -10,6 +10,7 @@ public class WolfRoot : MonsterRoot
     public float pounceDmg, pounceBuildup, pounceHitSpan, pouceRecover, pounceLength, viewDistance = 20, attackDistance;
     public AttackProfile pounceAtk;
     public AIPath pather;
+    public AIDestinationSetter destinationSetter;
     public PackManager pack;
     public Animator SMB;
     public GameObject thisGameObject;
@@ -24,6 +25,7 @@ public class WolfRoot : MonsterRoot
         pounceAtk = new AttackProfile(new DamageStruct(pounceDmg), pounceBuildup, pouceRecover, pounceHitSpan);
         pack = GetComponentInParent<PackManager>();
         pather = GetComponent<AIPath>();
+        destinationSetter = GetComponent<AIDestinationSetter>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -36,4 +38,16 @@ public class WolfRoot : MonsterRoot
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPackCircle>().CreateCircle(pack);
         }
     }
+
+    public override void Death()
+    {
+        base.Death();
+        pack.currentWolves--;
+        if (pack.currentWolves <= pack.startingWolves / 2)
+        {
+            pack.AllGoToFlee();
+        }
+    }
+
+
 }

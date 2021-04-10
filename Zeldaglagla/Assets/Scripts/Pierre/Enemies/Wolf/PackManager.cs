@@ -9,6 +9,7 @@ public class PackManager : MonoBehaviour
     GameObject player;
 
     public List<WolfRoot> wolves;
+    public int startingWolves, currentWolves;
     bool leaderIsAlive;
     bool isApproaching = false;
     public bool isInAttack = false;
@@ -23,6 +24,8 @@ public class PackManager : MonoBehaviour
     public bool isObserving;
     [Header("Rush")]
     public float rushCircleSize;
+    [Header("Flee")]
+    public float fleeDistance = 20;
 
     private void Start()
     {
@@ -35,10 +38,8 @@ public class PackManager : MonoBehaviour
 
 
 
-        foreach (WolfRoot wolf in GetComponentsInChildren<WolfRoot>())
-        {
-            wolves.Add(wolf);
-        }
+        CountWolves(true);
+
         DetermineLeader();
     }
 
@@ -46,6 +47,7 @@ public class PackManager : MonoBehaviour
     {
         if (isObserving)
         {
+
             currentObserveTime += Time.deltaTime;
             if (currentObserveTime >= observeTime)
             {
@@ -110,16 +112,42 @@ public class PackManager : MonoBehaviour
         }
     }
 
+    public int CountWolves(bool resetStartingNumber = false)
+    {
+        wolves.Clear();
+
+        foreach (WolfRoot wolf in GetComponentsInChildren<WolfRoot>())
+        {
+            wolves.Add(wolf);
+        }
+        if (resetStartingNumber)
+        {
+            startingWolves = wolves.Count;
+            return currentWolves = startingWolves;
+        } else
+        {
+            return currentWolves;
+        }
+    }
+
     public void DetermineLeader()
     {
-        leaderIsAlive = false;
-        int rng = Random.Range(0, wolves.Count);
-        wolves[rng].isPackLeader = true;
-        leader = wolves[rng];
+        if (!leaderIsAlive)
+        {
+            foreach (WolfRoot wolf in wolves)
+            {
+                wolf.isPackLeader = false;
+            }
+            int rng = Random.Range(0, wolves.Count);
+            wolves[rng].isPackLeader = true;
+            leader = wolves[rng];
+            leaderIsAlive = true;
+        }
     }
 
     public void AllGoToApproach()
     {
+        isObserving = false;
         if (!isApproaching)
         {
             isApproaching = true;
@@ -137,6 +165,7 @@ public class PackManager : MonoBehaviour
 
     public void AllGoToObserve()
     {
+        isApproaching = false;
         isObserving = true;
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<HDO_HeatManager>().heatModifierPerSecond > 0)
         {
@@ -150,7 +179,15 @@ public class PackManager : MonoBehaviour
 
     public void AllGoToRush()
     {
+        isApproaching = false;
         isObserving = false;
         GoToState("Rush");
+    }
+
+    public void AllGoToFlee()
+    {
+        isApproaching = false;
+        isObserving = false;
+        GoToState("Flee");
     }
 }

@@ -9,16 +9,17 @@ public class BaseWolf : WolfRoot
     public enum BaseWolfSMBState { WANDER, APPROACH, OBSERVE, RUSH, ATTACK, HARASS, FLEE };
     public BaseWolfSMBState baseWolfSMBState;
 
-    public float wanderSpeed, approachSpeed, observeSpeed, rushSpeed, pounceSpeed;
+    public float wanderSpeed, approachSpeed, observeSpeed, rushSpeed, pounceSpeed, fleeSpeed;
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Animator>().GetBehaviour<BaseWolfSMBWander>().baseWolf = this;
-        GetComponent<Animator>().GetBehaviour<BaseWolfSMBApproach>().baseWolf = this;
-        GetComponent<Animator>().GetBehaviour<BaseWolfSMBObserve>().baseWolf = this;
-        GetComponent<Animator>().GetBehaviour<BaseWolfSMBRush>().baseWolf = this;
-        GetComponent<Animator>().GetBehaviour<BaseWolfSMBHarass>().baseWolf = this;
-        GetComponent<Animator>().GetBehaviour<BaseWolfSMBAttack>().baseWolf = this;
+        SMB.GetBehaviour<BaseWolfSMBWander>().baseWolf = this;
+        SMB.GetBehaviour<BaseWolfSMBApproach>().baseWolf = this;
+        SMB.GetBehaviour<BaseWolfSMBObserve>().baseWolf = this;
+        SMB.GetBehaviour<BaseWolfSMBRush>().baseWolf = this;
+        SMB.GetBehaviour<BaseWolfSMBHarass>().baseWolf = this;
+        SMB.GetBehaviour<BaseWolfSMBAttack>().baseWolf = this;
+        SMB.GetBehaviour<BaseWolfSMBFlee>().baseWolf = this;
 
 
         stunRecoveredEvent += ctx => GoBackToState(); 
@@ -67,5 +68,10 @@ public class BaseWolf : WolfRoot
         base.Stun(stunTaken);
         isInAttack = false;
         SMB.Play("Stunned");
+    }
+
+    public Vector3 ToPlayer()
+    {
+        return player.transform.position - transform.position;
     }
 }

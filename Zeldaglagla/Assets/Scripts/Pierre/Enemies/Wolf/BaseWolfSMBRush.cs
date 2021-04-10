@@ -13,7 +13,7 @@ public class BaseWolfSMBRush : StateMachineBehaviour
         baseWolf.baseWolfSMBState = BaseWolf.BaseWolfSMBState.RUSH;
         baseWolf.pather.maxSpeed = baseWolf.rushSpeed;
         Debug.LogWarning("HEOOOO");
-        baseWolf.GetComponent<AIDestinationSetter>().target = GameObject.FindGameObjectWithTag("Player").transform;
+        baseWolf.destinationSetter.target = GameObject.FindGameObjectWithTag("Player").transform;
         Debug.LogWarning("Attached");
     }
 

@@ -10,6 +10,7 @@ public class BaseWolfSMBWander : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        baseWolf.destinationSetter.enabled = true;
         baseWolf.baseWolfSMBState = BaseWolf.BaseWolfSMBState.WANDER;
         baseWolf.pather.maxSpeed = baseWolf.wanderSpeed;
         if (baseWolf.isPackLeader)
@@ -17,7 +18,7 @@ public class BaseWolfSMBWander : StateMachineBehaviour
             Repath();
         } else
         {
-            baseWolf.GetComponent<AIDestinationSetter>().target = baseWolf.pack.leader.transform;
+            baseWolf.destinationSetter.target = baseWolf.pack.leader.transform;
         }
     }
 
@@ -38,23 +39,29 @@ public class BaseWolfSMBWander : StateMachineBehaviour
             {
                 if (other != this.baseWolf)
                 {
-                    if (Vector2.Distance(other.transform.position, this.baseWolf.transform.position) < 1)
+                    if (Vector2.Distance(other.transform.position, baseWolf.transform.position) < 1)
                     {
                         baseWolf.transform.position += (this.baseWolf.transform.position - other.transform.position) * 1/ Vector2.Distance(other.transform.position, this.baseWolf.transform.position) * Time.deltaTime;
-                        //baseWolf.GetComponent<AIDestinationSetter>().enabled = false;
+                        //baseWolf.destinationSetter.enabled = false;
                         tooclose = true;
                     }
                 }
             }
-            if (!tooclose && !baseWolf.GetComponent<AIDestinationSetter>().enabled)
+            if (!tooclose && !baseWolf.destinationSetter.enabled)
             {
-                baseWolf.GetComponent<AIDestinationSetter>().enabled = true;
-                baseWolf.GetComponent<AIDestinationSetter>().target = baseWolf.pack.leader.transform;
+                baseWolf.destinationSetter.enabled = true;
+                baseWolf.destinationSetter.target = baseWolf.pack.leader.transform;
             }
         }
-        if(Vector2.Distance(baseWolf.player.transform.position, this.baseWolf.transform.position) < baseWolf.viewDistance)
+        if(baseWolf.ToPlayer().magnitude < baseWolf.viewDistance)
         {
-            baseWolf.pack.AllGoToApproach();
+            if (baseWolf.player.GetComponent<PlayerPackCircle>().pack == null)
+            {
+                baseWolf.pack.AllGoToApproach();
+            } else if (baseWolf.player.GetComponent<PlayerPackCircle>().pack != baseWolf)
+            {
+                baseWolf.pack.AllGoToFlee();
+            }
         }
     }
 

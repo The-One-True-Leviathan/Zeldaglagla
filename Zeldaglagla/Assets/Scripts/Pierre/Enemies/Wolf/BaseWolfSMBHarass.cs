@@ -17,7 +17,7 @@ public class BaseWolfSMBHarass : StateMachineBehaviour
         {
             if (holder.GetComponent<WolfHolder>().wolf == baseWolf.gameObject)
             {
-                baseWolf.GetComponent<AIDestinationSetter>().target = holder.transform;
+                baseWolf.destinationSetter.target = holder.transform;
                 Debug.LogWarning("Attached");
                 break;
             }

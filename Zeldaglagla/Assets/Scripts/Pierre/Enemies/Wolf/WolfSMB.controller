@@ -94,7 +94,8 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -556324877669365796}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -109,6 +110,22 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-556324877669365796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce3e9b76f779af41984745e7a7fb571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseWolf: {fileID: 0}
+  maxFleeRate: 0.5
+  deviationAngle: 5
+  fleeLenght: 6
 --- !u!114 &-197895622184289222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -122,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseWolf: {fileID: 0}
-  buildupTime: 0.8
+  buildupTime: 0.4
   recoverTime: 0.4
   numberDiceNextAtkTime: 2
   valueDiceNextAtkTime: 0.5

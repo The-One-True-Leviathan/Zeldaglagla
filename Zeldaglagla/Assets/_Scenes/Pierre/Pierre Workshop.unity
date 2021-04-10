@@ -755,13 +755,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   pounceDmg: 5
-  pounceBuildup: 0.1
+  pounceBuildup: 0.3
   pounceHitSpan: 0
   pouceRecover: 0.5
   pounceLength: 5
   viewDistance: 20
   attackDistance: 0.5
   pather: {fileID: 1889767234}
+  destinationSetter: {fileID: 0}
   pack: {fileID: 308090477}
   SMB: {fileID: 0}
   thisGameObject: {fileID: 0}
@@ -773,6 +774,7 @@ MonoBehaviour:
   observeSpeed: 5
   rushSpeed: 7
   pounceSpeed: 10
+  fleeSpeed: 6
 --- !u!95 &185448727
 Animator:
   serializedVersion: 3
@@ -1061,6 +1063,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wolves: []
+  startingWolves: 0
+  currentWolves: 0
   isInAttack: 0
   wolfInAttack: {fileID: 0}
   leader: {fileID: 0}
@@ -1075,6 +1079,7 @@ MonoBehaviour:
   minObserveTime: 3
   isObserving: 0
   rushCircleSize: 4
+  fleeDistance: 20
 --- !u!4 &308090478
 Transform:
   m_ObjectHideFlags: 0
@@ -1716,13 +1721,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   pounceDmg: 5
-  pounceBuildup: 0.1
+  pounceBuildup: 0.3
   pounceHitSpan: 0
   pouceRecover: 0.5
   pounceLength: 5
   viewDistance: 20
   attackDistance: 0.5
   pather: {fileID: 1889767234}
+  destinationSetter: {fileID: 0}
   pack: {fileID: 308090477}
   SMB: {fileID: 0}
   thisGameObject: {fileID: 0}
@@ -1734,6 +1740,7 @@ MonoBehaviour:
   observeSpeed: 5
   rushSpeed: 7
   pounceSpeed: 10
+  fleeSpeed: 6
 --- !u!95 &589961133
 Animator:
   serializedVersion: 3
@@ -2732,13 +2739,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   pounceDmg: 5
-  pounceBuildup: 0.1
+  pounceBuildup: 0.3
   pounceHitSpan: 0
   pouceRecover: 0.5
   pounceLength: 5
   viewDistance: 20
   attackDistance: 0.5
   pather: {fileID: 1889767234}
+  destinationSetter: {fileID: 0}
   pack: {fileID: 308090477}
   SMB: {fileID: 0}
   thisGameObject: {fileID: 0}
@@ -2750,6 +2758,7 @@ MonoBehaviour:
   observeSpeed: 5
   rushSpeed: 7
   pounceSpeed: 10
+  fleeSpeed: 6
 --- !u!95 &1060608246
 Animator:
   serializedVersion: 3
@@ -2827,6 +2836,7 @@ MonoBehaviour:
   sizeMultiplier: 1
   shrinkSpeed: 0.05
   rotating: 0
+  pack: {fileID: 0}
 --- !u!4 &1096704065
 Transform:
   m_ObjectHideFlags: 0
@@ -3462,13 +3472,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   pounceDmg: 5
-  pounceBuildup: 0.1
+  pounceBuildup: 0.3
   pounceHitSpan: 0
   pouceRecover: 0.5
   pounceLength: 5
   viewDistance: 20
   attackDistance: 0.5
   pather: {fileID: 1889767234}
+  destinationSetter: {fileID: 0}
   pack: {fileID: 308090477}
   SMB: {fileID: 0}
   thisGameObject: {fileID: 0}
@@ -3480,6 +3491,7 @@ MonoBehaviour:
   observeSpeed: 5
   rushSpeed: 7
   pounceSpeed: 10
+  fleeSpeed: 6
 --- !u!95 &1312209855
 Animator:
   serializedVersion: 3
@@ -4795,13 +4807,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   pounceDmg: 5
-  pounceBuildup: 0.1
+  pounceBuildup: 0.3
   pounceHitSpan: 0
   pouceRecover: 0.5
   pounceLength: 5
   viewDistance: 20
   attackDistance: 0.5
   pather: {fileID: 1889767234}
+  destinationSetter: {fileID: 0}
   pack: {fileID: 308090477}
   SMB: {fileID: 0}
   thisGameObject: {fileID: 0}
@@ -4813,6 +4826,7 @@ MonoBehaviour:
   observeSpeed: 5
   rushSpeed: 7
   pounceSpeed: 10
+  fleeSpeed: 6
 --- !u!95 &1889767237
 Animator:
   serializedVersion: 3
@@ -5249,13 +5263,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   pounceDmg: 5
-  pounceBuildup: 0.1
+  pounceBuildup: 0.3
   pounceHitSpan: 0
   pouceRecover: 0.5
   pounceLength: 5
   viewDistance: 20
   attackDistance: 0.5
   pather: {fileID: 1889767234}
+  destinationSetter: {fileID: 0}
   pack: {fileID: 308090477}
   SMB: {fileID: 0}
   thisGameObject: {fileID: 0}
@@ -5267,6 +5282,7 @@ MonoBehaviour:
   observeSpeed: 5
   rushSpeed: 7
   pounceSpeed: 10
+  fleeSpeed: 6
 --- !u!95 &1928182506
 Animator:
   serializedVersion: 3

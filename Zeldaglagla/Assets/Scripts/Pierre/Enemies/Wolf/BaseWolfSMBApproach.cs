@@ -11,13 +11,14 @@ public class BaseWolfSMBApproach : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         baseWolf.baseWolfSMBState = BaseWolf.BaseWolfSMBState.APPROACH;
+        baseWolf.destinationSetter.enabled = true;
         baseWolf.pather.maxSpeed = baseWolf.approachSpeed;
         Debug.LogWarning("HEOOOO");
-        foreach (GameObject holder in GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPackCircle>().holders)
+        foreach (GameObject holder in baseWolf.player.GetComponent<PlayerPackCircle>().holders)
         {
             if (holder.GetComponent<WolfHolder>().wolf == baseWolf.gameObject)
             {
-                baseWolf.GetComponent<AIDestinationSetter>().target = holder.transform;
+                baseWolf.destinationSetter.target = holder.transform;
                 Debug.LogWarning("Attached");
                 break;
             }
@@ -28,8 +29,21 @@ public class BaseWolfSMBApproach : StateMachineBehaviour
     
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (baseWolf.destinationSetter.target == null)
+        {
+            baseWolf.destinationSetter.enabled = true;
+            foreach (GameObject holder in baseWolf.player.GetComponent<PlayerPackCircle>().holders)
+            {
+                if (holder.GetComponent<WolfHolder>().wolf == baseWolf.gameObject)
+                {
+                    baseWolf.destinationSetter.target = holder.transform;
+                    Debug.LogWarning("Attached");
+                    break;
+                }
+            }
+        }
         Transform player = GameObject.FindGameObjectWithTag("Player").transform;
-        if (Vector2.Distance(player.position, baseWolf.transform.position) < baseWolf.pack.avoidDistance)
+        if (baseWolf.ToPlayer().magnitude < baseWolf.pack.avoidDistance)
         {
             Vector2 wolfToPlayer = baseWolf.transform.position - GameObject.FindGameObjectWithTag("Player").transform.position;
             float adjust = baseWolf.pack.avoidDistance / Vector2.Distance(player.position, baseWolf.transform.position);
@@ -38,7 +52,7 @@ public class BaseWolfSMBApproach : StateMachineBehaviour
             Debug.LogWarning("Trying to avoid");
             //(baseWolf.pack.circleDistance / Vector2.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, this.baseWolf.transform.position)) 
             //* 
-            //baseWolf.GetComponent<AIDestinationSetter>().enabled = false;
+            //baseWolf.destinationSetter.enabled = false;
         }
     }
 

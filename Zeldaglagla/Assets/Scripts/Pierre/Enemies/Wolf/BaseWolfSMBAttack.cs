@@ -21,7 +21,7 @@ public class BaseWolfSMBAttack : StateMachineBehaviour
         baseWolf.baseWolfSMBState = BaseWolf.BaseWolfSMBState.ATTACK;
         baseWolf.pather.maxSpeed = baseWolf.observeSpeed;
         Debug.LogWarning("HEOOOO");
-        baseWolf.GetComponent<AIDestinationSetter>().target = GameObject.FindGameObjectWithTag("Player").transform;
+        baseWolf.destinationSetter.target = GameObject.FindGameObjectWithTag("Player").transform;
         cmbtState = CmbtState.NONE;
     }
 
@@ -68,7 +68,7 @@ public class BaseWolfSMBAttack : StateMachineBehaviour
                 }
                 break;
             case CmbtState.RECOVER:
-                baseWolf.GetComponent<AIDestinationSetter>().enabled = true;
+                baseWolf.destinationSetter.enabled = true;
                 baseWolf.pather.maxSpeed = baseWolf.observeSpeed;
                 recover += Time.deltaTime;
                 if (recover >= recoverTime)
@@ -82,7 +82,7 @@ public class BaseWolfSMBAttack : StateMachineBehaviour
 
     void RunCast()
     {
-        baseWolf.GetComponent<AIDestinationSetter>().enabled = false;
+        baseWolf.destinationSetter.enabled = false;
         baseWolf.pather.maxSpeed = baseWolf.pounceSpeed;
         RaycastHit2D hit2D;
         float hitLength = baseWolf.pounceLength;

@@ -63,12 +63,12 @@ public class BaseWolfSMBAttack : StateMachineBehaviour
                 baseWolf.Attack();
                 if (baseWolf.pather.remainingDistance <= 0.5)
                 {
+                    baseWolf.destinationSetter.enabled = true;
                     cmbtState = CmbtState.RECOVER;
                     recover = 0;
                 }
                 break;
             case CmbtState.RECOVER:
-                baseWolf.destinationSetter.enabled = true;
                 baseWolf.pather.maxSpeed = baseWolf.observeSpeed;
                 recover += Time.deltaTime;
                 if (recover >= recoverTime)
@@ -97,6 +97,7 @@ public class BaseWolfSMBAttack : StateMachineBehaviour
         Vector2 nik = target - baseWolf.transform.position;
         nik.Normalize();
         vectorToSprint = nik * hitLength;
+
 
         baseWolf.pather.destination = baseWolf.transform.position + vectorToSprint;
         baseWolf.pather.SearchPath();

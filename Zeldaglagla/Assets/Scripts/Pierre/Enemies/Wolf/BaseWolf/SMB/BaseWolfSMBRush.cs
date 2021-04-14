@@ -13,15 +13,14 @@ public class BaseWolfSMBRush : StateMachineBehaviour
         baseWolf.baseWolfSMBState = BaseWolf.BaseWolfSMBState.RUSH;
         baseWolf.pather.maxSpeed = baseWolf.rushSpeed;
         Debug.LogWarning("HEOOOO");
-        baseWolf.destinationSetter.target = GameObject.FindGameObjectWithTag("Player").transform;
-        Debug.LogWarning("Attached");
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPackCircle>().SetCircleSize(baseWolf.pack.rushCircleSize);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Vector2.Distance(baseWolf.transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) < baseWolf.attackDistance)
+        if (baseWolf.pather.remainingDistance < 0.5f)
         {
             baseWolf.pack.StartHarassing();
             baseWolf.pack.SetNextAttack();

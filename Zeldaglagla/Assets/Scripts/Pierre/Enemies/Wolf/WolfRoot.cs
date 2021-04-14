@@ -12,7 +12,6 @@ public class WolfRoot : MonsterRoot
     public AIPath pather;
     public AIDestinationSetter destinationSetter;
     public PackManager pack;
-    public Animator SMB;
     public GameObject thisGameObject;
     public bool hasAttacked;
 
@@ -21,7 +20,6 @@ public class WolfRoot : MonsterRoot
     private void Awake()
     {
         thisGameObject = this.gameObject;
-        SMB = GetComponent<Animator>();
         pounceAtk = new AttackProfile(new DamageStruct(pounceDmg), pounceBuildup, pouceRecover, pounceHitSpan);
         pack = GetComponentInParent<PackManager>();
         pather = GetComponent<AIPath>();

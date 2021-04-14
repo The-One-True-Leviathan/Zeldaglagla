@@ -70,8 +70,5 @@ public class BaseWolf : WolfRoot
         SMB.Play("Stunned");
     }
 
-    public Vector3 ToPlayer()
-    {
-        return player.transform.position - transform.position;
-    }
+    
 }

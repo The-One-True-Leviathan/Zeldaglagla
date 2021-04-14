@@ -53,7 +53,7 @@ namespace Monsters
         public GameObject player;
         [NonSerialized]
         public Collider2D playerCollider;
-
+        public Animator SMB;
         public LayerMask blocksLOS;
 
 
@@ -64,6 +64,7 @@ namespace Monsters
         {
             player = GameObject.FindGameObjectWithTag("Player");
             playerCollider = player.GetComponent<Collider2D>();
+            SMB = GetComponent<Animator>();
         }
 
         virtual public bool Damage(DamageStruct damageTaken)
@@ -131,6 +132,9 @@ namespace Monsters
             stunned = false;
             stunRecoveredEvent.Invoke(CombatEvents.stunContext);
         }
-
+        public Vector3 ToPlayer()
+        {
+            return player.transform.position - transform.position;
+        }
     }
 }

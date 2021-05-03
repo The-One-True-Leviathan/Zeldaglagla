@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Combat;
+using Monsters;
 
 public class HDO_Piolet : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class HDO_Piolet : MonoBehaviour
 
 
     HDO_UniversalEnemy ue;
+    MonsterRoot mr;
+    DamageStruct dam;
 
     [Header("FreezeFrame Stats")]
 
@@ -52,11 +55,18 @@ public class HDO_Piolet : MonoBehaviour
     {
         damage = cc.attackDamage;
         shieldBox = shield.GetComponentInChildren<BoxCollider2D>();
+
+        dam = new DamageStruct(damage);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(damage != cc.attackDamage)
+        {
+            damage = cc.attackDamage;
+        }
+
         CheckCollision();
 
         if (resetFF)
@@ -163,13 +173,13 @@ public class HDO_Piolet : MonoBehaviour
                     StartCoroutine(FreezeFrame());
                     ffed.Add(e);
                     freeezeFraming = true;
-                    ue = e.gameObject.GetComponent<HDO_UniversalEnemy>();
-                    ue.currentHealthPoints -= damage;
+                    mr = e.gameObject.GetComponent<MonsterRoot>();
+                    mr.Damage(dam);
                 }
                 else if (!(ffed.Contains(e)))
                 {
-                    ue = e.gameObject.GetComponent<HDO_UniversalEnemy>();
-                    ue.currentHealthPoints -= damage;
+                    mr = e.gameObject.GetComponent<MonsterRoot>();
+                    mr.Damage(dam);
                     ffed.Add(e);
                 }
             }

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Monsters;
+using Combat;
 
 public class HDO_Torch : MonoBehaviour
 {
@@ -19,6 +21,11 @@ public class HDO_Torch : MonoBehaviour
     [SerializeField]
     ContactFilter2D obstacles, enemy;
 
+    DamageStruct trueDamage, explosionDam;
+
+    MonsterRoot root;
+    List<MonsterRoot> damaged = null;
+
     [System.NonSerialized]
     public Vector3 movement;
 
@@ -27,6 +34,8 @@ public class HDO_Torch : MonoBehaviour
     {
         ExplosionCollider.radius = explosionRadius;
         self = GetComponent<CircleCollider2D>();
+        trueDamage = new DamageStruct(torchDamage);
+        explosionDam= new DamageStruct(explosionDamage);
     }
 
     // Update is called once per frame
@@ -42,38 +51,56 @@ public class HDO_Torch : MonoBehaviour
     void CheckCollision()
     {
         results = Physics2D.OverlapCollider(self, obstacles, result);
-        result = Physics2D.OverlapCircleAll(transform.position, self.radius, obstacles.layerMask);
-
-        foreach (Collider2D nik in result)
-        {
-            Explosion();
-        }
+        result = Physics2D.OverlapCircleAll(transform.position, self.radius, obstacles.layerMask);       
         
 
         Debug.Log(Physics2D.OverlapCollider(self, obstacles, result));
-        if (results != 0)
+        if (results != 0 && !wallHit)
         {
-            Explosion();
+            wallHit = true;
+            CheckExplosion();
+
+            if (result[0].GetComponent<MonsterRoot>() != null )
+            {
+                root = result[0].GetComponent<MonsterRoot>();
+                root.Damage(trueDamage);
+            }
+
         }
 
     }
 
-    void Explosion()
+    void CheckExplosion()
     {
         Debug.Log("boom");
         ExplosionCollider.enabled = true;
+        Collider2D[] exploCaught = new Collider2D[0];
+
+        exploCaught = Physics2D.OverlapCircleAll(transform.position, ExplosionCollider.radius, enemy.layerMask);
+
+        foreach(Collider2D col in exploCaught)
+        {
+            
+            root = col.GetComponent<MonsterRoot>();
+            if (!damaged.Contains(root))
+            {
+                Explosion(root);
+                damaged.Add(root);
+            }
+            
+        }
+
         StartCoroutine(Death());
+    }
+
+    void Explosion(MonsterRoot monster)
+    {
+        monster.Damage(explosionDam);     
     }
 
     IEnumerator Death()
     {
-        /*int results = Physics2D.OverlapCollider(ExplosionCollider, enemy, result);
-
-        for(int i = 0; i < result.Length; i++)
-        {
-
-        }*/
-
+        
         yield return new WaitForSeconds(explosionDuration);
 
         Destroy(this.gameObject);

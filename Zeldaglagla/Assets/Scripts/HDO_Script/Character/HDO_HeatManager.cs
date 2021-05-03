@@ -6,13 +6,27 @@ using UnityEngine.UI;
 public class HDO_HeatManager : MonoBehaviour
 {
     public Image heatBar;
+    [SerializeField]
+    HDO_TemperatureManager temp;
 
     public float heatValue;
     public int maxHeat;
     public float heatModifierPerSecond;
 
+    [Header("Modifiers")]
+    [SerializeField]
+    float noGainTemperature;
+    [SerializeField]
+    float heatMultiplier;
+
     // Update is called once per frame
     void Update()
+    {
+        Adjust();
+        Heat();
+    }
+
+    void Heat()
     {
         if (heatBar)
         {
@@ -20,9 +34,14 @@ public class HDO_HeatManager : MonoBehaviour
         }
         heatValue += heatModifierPerSecond * Time.deltaTime;
 
-        if(heatValue > maxHeat)
+        if (heatValue > maxHeat)
         {
             heatValue = maxHeat;
         }
+    }
+
+    void Adjust()
+    {
+        heatModifierPerSecond = (temp.ambientTemperature - noGainTemperature) * heatMultiplier;
     }
 }

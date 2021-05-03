@@ -2865,9 +2865,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heatBar: {fileID: 0}
+  temp: {fileID: 0}
   heatValue: 10
   maxHeat: 10
   heatModifierPerSecond: 1
+  noGainTemperature: 0
+  heatMultiplier: 0
 --- !u!1 &1104699318
 GameObject:
   m_ObjectHideFlags: 0

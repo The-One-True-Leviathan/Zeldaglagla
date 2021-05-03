@@ -56,15 +56,16 @@ namespace Monsters
         public Animator SMB;
         public LayerMask blocksLOS;
 
-
         public Action<CombatEvents.StunContext> stunnedEvent;
         public Action<CombatEvents.StunContext> stunRecoveredEvent;
 
-        private void Awake()
+        public void AwakeDuPauvre()
         {
             player = GameObject.FindGameObjectWithTag("Player");
             playerCollider = player.GetComponent<Collider2D>();
             SMB = GetComponent<Animator>();
+
+            stunRecoveredEvent += ctx => GoBackToState();
         }
 
         virtual public bool Damage(DamageStruct damageTaken)
@@ -135,6 +136,11 @@ namespace Monsters
         public Vector3 ToPlayer()
         {
             return player.transform.position - transform.position;
+        }
+
+        virtual public void GoBackToState()
+        {
+
         }
     }
 }

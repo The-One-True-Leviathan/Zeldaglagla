@@ -12,11 +12,10 @@ namespace Combat
         public static UnityEvent monsterWasStunned;
         public static Action<HitContext> monsterWasHit;
         public static HitContext hitStunned = new HitContext(true), hitNotStunned = new HitContext(false);
-        public static StunContext stunContext = new StunContext();
+        public static StunContext stunContext;
 
         public struct StunContext
         {
-
         }
         public struct HitContext
         {

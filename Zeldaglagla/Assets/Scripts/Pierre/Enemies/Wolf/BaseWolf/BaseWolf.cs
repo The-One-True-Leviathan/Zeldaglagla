@@ -20,12 +20,9 @@ public class BaseWolf : WolfRoot
         SMB.GetBehaviour<BaseWolfSMBHarass>().baseWolf = this;
         SMB.GetBehaviour<BaseWolfSMBAttack>().baseWolf = this;
         SMB.GetBehaviour<BaseWolfSMBFlee>().baseWolf = this;
-
-
-        stunRecoveredEvent += ctx => GoBackToState(); 
     }
 
-    void GoBackToState()
+    override public void GoBackToState()
     {
         switch (baseWolfSMBState)
         {
@@ -69,6 +66,4 @@ public class BaseWolf : WolfRoot
         isInAttack = false;
         SMB.Play("Stunned");
     }
-
-    
 }

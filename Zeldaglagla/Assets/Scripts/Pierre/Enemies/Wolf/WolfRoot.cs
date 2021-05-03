@@ -25,6 +25,8 @@ public class WolfRoot : MonsterRoot
         pather = GetComponent<AIPath>();
         destinationSetter = GetComponent<AIDestinationSetter>();
         player = GameObject.FindGameObjectWithTag("Player");
+
+        AwakeDuPauvre();
     }
 
     public void GoToApproach()

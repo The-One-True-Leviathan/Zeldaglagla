@@ -42,6 +42,9 @@ public class HDO_HeatManager : MonoBehaviour
 
     void Adjust()
     {
-        heatModifierPerSecond = (temp.ambientTemperature - noGainTemperature) * heatMultiplier;
+        if (temp)
+        {
+            heatModifierPerSecond = (temp.ambientTemperature - noGainTemperature) * heatMultiplier;
+        }
     }
 }

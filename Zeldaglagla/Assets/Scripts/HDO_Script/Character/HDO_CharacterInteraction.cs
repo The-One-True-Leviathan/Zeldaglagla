@@ -40,6 +40,8 @@ public class HDO_CharacterInteraction : MonoBehaviour
     [SerializeField]
     List<HDO_InteractionSO> doneUniqueInteraction = null;
 
+    public List<HDO_ItemSO> inventory = null;
+
     bool manualInteraction, triggerInteraction;
 
     private void Start()
@@ -78,6 +80,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
             return;
         }
 
+        j = 0;
         manualInteraction = true;
 
         if (interaction.severalInteractions && !triggerInteraction)
@@ -163,6 +166,16 @@ public class HDO_CharacterInteraction : MonoBehaviour
             EnemyEvent(inter);
         }
 
+        if (inter.interactionType == HDO_InteractionSO.InteractionType.item)
+        {
+            GetItem(inter);
+        }
+
+        if(inter.interactionType == HDO_InteractionSO.InteractionType.needItem)
+        {
+            NeedItem(inter);
+        }
+
         if (inter.isUnique)
         {
             doneUniqueInteraction.Add(inter);
@@ -231,6 +244,27 @@ public class HDO_CharacterInteraction : MonoBehaviour
             foreach(GameObject toSpawn in inter.enemiesToSpawn)
             {
                 Instantiate(toSpawn, new Vector3(interaction.spawnPoint.transform.position.x, interaction.spawnPoint.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+            }
+        }
+    }
+
+    void GetItem(HDO_InteractionSO inter)
+    {
+        inventory.Add(inter.item);
+    }
+
+    void NeedItem(HDO_InteractionSO inter)
+    {
+        if (inventory.Contains(inter.neededItem))
+        {
+            if(inter.consumesItem)
+            {
+                inventory.Remove(inter.neededItem);
+            }
+
+            foreach(HDO_Interactive interactive in interaction.interactives)
+            {
+                interactive.Action();
             }
         }
     }

@@ -12,15 +12,5 @@ public class HDO_Shield : MonoBehaviour
     float perfectShieldTiming, shieldDecreaseRate, shieldRegrowRate, shieldMin;
     float elapsedTime;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

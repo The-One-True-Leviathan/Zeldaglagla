@@ -14,7 +14,7 @@ public class HDO_CharacterCombat : MonoBehaviour
 
     [Header("Combat Statistics")]
     public bool canStrike;
-    public int attackDamage;
+    public float attackDamage, attackStun, attackStunDuration;
     [SerializeField]
     float attackCooldown;
     float elapsedTimeA;

@@ -742,6 +742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5311234934450637272}
   - component: {fileID: 5311234934450637273}
+  - component: {fileID: 2394684094610275269}
   - component: {fileID: 5311234934450637276}
   - component: {fileID: 5311234934450637274}
   - component: {fileID: 5311234934450637278}
@@ -825,6 +826,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2394684094610275269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5311234934450637275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8702c8bb53e9947a5d29ec3151738c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holders: []
+  center: {fileID: 5311234934450637275}
+  sizeMultiplier: 1
+  shrinkSpeed: 0.05
+  rotating: 0
+  pack: {fileID: 0}
 --- !u!114 &5311234934450637276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,6 +879,7 @@ MonoBehaviour:
   EVAADialog: {fileID: 0}
   innerDialog: {fileID: 5311234933867964702}
   toDoInteractions: []
+  doneUniqueInteraction: []
 --- !u!114 &5311234934450637274
 MonoBehaviour:
   m_ObjectHideFlags: 0

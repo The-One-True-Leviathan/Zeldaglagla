@@ -82,11 +82,15 @@ public class HDO_Torch : MonoBehaviour
         {
             
             root = col.GetComponent<MonsterRoot>();
-            if (!damaged.Contains(root))
+            if(damaged.Count != 0)
             {
-                Explosion(root);
-                damaged.Add(root);
+                if (!damaged.Contains(root))
+                {
+                    Explosion(root);
+                    damaged.Add(root);
+                }
             }
+            
             
         }
 

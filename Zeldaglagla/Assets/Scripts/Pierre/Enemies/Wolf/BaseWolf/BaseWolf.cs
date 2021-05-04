@@ -64,6 +64,7 @@ public class BaseWolf : WolfRoot
     {
         base.Stun(stunTaken);
         isInAttack = false;
+        Debug.Log("oh no je suis un loup et je suis stun ouhlala");
         SMB.Play("Stunned");
     }
 }

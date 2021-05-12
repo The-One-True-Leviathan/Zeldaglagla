@@ -11,6 +11,8 @@ public class BaseShooterBehavior : ShooterRoot
     public bool cyclicPatrol;
     public List<Transform> patrolTargets = new List<Transform>();
 
+    public GameObject projectile;
+
     // Start is called before the first frame update
     void Start()
     {

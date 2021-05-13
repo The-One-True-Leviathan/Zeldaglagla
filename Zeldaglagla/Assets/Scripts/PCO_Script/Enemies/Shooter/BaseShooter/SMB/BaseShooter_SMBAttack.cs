@@ -63,6 +63,7 @@ public class BaseShooter_SMBAttack : StateMachineBehaviour
                 {
                     shooter.pather.enabled = true;
                     shooter.destinationSetter.enabled = true;
+                    Debug.Log("Shooter Relocating");
                     animator.Play("Relocate");
                 }
                 break;
@@ -73,7 +74,12 @@ public class BaseShooter_SMBAttack : StateMachineBehaviour
     void Shoot()
     {
         shotsFired++;
-        Instantiate(shooter.projectile, shooter.transform.position, Quaternion.LookRotation(Vector3.forward, shooter.ToPlayer().normalized));
+        Projectile_Behaviour projectile;
+        projectile = Instantiate(shooter.projectile, shooter.transform.position, Quaternion.LookRotation(Vector3.forward, shooter.ToPlayer().normalized)).GetComponent<Projectile_Behaviour>();
+        projectile.direction = shooter.ToPlayer().normalized;
+        projectile.damage = shooter.shotDmg;
+        projectile.knockBack = shooter.shotKB;
+        projectile.speed = shooter.shotSpeed;
         Debug.LogWarning("Shot fired !");
     }
 

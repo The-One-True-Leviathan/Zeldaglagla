@@ -16,10 +16,11 @@ public class BaseShooterBehavior : ShooterRoot
     // Start is called before the first frame update
     void Start()
     {
+        AwakeDuPauvre();
         SMB.GetBehaviour<BaseShooter_SMBWander>().shooter = this;
-        //SMB.GetBehaviour<BaseShooter_SMBPause>().shooter = this;
+        SMB.GetBehaviour<BaseShooter_SMBPause>().shooter = this;
         SMB.GetBehaviour<BaseShooter_SMBApproach>().shooter = this;
-        //SMB.GetBehaviour<BaseShooter_SMBAttack>().shooter = this;
+        SMB.GetBehaviour<BaseShooter_SMBAttack>().shooter = this;
         SMB.GetBehaviour<BaseShooter_SMBRelocate>().shooter = this;
         SMB.GetBehaviour<BaseShooter_SMBFlee>().shooter = this;
     }

@@ -38,6 +38,7 @@ public class BaseShooter_SMBFlee : StateMachineBehaviour
         }
         if (shooter.ToPlayer().magnitude > shooter.minAtkDistance)
         {
+            Debug.Log("Shooter Stops Fleeing");
             animator.Play("Attack");
         }
     }

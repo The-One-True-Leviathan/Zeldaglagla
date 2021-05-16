@@ -78,7 +78,9 @@ public class BaseShooter_SMBAttack : StateMachineBehaviour
         projectile = Instantiate(shooter.projectile, shooter.transform.position, Quaternion.LookRotation(Vector3.forward, shooter.ToPlayer().normalized)).GetComponent<Projectile_Behaviour>();
         projectile.direction = shooter.ToPlayer().normalized;
         projectile.damage = shooter.shotDmg;
-        projectile.knockBack = shooter.shotKB;
+        projectile.knockBackStrength = shooter.shotKBStrength;
+        projectile.knockBackSpeed = shooter.shotKBSpeed;
+        projectile.knockBackTime = shooter.shotKBTime;
         projectile.speed = shooter.shotSpeed;
         Debug.LogWarning("Shot fired !");
     }

@@ -156,8 +156,9 @@ public class HDO_Piolet : MonoBehaviour
 
     }
 
-    public void Defend()
+    public bool Defend()
     {
+        bool returnValue = false;
         if (!shielding)
         {
             shieldBox.enabled = true;
@@ -175,26 +176,25 @@ public class HDO_Piolet : MonoBehaviour
 
             if(result != null)
             {
-                BaseWolf baseWolf;
                 MonsterRoot mr;
-                baseWolf = result[0].GetComponent<BaseWolf>();
                 mr = result[0].GetComponent<MonsterRoot>();
 
-                if (baseWolf.Attack())
+                if (mr.isInAttack)
                 {
                     protecting = true;
                     Debug.Log("protecting");
                     if(elapsedTime >= 0)
                     {
                         Debug.Log("stun !");
-                        mr.Damage(new DamageStruct(0, shieldStun));
+                        mr.Stun(shieldStun);
+                        returnValue = true;
                     }
                 }
             }
 
             elapsedTime -= Time.deltaTime;
         }
-        
+        return returnValue;
     }
 
     void CheckCollision()

@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Combat;
 
 public class Projectile_Behaviour : MonoBehaviour
 {
-    public float lifeTime = 5, damage, knockBack, speed, size;
+    public float lifeTime = 5, damage, knockBackStrength = 1, knockBackSpeed = 5, knockBackTime = 0.2f, speed = 16, size;
+    DamageStruct atk;
     public Vector3 direction;
     GameObject player;
     // Start is called before the first frame update
     void Start()
     {
+        KnockBackStruct knockBack = new KnockBackStruct(transform.position, knockBackStrength, knockBackSpeed, knockBackTime);
+        atk = new DamageStruct(damage, knockBack);
         Destroy(gameObject, lifeTime);
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -19,7 +23,13 @@ public class Projectile_Behaviour : MonoBehaviour
     {
         if ((transform.position - player.transform.position).sqrMagnitude < size * size)
         {
-            //damage player
+            if (player.GetComponent<HDO_CharacterCombat>())
+            {
+                player.GetComponent<HDO_CharacterCombat>().TakeDamage(atk, transform);
+            } else
+            {
+                Debug.LogError("Player has no HDO_CharacterCombat");
+            }
             Destroy(gameObject);
         }
         transform.position += direction * speed * Time.deltaTime;

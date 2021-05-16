@@ -60,9 +60,11 @@ public class BaseWolfSMBAttack : StateMachineBehaviour
                 }
                 break;
             case CmbtState.HITSPAN:
+                baseWolf.isInAttack = true;
                 baseWolf.Attack();
                 if (baseWolf.pather.remainingDistance <= 0.5)
                 {
+                    baseWolf.isInAttack = false;
                     baseWolf.destinationSetter.enabled = true;
                     cmbtState = CmbtState.RECOVER;
                     recover = 0;

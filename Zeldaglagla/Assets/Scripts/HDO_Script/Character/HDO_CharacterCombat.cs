@@ -12,6 +12,18 @@ public class HDO_CharacterCombat : MonoBehaviour
     [SerializeField]
     HDO_Piolet piolet;
 
+    //De la part de Pierre
+    PCO_PlayerKnockback playerKnockback;
+    [Header("Health")]
+    public float maxHealth = 20, currentHealth = 20;
+    [SerializeField]
+    const float immunityTime = 0.4f;
+    [SerializeField]
+    float deflectImmunityFactor = 1;
+    bool isInImmunity = false;
+    //Fin des bidouillages de Pierre ;3
+
+
     [Header("Combat Statistics")]
     public bool canStrike;
     public float attackDamage, attackStun, attackStunDuration;
@@ -33,6 +45,12 @@ public class HDO_CharacterCombat : MonoBehaviour
 
     private void Awake()
     {
+        if (deflectImmunityFactor == 0)
+        {
+            deflectImmunityFactor = 0.0001f;
+        }
+        playerKnockback = GetComponent<PCO_PlayerKnockback>();
+
         controls = new Controls();
 
         controls.UsualControls.Torch.performed += ctx => Torch();
@@ -81,8 +99,10 @@ public class HDO_CharacterCombat : MonoBehaviour
     void Deflect()
     {
         Debug.Log("Shield");
-        piolet.Defend();
-
+        if (piolet.Defend())
+        {
+            Immunity(immunityTime * deflectImmunityFactor);
+        }
     }
 
     void Strike()
@@ -119,6 +139,56 @@ public class HDO_CharacterCombat : MonoBehaviour
 
 
     }
+
+    //De la part de Pierre
+    public void TakeDamage(DamageStruct damage, Transform origin = null)
+    {
+        if (!isInImmunity)
+        {
+            currentHealth -= damage.dmg;
+            if (currentHealth <= 0)
+            {
+                currentHealth = 0;
+                Die();
+            }
+            else if (currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
+            if (damage.dmg > 0)
+            {
+                Immunity();
+            }
+
+            if (origin != null && damage.kb.str != 0)
+            {
+                Vector3 knockbackDirection = (transform.position - origin.position).normalized;
+                knockbackDirection *= damage.kb.spd;
+                playerKnockback.Knockback(knockbackDirection, damage.kb.lgt);
+            }
+        }
+    }
+
+    public void Die()
+    {
+
+    }
+
+    public void Immunity(float imunTime = immunityTime)
+    {
+        StopCoroutine(ImmunityCoroutine());
+        isInImmunity = false;
+        StartCoroutine(ImmunityCoroutine(imunTime));
+    }
+
+    IEnumerator ImmunityCoroutine(float imunTime = immunityTime)
+    {
+        isInImmunity = true;
+        yield return new WaitForSeconds(imunTime);
+        isInImmunity = false;
+    }
+    //Fin des bidouillages de Pierre ;3
+
 
     private void OnDisable()
     {

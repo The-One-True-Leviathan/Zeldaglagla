@@ -54,7 +54,13 @@ public class BaseWolf : WolfRoot
     {
         if (Vector2.Distance(transform.position, player.transform.position) < attackDistance)
         {
-            //damagePlayer
+            if (player.GetComponent<HDO_CharacterCombat>())
+            {
+                player.GetComponent<HDO_CharacterCombat>().TakeDamage(pounceAtk.dmg, transform);
+            } else
+            {
+                Debug.LogError("Player has no HDO_CharacterCombat");
+            }
             return true;
         }
         return false;

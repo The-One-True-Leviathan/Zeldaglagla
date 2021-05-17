@@ -54,6 +54,7 @@ namespace Monsters
         [NonSerialized]
         public Collider2D playerCollider;
         public Animator SMB;
+        public Animator Animator;
         public LayerMask blocksLOS;
 
         public Action<CombatEvents.StunContext> stunnedEvent;

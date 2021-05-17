@@ -145,10 +145,10 @@ TextureImporter:
       name: Blast_back_0
       rect:
         serializedVersion: 2
-        x: 140
-        y: 2387
-        width: 1969
-        height: 1961
+        x: 0
+        y: 2300
+        width: 2500
+        height: 2300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +166,10 @@ TextureImporter:
       name: Blast_back_1
       rect:
         serializedVersion: 2
-        x: 2881
-        y: 2346
-        width: 1973
-        height: 1839
+        x: 2500
+        y: 2300
+        width: 2500
+        height: 2300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,10 +187,10 @@ TextureImporter:
       name: Blast_back_2
       rect:
         serializedVersion: 2
-        x: 5410
-        y: 2373
-        width: 1969
-        height: 1801
+        x: 5000
+        y: 2300
+        width: 2500
+        height: 2300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,10 +208,10 @@ TextureImporter:
       name: Blast_back_3
       rect:
         serializedVersion: 2
-        x: 305
-        y: 76
-        width: 1970
-        height: 1862
+        x: 0
+        y: 0
+        width: 2500
+        height: 2300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,10 +229,10 @@ TextureImporter:
       name: Blast_back_4
       rect:
         serializedVersion: 2
-        x: 2631
-        y: 215
-        width: 1970
-        height: 1829
+        x: 2500
+        y: 0
+        width: 2500
+        height: 2300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

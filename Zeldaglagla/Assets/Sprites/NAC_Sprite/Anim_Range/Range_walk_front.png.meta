@@ -154,10 +154,10 @@ TextureImporter:
       name: Range_walk_front_0
       rect:
         serializedVersion: 2
-        x: 289
-        y: 5287
-        width: 1985
-        height: 1883
+        x: 0
+        y: 5000
+        width: 2500
+        height: 2500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +175,10 @@ TextureImporter:
       name: Range_walk_front_1
       rect:
         serializedVersion: 2
-        x: 2788
-        y: 5236
-        width: 1978
-        height: 1870
+        x: 2500
+        y: 5000
+        width: 2500
+        height: 2500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,10 +196,10 @@ TextureImporter:
       name: Range_walk_front_2
       rect:
         serializedVersion: 2
-        x: 5289
-        y: 5350
-        width: 2037
-        height: 1832
+        x: 5000
+        y: 5000
+        width: 2500
+        height: 2500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,10 +217,10 @@ TextureImporter:
       name: Range_walk_front_3
       rect:
         serializedVersion: 2
-        x: 287
-        y: 2901
-        width: 1988
-        height: 1861
+        x: 0
+        y: 2500
+        width: 2500
+        height: 2500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,10 +238,10 @@ TextureImporter:
       name: Range_walk_front_4
       rect:
         serializedVersion: 2
-        x: 2694
-        y: 2994
-        width: 2141
-        height: 1681
+        x: 2500
+        y: 2500
+        width: 2500
+        height: 2500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +259,10 @@ TextureImporter:
       name: Range_walk_front_5
       rect:
         serializedVersion: 2
-        x: 5165
-        y: 2982
-        width: 2045
-        height: 1712
+        x: 5000
+        y: 2500
+        width: 2500
+        height: 2500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,10 +280,10 @@ TextureImporter:
       name: Range_walk_front_6
       rect:
         serializedVersion: 2
-        x: 169
-        y: 560
-        width: 2065
-        height: 1675
+        x: 0
+        y: 0
+        width: 2500
+        height: 2500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,10 +301,10 @@ TextureImporter:
       name: Range_walk_front_7
       rect:
         serializedVersion: 2
-        x: 2692
-        y: 576
-        width: 2061
-        height: 1601
+        x: 2500
+        y: 0
+        width: 2500
+        height: 2500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

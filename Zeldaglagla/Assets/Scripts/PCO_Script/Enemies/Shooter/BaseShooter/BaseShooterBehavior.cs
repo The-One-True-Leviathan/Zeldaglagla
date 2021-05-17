@@ -10,7 +10,7 @@ public class BaseShooterBehavior : ShooterRoot
     public float walkSpeed, runSpeed, patrolWaitTime, pauseTime;
     public bool cyclicPatrol;
     public List<Transform> patrolTargets = new List<Transform>();
-    int animationIndex; //0 = Idle, 1 = Idle up, 2 = Walk, 3 = Walk up, 4 = Buildup, 5 = Buildup up, 6 = shoot, 7 = shoot up;
+    int animationIndex; //0 = Idle, 1 = Idle up, 2 = Walk, 3 = Walk up, 4 = Buildup, 5 = Buildup up, 6 = Shoot, 7 = Shoot up, 8 = Recover, 9 = Recover up
     bool isUp, isRight;
     public GameObject projectile;
 
@@ -64,33 +64,49 @@ public class BaseShooterBehavior : ShooterRoot
 
     }
 
-    public void SetAnim(int anim)
+    public void SetAnim(int anim, Vector3 direction)
     {
         animationIndex = anim;
+        if (direction.x > 0)
+        {
+            isRight = true;
+        }
+        else if (direction.x < 0)
+        {
+            isRight = false;
+        }
+        if (direction.y > 0)
+        {
+            isUp = true;
+            if (animationIndex != -1) animationIndex += 1;
+        }
+        else if (direction.y < 0)
+        {
+            isUp = false;
+        }
     }
     void AnimationManager()
     {
         switch (baseShooterSMBState)
         {
             case BaseShooterSMBState.WANDER:
-                AnimateWithWalkOrientation();
-                animationIndex = 1;
+                if (!AnimateWithWalkOrientation()) animationIndex = 0;
                 break;
             case BaseShooterSMBState.APPROACH:
-                AnimateWithWalkOrientation();
-                animationIndex = 1;
+                if (!AnimateWithWalkOrientation()) animationIndex = 0;
                 break;
             case BaseShooterSMBState.FLEE:
-                AnimateWithWalkOrientation();
-                animationIndex = 1;
+                if (!AnimateWithWalkOrientation()) animationIndex = 0;
                 break;
             case BaseShooterSMBState.RELOCATE:
-                AnimateWithWalkOrientation();
-                animationIndex = 1;
+                if (!AnimateWithWalkOrientation()) animationIndex = 0;
+                break;
+            case BaseShooterSMBState.PAUSE:
+                animationIndex = 0;
                 break;
         }
-        if (isRight) animator.transform.localScale = new Vector3(-1, 1, 1);
-        if (isUp && animationIndex != -1) animationIndex += 1;
+        if (isRight) animator.transform.localScale = new Vector3(-1, 1, 1); else animator.transform.localScale = new Vector3(1, 1, 1);
+        //if (isUp && animationIndex != -1) animationIndex += 1;
 
         switch (animationIndex)
         {
@@ -118,26 +134,35 @@ public class BaseShooterBehavior : ShooterRoot
             case 7:
                 animator.Play("PCO_Range_Shoot_Back");
                 break;
+            case 8:
+                animator.Play("PCO_Range_Recover_Front");
+                break;
+            case 9:
+                animator.Play("PCO_Range_Recover_Back");
+                break;
         }
     }
 
-    void AnimateWithWalkOrientation()
+    bool AnimateWithWalkOrientation()
     {
-        if (pather.desiredVelocity.x > 0)
+        if (pather.velocity.x > 0.12)
         {
             isRight = true;
-        } else if (pather.desiredVelocity.x < 0)
+        } else if (pather.velocity.x < -0.12)
         {
             isRight = false;
         }
-        if (pather.desiredVelocity.y > 0)
+        if (pather.velocity.y > 0.12)
         {
             isUp = true;
-        } else if (pather.desiredVelocity.y < 0)
+            animationIndex = 3;
+        } else if (pather.velocity.y < -0.12)
         {
             isUp = false;
+            animationIndex = 2;
         }
-        if (pather.desiredVelocity.magnitude == 0) animationIndex = 0;
+        if (pather.velocity.magnitude < 0.1) return false;
+        return true;
     }
 
 }

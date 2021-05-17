@@ -91,8 +91,8 @@ MonoBehaviour:
   playerInSight: 0
   playerInMemory: 0
   baseShooterSMBState: 0
-  walkSpeed: 4
-  runSpeed: 8
+  walkSpeed: 3
+  runSpeed: 6
   patrolWaitTime: 1
   pauseTime: 1
   cyclicPatrol: 1

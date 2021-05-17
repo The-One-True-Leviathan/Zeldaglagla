@@ -115,6 +115,7 @@ namespace Monsters
         {
             CombatEvents.monsterWasKilled.Invoke();
             dead = true;
+            Destroy(gameObject);
         }
 
         virtual public void Stun(StunStruct stunTaken)

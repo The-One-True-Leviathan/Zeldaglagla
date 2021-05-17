@@ -174,10 +174,10 @@ public class HDO_Piolet : MonoBehaviour
 
             int results = Physics2D.OverlapCollider(shieldBox, enemy, result);
 
-            if(result != null)
+            foreach (Collider2D monster in result)
             {
                 MonsterRoot mr;
-                mr = result[0].GetComponent<MonsterRoot>();
+                mr = monster.GetComponent<MonsterRoot>();
 
                 if (mr.isInAttack)
                 {

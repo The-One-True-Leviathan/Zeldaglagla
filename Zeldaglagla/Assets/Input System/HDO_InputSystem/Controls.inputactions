@@ -262,7 +262,7 @@
                 {
                     "name": "up",
                     "id": "11831fc6-d0c9-491f-812d-fb802c63e9f6",
-                    "path": "<Keyboard>/z",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -284,7 +284,7 @@
                 {
                     "name": "left",
                     "id": "37971cc4-d0b3-43ce-8c4a-21eb8878bbf8",
-                    "path": "<Keyboard>/q",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -307,7 +307,10 @@ MonoBehaviour:
   shieldRegrowRate: 0.05
   shieldMin: 0.15
   shieldMax: 0.75
+  shieldStunAmount: 0
+  shieldStunLength: 0
   shielding: 0
+  protecting: 0
 --- !u!212 &7808011128689221643
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -748,6 +751,7 @@ GameObject:
   - component: {fileID: 5311234934450637278}
   - component: {fileID: 5311234934450637277}
   - component: {fileID: 5311234934450637279}
+  - component: {fileID: 1319476252139588231}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -880,6 +884,7 @@ MonoBehaviour:
   innerDialog: {fileID: 5311234933867964702}
   toDoInteractions: []
   doneUniqueInteraction: []
+  inventory: []
 --- !u!114 &5311234934450637274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,8 +935,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hm: {fileID: 1113747591}
   piolet: {fileID: 8275461240802376916}
+  maxHealth: 20
+  currentHealth: 20
+  deflectImmunityFactor: 1
   canStrike: 1
   attackDamage: 3
+  attackStun: 0
+  attackStunDuration: 0
   attackCooldown: 1
   pioletAnim: {fileID: 7695630634022016124}
   shot: {fileID: 7801563822568252800, guid: 580eebb0ab7c878479a61f9a82315a88, type: 3}
@@ -966,6 +976,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1319476252139588231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5311234934450637275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89004897957dd754e8348775e101977f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8992833850383718440
 GameObject:
   m_ObjectHideFlags: 0

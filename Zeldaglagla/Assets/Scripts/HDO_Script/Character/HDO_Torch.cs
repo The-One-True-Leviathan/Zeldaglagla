@@ -24,7 +24,7 @@ public class HDO_Torch : MonoBehaviour
     DamageStruct trueDamage, explosionDam;
 
     MonsterRoot root;
-    List<MonsterRoot> damaged = null;
+    public List<MonsterRoot> damaged = null;
 
     [System.NonSerialized]
     public Vector3 movement;
@@ -82,11 +82,15 @@ public class HDO_Torch : MonoBehaviour
         {
             
             root = col.GetComponent<MonsterRoot>();
-            if (!damaged.Contains(root))
+            if(damaged.Count != 0)
             {
-                Explosion(root);
-                damaged.Add(root);
+                if (!damaged.Contains(root))
+                {
+                    Explosion(root);
+                    damaged.Add(root);
+                }
             }
+            
             
         }
 
@@ -102,8 +106,9 @@ public class HDO_Torch : MonoBehaviour
     {
         
         yield return new WaitForSeconds(explosionDuration);
-
+        damaged.Clear();
         Destroy(this.gameObject);
+        
     }
 
 

@@ -26,6 +26,7 @@ public class HDO_Piolet : MonoBehaviour
     HDO_UniversalEnemy ue;
     MonsterRoot mr;
     DamageStruct dam;
+    StunStruct stun, shieldStun;
 
     [Header("FreezeFrame Stats")]
 
@@ -34,8 +35,8 @@ public class HDO_Piolet : MonoBehaviour
     [SerializeField]
     float ffRealTimeDuration;
 
-    int damage;
-    int willLoss;
+    float damage;
+    float stunAmount, stunLength;
 
     bool freeezeFraming;
     public bool resetFF;
@@ -46,16 +47,22 @@ public class HDO_Piolet : MonoBehaviour
     GameObject shield;
     BoxCollider2D shieldBox;
     [SerializeField]
-    float perfectShieldTiming, shieldDecreaseRate, shieldRegrowRate, shieldMin, shieldMax;
+    float perfectShieldTiming, shieldDecreaseRate, shieldRegrowRate, shieldMin, shieldMax, shieldStunAmount, shieldStunLength;
     float elapsedTime;
-    public bool shielding;
+    public bool shielding, protecting;
 
     // Start is called before the first frame update
     void Start()
     {
         damage = cc.attackDamage;
-        shieldBox = shield.GetComponentInChildren<BoxCollider2D>();
+        stunLength = cc.attackStunDuration;
+        stunAmount = cc.attackStun;
 
+        shieldBox = shield.GetComponentInChildren<BoxCollider2D>();
+        
+
+        stun = new StunStruct(stunAmount, stunLength);
+        shieldStun = new StunStruct(shieldStunAmount, shieldStunLength);
         dam = new DamageStruct(damage);
     }
 
@@ -65,6 +72,16 @@ public class HDO_Piolet : MonoBehaviour
         if(damage != cc.attackDamage)
         {
             damage = cc.attackDamage;
+        }
+
+        if (stunAmount != cc.attackStun)
+        {
+            stunAmount = cc.attackStun;
+        }
+
+        if (stunLength != cc.attackStunDuration)
+        {
+            stunLength = cc.attackStunDuration;
         }
 
         CheckCollision();
@@ -153,6 +170,28 @@ public class HDO_Piolet : MonoBehaviour
             {
                 shieldBox.size = new Vector2(shieldMin, shieldBox.size.y);
             }
+
+            int results = Physics2D.OverlapCollider(shieldBox, enemy, result);
+
+            if(result != null)
+            {
+                BaseWolf baseWolf;
+                MonsterRoot mr;
+                baseWolf = result[0].GetComponent<BaseWolf>();
+                mr = result[0].GetComponent<MonsterRoot>();
+
+                if (baseWolf.Attack())
+                {
+                    protecting = true;
+                    Debug.Log("protecting");
+                    if(elapsedTime >= 0)
+                    {
+                        Debug.Log("stun !");
+                        mr.Damage(new DamageStruct(0, shieldStun));
+                    }
+                }
+            }
+
             elapsedTime -= Time.deltaTime;
         }
         

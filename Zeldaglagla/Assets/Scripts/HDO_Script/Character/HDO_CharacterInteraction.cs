@@ -40,6 +40,8 @@ public class HDO_CharacterInteraction : MonoBehaviour
     [SerializeField]
     List<HDO_InteractionSO> doneUniqueInteraction = null;
 
+    public List<HDO_ItemSO> inventory = null;
+
     bool manualInteraction, triggerInteraction;
 
     private void Start()
@@ -78,6 +80,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
             return;
         }
 
+        j = 0;
         manualInteraction = true;
 
         if (interaction.severalInteractions && !triggerInteraction)
@@ -136,7 +139,6 @@ public class HDO_CharacterInteraction : MonoBehaviour
 
         yield return new WaitForSeconds(interaction.waitTimeBetweenInteractions[j]);
 
-        //toDoInteractions.Remove(toDoInteractions[0]);
         j++;
         StartCoroutine(SeveralInteractions());
     }
@@ -157,6 +159,21 @@ public class HDO_CharacterInteraction : MonoBehaviour
         if(inter.interactionType == HDO_InteractionSO.InteractionType.environmentEvent)
         {
             EnvironmentChange(inter);
+        }
+
+        if(inter.interactionType == HDO_InteractionSO.InteractionType.enemyEvent)
+        {
+            EnemyEvent(inter);
+        }
+
+        if (inter.interactionType == HDO_InteractionSO.InteractionType.item)
+        {
+            GetItem(inter);
+        }
+
+        if(inter.interactionType == HDO_InteractionSO.InteractionType.needItem)
+        {
+            NeedItem(inter);
         }
 
         if (inter.isUnique)
@@ -211,6 +228,44 @@ public class HDO_CharacterInteraction : MonoBehaviour
             }
 
             Instantiate(inter.Environment, interaction.spawnPoint.transform);
+        }
+    }
+
+    void EnemyEvent(HDO_InteractionSO inter)
+    {
+        if (inter.needSpawnPoint)
+        {
+
+            if(interaction.spawnPoint == null)
+            {
+                interaction.spawnPoint = interaction.gameObject;
+            }
+
+            foreach(GameObject toSpawn in inter.enemiesToSpawn)
+            {
+                Instantiate(toSpawn, new Vector3(interaction.spawnPoint.transform.position.x, interaction.spawnPoint.transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+            }
+        }
+    }
+
+    void GetItem(HDO_InteractionSO inter)
+    {
+        inventory.Add(inter.item);
+    }
+
+    void NeedItem(HDO_InteractionSO inter)
+    {
+        if (inventory.Contains(inter.neededItem))
+        {
+            if(inter.consumesItem)
+            {
+                inventory.Remove(inter.neededItem);
+            }
+
+            foreach(HDO_Interactive interactive in interaction.interactives)
+            {
+                interactive.Action();
+            }
         }
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Interaction", menuName = "Interaction", order = 0)]
 public class HDO_InteractionSO : ScriptableObject
 {
-    public enum InteractionType { dialog, enemyEvent, environmentEvent, item, bossEvent, characterImprovement}
+    public enum InteractionType { dialog, enemyEvent, environmentEvent, item, bossEvent, characterImprovement, needItem}
     public enum dialogType { inner, EVAA };
     public enum dialogNum { one, several };
 
@@ -32,8 +32,11 @@ public class HDO_InteractionSO : ScriptableObject
     public bool snowStorm;
 
     [Header("Item")]
-    public Sprite itemSprite;
-    public string itemName;
+    public HDO_ItemSO item;
+
+    [Header("need Item")]
+    public HDO_ItemSO neededItem;
+    public bool consumesItem;
 
     [Header("Boss Event")]
     public bool boosDialog;

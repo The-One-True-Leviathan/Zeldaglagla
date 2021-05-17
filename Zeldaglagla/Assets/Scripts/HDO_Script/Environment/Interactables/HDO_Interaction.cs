@@ -12,6 +12,8 @@ public class HDO_Interaction : MonoBehaviour
     public GameObject spawnPoint;
     public bool isFullTrigger;
 
+    public List<HDO_Interactive> interactives = null;
+
     private void Start()
     {
         if(interactions.Count > 1)

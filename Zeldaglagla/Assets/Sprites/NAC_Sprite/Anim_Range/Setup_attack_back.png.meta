@@ -148,10 +148,10 @@ TextureImporter:
       name: Setup_attack_back_0
       rect:
         serializedVersion: 2
-        x: 45
-        y: 5037
-        width: 2125
-        height: 1855
+        x: 0
+        y: 4800
+        width: 2800
+        height: 2400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +169,10 @@ TextureImporter:
       name: Setup_attack_back_1
       rect:
         serializedVersion: 2
-        x: 2824
-        y: 5038
-        width: 2195
-        height: 1785
+        x: 2800
+        y: 4800
+        width: 2800
+        height: 2400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,10 +190,10 @@ TextureImporter:
       name: Setup_attack_back_2
       rect:
         serializedVersion: 2
-        x: 312
-        y: 2623
-        width: 2222
-        height: 1561
+        x: 0
+        y: 2400
+        width: 2800
+        height: 2400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +211,10 @@ TextureImporter:
       name: Setup_attack_back_3
       rect:
         serializedVersion: 2
-        x: 3350
-        y: 2558
-        width: 1967
-        height: 1927
+        x: 2800
+        y: 2400
+        width: 2800
+        height: 2400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,10 +232,10 @@ TextureImporter:
       name: Setup_attack_back_4
       rect:
         serializedVersion: 2
-        x: 671
-        y: 109
-        width: 1967
-        height: 1892
+        x: 0
+        y: 0
+        width: 2800
+        height: 2400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +253,10 @@ TextureImporter:
       name: Setup_attack_back_5
       rect:
         serializedVersion: 2
-        x: 3513
-        y: 15
-        width: 1968
-        height: 1962
+        x: 2800
+        y: 0
+        width: 2800
+        height: 2400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

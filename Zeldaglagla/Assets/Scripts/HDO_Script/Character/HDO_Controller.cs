@@ -20,7 +20,7 @@ public class HDO_Controller : MonoBehaviour
     int actualSpeed, bonusSpeed, dodgeDivider;
     float dodgeElapse, dodgeCdElapsed;
     Vector2 movementVector;
-    Vector3 inputVector, dodgeVector;
+    Vector3 inputVector, dodgeVector, finalVector, knockbackVector;
 
     bool dodging;
     public bool freeMovement;
@@ -55,6 +55,7 @@ public class HDO_Controller : MonoBehaviour
     void Update()
     {
         if (dodgeCdElapsed > 0) dodgeCdElapsed -= Time.deltaTime;
+        Input();
         Movement();
     }
 
@@ -71,7 +72,7 @@ public class HDO_Controller : MonoBehaviour
         dodgeVector = new Vector3(movementVector.x, movementVector.y);
     }
 
-    void Movement()
+    void Input()
     {
         actualSpeed = baseSpeed + bonusSpeed;
 
@@ -93,11 +94,19 @@ public class HDO_Controller : MonoBehaviour
                 freeMovement = true;
             }
         }
-        inputVector = collision.RecalculateVector(inputVector);
-        
-        transform.position = transform.position + inputVector;
 
         if(inputVector != Vector3.zero) gunPoint.transform.localPosition = Vector3.Normalize(inputVector);
+    }
+
+    void Movement()
+    {
+        finalVector = collision.RecalculateVector(inputVector + knockbackVector);
+        transform.position = transform.position + finalVector;
+    }
+
+    public void Knockback(Vector3 knockback)
+    {
+        knockbackVector = knockback;
     }
 
     private void OnDisable()

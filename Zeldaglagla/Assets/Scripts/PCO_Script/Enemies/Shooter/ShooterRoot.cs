@@ -12,7 +12,7 @@ public class ShooterRoot : MonsterRoot
     public AIDestinationSetter destinationSetter;
     public LayerMask isPlayer;
 
-    public float shotDmg, shotBuildup, shotRecover, shotKB, shotSpeed, minAtkDistance, maxAtkDistance;
+    public float shotDmg, shotBuildup, shotRecover, shotKBStrength, shotKBSpeed, shotKBTime, shotSpeed, minAtkDistance, maxAtkDistance;
     public float maxSight, timeSinceLastSeen;
     public bool playerInSight, playerInMemory;
 

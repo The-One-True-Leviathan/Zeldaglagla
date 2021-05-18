@@ -31,7 +31,7 @@ public class BaseShooterBehavior : ShooterRoot
     public bool SightCast()
     {
         RaycastHit2D hit2D;
-        Vector3 toPlayer = ToPlayer();
+        Vector3 toPlayer = ToPlayer().normalized;
         //RaycastHit hit;
         float hitLength = maxSight;
         hit2D = Physics2D.Raycast(transform.position, toPlayer, hitLength, blocksLOS);

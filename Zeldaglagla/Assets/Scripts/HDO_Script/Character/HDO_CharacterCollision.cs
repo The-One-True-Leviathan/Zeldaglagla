@@ -12,6 +12,9 @@ public class HDO_CharacterCollision : MonoBehaviour
     [SerializeField]
     LayerMask walls;
 
+    [SerializeField]
+    GameObject ULPoint, URPoint, DLPoint, DRPoint;
+
     Vector2 startingPointDL, startingPointDR, startingPointUR, startingPointUL;
 
     // Start is called before the first frame update
@@ -26,9 +29,9 @@ public class HDO_CharacterCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        startingPointDL = new Vector2(transform.position.x - 0.80f * sizeX, transform.position.y - sizeY);
-        startingPointUR = new Vector2(transform.position.x + 0.80f * sizeX, transform.position.y + 0.2f * sizeY);
-        startingPointDR = new Vector2(transform.position.x + sizeX, transform.position.y - 0.80f * sizeY);
+        startingPointDL = new Vector2(transform.position.x - 0.50f * sizeX, transform.position.y - 0.6f * sizeY);
+        startingPointUR = new Vector2(transform.position.x + 0.60f * sizeX, transform.position.y + 0.6f * sizeY);
+        startingPointDR = new Vector2(transform.position.x + sizeX, transform.position.y - 0.60f * sizeY);
         startingPointUL = new Vector2(transform.position.x - sizeX, transform.position.y + 0.10f * sizeY);
 
         //Points de départ de chaque raycast (DownLeft - UpRight - DownRight - UpLeft)
@@ -40,8 +43,8 @@ public class HDO_CharacterCollision : MonoBehaviour
         //Cette fonction elle est appelée dans mon script de mouvement pour recalculer le vecteur de déplacement
         //mon vecteur2 "input" provient de mon script de mouvement
 
-        upFree = Physics2D.Raycast(startingPointUR, Vector2.left, sizeX * 1f, walls);
-        Debug.DrawRay(startingPointUR, sizeX * Vector2.left, Color.red);
+        upFree = Physics2D.Raycast(URPoint.transform.position, Vector2.left, (Vector2.Distance(URPoint.transform.position, ULPoint.transform.position) - 0.05f), walls);
+        Debug.DrawRay(URPoint.transform.position, (Vector2.Distance(URPoint.transform.position, ULPoint.transform.position) - 0.05f) * Vector2.left, Color.red);
 
         if (upFree.collider != null)
         {
@@ -53,8 +56,8 @@ public class HDO_CharacterCollision : MonoBehaviour
 
         }
 
-        downFree = Physics2D.Raycast(startingPointDL, Vector2.right, sizeX * 1f, walls);
-        Debug.DrawRay(startingPointDL, sizeX * Vector2.right, Color.red);
+        downFree = Physics2D.Raycast(DLPoint.transform.position, Vector2.right, (Vector2.Distance(DLPoint.transform.position, DRPoint.transform.position) - 0.05f), walls);
+        Debug.DrawRay(DLPoint.transform.position, (Vector2.Distance(DLPoint.transform.position, DRPoint.transform.position) - 0.05f) * Vector2.right, Color.red);
 
         if (downFree.collider != null)
         {
@@ -65,8 +68,8 @@ public class HDO_CharacterCollision : MonoBehaviour
 
         }
 
-        rightFree = Physics2D.Raycast(startingPointDR, Vector2.up, 0.8f * sizeY, walls);
-        Debug.DrawRay(startingPointUR, sizeY * Vector2.down, Color.red);
+        rightFree = Physics2D.Raycast(DRPoint.transform.position, Vector2.up, (Vector2.Distance(DRPoint.transform.position, URPoint.transform.position) - 0.05f), walls);
+        Debug.DrawRay(DRPoint.transform.position, (Vector2.Distance(DRPoint.transform.position, URPoint.transform.position) - 0.05f) * Vector2.up, Color.red);
 
         if (rightFree.collider != null)
         {
@@ -77,8 +80,8 @@ public class HDO_CharacterCollision : MonoBehaviour
 
         }
 
-        leftFree = Physics2D.Raycast(startingPointUL, Vector2.down, 1f * sizeY, walls);
-        Debug.DrawRay(startingPointDL, sizeY * Vector2.up, Color.red);
+        leftFree = Physics2D.Raycast(ULPoint.transform.position, Vector2.down, (Vector2.Distance(ULPoint.transform.position, DLPoint.transform.position) - 0.05f), walls);
+        Debug.DrawRay(ULPoint.transform.position, (Vector2.Distance(ULPoint.transform.position, DLPoint.transform.position) - 0.05f) * Vector2.down, Color.red);
 
         if (leftFree.collider != null)
         {

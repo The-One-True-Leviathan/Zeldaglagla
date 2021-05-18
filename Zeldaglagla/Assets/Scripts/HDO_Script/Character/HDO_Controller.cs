@@ -31,6 +31,7 @@ public class HDO_Controller : MonoBehaviour
     bool dodging;
     public bool freeMovement;
 
+
     private void Awake()
     {
         controls = new Controls();

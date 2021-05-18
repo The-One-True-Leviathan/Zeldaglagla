@@ -24,6 +24,10 @@ public class HDO_CharacterCombat : MonoBehaviour
     //Fin des bidouillages de Pierre ;3
 
 
+    [Header("RespawnPoint")]
+    public GameObject respawnPoint;
+
+
     [Header("Combat Statistics")]
     public bool canStrike;
     public float attackDamage, attackStun, attackStunDuration;
@@ -44,6 +48,8 @@ public class HDO_CharacterCombat : MonoBehaviour
     public float torchHeatCost, torchCooldown;
     public bool torching;
     float torchCDElapsed;
+
+
 
     private void Awake()
     {
@@ -186,7 +192,7 @@ public class HDO_CharacterCombat : MonoBehaviour
 
     public void Die()
     {
-
+        transform.position = respawnPoint.transform.position;
     }
 
     public void Immunity(float imunTime = immunityTime)

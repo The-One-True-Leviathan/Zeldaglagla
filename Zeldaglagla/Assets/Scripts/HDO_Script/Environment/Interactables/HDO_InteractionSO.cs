@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Interaction", menuName = "Interaction", order = 0)]
 public class HDO_InteractionSO : ScriptableObject
 {
-    public enum InteractionType { dialog, enemyEvent, environmentEvent, item, bossEvent, characterImprovement, needItem}
+    public enum InteractionType { dialog, enemyEvent, environmentEvent, item, bossEvent, characterImprovement, needItem, setSpawnPoint}
     public enum dialogType { inner, EVAA };
     public enum dialogNum { one, several };
 
@@ -46,5 +46,7 @@ public class HDO_InteractionSO : ScriptableObject
 
     public float damageModifier;
     public float torchDamageModifier;
+
+    
 
 }

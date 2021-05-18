@@ -30,6 +30,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
     HDO_Interaction interaction, triggerInteracted;
     HDO_InteractionSO currentInteraction;
     CoolTextScript cts;
+    HDO_CharacterCombat combat;
 
     [SerializeField]
     Text EVAADialog, innerDialog;
@@ -47,6 +48,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
     private void Start()
     {
         selectorSr = selector.GetComponent<SpriteRenderer>();
+        combat = GetComponent<HDO_CharacterCombat>();
     }
 
     // Update is called once per frame
@@ -176,10 +178,20 @@ public class HDO_CharacterInteraction : MonoBehaviour
             NeedItem(inter);
         }
 
+        if(inter.interactionType == HDO_InteractionSO.InteractionType.setSpawnPoint)
+        {
+            SetSpawn(inter);
+        }
+
         if (inter.isUnique)
         {
             doneUniqueInteraction.Add(inter);
         }
+    }
+
+    void SetSpawn(HDO_InteractionSO inter)
+    {
+        combat.respawnPoint = interaction.spawnPoint;  
     }
 
     void SpawnDialog(HDO_InteractionSO inter)

@@ -42,8 +42,8 @@ MonoBehaviour:
   shooter: {fileID: 0}
   buildupTime: 0.5
   recoverTime: 0.5
-  timeBetweenShots: 0
-  numberOfShots: 1
+  timeBetweenShots: 0.2
+  numberOfShots: 3
 --- !u!114 &-7691855848865257639
 MonoBehaviour:
   m_ObjectHideFlags: 1

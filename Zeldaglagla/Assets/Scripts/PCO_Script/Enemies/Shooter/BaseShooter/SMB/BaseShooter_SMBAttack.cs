@@ -17,11 +17,13 @@ public class BaseShooter_SMBAttack : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        buildup = recover = 0;
+        buildup = recover = timeSinceLastShot = 0;
+        shotsLeft = true;
         shooter.baseShooterSMBState = BaseShooterBehavior.BaseShooterSMBState.ATTACK;
         shooter.pather.maxSpeed = shooter.walkSpeed;
         cmbtState = CmbtState.BUILDUP;
         shooter.pather.enabled = false;
+        shotsFired = 0;
         shooter.destinationSetter.enabled = false;
     }
 
@@ -32,12 +34,18 @@ public class BaseShooter_SMBAttack : StateMachineBehaviour
         switch (cmbtState)
         {
             case CmbtState.BUILDUP:
+                shooter.SetAnim(4, shooter.ToPlayer());
                 buildup += Time.deltaTime;
                 if (buildup >= buildupTime)
                 {
-                    cmbtState = CmbtState.HITSPAN;
-                    shotsFired = 0; timeSinceLastShot = 0; shotsLeft = false;
-                    Shoot();
+                    if (shotsLeft) Shoot();
+                    shotsLeft = false;
+                    shooter.SetAnim(6, shooter.ToPlayer());
+                    timeSinceLastShot += Time.deltaTime;
+                    if (timeSinceLastShot >= timeBetweenShots)
+                    {
+                        cmbtState = CmbtState.HITSPAN;
+                    }
                 }
                 break;
             case CmbtState.HITSPAN:
@@ -48,12 +56,27 @@ public class BaseShooter_SMBAttack : StateMachineBehaviour
                     {
                         timeSinceLastShot = 0f;
                         Shoot();
+                        shooter.SetAnim(6, shooter.ToPlayer());
+                        shotsLeft = true;
                     }
                 }
-                    else 
+                else
                 {
-                    cmbtState = CmbtState.RECOVER;
-                    recover = 0;
+                    if (shotsLeft)
+                    {
+                        timeSinceLastShot += Time.deltaTime;
+                        if (timeSinceLastShot >= timeBetweenShots)
+                        {
+                            cmbtState = CmbtState.RECOVER;
+                            recover = 0;
+                            shooter.SetAnim(8, shooter.ToPlayer());
+                        }
+                    } else
+                    {
+                        cmbtState = CmbtState.RECOVER;
+                        recover = 0;
+                        shooter.SetAnim(8, shooter.ToPlayer());
+                    }
                 }
                 break;
             case CmbtState.RECOVER:

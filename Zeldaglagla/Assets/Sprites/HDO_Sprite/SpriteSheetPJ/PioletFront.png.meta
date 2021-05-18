@@ -1,31 +1,25 @@
 fileFormatVersion: 2
-guid: 58a538ebe65b47c4281915fcf61e22be
+guid: 35929d765e634da44aa9538411f9f92d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1094213208078035498
-    second: walkfront_0
+      213: -1280749015318466068
+    second: PioletFront_0
   - first:
-      213: 2071378031760838792
-    second: walkfront_1
+      213: -5720682214250881898
+    second: PioletFront_1
   - first:
-      213: 2357296108249269887
-    second: walkfront_2
+      213: 5524689767543976425
+    second: PioletFront_2
   - first:
-      213: 3128798405554354426
-    second: walkfront_3
+      213: -2578675972167721567
+    second: PioletFront_3
   - first:
-      213: 7864026162303056399
-    second: walkfront_4
+      213: 5831611723550444627
+    second: PioletFront_4
   - first:
-      213: -8515063127578767370
-    second: walkfront_5
-  - first:
-      213: 8164936402309495197
-    second: walkfront_6
-  - first:
-      213: 2910913707500306984
-    second: walkfront_7
+      213: 3673308103204256645
+    second: PioletFront_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -151,13 +145,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walkfront_0
+      name: PioletFront_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 5760
-        width: 1495
-        height: 1920
+        y: 1853
+        width: 2243
+        height: 1853
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2a28088d1d6f2f00800000000000000
-      internalID: 1094213208078035498
+      spriteID: ce1f2876e8dd93ee0800000000000000
+      internalID: -1280749015318466068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walkfront_1
+      name: PioletFront_1
       rect:
         serializedVersion: 2
-        x: 1495
-        y: 5760
-        width: 1495
-        height: 1920
+        x: 2243
+        y: 1853
+        width: 2243
+        height: 1853
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +180,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88017a268530fbc10800000000000000
-      internalID: 2071378031760838792
+      spriteID: 69c5eaae5dd0c90b0800000000000000
+      internalID: -5720682214250881898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walkfront_2
+      name: PioletFront_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3840
-        width: 1495
-        height: 1920
+        x: 4486
+        y: 1853
+        width: 2243
+        height: 1853
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,83 +201,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f76cb9a225cc6b020800000000000000
-      internalID: 2357296108249269887
+      spriteID: 9e1b1b09214abac40800000000000000
+      internalID: 5524689767543976425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walkfront_3
-      rect:
-        serializedVersion: 2
-        x: 1495
-        y: 3840
-        width: 1495
-        height: 1920
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af830e0a299bb6b20800000000000000
-      internalID: 3128798405554354426
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walkfront_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1920
-        width: 1495
-        height: 1920
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0ab3741122a22d60800000000000000
-      internalID: 7864026162303056399
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walkfront_5
-      rect:
-        serializedVersion: 2
-        x: 1495
-        y: 1920
-        width: 1495
-        height: 1920
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ff04a0433b64d980800000000000000
-      internalID: -8515063127578767370
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walkfront_6
+      name: PioletFront_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1495
-        height: 1920
+        width: 2243
+        height: 1853
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,20 +222,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d993051f56eaf4170800000000000000
-      internalID: 8164936402309495197
+      spriteID: 1ad9b10add3b63cd0800000000000000
+      internalID: -2578675972167721567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walkfront_7
+      name: PioletFront_4
       rect:
         serializedVersion: 2
-        x: 1495
+        x: 2243
         y: 0
-        width: 1495
-        height: 1920
+        width: 2243
+        height: 1853
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,8 +243,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8220f532894a56820800000000000000
-      internalID: 2910913707500306984
+      spriteID: 35c4a3227fb0ee050800000000000000
+      internalID: 5831611723550444627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PioletFront_5
+      rect:
+        serializedVersion: 2
+        x: 4486
+        y: 0
+        width: 2243
+        height: 1853
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58bbd0202463af230800000000000000
+      internalID: 3673308103204256645
       vertices: []
       indices: 
       edges: []
@@ -321,7 +273,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 30925bf16ecbd6a4c8cc9b39fee81a84
+    spriteID: e5066448c1206d0419680b93632a5435
     internalID: 0
     vertices: []
     indices: 

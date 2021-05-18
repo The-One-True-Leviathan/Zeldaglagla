@@ -54,7 +54,7 @@ public class HDO_Torch : MonoBehaviour
         result = Physics2D.OverlapCircleAll(transform.position, self.radius, obstacles.layerMask);       
         
 
-        Debug.Log(Physics2D.OverlapCollider(self, obstacles, result));
+        //Debug.Log(Physics2D.OverlapCollider(self, obstacles, result));
         if (results != 0 && !wallHit)
         {
             wallHit = true;

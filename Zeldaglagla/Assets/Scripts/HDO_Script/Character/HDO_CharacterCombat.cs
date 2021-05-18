@@ -32,6 +32,7 @@ public class HDO_CharacterCombat : MonoBehaviour
     float elapsedTimeA;
     [SerializeField]
     Animator pioletAnim;
+    Animator animator;
 
     [Header("Torch Statistics")]
     [SerializeField]
@@ -41,6 +42,7 @@ public class HDO_CharacterCombat : MonoBehaviour
     public int torchDirectDamage;
     public int torchExplosionDamage;
     public float torchHeatCost, torchCooldown;
+    public bool torching;
     float torchCDElapsed;
 
     private void Awake()
@@ -69,6 +71,7 @@ public class HDO_CharacterCombat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -91,6 +94,11 @@ public class HDO_CharacterCombat : MonoBehaviour
                 elapsedTimeA = 0;
                 canStrike = true;
             }
+        }
+
+        if (torching)
+        {
+            InstantiateTorch();
         }
 
         
@@ -116,6 +124,7 @@ public class HDO_CharacterCombat : MonoBehaviour
         pioletAnim.SetFloat("gunPointX", gunPoint.transform.localPosition.x);
         pioletAnim.SetFloat("gunPointY", gunPoint.transform.localPosition.y);
         piolet.ffed.Clear();
+        animator.SetTrigger("Piolet");
         pioletAnim.SetTrigger("Attack");
         canStrike = false;
         elapsedTimeA = attackCooldown;
@@ -131,16 +140,22 @@ public class HDO_CharacterCombat : MonoBehaviour
         hm.heatValue -= torchHeatCost;
         torchCDElapsed = torchCooldown;
 
+        animator.SetTrigger("Torch");
+
+    }
+
+    void InstantiateTorch()
+    {
+        torching = false;
         torch = Instantiate(shot, transform.position, Quaternion.identity).GetComponent<HDO_Torch>();
 
         torch.torchDamage = torchDirectDamage;
         torch.explosionDamage = torchExplosionDamage;
         torch.movement = Vector3.Normalize(gunPoint.transform.position - transform.position);
-
-
     }
 
     //De la part de Pierre
+    //Merci Pelo.
     public void TakeDamage(DamageStruct damage, Transform origin = null)
     {
         if (!isInImmunity)

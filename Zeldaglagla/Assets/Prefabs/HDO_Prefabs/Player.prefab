@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heatBar: {fileID: 0}
   temp: {fileID: 348949936}
-  heatValue: 15
+  heatValue: 30.05
   maxHeat: 50
   heatModifierPerSecond: 0
   noGainTemperature: -9
@@ -307,8 +307,8 @@ MonoBehaviour:
   shieldRegrowRate: 0.05
   shieldMin: 0.15
   shieldMax: 0.75
-  shieldStunAmount: 0
-  shieldStunLength: 0
+  shieldStunAmount: 100
+  shieldStunLength: 5
   shielding: 0
   protecting: 0
 --- !u!212 &7808011128689221643
@@ -752,6 +752,7 @@ GameObject:
   - component: {fileID: 5311234934450637277}
   - component: {fileID: 5311234934450637279}
   - component: {fileID: 1319476252139588231}
+  - component: {fileID: 5388419272970035235}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -900,6 +901,7 @@ MonoBehaviour:
   collision: {fileID: 5311234934450637278}
   interact: {fileID: 5311234934450637276}
   gunPoint: {fileID: 5311234933482019644}
+  pioletSR: {fileID: 7808011128689221643}
   baseSpeed: 5
   dodgeSpeed: 15
   dodgeTime: 0.1
@@ -940,8 +942,8 @@ MonoBehaviour:
   deflectImmunityFactor: 1
   canStrike: 1
   attackDamage: 3
-  attackStun: 0
-  attackStunDuration: 0
+  attackStun: 5
+  attackStunDuration: 3
   attackCooldown: 1
   pioletAnim: {fileID: 7695630634022016124}
   shot: {fileID: 7801563822568252800, guid: 580eebb0ab7c878479a61f9a82315a88, type: 3}
@@ -950,6 +952,7 @@ MonoBehaviour:
   torchExplosionDamage: 5
   torchHeatCost: 0
   torchCooldown: 1
+  torching: 0
 --- !u!61 &5311234934450637279
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -988,6 +991,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89004897957dd754e8348775e101977f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &5388419272970035235
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5311234934450637275}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 74ec30fbf6df8dd4ba4fe4177ac4a01f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8992833850383718440
 GameObject:
   m_ObjectHideFlags: 0

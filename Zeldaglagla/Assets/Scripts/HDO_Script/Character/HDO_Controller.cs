@@ -14,6 +14,12 @@ public class HDO_Controller : MonoBehaviour
     [SerializeField]
     GameObject gunPoint;
 
+    Animator animator;
+    [SerializeField]
+    SpriteRenderer pioletSR;
+    SpriteRenderer spriteRenderer;
+
+
     [Header("Movement Stats")]
     public int baseSpeed, dodgeSpeed;
     public float dodgeTime, dodgeSpeedDecreasePerFrame, dodgeCooldown;
@@ -48,7 +54,8 @@ public class HDO_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -95,12 +102,49 @@ public class HDO_Controller : MonoBehaviour
             }
         }
 
-        if(inputVector != Vector3.zero) gunPoint.transform.localPosition = Vector3.Normalize(inputVector);
+        //if(inputVector != Vector3.zero) gunPoint.transform.localPosition = Vector3.Normalize(inputVector);
     }
 
     void Movement()
     {
         finalVector = collision.RecalculateVector(inputVector + knockbackVector);
+
+        if(finalVector != Vector3.zero && knockbackVector == Vector3.zero)
+        {
+            animator.SetFloat("speedY", finalVector.y);
+            animator.SetFloat("speedX", gunPoint.transform.localPosition.x);
+            if (finalVector.x >= 0 && finalVector.y <= 0)
+            {
+                spriteRenderer.flipX = false;
+                pioletSR.flipX = false;
+                gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(1, -1, 0));
+            }
+            else if (finalVector.x > 0 && finalVector.y > 0)
+            {
+                spriteRenderer.flipX = true;
+                pioletSR.flipX = true;
+                gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(1, 1, 0));
+            }
+            else if (finalVector.x < 0 && finalVector.y <= 0)
+            {
+                spriteRenderer.flipX = true;
+                pioletSR.flipX = true;
+                gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(-1, -1, 0));
+            }
+            else if (finalVector.x <= 0 && finalVector.y > 0)
+            {
+                spriteRenderer.flipX = false;
+                pioletSR.flipX = false;
+                gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(-1, 1, 0));
+            }
+
+            if(Mathf.Abs(finalVector.x) < 0.1f && Mathf.Abs(finalVector.y) > 0.75f)
+            {
+                gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(-1, 1, 0));
+            }
+
+        }
+
         transform.position = transform.position + finalVector;
     }
 

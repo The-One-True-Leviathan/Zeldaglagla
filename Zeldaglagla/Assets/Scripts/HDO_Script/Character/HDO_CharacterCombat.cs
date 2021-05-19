@@ -39,6 +39,7 @@ public class HDO_CharacterCombat : MonoBehaviour
 
     [Header("Combat Statistics")]
     public bool canStrike;
+    public bool torchUnlocked;
     public float attackDamage, attackStun, attackStunDuration;
     [SerializeField]
     float attackCooldown;
@@ -150,7 +151,7 @@ public class HDO_CharacterCombat : MonoBehaviour
 
     void Torch()
     {
-        if(hm.heatValue < torchHeatCost || torchCDElapsed > 0)
+        if(hm.heatValue < torchHeatCost || torchCDElapsed > 0 || !torchUnlocked)
         {
             return;
         }

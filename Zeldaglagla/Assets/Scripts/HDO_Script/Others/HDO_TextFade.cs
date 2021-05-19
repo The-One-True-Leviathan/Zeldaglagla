@@ -17,10 +17,13 @@ public class HDO_TextFade : MonoBehaviour
 
     bool fadeStarted;
 
+    CoolTextScript cts;
+
     // Start is called before the first frame update
     void Start()
     {
         text = GetComponent<Text>();
+        cts = GetComponent<CoolTextScript>();
 
         text.text = "";
     }
@@ -54,13 +57,14 @@ public class HDO_TextFade : MonoBehaviour
 
         yield return new WaitForSeconds(0.1f);
 
-        if(text.color.a > 0)
+        if(text.color.a > 0.01f)
         {
             StartCoroutine(Fade());
         }
         else
         {
             text.text = "";
+            cts.defaultText = "";
             fadeStarted = false;
         }
     }

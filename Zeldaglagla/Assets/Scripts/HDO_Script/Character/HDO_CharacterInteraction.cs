@@ -44,6 +44,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
     public List<HDO_ItemSO> inventory = null;
 
     bool manualInteraction, triggerInteraction;
+    int it;
 
     private void Start()
     {
@@ -183,9 +184,25 @@ public class HDO_CharacterInteraction : MonoBehaviour
             SetSpawn(inter);
         }
 
+        if(inter.interactionType == HDO_InteractionSO.InteractionType.characterImprovement)
+        {
+            ImproveCharacter(inter);
+        }
+
         if (inter.isUnique)
         {
             doneUniqueInteraction.Add(inter);
+        }
+    }
+
+    void ImproveCharacter(HDO_InteractionSO inter)
+    {
+        if (inter.abilityUnlock)
+        {
+            if(inter.abilityUnlocked == HDO_InteractionSO.Ability.torch)
+            {
+                GetComponent<HDO_CharacterCombat>().torchUnlocked = true;
+            }
         }
     }
 
@@ -207,9 +224,19 @@ public class HDO_CharacterInteraction : MonoBehaviour
             }
             else
             {
-                cts = innerDialog.GetComponent<CoolTextScript>();
-                cts.defaultText = inter.dialogs[Random.Range(0, inter.dialogs.Count)];
-                cts.Read();
+                if (inter.dialogSuite)
+                {
+                    cts = innerDialog.GetComponent<CoolTextScript>();
+                    List<string> list = inter.dialogs;
+                    StartCoroutine(dialogSuite(list));
+                }
+                else
+                {
+                    cts = innerDialog.GetComponent<CoolTextScript>();
+                    cts.defaultText = inter.dialogs[Random.Range(0, inter.dialogs.Count)];
+                    cts.Read();
+                }
+                
             }
         }
         else
@@ -222,9 +249,19 @@ public class HDO_CharacterInteraction : MonoBehaviour
             }
             else
             {
-                cts = EVAADialog.GetComponent<CoolTextScript>();
-                cts.defaultText = inter.dialogs[Random.Range(0, inter.dialogs.Count)];
-                cts.Read();
+                if (inter.dialogSuite)
+                {
+                    cts = EVAADialog.GetComponent<CoolTextScript>();
+                    List<string> list = inter.dialogs;
+                    StartCoroutine(dialogSuite(list));
+                }
+                else
+                {
+                    cts = EVAADialog.GetComponent<CoolTextScript>();
+                    cts.defaultText = inter.dialogs[Random.Range(0, inter.dialogs.Count)];
+                    cts.Read();
+                }
+                
             }
 
         }
@@ -390,5 +427,19 @@ public class HDO_CharacterInteraction : MonoBehaviour
     }
 
   
+    IEnumerator dialogSuite(List<string> list)
+    {
+        
+        
+        cts.defaultText = list[it];
+        cts.Read();
+        it++;
+        yield return new WaitUntil(() => cts.defaultText == "");
+        if (!(it >= list.Count))
+        {
+            StartCoroutine(dialogSuite(list));
+        }
+
+    }
 
 }

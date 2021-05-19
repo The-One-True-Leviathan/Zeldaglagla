@@ -112,7 +112,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -201,7 +201,7 @@ TextureImporter:
         width: 1017
         height: 787
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -222,7 +222,7 @@ TextureImporter:
         width: 502
         height: 700
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,7 +243,7 @@ TextureImporter:
         width: 557
         height: 549
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,69 +251,6 @@ TextureImporter:
       bones: []
       spriteID: 9e125c5313df57070800000000000000
       internalID: 8103661492320412137
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: asset_donjon_ancienne_civj_vvvaaa_3
-      rect:
-        serializedVersion: 2
-        x: 4340
-        y: 3216
-        width: 21
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1ec13a4c11443f00800000000000000
-      internalID: 1095572199117540890
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: asset_donjon_ancienne_civj_vvvaaa_4
-      rect:
-        serializedVersion: 2
-        x: 2445
-        y: 3074
-        width: 10
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8abdf68c3496fe510800000000000000
-      internalID: 1580597734076832680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: asset_donjon_ancienne_civj_vvvaaa_5
-      rect:
-        serializedVersion: 2
-        x: 2460
-        y: 3078
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85f9c1c3fd5ea74e0800000000000000
-      internalID: -1983019938954305704
       vertices: []
       indices: 
       edges: []
@@ -327,7 +264,7 @@ TextureImporter:
         width: 1018
         height: 787
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -335,111 +272,6 @@ TextureImporter:
       bones: []
       spriteID: 04a1fb95622612e50800000000000000
       internalID: 6782810430650653248
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: asset_donjon_ancienne_civj_vvvaaa_7
-      rect:
-        serializedVersion: 2
-        x: 4723
-        y: 2670
-        width: 26
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62a78d081e9f51d20800000000000000
-      internalID: 3248777453142309414
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: asset_donjon_ancienne_civj_vvvaaa_8
-      rect:
-        serializedVersion: 2
-        x: 434
-        y: 2505
-        width: 4
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba61a096f606c32e0800000000000000
-      internalID: -2144733290915293525
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: asset_donjon_ancienne_civj_vvvaaa_9
-      rect:
-        serializedVersion: 2
-        x: 434
-        y: 2475
-        width: 4
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce597d09d3cfb5970800000000000000
-      internalID: 8744860442823202284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: asset_donjon_ancienne_civj_vvvaaa_10
-      rect:
-        serializedVersion: 2
-        x: 7014
-        y: 2377
-        width: 4
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0fd8cea23923edac0800000000000000
-      internalID: -3828567025556615696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: asset_donjon_ancienne_civj_vvvaaa_11
-      rect:
-        serializedVersion: 2
-        x: 7014
-        y: 2347
-        width: 4
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55a58030445018840800000000000000
-      internalID: 5224462832393280085
       vertices: []
       indices: 
       edges: []
@@ -453,7 +285,7 @@ TextureImporter:
         width: 544
         height: 550
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -474,7 +306,7 @@ TextureImporter:
         width: 905
         height: 833
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -495,7 +327,7 @@ TextureImporter:
         width: 503
         height: 704
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -503,48 +335,6 @@ TextureImporter:
       bones: []
       spriteID: ea872a0964b040560800000000000000
       internalID: 7278955295439747246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: asset_donjon_ancienne_civj_vvvaaa_15
-      rect:
-        serializedVersion: 2
-        x: 4888
-        y: 1802
-        width: 4
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4c8ef4ad91cf50b0800000000000000
-      internalID: -5737654517424550838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: asset_donjon_ancienne_civj_vvvaaa_16
-      rect:
-        serializedVersion: 2
-        x: 4897
-        y: 1798
-        width: 10
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 673539cdf8551b6c0800000000000000
-      internalID: -4129425306952707210
       vertices: []
       indices: 
       edges: []
@@ -558,7 +348,7 @@ TextureImporter:
         width: 538
         height: 550
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -566,48 +356,6 @@ TextureImporter:
       bones: []
       spriteID: 6a27940396d1f9510800000000000000
       internalID: 1557996333712372390
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: asset_donjon_ancienne_civj_vvvaaa_18
-      rect:
-        serializedVersion: 2
-        x: 4615
-        y: 1272
-        width: 202
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35fdfda7fc2930f20800000000000000
-      internalID: 3387712764530122579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: asset_donjon_ancienne_civj_vvvaaa_19
-      rect:
-        serializedVersion: 2
-        x: 2835
-        y: 1241
-        width: 31
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a119036cac9744a10800000000000000
-      internalID: 1892771655217877274
       vertices: []
       indices: 
       edges: []
@@ -621,7 +369,7 @@ TextureImporter:
         width: 552
         height: 644
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -629,27 +377,6 @@ TextureImporter:
       bones: []
       spriteID: 0a27866a940211e80800000000000000
       internalID: -8209745145023139168
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: asset_donjon_ancienne_civj_vvvaaa_21
-      rect:
-        serializedVersion: 2
-        x: 909
-        y: 783
-        width: 21
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19178f4eed303b590800000000000000
-      internalID: -7659774285367971439
       vertices: []
       indices: 
       edges: []

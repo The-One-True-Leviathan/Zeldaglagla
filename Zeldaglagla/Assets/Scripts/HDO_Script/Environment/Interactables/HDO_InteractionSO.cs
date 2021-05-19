@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Interaction", menuName = "Interaction", order = 0)]
 public class HDO_InteractionSO : ScriptableObject
 {
-    public enum InteractionType { dialog, enemyEvent, environmentEvent, item, bossEvent, characterImprovement, needItem, setSpawnPoint}
+    public enum InteractionType { dialog, enemyEvent, environmentEvent, item, bossEvent, characterImprovement, needItem, setSpawnPoint};
     public enum dialogType { inner, EVAA };
     public enum dialogNum { one, several };
 
@@ -18,11 +18,11 @@ public class HDO_InteractionSO : ScriptableObject
     public bool needSpawnPoint;
 
     [Header("Dialogue")]
+    public bool dialogSuite;
     public dialogNum number;
     public dialogType type;
 
     public List<string> dialogs = null;
-
 
     [Header("Enemy Event")]
     public List<GameObject> enemiesToSpawn = null;
@@ -39,13 +39,17 @@ public class HDO_InteractionSO : ScriptableObject
     public bool consumesItem;
 
     [Header("Boss Event")]
-    public bool boosDialog;
+    public bool bossDialog;
 
     [Header("Character Improvement (must be Unique !!!)")]
     public bool percentage;
 
     public float damageModifier;
     public float torchDamageModifier;
+
+    public bool abilityUnlock;
+    public enum Ability { none, torch, heatwave};
+    public Ability abilityUnlocked;
 
     
 

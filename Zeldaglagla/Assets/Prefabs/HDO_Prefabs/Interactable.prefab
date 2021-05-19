@@ -124,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   severalInteractions: 0
   interactions:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: f60509f55ace23a45a8762e5cab922b3, type: 2}
   waitTimeBetweenInteractions:
   - 0
   spawnPoint: {fileID: 0}

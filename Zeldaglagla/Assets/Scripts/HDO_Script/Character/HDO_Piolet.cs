@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Combat;
 using Monsters;
+using UnityEngine.InputSystem;
 
 public class HDO_Piolet : MonoBehaviour
 {
@@ -29,7 +30,6 @@ public class HDO_Piolet : MonoBehaviour
     StunStruct stun, shieldStun;
 
     [Header("FreezeFrame Stats")]
-
     [SerializeField]
     float ffScale; 
     [SerializeField]
@@ -41,6 +41,14 @@ public class HDO_Piolet : MonoBehaviour
     bool freeezeFraming;
     public bool resetFF;
     int checker;
+
+    Gamepad gamepad;
+
+    [Header("Controller Vibration Stats")]
+    [SerializeField]
+    float lowFrequency;
+    [SerializeField]
+    float highFrequency, duration;
 
     [Header("Shield")]
     [SerializeField]
@@ -60,10 +68,11 @@ public class HDO_Piolet : MonoBehaviour
 
         shieldBox = shield.GetComponentInChildren<BoxCollider2D>();
         
-
         stun = new StunStruct(stunAmount, stunLength);
         shieldStun = new StunStruct(shieldStunAmount, shieldStunLength);
         dam = new DamageStruct(damage);
+
+        gamepad = Gamepad.current;
     }
 
     // Update is called once per frame
@@ -209,6 +218,8 @@ public class HDO_Piolet : MonoBehaviour
             {
                 if (!freeezeFraming && !(ffed.Contains(e)))
                 {
+                    gamepad.SetMotorSpeeds(lowFrequency, highFrequency);
+                    StartCoroutine(Vibration());
                     StartCoroutine(FreezeFrame());
                     ffed.Add(e);
                     freeezeFraming = true;
@@ -223,6 +234,12 @@ public class HDO_Piolet : MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator Vibration()
+    {
+        yield return new WaitForSecondsRealtime(duration);
+        gamepad.ResetHaptics();
     }
 
     IEnumerator FreezeFrame()

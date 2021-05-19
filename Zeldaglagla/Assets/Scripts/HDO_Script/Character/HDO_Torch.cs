@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Monsters;
 using Combat;
+using UnityEngine.InputSystem;
 
 public class HDO_Torch : MonoBehaviour
 {
@@ -10,9 +11,17 @@ public class HDO_Torch : MonoBehaviour
     public float speed;
     public float explosionRadius;
     public float explosionDuration;
+    [SerializeField]
+    float maxDuration;
     [System.NonSerialized] public int torchDamage, explosionDamage;
     bool wallHit;
     int results;
+
+    [Header("Controller Vibration Stats")]
+    [SerializeField]
+    float lowFrequency;
+    [SerializeField]
+    float highFrequency, vibrationDuration;
 
     [SerializeField]
     CircleCollider2D ExplosionCollider;
@@ -29,6 +38,10 @@ public class HDO_Torch : MonoBehaviour
     [System.NonSerialized]
     public Vector3 movement;
 
+    Gamepad gamepad;
+
+    bool vibrating;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +49,8 @@ public class HDO_Torch : MonoBehaviour
         self = GetComponent<CircleCollider2D>();
         trueDamage = new DamageStruct(torchDamage);
         explosionDam= new DamageStruct(explosionDamage);
+
+        gamepad = Gamepad.current;
     }
 
     // Update is called once per frame
@@ -45,6 +60,13 @@ public class HDO_Torch : MonoBehaviour
         {
             transform.position = transform.position + (movement * speed * Time.deltaTime);
             CheckCollision();
+        }
+
+        maxDuration -= Time.deltaTime;
+
+        if(maxDuration <= 0)
+        {
+            Destroy(this.gameObject);
         }
     }
 
@@ -77,8 +99,14 @@ public class HDO_Torch : MonoBehaviour
         Collider2D[] exploCaught = new Collider2D[0];
 
         exploCaught = Physics2D.OverlapCircleAll(transform.position, ExplosionCollider.radius, enemy.layerMask);
-
-        foreach(Collider2D col in exploCaught)
+        if (!vibrating)
+        {
+            vibrating = true;
+            gamepad.SetMotorSpeeds(lowFrequency, highFrequency);
+            StartCoroutine(Vibration());
+        }
+        
+        foreach (Collider2D col in exploCaught)
         {
             
             root = col.GetComponent<MonsterRoot>();
@@ -102,11 +130,18 @@ public class HDO_Torch : MonoBehaviour
         monster.Damage(explosionDam);     
     }
 
+    IEnumerator Vibration()
+    {
+        yield return new WaitForSecondsRealtime(vibrationDuration);
+        gamepad.ResetHaptics();
+    }
+
     IEnumerator Death()
     {
         
         yield return new WaitForSeconds(explosionDuration);
         damaged.Clear();
+        gamepad.ResetHaptics();
         Destroy(this.gameObject);
         
     }

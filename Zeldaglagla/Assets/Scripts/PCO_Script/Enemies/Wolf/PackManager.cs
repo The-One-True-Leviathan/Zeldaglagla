@@ -6,7 +6,7 @@ using Pathfinding;
 
 public class PackManager : MonoBehaviour
 {
-    GameObject player;
+    GameObject player, heatManagerGO;
 
     public List<WolfRoot> wolves;
     public int startingWolves, currentWolves;
@@ -30,10 +30,11 @@ public class PackManager : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        heatManagerGO = GameObject.FindGameObjectWithTag("HeatManager");
 
-        if (player.GetComponent<HDO_HeatManager>())
+        if (heatManagerGO.GetComponent<HDO_HeatManager>())
         {
-            heatManager = player.GetComponent<HDO_HeatManager>();
+            heatManager = heatManagerGO.GetComponent<HDO_HeatManager>();
         }
 
 
@@ -53,7 +54,7 @@ public class PackManager : MonoBehaviour
             {
                 AllGoToRush();
             }
-            if (player.GetComponent<HDO_HeatManager>().heatModifierPerSecond < 0 && player.GetComponent<HDO_HeatManager>().heatValue < player.GetComponent<HDO_HeatManager>().maxHeat / 2)
+            if (heatManager.heatModifierPerSecond < 0 && heatManager.heatValue < heatManager.maxHeat / 2)
             {
                 AllGoToRush();
             }
@@ -62,7 +63,7 @@ public class PackManager : MonoBehaviour
 
     public void StartHarassing()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPackCircle>().SetCircleSize(rushCircleSize);
+        player.GetComponent<PlayerPackCircle>().SetCircleSize(rushCircleSize);
         GoToState("Harass");
     }
 
@@ -167,7 +168,7 @@ public class PackManager : MonoBehaviour
     {
         isApproaching = false;
         isObserving = true;
-        if (GameObject.FindGameObjectWithTag("Player").GetComponent<HDO_HeatManager>().heatModifierPerSecond > 0)
+        if (heatManager.heatModifierPerSecond > 0)
         {
             observeTime = minObserveTime;
         } else

@@ -101,7 +101,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   explosionRadius: 2.5
-  explosionDuration: 0
+  explosionDuration: 0.25
+  maxDuration: 2
+  lowFrequency: 0.85
+  highFrequency: 0
+  vibrationDuration: 0.3
   ExplosionCollider: {fileID: 7801563822987779906}
   obstacles:
     useTriggers: 0
@@ -131,6 +135,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  damaged: []
 --- !u!58 &7801563822568252801
 CircleCollider2D:
   m_ObjectHideFlags: 0

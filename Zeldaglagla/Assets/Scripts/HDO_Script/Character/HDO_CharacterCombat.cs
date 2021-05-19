@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Combat;
+using UnityEngine.InputSystem;
 
 public class HDO_CharacterCombat : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class HDO_CharacterCombat : MonoBehaviour
     HDO_HeatManager hm;
     [SerializeField]
     HDO_Piolet piolet;
+
+    Gamepad gamepad;
 
     //De la part de Pierre
     PCO_PlayerKnockback playerKnockback;
@@ -26,6 +29,12 @@ public class HDO_CharacterCombat : MonoBehaviour
 
     [Header("RespawnPoint")]
     public GameObject respawnPoint;
+
+    [Header("Controller Vibration Stats")]
+    [SerializeField]
+    float lowFrequency;
+    [SerializeField]
+    float highFrequency, vibrationDuration;
 
 
     [Header("Combat Statistics")]
@@ -71,6 +80,8 @@ public class HDO_CharacterCombat : MonoBehaviour
         controls.KBControlsWASD.Deflect.performed += ctx => Deflect();
         controls.UsualControls.Deflect.canceled += ctx => piolet.shielding = false;
         controls.KBControlsWASD.Deflect.canceled += ctx => piolet.shielding = false;
+
+        gamepad = Gamepad.current;
 
     }
 
@@ -152,7 +163,13 @@ public class HDO_CharacterCombat : MonoBehaviour
 
     void InstantiateTorch()
     {
+
         torching = false;
+        if(torch != null)
+        {
+            return;
+        }
+
         torch = Instantiate(shot, transform.position, Quaternion.identity).GetComponent<HDO_Torch>();
 
         torch.torchDamage = torchDirectDamage;
@@ -166,6 +183,8 @@ public class HDO_CharacterCombat : MonoBehaviour
     {
         if (!isInImmunity)
         {
+            gamepad.SetMotorSpeeds(lowFrequency, highFrequency);
+            StartCoroutine(Vibration());
             currentHealth -= damage.dmg;
             if (currentHealth <= 0)
             {
@@ -210,6 +229,11 @@ public class HDO_CharacterCombat : MonoBehaviour
     }
     //Fin des bidouillages de Pierre ;3
 
+    IEnumerator Vibration()
+    {
+        yield return new WaitForSecondsRealtime(vibrationDuration);
+        gamepad.ResetHaptics();
+    }
 
     private void OnDisable()
     {

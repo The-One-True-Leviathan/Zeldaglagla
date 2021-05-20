@@ -71,27 +71,26 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-    }/*public void PlayGame()
+    }
+    public void SetVolume(float volume)
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        SceneManager.LoadScene("GB_TestScene");
-        Debug.Log("Play Game OK");
+        AudioManager.volumeSlider = volume;
     }
 
-    public void OptionsMenu()
+
+    List<int> widths = new List<int>() { 568, 960, 1280, 1980 };
+    List<int> heights = new List<int>() { 320, 540, 800, 1080 };
+
+    public void SetScreensize(int index)
     {
-        Debug.Log("Options Menu OK");
+        bool fullscreen = Screen.fullScreen;
+        int width = widths[index];
+        int height = heights[index];
+        Screen.SetResolution(width, height, fullscreen);
     }
 
-    public void Credits()
+    public void SetFullScreen(bool _fullscreen)
     {
-        Debug.Log("Credits OK");
+        Screen.fullScreen = _fullscreen;
     }
-
-    public void QuitGame()
-    {
-        Debug.Log("Quit Game OK");
-        Application.Quit();
-    }*/
-
 }

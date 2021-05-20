@@ -60,6 +60,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Map",
+                    "type": "Button",
+                    "id": "66ca817a-b193-4dff-8049-4cae56366ddb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -183,6 +191,17 @@
                     "action": "Torch",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "88c2cf94-858b-43b7-bfd5-9cdb448555c8",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Map",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -242,6 +261,14 @@
                     "name": "Torch",
                     "type": "Button",
                     "id": "64c39b03-5bbd-4ffd-964f-493146ebd87f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Map",
+                    "type": "Button",
+                    "id": "210ca224-c606-46cb-8462-a023a75dca7f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -366,6 +393,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Torch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9b7026d4-d247-420c-821f-b8346ad0ca3f",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Map",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

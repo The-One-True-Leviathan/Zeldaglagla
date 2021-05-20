@@ -6,6 +6,14 @@ TagManager:
   tags:
   - I_Observe
   - HeatManager
+  - Map
+  - HeatCacheZ1
+  - HeatCacheZ2
+  - HeatCacheZ3
+  - CampCacheZ1
+  - CampCacheZ2
+  - CampCacheZ3
+  - DungeonCache
   layers:
   - Default
   - TransparentFX

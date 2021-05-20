@@ -31,6 +31,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
     HDO_InteractionSO currentInteraction;
     CoolTextScript cts;
     HDO_CharacterCombat combat;
+    HDO_MapManager map;
 
     [SerializeField]
     Text EVAADialog, innerDialog;
@@ -46,10 +47,12 @@ public class HDO_CharacterInteraction : MonoBehaviour
     bool manualInteraction, triggerInteraction;
     int it;
 
+
     private void Start()
     {
         selectorSr = selector.GetComponent<SpriteRenderer>();
         combat = GetComponent<HDO_CharacterCombat>();
+        map = GameObject.FindGameObjectWithTag("Map").GetComponent<HDO_MapManager>();
     }
 
     // Update is called once per frame
@@ -189,10 +192,117 @@ public class HDO_CharacterInteraction : MonoBehaviour
             ImproveCharacter(inter);
         }
 
+        if(inter.interactionType == HDO_InteractionSO.InteractionType.mapEvent)
+        {
+            MapEVent(inter);
+        }
+
         if (inter.isUnique)
         {
             doneUniqueInteraction.Add(inter);
         }
+    }
+
+    void MapEVent(HDO_InteractionSO inter)
+    {
+        if (inter.unlockMapPart)
+        {
+            GameObject mapPart = GameObject.Find(inter.mapPartName);
+            Destroy(mapPart);
+        }
+
+        if (inter.redirectToLocation && !inter.specificLocation)
+        {
+            GameObject[] caches = null;
+
+            if (inter.locationType == HDO_InteractionSO.LocationType.heatPoint)
+            {
+                if(inter.region == HDO_InteractionSO.Region.zone_1)
+                {
+                    caches = GameObject.FindGameObjectsWithTag("HeatCacheZ1");
+                }
+                else if (inter.region == HDO_InteractionSO.Region.zone_2)
+                {
+                    caches = GameObject.FindGameObjectsWithTag("HeatCacheZ2");
+                }
+                else if (inter.region == HDO_InteractionSO.Region.zone_3)
+                {
+                    caches = GameObject.FindGameObjectsWithTag("HeatCacheZ3");
+                }               
+
+            }
+
+            if (inter.locationType == HDO_InteractionSO.LocationType.monsterCamp)
+            {
+                if (inter.region == HDO_InteractionSO.Region.zone_1)
+                {
+                    caches = GameObject.FindGameObjectsWithTag("CampCacheZ1");
+                }
+                else if (inter.region == HDO_InteractionSO.Region.zone_2)
+                {
+                    caches = GameObject.FindGameObjectsWithTag("CampCacheZ2");
+                }
+                else if (inter.region == HDO_InteractionSO.Region.zone_3)
+                {
+                    caches = GameObject.FindGameObjectsWithTag("CampCacheZ3");
+                }
+            }
+
+            if (inter.locationType == HDO_InteractionSO.LocationType.dungeon)
+            {
+                caches = GameObject.FindGameObjectsWithTag("DungeonCache");
+            }
+
+            if (caches != null)
+            {
+                if (caches.Length == 1)
+                {
+                    map.Stock(caches[0].GetComponent<Image>(), inter.locationType);
+                }
+                else
+                {
+                    StartCoroutine(SelectCache(inter, caches));
+                }
+            }
+            else
+            {
+                Debug.Log("no caches left");
+            }
+
+            
+        }
+        else
+        {
+            map.Stock(GameObject.Find(inter.specificLocationName).GetComponent<Image>(), inter.locationType);
+        }
+    }
+
+    IEnumerator SelectCache(HDO_InteractionSO inter, GameObject[] caches)
+    {
+        Debug.Log("try selection");
+
+        int randomizer = Random.Range(0, caches.Length);
+        GameObject cache;
+        cache = caches[randomizer];
+
+        Debug.Log(cache);
+
+        yield return new WaitForEndOfFrame();
+
+        if(cache == null)
+        {
+            StartCoroutine(SelectCache(inter, caches));
+        }
+
+        if(inter.mapPartName == cache.name)
+        {
+            StartCoroutine(SelectCache(inter, caches));
+        }
+        else
+        {
+            map.Stock(cache.GetComponent<Image>(), inter.locationType);
+        }
+
     }
 
     void ImproveCharacter(HDO_InteractionSO inter)

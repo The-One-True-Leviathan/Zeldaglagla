@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class HDO_Controller : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class HDO_Controller : MonoBehaviour
     [SerializeField]
     HDO_CharacterInteraction interact;
     [SerializeField]
-    GameObject gunPoint;
+    GameObject gunPoint, map;
 
     Animator animator;
     [SerializeField]
@@ -30,7 +31,7 @@ public class HDO_Controller : MonoBehaviour
 
     bool dodging;
     public bool freeMovement;
-
+    bool mapDisplay;
 
     private void Awake()
     {
@@ -41,6 +42,9 @@ public class HDO_Controller : MonoBehaviour
 
         controls.KBControlsWASD.Movement.performed += ctx => movementVector = ctx.ReadValue<Vector2>();
         controls.KBControlsWASD.Movement.canceled += ctx => movementVector = Vector2.zero;
+
+        controls.UsualControls.Map.performed += ctx => mapDisplay = !mapDisplay;
+        controls.UsualControls.Map.performed += ctx => Map();
 
         controls.UsualControls.Dodge.performed += ctx => Dodge();
 
@@ -65,6 +69,12 @@ public class HDO_Controller : MonoBehaviour
         if (dodgeCdElapsed > 0) dodgeCdElapsed -= Time.deltaTime;
         Input();
         Movement();
+    }
+
+    void Map()
+    {
+        map.GetComponent<Image>().enabled = mapDisplay;
+        
     }
 
     void Dodge()

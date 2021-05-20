@@ -73,6 +73,14 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Map"",
+                    ""type"": ""Button"",
+                    ""id"": ""66ca817a-b193-4dff-8049-4cae56366ddb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -196,6 +204,17 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""action"": ""Torch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""88c2cf94-858b-43b7-bfd5-9cdb448555c8"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Map"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -255,6 +274,14 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""name"": ""Torch"",
                     ""type"": ""Button"",
                     ""id"": ""64c39b03-5bbd-4ffd-964f-493146ebd87f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Map"",
+                    ""type"": ""Button"",
+                    ""id"": ""210ca224-c606-46cb-8462-a023a75dca7f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -381,6 +408,17 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""action"": ""Torch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9b7026d4-d247-420c-821f-b8346ad0ca3f"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Map"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -396,6 +434,7 @@ public class @Controls : IInputActionCollection, IDisposable
         m_UsualControls_Deflect = m_UsualControls.FindAction("Deflect", throwIfNotFound: true);
         m_UsualControls_Heatwave = m_UsualControls.FindAction("Heatwave", throwIfNotFound: true);
         m_UsualControls_Torch = m_UsualControls.FindAction("Torch", throwIfNotFound: true);
+        m_UsualControls_Map = m_UsualControls.FindAction("Map", throwIfNotFound: true);
         // KBControlsWASD
         m_KBControlsWASD = asset.FindActionMap("KBControlsWASD", throwIfNotFound: true);
         m_KBControlsWASD_Movement = m_KBControlsWASD.FindAction("Movement", throwIfNotFound: true);
@@ -405,6 +444,7 @@ public class @Controls : IInputActionCollection, IDisposable
         m_KBControlsWASD_Deflect = m_KBControlsWASD.FindAction("Deflect", throwIfNotFound: true);
         m_KBControlsWASD_Heatwave = m_KBControlsWASD.FindAction("Heatwave", throwIfNotFound: true);
         m_KBControlsWASD_Torch = m_KBControlsWASD.FindAction("Torch", throwIfNotFound: true);
+        m_KBControlsWASD_Map = m_KBControlsWASD.FindAction("Map", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -461,6 +501,7 @@ public class @Controls : IInputActionCollection, IDisposable
     private readonly InputAction m_UsualControls_Deflect;
     private readonly InputAction m_UsualControls_Heatwave;
     private readonly InputAction m_UsualControls_Torch;
+    private readonly InputAction m_UsualControls_Map;
     public struct UsualControlsActions
     {
         private @Controls m_Wrapper;
@@ -472,6 +513,7 @@ public class @Controls : IInputActionCollection, IDisposable
         public InputAction @Deflect => m_Wrapper.m_UsualControls_Deflect;
         public InputAction @Heatwave => m_Wrapper.m_UsualControls_Heatwave;
         public InputAction @Torch => m_Wrapper.m_UsualControls_Torch;
+        public InputAction @Map => m_Wrapper.m_UsualControls_Map;
         public InputActionMap Get() { return m_Wrapper.m_UsualControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -502,6 +544,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Torch.started -= m_Wrapper.m_UsualControlsActionsCallbackInterface.OnTorch;
                 @Torch.performed -= m_Wrapper.m_UsualControlsActionsCallbackInterface.OnTorch;
                 @Torch.canceled -= m_Wrapper.m_UsualControlsActionsCallbackInterface.OnTorch;
+                @Map.started -= m_Wrapper.m_UsualControlsActionsCallbackInterface.OnMap;
+                @Map.performed -= m_Wrapper.m_UsualControlsActionsCallbackInterface.OnMap;
+                @Map.canceled -= m_Wrapper.m_UsualControlsActionsCallbackInterface.OnMap;
             }
             m_Wrapper.m_UsualControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -527,6 +572,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Torch.started += instance.OnTorch;
                 @Torch.performed += instance.OnTorch;
                 @Torch.canceled += instance.OnTorch;
+                @Map.started += instance.OnMap;
+                @Map.performed += instance.OnMap;
+                @Map.canceled += instance.OnMap;
             }
         }
     }
@@ -542,6 +590,7 @@ public class @Controls : IInputActionCollection, IDisposable
     private readonly InputAction m_KBControlsWASD_Deflect;
     private readonly InputAction m_KBControlsWASD_Heatwave;
     private readonly InputAction m_KBControlsWASD_Torch;
+    private readonly InputAction m_KBControlsWASD_Map;
     public struct KBControlsWASDActions
     {
         private @Controls m_Wrapper;
@@ -553,6 +602,7 @@ public class @Controls : IInputActionCollection, IDisposable
         public InputAction @Deflect => m_Wrapper.m_KBControlsWASD_Deflect;
         public InputAction @Heatwave => m_Wrapper.m_KBControlsWASD_Heatwave;
         public InputAction @Torch => m_Wrapper.m_KBControlsWASD_Torch;
+        public InputAction @Map => m_Wrapper.m_KBControlsWASD_Map;
         public InputActionMap Get() { return m_Wrapper.m_KBControlsWASD; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -583,6 +633,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Torch.started -= m_Wrapper.m_KBControlsWASDActionsCallbackInterface.OnTorch;
                 @Torch.performed -= m_Wrapper.m_KBControlsWASDActionsCallbackInterface.OnTorch;
                 @Torch.canceled -= m_Wrapper.m_KBControlsWASDActionsCallbackInterface.OnTorch;
+                @Map.started -= m_Wrapper.m_KBControlsWASDActionsCallbackInterface.OnMap;
+                @Map.performed -= m_Wrapper.m_KBControlsWASDActionsCallbackInterface.OnMap;
+                @Map.canceled -= m_Wrapper.m_KBControlsWASDActionsCallbackInterface.OnMap;
             }
             m_Wrapper.m_KBControlsWASDActionsCallbackInterface = instance;
             if (instance != null)
@@ -608,6 +661,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Torch.started += instance.OnTorch;
                 @Torch.performed += instance.OnTorch;
                 @Torch.canceled += instance.OnTorch;
+                @Map.started += instance.OnMap;
+                @Map.performed += instance.OnMap;
+                @Map.canceled += instance.OnMap;
             }
         }
     }
@@ -621,6 +677,7 @@ public class @Controls : IInputActionCollection, IDisposable
         void OnDeflect(InputAction.CallbackContext context);
         void OnHeatwave(InputAction.CallbackContext context);
         void OnTorch(InputAction.CallbackContext context);
+        void OnMap(InputAction.CallbackContext context);
     }
     public interface IKBControlsWASDActions
     {
@@ -631,5 +688,6 @@ public class @Controls : IInputActionCollection, IDisposable
         void OnDeflect(InputAction.CallbackContext context);
         void OnHeatwave(InputAction.CallbackContext context);
         void OnTorch(InputAction.CallbackContext context);
+        void OnMap(InputAction.CallbackContext context);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Interaction", menuName = "Interaction", order = 0)]
 public class HDO_InteractionSO : ScriptableObject
 {
-    public enum InteractionType { dialog, enemyEvent, environmentEvent, item, bossEvent, characterImprovement, needItem, setSpawnPoint};
+    public enum InteractionType { dialog, enemyEvent, environmentEvent, item, bossEvent, characterImprovement, needItem, setSpawnPoint, mapEvent};
     public enum dialogType { inner, EVAA };
     public enum dialogNum { one, several };
 
@@ -51,6 +51,19 @@ public class HDO_InteractionSO : ScriptableObject
     public enum Ability { none, torch, heatwave};
     public Ability abilityUnlocked;
 
-    
+    [Header("Map Event")]
+    public bool unlockMapPart;
+    public string mapPartName;
+
+    public bool redirectToLocation;
+
+    public enum Region { zone_1, zone_2, zone_3, any}
+    public Region region;
+
+    public bool specificLocation;
+
+    public string specificLocationName;
+    public enum LocationType { dungeon, heatPoint, monsterCamp};
+    public LocationType locationType;
 
 }

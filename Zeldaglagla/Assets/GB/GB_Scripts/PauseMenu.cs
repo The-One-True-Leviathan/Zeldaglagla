@@ -10,6 +10,11 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     public GameObject optionsMenu;
 
+    private void Awake()
+    {
+        AudioManager.volumeSlider = 1f;
+    }
+    
     void Update()
     {
         if (Gamepad.current.startButton.wasPressedThisFrame || Keyboard.current.escapeKey.wasPressedThisFrame)

@@ -164,5 +164,9 @@ public class BaseShooterBehavior : ShooterRoot
         if (pather.velocity.magnitude < 0.1) return false;
         return true;
     }
+    void ShooterShot()
+    {
+        FindObjectOfType<AudioManager>().Play("ShooterShot");
+    }
 
 }

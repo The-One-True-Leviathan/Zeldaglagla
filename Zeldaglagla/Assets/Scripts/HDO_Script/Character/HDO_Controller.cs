@@ -175,4 +175,20 @@ public class HDO_Controller : MonoBehaviour
         controls.UsualControls.Enable();
         controls.KBControlsWASD.Enable();
     }
+
+    void Footstep()
+    {
+        FindObjectOfType<AudioManager>().Play("Footstep Snow");
+        Debug.Log("Son marche");
+    }
+
+    void IceAxe()
+    {
+        FindObjectOfType<AudioManager>().Play("Ice Axe");
+    }
+
+    void Torch()
+    {
+        FindObjectOfType<AudioManager>().Play("Torch");
+    }
 }

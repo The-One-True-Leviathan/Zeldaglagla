@@ -96,6 +96,8 @@ public class BaseShooter_SMBAttack : StateMachineBehaviour
 
     void Shoot()
     {
+        FindObjectOfType<AudioManager>().Play("ShooterShot");
+
         shotsFired++;
         Projectile_Behaviour projectile;
         projectile = Instantiate(shooter.projectile, shooter.transform.position, Quaternion.LookRotation(Vector3.forward, shooter.ToPlayer().normalized)).GetComponent<Projectile_Behaviour>();

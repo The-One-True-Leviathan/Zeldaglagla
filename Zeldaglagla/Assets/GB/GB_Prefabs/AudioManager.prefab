@@ -62,3 +62,27 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Footstep Snow
+    clip: {fileID: 8300000, guid: 902a17dfd9dba6840878c5373289f432, type: 3}
+    volume: 0
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ice Axe
+    clip: {fileID: 8300000, guid: 254446ef80ce3244e9daff3928a96bf2, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Torch
+    clip: {fileID: 8300000, guid: 5ad35b6c3a96a564b877efc0c1d60115, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ShooterShot
+    clip: {fileID: 8300000, guid: d7f1c31d406be9745883fe4d3e92e4e4, type: 3}
+    volume: 0.75
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

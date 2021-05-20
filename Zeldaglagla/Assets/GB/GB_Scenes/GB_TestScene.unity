@@ -1060,17 +1060,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 693671876588548349, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
-      propertyPath: torchCooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 693671876588548349, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
-      propertyPath: torchUnlocked
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6488109896675098630, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Name
       value: Essentials
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488109896675098630, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8036298405979945407, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_RootOrder

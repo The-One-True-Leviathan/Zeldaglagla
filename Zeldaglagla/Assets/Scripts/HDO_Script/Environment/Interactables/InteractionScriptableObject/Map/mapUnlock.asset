@@ -36,4 +36,7 @@ MonoBehaviour:
   unlockMapPart: 1
   mapPartName: mapCache - heatPoint
   redirectToLocation: 1
+  region: 0
+  specificLocation: 0
+  specificLocationName: 
   locationType: 1

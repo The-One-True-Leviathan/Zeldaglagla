@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class HDO_CharacterInteraction : MonoBehaviour
 {
-
     [SerializeField]
     ContactFilter2D interactables;
     [SerializeField]
@@ -47,12 +46,69 @@ public class HDO_CharacterInteraction : MonoBehaviour
     bool manualInteraction, triggerInteraction;
     int it;
 
+    
+    GameObject[] allHeatCache = null;
+    [SerializeField]
+    List<GameObject> heatCacheTransfer = null;
+
+    
+    GameObject[] campCache = null;
+    [SerializeField]
+    List<GameObject> campCacheTransfer = null;
 
     private void Start()
     {
         selectorSr = selector.GetComponent<SpriteRenderer>();
         combat = GetComponent<HDO_CharacterCombat>();
         map = GameObject.FindGameObjectWithTag("Map").GetComponent<HDO_MapManager>();
+
+        Invoke("GetMap", 1.5f);
+
+    }
+
+    void GetMap()
+    {
+        allHeatCache = GameObject.FindGameObjectsWithTag("HeatCacheZ1");
+
+        foreach (GameObject go in allHeatCache)
+        {
+            heatCacheTransfer.Add(go);
+        }
+
+        allHeatCache = GameObject.FindGameObjectsWithTag("HeatCacheZ2");
+
+        foreach (GameObject go in allHeatCache)
+        {
+            heatCacheTransfer.Add(go);
+        }
+
+        allHeatCache = GameObject.FindGameObjectsWithTag("HeatCacheZ3");
+
+        foreach (GameObject go in allHeatCache)
+        {
+            heatCacheTransfer.Add(go);
+        }
+
+        campCache = GameObject.FindGameObjectsWithTag("CampCacheZ1");
+
+        foreach (GameObject go in campCache)
+        {
+            campCacheTransfer.Add(go);
+        }
+
+        campCache = GameObject.FindGameObjectsWithTag("CampCacheZ2");
+
+        foreach (GameObject go in campCache)
+        {
+            campCacheTransfer.Add(go);
+        }
+
+        campCache = GameObject.FindGameObjectsWithTag("CampCacheZ3");
+
+        foreach (GameObject go in campCache)
+        {
+            campCacheTransfer.Add(go);
+        }
     }
 
     // Update is called once per frame
@@ -205,6 +261,8 @@ public class HDO_CharacterInteraction : MonoBehaviour
 
     void MapEVent(HDO_InteractionSO inter)
     {
+        bool any = false;
+
         if (inter.unlockMapPart)
         {
             GameObject mapPart = GameObject.Find(inter.mapPartName);
@@ -228,7 +286,11 @@ public class HDO_CharacterInteraction : MonoBehaviour
                 else if (inter.region == HDO_InteractionSO.Region.zone_3)
                 {
                     caches = GameObject.FindGameObjectsWithTag("HeatCacheZ3");
-                }               
+                }   
+                else if(inter.region == HDO_InteractionSO.Region.any)
+                {
+                    any = true;
+                }
 
             }
 
@@ -246,6 +308,10 @@ public class HDO_CharacterInteraction : MonoBehaviour
                 {
                     caches = GameObject.FindGameObjectsWithTag("CampCacheZ3");
                 }
+                else if(inter.region == HDO_InteractionSO.Region.any)
+                {
+                    any = true;
+                }
             }
 
             if (inter.locationType == HDO_InteractionSO.LocationType.dungeon)
@@ -253,7 +319,9 @@ public class HDO_CharacterInteraction : MonoBehaviour
                 caches = GameObject.FindGameObjectsWithTag("DungeonCache");
             }
 
-            if (caches != null)
+            Debug.Log(any);
+
+            if (caches != null && !any)
             {
                 if (caches.Length == 1)
                 {
@@ -264,16 +332,54 @@ public class HDO_CharacterInteraction : MonoBehaviour
                     StartCoroutine(SelectCache(inter, caches));
                 }
             }
+            else if(any)
+            {
+                if(inter.locationType == HDO_InteractionSO.LocationType.heatPoint)
+                {
+                    SelectListCache(inter, heatCacheTransfer);
+                }
+
+                if (inter.locationType == HDO_InteractionSO.LocationType.monsterCamp)
+                {
+                    SelectListCache(inter, campCacheTransfer);
+                }
+            }
             else
             {
                 Debug.Log("no caches left");
             }
 
-            
         }
         else
         {
             map.Stock(GameObject.Find(inter.specificLocationName).GetComponent<Image>(), inter.locationType);
+        }
+    }
+
+    IEnumerator SelectListCache(HDO_InteractionSO inter, List<GameObject> list)
+    {
+        Debug.Log("try selection");
+
+        int randomizer = Random.Range(0, list.Count - 1);
+        GameObject cache;
+        cache = list[randomizer];
+
+        Debug.Log(cache);
+
+        yield return new WaitForEndOfFrame();
+
+        if (cache == null)
+        {
+            StartCoroutine(SelectListCache(inter, list));
+        }
+
+        if (inter.mapPartName == cache.name)
+        {
+            StartCoroutine(SelectListCache(inter, list));
+        }
+        else
+        {
+            map.Stock(cache.GetComponent<Image>(), inter.locationType);
         }
     }
 

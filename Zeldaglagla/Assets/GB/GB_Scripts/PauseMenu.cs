@@ -7,7 +7,8 @@ using UnityEngine.InputSystem;
 public class PauseMenu : MonoBehaviour
 {
     public static bool isGamePaused = false;
-    [SerializeField] GameObject pauseMenu;
+    [SerializeField] 
+    GameObject pauseMenu;
     public GameObject optionsMenu;
 
     private void Awake()
@@ -17,7 +18,7 @@ public class PauseMenu : MonoBehaviour
     
     void Update()
     {
-        if (Gamepad.current.startButton.wasPressedThisFrame || Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (Keyboard.current.escapeKey.wasPressedThisFrame || Gamepad.current.startButton.wasPressedThisFrame)
         {
             if (isGamePaused)
             {

@@ -472,6 +472,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1576772520, guid: 46293280de312954797e205b5f05196a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9078135828925261985, guid: 46293280de312954797e205b5f05196a, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -629,10 +633,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1574232079}
-    - target: {fileID: 8561356652096630484, guid: 8331d87669458d0439618832d8abe332, type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8331d87669458d0439618832d8abe332, type: 3}
 --- !u!114 &392837968 stripped
@@ -1064,9 +1064,13 @@ PrefabInstance:
       propertyPath: torchUnlocked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 693671877529093924, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 693671878385123622, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6488109896675098630, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Name
@@ -1417,7 +1421,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 200
   m_TargetDisplay: 0
 --- !u!224 &1366164412
 RectTransform:
@@ -2277,11 +2281,19 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: a7282855ab49bb2439a9fa662d3b5d00, type: 3}
     - target: {fileID: 2963793758499493850, guid: 9382841148e0a0940ab33354b43c3f7c, type: 3}
       propertyPath: sounds.Array.data[3].volume
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963793758499493850, guid: 9382841148e0a0940ab33354b43c3f7c, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2963793758499493850, guid: 9382841148e0a0940ab33354b43c3f7c, type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2963793758499493850, guid: 9382841148e0a0940ab33354b43c3f7c, type: 3}
       propertyPath: sounds.Array.data[6].volume
-      value: 0.3
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 9121617942508769137, guid: 9382841148e0a0940ab33354b43c3f7c, type: 3}
       propertyPath: m_RootOrder

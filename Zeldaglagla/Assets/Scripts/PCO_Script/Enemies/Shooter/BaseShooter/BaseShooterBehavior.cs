@@ -26,6 +26,31 @@ public class BaseShooterBehavior : ShooterRoot
         SMB.GetBehaviour<BaseShooter_SMBFlee>().shooter = this;
     }
 
+    override public void GoBackToState()
+    {
+        switch (baseShooterSMBState)
+        {
+            case BaseShooterSMBState.WANDER:
+                SMB.Play("Flee");
+                break;
+            case BaseShooterSMBState.APPROACH:
+                SMB.Play("Flee");
+                break;
+            case BaseShooterSMBState.PAUSE:
+                SMB.Play("Flee");
+                break;
+            case BaseShooterSMBState.RELOCATE:
+                SMB.Play("Flee");
+                break;
+            case BaseShooterSMBState.ATTACK:
+                SMB.Play("Flee");
+                break;
+            case BaseShooterSMBState.FLEE:
+                SMB.Play("Flee");
+                break;
+        }
+    }
+
     private void Update()
     {
         AnimationManager();

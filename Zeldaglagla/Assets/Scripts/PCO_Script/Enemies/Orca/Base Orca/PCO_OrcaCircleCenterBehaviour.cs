@@ -19,7 +19,7 @@ public class PCO_OrcaCircleCenterBehaviour : MonoBehaviour
     {
         if (circling)
         {
-            if (orcaBehaviour.ToPlayer().magnitude > circleDistance * 2)
+            if (orcaBehaviour.ToPlayer().magnitude > circleDistance * 2 || orcaBehaviour.ToPlayer().magnitude < circleDistance*0.5)
             {
                 nearing = true;
             } else if (orcaBehaviour.ToPlayer().magnitude < 2)
@@ -31,7 +31,7 @@ public class PCO_OrcaCircleCenterBehaviour : MonoBehaviour
             if (!nearing)
             {
                 angle += circleSpeed * Time.deltaTime;
-                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                transform.eulerAngles = new Vector3(0,0,angle);
             } else
             {
                 transform.rotation = Quaternion.LookRotation(Vector3.forward,(-orcaBehaviour.ToPlayer()).normalized);

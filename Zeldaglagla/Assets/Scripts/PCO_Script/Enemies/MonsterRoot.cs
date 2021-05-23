@@ -112,6 +112,11 @@ namespace Monsters
             }
         }
 
+        virtual public bool Damage(DamageStruct damageTaken, bool isThisATorchAtk)
+        {
+            return Damage(damageTaken);
+        }
+
         virtual public void Death()
         {
             CombatEvents.monsterWasKilled.Invoke();

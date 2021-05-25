@@ -1,0 +1,312 @@
+fileFormatVersion: 2
+guid: 50d249b38eb1c6545a62f51593bee3ce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4176430773056801502
+    second: asset_donjon_ancienne_civloliloofaa_0
+  - first:
+      213: 3552835208123693775
+    second: asset_donjon_ancienne_civloliloofaa_1
+  - first:
+      213: 8133680147241531822
+    second: asset_donjon_ancienne_civloliloofaa_2
+  - first:
+      213: -1948223162496301218
+    second: asset_donjon_ancienne_civloliloofaa_3
+  - first:
+      213: 4254913264585185474
+    second: asset_donjon_ancienne_civloliloofaa_4
+  - first:
+      213: -8669036537406986037
+    second: asset_donjon_ancienne_civloliloofaa_5
+  - first:
+      213: -379694013582963170
+    second: asset_donjon_ancienne_civloliloofaa_6
+  - first:
+      213: 1410320580988280967
+    second: asset_donjon_ancienne_civloliloofaa_7
+  - first:
+      213: 8904372087368361318
+    second: asset_donjon_ancienne_civloliloofaa_8
+  - first:
+      213: -1718492274503229890
+    second: asset_donjon_ancienne_civloliloofaa_9
+  - first:
+      213: 123551777555444732
+    second: asset_donjon_ancienne_civloliloofaa_10
+  - first:
+      213: 8123670322138498226
+    second: asset_donjon_ancienne_civloliloofaa_11
+  - first:
+      213: -4028759738017608860
+    second: asset_donjon_ancienne_civloliloofaa_12
+  - first:
+      213: 3555332958188158755
+    second: asset_donjon_ancienne_civloliloofaa_13
+  - first:
+      213: 7869679870126368427
+    second: asset_donjon_ancienne_civloliloofaa_14
+  - first:
+      213: -8895830291790004165
+    second: asset_donjon_ancienne_civloliloofaa_15
+  - first:
+      213: 6817624365328010000
+    second: asset_donjon_ancienne_civloliloofaa_16
+  - first:
+      213: 8713372932760153477
+    second: asset_donjon_ancienne_civloliloofaa_17
+  - first:
+      213: 3078712654667077897
+    second: asset_donjon_ancienne_civloliloofaa_18
+  - first:
+      213: -7179531201657154481
+    second: asset_donjon_ancienne_civloliloofaa_19
+  - first:
+      213: 4469469941654306933
+    second: asset_donjon_ancienne_civloliloofaa_20
+  - first:
+      213: 8791648810848786284
+    second: asset_donjon_ancienne_civloliloofaa_21
+  - first:
+      213: -2503178592386559815
+    second: asset_donjon_ancienne_civloliloofaa_22
+  - first:
+      213: -8840526340621206822
+    second: asset_donjon_ancienne_civloliloofaa_23
+  - first:
+      213: -1422072104128242096
+    second: asset_donjon_ancienne_civloliloofaa_24
+  - first:
+      213: -5585829095913990581
+    second: asset_donjon_ancienne_civloliloofaa_25
+  - first:
+      213: 1094258456221886458
+    second: asset_donjon_ancienne_civloliloofaa_26
+  - first:
+      213: -4990062783683085516
+    second: asset_donjon_ancienne_civloliloofaa_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: asset_donjon_ancienne_civloliloofaa_0
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 986
+        width: 1252
+        height: 1845
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda8f0119a9a5f930800000000000000
+      internalID: 4176430773056801502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asset_donjon_ancienne_civloliloofaa_1
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 1175
+        width: 1427
+        height: 1666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcab6bd4cc43e4130800000000000000
+      internalID: 3552835208123693775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asset_donjon_ancienne_civloliloofaa_4
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 1209
+        width: 1252
+        height: 1025
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c892b5121d7c0b30800000000000000
+      internalID: 4254913264585185474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asset_donjon_ancienne_civloliloofaa_5
+      rect:
+        serializedVersion: 2
+        x: 5949
+        y: 1454
+        width: 1240
+        height: 572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc869f2233561b780800000000000000
+      internalID: -8669036537406986037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6c33b359fbc73b448a984d0c954fce0a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

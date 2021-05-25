@@ -33,21 +33,25 @@ public class PCO_BaseOrca_SMB_Attack : StateMachineBehaviour
                 buildup += Time.deltaTime;
                 if (buildup > maxBuildup)
                 {
-                    state = State.BUILDUP;
+                    state = State.HITSPAN;
+                    Debug.LogWarning("Orca is Going into Hitspan");
                 }
                 break;
             case State.HITSPAN:
                 hitspan += Time.deltaTime;
+                Debug.LogWarning("Hitspan time so far : " + hitspan);
                 baseOrca.Attack();
                 if (hitspan > maxHitspan)
                 {
                     state = State.RECOVER;
+                    Debug.LogWarning("Orca is Going into Recover");
                 }
                 break;
             case State.RECOVER:
                 recover += Time.deltaTime;
                 if (recover > maxRecover)
                 {
+                    Debug.LogWarning("Orca is Going into Circle");
                     animator.Play("Circle");
                 }
                 break;

@@ -178,17 +178,17 @@ public class HDO_Controller : MonoBehaviour
 
     void Footstep()
     {
-        FindObjectOfType<AudioManager>().Play("Footstep Snow");
+        //FindObjectOfType<AudioManager>().Play("Footstep Snow");
         Debug.Log("Son marche");
     }
 
     void IceAxe()
     {
-        FindObjectOfType<AudioManager>().Play("Ice Axe");
+        //FindObjectOfType<AudioManager>().Play("Ice Axe");
     }
 
     void Torch()
     {
-        FindObjectOfType<AudioManager>().Play("Torch");
+        //FindObjectOfType<AudioManager>().Play("Torch");
     }
 }

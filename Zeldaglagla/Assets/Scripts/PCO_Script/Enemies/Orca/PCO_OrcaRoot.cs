@@ -31,6 +31,7 @@ public class PCO_OrcaRoot : MonsterRoot
             if (player.GetComponent<HDO_CharacterCombat>())
             {
                 player.GetComponent<HDO_CharacterCombat>().TakeDamage(orcaDamage, transform);
+                Debug.LogWarning("Attacking Player");
             }
             else
             {

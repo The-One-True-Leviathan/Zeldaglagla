@@ -40,7 +40,7 @@ public class PCO_BaseOrcaBehaviour : PCO_OrcaRoot
     {
         circleCenterBehaviour.CenterOnPlayer();
         circleCenterBehaviour.Circle(runSpeed, circleDistance);
-        SMB.Play("Circling");
+        SMB.Play("Circle");
     }
 
     public override bool Damage(DamageStruct damageTaken)

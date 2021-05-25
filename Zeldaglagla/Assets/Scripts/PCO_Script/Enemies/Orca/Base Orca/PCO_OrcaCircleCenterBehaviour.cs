@@ -8,7 +8,9 @@ public class PCO_OrcaCircleCenterBehaviour : MonoBehaviour
     PCO_OrcaRoot orcaBehaviour;
     public Transform circlePointTransform;
     float circleSpeed, circleDistance, angle;
+    [SerializeField]
     bool circling, nearing;
+    public float distance;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +19,13 @@ public class PCO_OrcaCircleCenterBehaviour : MonoBehaviour
 
     private void Update()
     {
+        distance = orcaBehaviour.ToPlayer().magnitude;
         if (circling)
         {
-            if (orcaBehaviour.ToPlayer().magnitude > circleDistance * 2 || orcaBehaviour.ToPlayer().magnitude < circleDistance*0.5)
+            if (orcaBehaviour.ToPlayer().magnitude > circleDistance * 1.2 || orcaBehaviour.ToPlayer().magnitude < circleDistance*0.5)
             {
                 nearing = true;
-            } else if (orcaBehaviour.ToPlayer().magnitude < 2)
+            } else if (orcaBehaviour.ToPlayer().magnitude < circleDistance * 1.2 && orcaBehaviour.ToPlayer().magnitude > circleDistance*0.5)
             {
                 nearing = false;
                 angle = transform.eulerAngles.z;
@@ -48,18 +51,21 @@ public class PCO_OrcaCircleCenterBehaviour : MonoBehaviour
     public void CenterOnPlayer()
     {
         transform.parent = playerTransform;
+        transform.localPosition = Vector3.zero;
     }
 
     public void CenterOnOrca()
     {
         transform.parent = orcaTransform;
+        transform.localPosition = Vector3.zero;
     }
 
     public void Circle(float speed, float distance)
     {
-        circleSpeed = speed;
         circleDistance = distance;
+        circleSpeed = (speed*0.8f / ((distance * 2) * Mathf.PI)) * 360;
         circling = true;
+        transform.localScale = Vector3.one * circleDistance;
     }
 
     public void StopCircling()

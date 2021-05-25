@@ -184,8 +184,11 @@ public class HDO_CharacterCombat : MonoBehaviour
     {
         if (!isInImmunity)
         {
-            gamepad.SetMotorSpeeds(lowFrequency, highFrequency);
-            StartCoroutine(Vibration());
+            if (gamepad != null)
+            {
+                gamepad.SetMotorSpeeds(lowFrequency, highFrequency);
+                StartCoroutine(Vibration());
+            }
             currentHealth -= damage.dmg;
             if (currentHealth <= 0)
             {

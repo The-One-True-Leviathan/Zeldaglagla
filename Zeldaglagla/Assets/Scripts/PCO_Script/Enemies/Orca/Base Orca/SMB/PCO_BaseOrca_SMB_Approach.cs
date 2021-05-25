@@ -12,6 +12,7 @@ public class PCO_BaseOrca_SMB_Approach : StateMachineBehaviour
         baseOrca.destinationSetter.enabled = true;
         baseOrca.pather.enabled = true;
         baseOrca.destinationSetter.target = baseOrca.player.transform;
+        baseOrca.pather.SearchPath();
         baseOrca.baseOrcaSMBState = PCO_BaseOrcaBehaviour.BaseOrcaSMBState.APPROACH;
         baseOrca.pather.maxSpeed = baseOrca.runSpeed;
     }

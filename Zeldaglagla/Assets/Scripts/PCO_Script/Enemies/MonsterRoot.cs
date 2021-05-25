@@ -48,7 +48,7 @@ namespace Monsters
         public float kbThreshold = 0;
         public bool stunned, isInAttack, isInBuildup, isInRecover, isInHitSpan, isInKnockback, dead = false;
 
-        public Collider2D boundBox, hurtBox, attackZone;
+        public Collider2D boundBox, attackZone;
         [NonSerialized]
         public GameObject player;
         [NonSerialized]

@@ -86,11 +86,11 @@ public class BaseWolf : WolfRoot
         }
         if (direction.y > 0)
         {
-            anim += "_Up";
+            anim += "_Back";
         }
         else if (direction.y < 0)
         {
-            anim += "_Down";
+            anim += "_Front";
         }
         animator.Play(anim);
     }

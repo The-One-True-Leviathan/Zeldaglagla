@@ -87,15 +87,15 @@ MonoBehaviour:
   hasAttacked: 0
   isPackLeader: 0
   baseWolfSMBState: 0
-  wanderSpeed: 0
-  approachSpeed: 0
-  observeSpeed: 0
-  rushSpeed: 0
-  pounceSpeed: 0
-  fleeSpeed: 0
+  wanderSpeed: 5
+  approachSpeed: 10
+  observeSpeed: 5
+  rushSpeed: 7
+  pounceSpeed: 10
+  fleeSpeed: 6
   patrolTargets: []
   cyclicPatrol: 1
-  patrolWaitTime: 2
+  patrolWaitTime: 0.5
   playerInSight: 0
   playerInMemory: 0
   isPlayer:

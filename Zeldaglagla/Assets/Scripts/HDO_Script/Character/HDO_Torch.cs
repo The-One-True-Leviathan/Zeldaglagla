@@ -102,8 +102,11 @@ public class HDO_Torch : MonoBehaviour
         if (!vibrating)
         {
             vibrating = true;
-            gamepad.SetMotorSpeeds(lowFrequency, highFrequency);
-            StartCoroutine(Vibration());
+            if (gamepad != null)
+            {
+                gamepad.SetMotorSpeeds(lowFrequency, highFrequency);
+                StartCoroutine(Vibration());
+            }
         }
         
         foreach (Collider2D col in exploCaught)
@@ -141,7 +144,10 @@ public class HDO_Torch : MonoBehaviour
         
         yield return new WaitForSeconds(explosionDuration);
         damaged.Clear();
-        gamepad.ResetHaptics();
+        if (gamepad != null)
+        {
+            gamepad.ResetHaptics();
+        }
         Destroy(this.gameObject);
         
     }

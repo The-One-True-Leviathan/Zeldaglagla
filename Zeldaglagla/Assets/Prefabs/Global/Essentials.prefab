@@ -246,6 +246,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8036298405979945407}
     m_Modifications:
+    - target: {fileID: 1113747589, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
+      propertyPath: m_TagString
+      value: HeatManager
+      objectReference: {fileID: 0}
     - target: {fileID: 1113747591, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
       propertyPath: heatBar
       value: 

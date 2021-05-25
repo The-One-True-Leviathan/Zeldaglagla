@@ -177,16 +177,17 @@ public class BaseShooterBehavior : ShooterRoot
         {
             isRight = false;
         }
-        if (pather.velocity.y > 0.12)
+        if (pather.velocity.y > 0)
         {
             isUp = true;
             animationIndex = 3;
-        } else if (pather.velocity.y < -0.12)
+        } else if (pather.velocity.y < 0)
         {
             isUp = false;
             animationIndex = 2;
         }
-        if (pather.velocity.magnitude < 0.1) return false;
+        if (pather.velocity.magnitude < 0.05) return false;
+        Debug.Log("Walk with velocity, index = " + animationIndex);
         return true;
     }
     void ShooterShot()

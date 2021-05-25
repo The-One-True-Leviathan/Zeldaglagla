@@ -565,16 +565,14 @@ GameObject:
   m_Component:
   - component: {fileID: 185448719}
   - component: {fileID: 185448727}
-  - component: {fileID: 185448726}
+  - component: {fileID: 185448721}
   - component: {fileID: 185448725}
   - component: {fileID: 185448724}
   - component: {fileID: 185448723}
-  - component: {fileID: 185448722}
-  - component: {fileID: 185448721}
   - component: {fileID: 185448720}
   - component: {fileID: 185448728}
   m_Layer: 9
-  m_Name: Wolf 2
+  m_Name: Patrol Wolf
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -608,38 +606,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
---- !u!58 &185448721
-CircleCollider2D:
+--- !u!114 &185448721
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185448718}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.5, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.0001
---- !u!58 &185448722
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185448718}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954309fb8117c8843a0a7b76a5ec4ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  currentHP: 10
+  stunResist: 1
+  stunThreshold: 0
+  accumulatedStun: 0
+  stunMultiplier: 2
+  stunRecover: 0
+  kbResist: 1
+  kbThreshold: 0
+  stunned: 0
+  isInAttack: 0
+  isInBuildup: 0
+  isInRecover: 0
+  isInHitSpan: 0
+  isInKnockback: 0
+  dead: 0
+  boundBox: {fileID: 185448723}
+  attackZone: {fileID: 0}
+  SMB: {fileID: 185448727}
+  animator: {fileID: 0}
+  blocksLOS:
+    serializedVersion: 2
+    m_Bits: 64
+  pounceDmg: 5
+  pounceBuildup: 0.3
+  pounceHitSpan: 0
+  pouceRecover: 0.5
+  pounceLength: 5
+  viewDistance: 20
+  attackDistance: 0.5
+  pather: {fileID: 185448724}
+  destinationSetter: {fileID: 185448720}
+  pack: {fileID: 0}
+  thisGameObject: {fileID: 185448718}
+  hasAttacked: 0
+  isPackLeader: 0
+  baseWolfSMBState: 0
+  wanderSpeed: 0
+  approachSpeed: 0
+  observeSpeed: 0
+  rushSpeed: 0
+  pounceSpeed: 0
+  fleeSpeed: 0
+  patrolTargets: []
+  cyclicPatrol: 1
+  patrolWaitTime: 2
+  playerInSight: 0
+  playerInMemory: 0
+  isPlayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!58 &185448723
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -720,62 +749,6 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &185448726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185448718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d393e7db8e6b54e498c9327410f06ecd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
-  stunResist: 1
-  stunThreshold: 0
-  accumulatedStun: 0
-  stunMultiplier: 2
-  stunRecover: 0
-  kbResist: 1
-  kbThreshold: 0
-  stunned: 0
-  isInAttack: 0
-  isInBuildup: 0
-  isInRecover: 0
-  isInHitSpan: 0
-  isInKnockback: 0
-  dead: 0
-  boundBox: {fileID: 1889767241}
-  hurtBox: {fileID: 1889767240}
-  attackZone: {fileID: 1889767239}
-  SMB: {fileID: 0}
-  animator: {fileID: 0}
-  blocksLOS:
-    serializedVersion: 2
-    m_Bits: 64
-  pounceDmg: 5
-  pounceBuildup: 0.3
-  pounceHitSpan: 0
-  pouceRecover: 0.5
-  pounceLength: 5
-  viewDistance: 20
-  attackDistance: 0.5
-  pather: {fileID: 1889767234}
-  destinationSetter: {fileID: 0}
-  pack: {fileID: 308090477}
-  thisGameObject: {fileID: 0}
-  hasAttacked: 0
-  isPackLeader: 0
-  baseWolfSMBState: 0
-  wanderSpeed: 5
-  approachSpeed: 10
-  observeSpeed: 5
-  rushSpeed: 7
-  pounceSpeed: 10
-  fleeSpeed: 6
 --- !u!95 &185448727
 Animator:
   serializedVersion: 3
@@ -1171,7 +1144,6 @@ MonoBehaviour:
   isInKnockback: 0
   dead: 0
   boundBox: {fileID: 0}
-  hurtBox: {fileID: 0}
   attackZone: {fileID: 0}
   SMB: {fileID: 0}
   animator: {fileID: 0}
@@ -1740,8 +1712,7 @@ MonoBehaviour:
   isInKnockback: 0
   dead: 0
   boundBox: {fileID: 1889767241}
-  hurtBox: {fileID: 1889767240}
-  attackZone: {fileID: 1889767239}
+  attackZone: {fileID: 0}
   SMB: {fileID: 0}
   animator: {fileID: 0}
   blocksLOS:
@@ -3000,8 +2971,7 @@ MonoBehaviour:
   isInKnockback: 0
   dead: 0
   boundBox: {fileID: 1889767241}
-  hurtBox: {fileID: 1889767240}
-  attackZone: {fileID: 1889767239}
+  attackZone: {fileID: 0}
   SMB: {fileID: 0}
   animator: {fileID: 0}
   blocksLOS:
@@ -3769,8 +3739,7 @@ MonoBehaviour:
   isInKnockback: 0
   dead: 0
   boundBox: {fileID: 1889767241}
-  hurtBox: {fileID: 1889767240}
-  attackZone: {fileID: 1889767239}
+  attackZone: {fileID: 0}
   SMB: {fileID: 0}
   animator: {fileID: 0}
   blocksLOS:
@@ -5412,16 +5381,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6557071358892673241, guid: d41b81a5441ed81428441cc634034c52, type: 3}
   m_PrefabInstance: {fileID: 6557071357002909599}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &1889767239 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 6557071358892673240, guid: d41b81a5441ed81428441cc634034c52, type: 3}
-  m_PrefabInstance: {fileID: 6557071357002909599}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &1889767240 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 6557071358892673239, guid: d41b81a5441ed81428441cc634034c52, type: 3}
-  m_PrefabInstance: {fileID: 6557071357002909599}
-  m_PrefabAsset: {fileID: 0}
 --- !u!58 &1889767241 stripped
 CircleCollider2D:
   m_CorrespondingSourceObject: {fileID: 6557071358892673238, guid: d41b81a5441ed81428441cc634034c52, type: 3}
@@ -5739,8 +5698,7 @@ MonoBehaviour:
   isInKnockback: 0
   dead: 0
   boundBox: {fileID: 1889767241}
-  hurtBox: {fileID: 1889767240}
-  attackZone: {fileID: 1889767239}
+  attackZone: {fileID: 0}
   SMB: {fileID: 0}
   animator: {fileID: 0}
   blocksLOS:
@@ -6298,6 +6256,78 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142755352}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &8452435242415474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544675255543312874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  radius: 0.5
+  height: 2
+  repathRate: 0.5
+  canSearch: 1
+  canMove: 1
+  maxSpeed: 10
+  gravity: {x: NaN, y: NaN, z: NaN}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  centerOffsetCompatibility: NaN
+  orientation: 1
+  enableRotation: 0
+  targetCompatibility: {fileID: 0}
+  maxAcceleration: 20
+  rotationSpeed: 360
+  slowdownDistance: 0.6
+  pickNextWaypointDist: 0.2
+  endReachedDistance: 0.2
+  alwaysDrawGizmos: 1
+  slowWhenNotFacingTarget: 1
+  whenCloseToDestination: 0
+  constrainInsideGraph: 0
+--- !u!114 &179214391496072251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018763167498530194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  radius: 0.5
+  height: 2
+  repathRate: 0.5
+  canSearch: 1
+  canMove: 1
+  maxSpeed: 10
+  gravity: {x: NaN, y: NaN, z: NaN}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  centerOffsetCompatibility: NaN
+  orientation: 1
+  enableRotation: 0
+  targetCompatibility: {fileID: 0}
+  maxAcceleration: 20
+  rotationSpeed: 360
+  slowdownDistance: 0.6
+  pickNextWaypointDist: 0.2
+  endReachedDistance: 0.2
+  alwaysDrawGizmos: 1
+  slowWhenNotFacingTarget: 1
+  whenCloseToDestination: 0
+  constrainInsideGraph: 0
 --- !u!4 &643111626268385008
 Transform:
   m_ObjectHideFlags: 0
@@ -6379,6 +6409,96 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643111626268385009}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &717622955226429217
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018763167498530194}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0327f9222ad2ef14aa04a54e132b8560, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &832287109973466540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018763167498530194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b090bec917bbe4c3bbc612ef13f7c4a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  useRaycasting: 1
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  thickRaycast: 1
+  thickRaycastRadius: 0.5
+  use2DPhysics: 1
+  raycastOffset: {x: 0, y: 0, z: 0}
+  useGraphRaycasting: 0
+  quality: 1
+--- !u!4 &913167017156349760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241237070054939825}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.19, y: -0.3499999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 940317415029095513}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &940317415029095513
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8652609394486160131}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03, y: -2.48, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3569128028887380297}
+  - {fileID: 7014981451956991793}
+  - {fileID: 1070602558744683442}
+  - {fileID: 6733251929352732797}
+  - {fileID: 913167017156349760}
+  - {fileID: 1876270140231964910}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1070602558744683442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018763167498530194}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.19, y: -0.3499999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 940317415029095513}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1121575739896979462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6402,6 +6522,753 @@ MonoBehaviour:
   raycastOffset: {x: 0, y: 0, z: 0}
   useGraphRaycasting: 0
   quality: 1
+--- !u!58 &1187506078937302440
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076771819283616791}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!1 &1241237070054939825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 913167017156349760}
+  - component: {fileID: 7863355368991086204}
+  - component: {fileID: 6214403647667250319}
+  - component: {fileID: 3869148233262019611}
+  - component: {fileID: 6914139846242737813}
+  - component: {fileID: 6921721940895681838}
+  - component: {fileID: 2118207537570782769}
+  - component: {fileID: 2784146969425189403}
+  m_Layer: 9
+  m_Name: Patrol Wolf_5
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1524265231154633361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544675255543312874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b090bec917bbe4c3bbc612ef13f7c4a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  useRaycasting: 1
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  thickRaycast: 1
+  thickRaycastRadius: 0.5
+  use2DPhysics: 1
+  raycastOffset: {x: 0, y: 0, z: 0}
+  useGraphRaycasting: 0
+  quality: 1
+--- !u!4 &1876270140231964910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544675255543312874}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.19, y: -0.3499999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 940317415029095513}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2018763167498530194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1070602558744683442}
+  - component: {fileID: 717622955226429217}
+  - component: {fileID: 3376535007787265951}
+  - component: {fileID: 7453769917839783993}
+  - component: {fileID: 179214391496072251}
+  - component: {fileID: 2043025191078244066}
+  - component: {fileID: 3894558870914986080}
+  - component: {fileID: 832287109973466540}
+  m_Layer: 9
+  m_Name: Patrol Wolf_3
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!58 &2043025191078244066
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018763167498530194}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &2118207537570782769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241237070054939825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  target: {fileID: 0}
+--- !u!114 &2154957717062101542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404563496339208491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!1001 &2516650562943134639
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 940317415029095513}
+    m_Modifications:
+    - target: {fileID: 1397496125169851110, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397496125169851110, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397496125169851110, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.3499999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397496125169851110, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397496125169851110, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397496125169851110, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397496125169851110, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397496125169851110, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397496125169851110, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397496125169851110, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397496125169851110, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483704343725120412, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+      propertyPath: m_Name
+      value: Patrol Wolf_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793254701007145719, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+      propertyPath: pack
+      value: 
+      objectReference: {fileID: 5707514154249966594}
+    - target: {fileID: 3793254701007145719, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+      propertyPath: attackZone
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+--- !u!114 &2570837504544986432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404563496339208491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954309fb8117c8843a0a7b76a5ec4ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  currentHP: 10
+  stunResist: 1
+  stunThreshold: 0
+  accumulatedStun: 0
+  stunMultiplier: 2
+  stunRecover: 0
+  kbResist: 1
+  kbThreshold: 0
+  stunned: 0
+  isInAttack: 0
+  isInBuildup: 0
+  isInRecover: 0
+  isInHitSpan: 0
+  isInKnockback: 0
+  dead: 0
+  boundBox: {fileID: 7247159065814543197}
+  attackZone: {fileID: 0}
+  SMB: {fileID: 5190968927587108225}
+  animator: {fileID: 0}
+  blocksLOS:
+    serializedVersion: 2
+    m_Bits: 64
+  pounceDmg: 5
+  pounceBuildup: 0.3
+  pounceHitSpan: 0
+  pouceRecover: 0.5
+  pounceLength: 5
+  viewDistance: 20
+  attackDistance: 0.5
+  pather: {fileID: 7774117383180153421}
+  destinationSetter: {fileID: 7701902429234665294}
+  pack: {fileID: 5707514154249966594}
+  thisGameObject: {fileID: 4404563496339208491}
+  hasAttacked: 0
+  isPackLeader: 0
+  baseWolfSMBState: 0
+  wanderSpeed: 0
+  approachSpeed: 0
+  observeSpeed: 0
+  rushSpeed: 0
+  pounceSpeed: 0
+  fleeSpeed: 0
+  patrolTargets: []
+  cyclicPatrol: 1
+  patrolWaitTime: 2
+  playerInSight: 0
+  playerInMemory: 0
+  isPlayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &2639128517972133327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076771819283616791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  radius: 0.5
+  height: 2
+  repathRate: 0.5
+  canSearch: 1
+  canMove: 1
+  maxSpeed: 10
+  gravity: {x: NaN, y: NaN, z: NaN}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  centerOffsetCompatibility: NaN
+  orientation: 1
+  enableRotation: 0
+  targetCompatibility: {fileID: 0}
+  maxAcceleration: 20
+  rotationSpeed: 360
+  slowdownDistance: 0.6
+  pickNextWaypointDist: 0.2
+  endReachedDistance: 0.2
+  alwaysDrawGizmos: 1
+  slowWhenNotFacingTarget: 1
+  whenCloseToDestination: 0
+  constrainInsideGraph: 0
+--- !u!114 &2784146969425189403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241237070054939825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b090bec917bbe4c3bbc612ef13f7c4a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  useRaycasting: 1
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  thickRaycast: 1
+  thickRaycastRadius: 0.5
+  use2DPhysics: 1
+  raycastOffset: {x: 0, y: 0, z: 0}
+  useGraphRaycasting: 0
+  quality: 1
+--- !u!114 &3376535007787265951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018763167498530194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954309fb8117c8843a0a7b76a5ec4ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  currentHP: 10
+  stunResist: 1
+  stunThreshold: 0
+  accumulatedStun: 0
+  stunMultiplier: 2
+  stunRecover: 0
+  kbResist: 1
+  kbThreshold: 0
+  stunned: 0
+  isInAttack: 0
+  isInBuildup: 0
+  isInRecover: 0
+  isInHitSpan: 0
+  isInKnockback: 0
+  dead: 0
+  boundBox: {fileID: 2043025191078244066}
+  attackZone: {fileID: 0}
+  SMB: {fileID: 717622955226429217}
+  animator: {fileID: 0}
+  blocksLOS:
+    serializedVersion: 2
+    m_Bits: 64
+  pounceDmg: 5
+  pounceBuildup: 0.3
+  pounceHitSpan: 0
+  pouceRecover: 0.5
+  pounceLength: 5
+  viewDistance: 20
+  attackDistance: 0.5
+  pather: {fileID: 179214391496072251}
+  destinationSetter: {fileID: 3894558870914986080}
+  pack: {fileID: 5707514154249966594}
+  thisGameObject: {fileID: 2018763167498530194}
+  hasAttacked: 0
+  isPackLeader: 0
+  baseWolfSMBState: 0
+  wanderSpeed: 0
+  approachSpeed: 0
+  observeSpeed: 0
+  rushSpeed: 0
+  pounceSpeed: 0
+  fleeSpeed: 0
+  patrolTargets: []
+  cyclicPatrol: 1
+  patrolWaitTime: 2
+  playerInSight: 0
+  playerInMemory: 0
+  isPlayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!1 &3544675255543312874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1876270140231964910}
+  - component: {fileID: 4568447194692934741}
+  - component: {fileID: 7978613941736336060}
+  - component: {fileID: 7292921338283159392}
+  - component: {fileID: 8452435242415474}
+  - component: {fileID: 6110494707635319471}
+  - component: {fileID: 5671053994756828152}
+  - component: {fileID: 1524265231154633361}
+  m_Layer: 9
+  m_Name: Patrol Wolf_6
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3569128028887380297 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1397496125169851110, guid: a168ee608ad96b24db3ddaf481a0263e, type: 3}
+  m_PrefabInstance: {fileID: 2516650562943134639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3869148233262019611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241237070054939825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &3894558870914986080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018763167498530194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  target: {fileID: 0}
+--- !u!1 &4076771819283616791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7014981451956991793}
+  - component: {fileID: 7339576774489096710}
+  - component: {fileID: 5904115562630505943}
+  - component: {fileID: 8440293730460253835}
+  - component: {fileID: 2639128517972133327}
+  - component: {fileID: 1187506078937302440}
+  - component: {fileID: 8918308265508252385}
+  - component: {fileID: 7612462484966702691}
+  m_Layer: 9
+  m_Name: Patrol Wolf_2
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &4404563496339208491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6733251929352732797}
+  - component: {fileID: 5190968927587108225}
+  - component: {fileID: 2570837504544986432}
+  - component: {fileID: 2154957717062101542}
+  - component: {fileID: 7774117383180153421}
+  - component: {fileID: 7247159065814543197}
+  - component: {fileID: 7701902429234665294}
+  - component: {fileID: 7309029457228515092}
+  m_Layer: 9
+  m_Name: Patrol Wolf_4
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &4568447194692934741
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544675255543312874}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0327f9222ad2ef14aa04a54e132b8560, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &5190968927587108225
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404563496339208491}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0327f9222ad2ef14aa04a54e132b8560, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5671053994756828152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544675255543312874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  target: {fileID: 0}
+--- !u!114 &5707514154249966594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8652609394486160131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc7afd0bc1f321543afa3520428a0d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wolves: []
+  startingWolves: 0
+  currentWolves: 0
+  isInAttack: 0
+  wolfInAttack: {fileID: 0}
+  leader: {fileID: 0}
+  baseCircleDistance: 5
+  currentCircleDistance: 0
+  avoidDistance: 5
+  circleShrinkSpeed: 0.1
+  rotationSpeed: 0.2
+  observeDistance: 8
+  observeTime: 10
+  maxObserveTime: 10
+  minObserveTime: 3
+  isObserving: 0
+  rushCircleSize: 4
+  fleeDistance: 20
+--- !u!114 &5904115562630505943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076771819283616791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954309fb8117c8843a0a7b76a5ec4ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  currentHP: 10
+  stunResist: 1
+  stunThreshold: 0
+  accumulatedStun: 0
+  stunMultiplier: 2
+  stunRecover: 0
+  kbResist: 1
+  kbThreshold: 0
+  stunned: 0
+  isInAttack: 0
+  isInBuildup: 0
+  isInRecover: 0
+  isInHitSpan: 0
+  isInKnockback: 0
+  dead: 0
+  boundBox: {fileID: 1187506078937302440}
+  attackZone: {fileID: 0}
+  SMB: {fileID: 7339576774489096710}
+  animator: {fileID: 0}
+  blocksLOS:
+    serializedVersion: 2
+    m_Bits: 64
+  pounceDmg: 5
+  pounceBuildup: 0.3
+  pounceHitSpan: 0
+  pouceRecover: 0.5
+  pounceLength: 5
+  viewDistance: 20
+  attackDistance: 0.5
+  pather: {fileID: 2639128517972133327}
+  destinationSetter: {fileID: 8918308265508252385}
+  pack: {fileID: 5707514154249966594}
+  thisGameObject: {fileID: 4076771819283616791}
+  hasAttacked: 0
+  isPackLeader: 0
+  baseWolfSMBState: 0
+  wanderSpeed: 0
+  approachSpeed: 0
+  observeSpeed: 0
+  rushSpeed: 0
+  pounceSpeed: 0
+  fleeSpeed: 0
+  patrolTargets: []
+  cyclicPatrol: 1
+  patrolWaitTime: 2
+  playerInSight: 0
+  playerInMemory: 0
+  isPlayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!58 &6110494707635319471
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544675255543312874}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &6214403647667250319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241237070054939825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954309fb8117c8843a0a7b76a5ec4ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  currentHP: 10
+  stunResist: 1
+  stunThreshold: 0
+  accumulatedStun: 0
+  stunMultiplier: 2
+  stunRecover: 0
+  kbResist: 1
+  kbThreshold: 0
+  stunned: 0
+  isInAttack: 0
+  isInBuildup: 0
+  isInRecover: 0
+  isInHitSpan: 0
+  isInKnockback: 0
+  dead: 0
+  boundBox: {fileID: 6921721940895681838}
+  attackZone: {fileID: 0}
+  SMB: {fileID: 7863355368991086204}
+  animator: {fileID: 0}
+  blocksLOS:
+    serializedVersion: 2
+    m_Bits: 64
+  pounceDmg: 5
+  pounceBuildup: 0.3
+  pounceHitSpan: 0
+  pouceRecover: 0.5
+  pounceLength: 5
+  viewDistance: 20
+  attackDistance: 0.5
+  pather: {fileID: 6914139846242737813}
+  destinationSetter: {fileID: 2118207537570782769}
+  pack: {fileID: 5707514154249966594}
+  thisGameObject: {fileID: 1241237070054939825}
+  hasAttacked: 0
+  isPackLeader: 0
+  baseWolfSMBState: 0
+  wanderSpeed: 0
+  approachSpeed: 0
+  observeSpeed: 0
+  rushSpeed: 0
+  pounceSpeed: 0
+  fleeSpeed: 0
+  patrolTargets: []
+  cyclicPatrol: 1
+  patrolWaitTime: 2
+  playerInSight: 0
+  playerInMemory: 0
+  isPlayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1001 &6557071357002909599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6461,8 +7328,359 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wolf 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6557071358892673239, guid: d41b81a5441ed81428441cc634034c52, type: 3}
+    - {fileID: 6557071358892673240, guid: d41b81a5441ed81428441cc634034c52, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d41b81a5441ed81428441cc634034c52, type: 3}
+--- !u!4 &6733251929352732797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404563496339208491}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.19, y: -0.3499999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 940317415029095513}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6914139846242737813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241237070054939825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  radius: 0.5
+  height: 2
+  repathRate: 0.5
+  canSearch: 1
+  canMove: 1
+  maxSpeed: 10
+  gravity: {x: NaN, y: NaN, z: NaN}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  centerOffsetCompatibility: NaN
+  orientation: 1
+  enableRotation: 0
+  targetCompatibility: {fileID: 0}
+  maxAcceleration: 20
+  rotationSpeed: 360
+  slowdownDistance: 0.6
+  pickNextWaypointDist: 0.2
+  endReachedDistance: 0.2
+  alwaysDrawGizmos: 1
+  slowWhenNotFacingTarget: 1
+  whenCloseToDestination: 0
+  constrainInsideGraph: 0
+--- !u!58 &6921721940895681838
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241237070054939825}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!4 &7014981451956991793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076771819283616791}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.19, y: -0.3499999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 940317415029095513}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &7247159065814543197
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404563496339208491}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &7292921338283159392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544675255543312874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &7309029457228515092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404563496339208491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b090bec917bbe4c3bbc612ef13f7c4a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  useRaycasting: 1
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  thickRaycast: 1
+  thickRaycastRadius: 0.5
+  use2DPhysics: 1
+  raycastOffset: {x: 0, y: 0, z: 0}
+  useGraphRaycasting: 0
+  quality: 1
+--- !u!95 &7339576774489096710
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076771819283616791}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0327f9222ad2ef14aa04a54e132b8560, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7453769917839783993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018763167498530194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &7612462484966702691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076771819283616791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b090bec917bbe4c3bbc612ef13f7c4a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  useRaycasting: 1
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  thickRaycast: 1
+  thickRaycastRadius: 0.5
+  use2DPhysics: 1
+  raycastOffset: {x: 0, y: 0, z: 0}
+  useGraphRaycasting: 0
+  quality: 1
+--- !u!114 &7701902429234665294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404563496339208491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  target: {fileID: 0}
+--- !u!114 &7774117383180153421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404563496339208491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  radius: 0.5
+  height: 2
+  repathRate: 0.5
+  canSearch: 1
+  canMove: 1
+  maxSpeed: 10
+  gravity: {x: NaN, y: NaN, z: NaN}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  centerOffsetCompatibility: NaN
+  orientation: 1
+  enableRotation: 0
+  targetCompatibility: {fileID: 0}
+  maxAcceleration: 20
+  rotationSpeed: 360
+  slowdownDistance: 0.6
+  pickNextWaypointDist: 0.2
+  endReachedDistance: 0.2
+  alwaysDrawGizmos: 1
+  slowWhenNotFacingTarget: 1
+  whenCloseToDestination: 0
+  constrainInsideGraph: 0
+--- !u!95 &7863355368991086204
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241237070054939825}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0327f9222ad2ef14aa04a54e132b8560, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7978613941736336060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544675255543312874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954309fb8117c8843a0a7b76a5ec4ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  currentHP: 10
+  stunResist: 1
+  stunThreshold: 0
+  accumulatedStun: 0
+  stunMultiplier: 2
+  stunRecover: 0
+  kbResist: 1
+  kbThreshold: 0
+  stunned: 0
+  isInAttack: 0
+  isInBuildup: 0
+  isInRecover: 0
+  isInHitSpan: 0
+  isInKnockback: 0
+  dead: 0
+  boundBox: {fileID: 6110494707635319471}
+  attackZone: {fileID: 0}
+  SMB: {fileID: 4568447194692934741}
+  animator: {fileID: 0}
+  blocksLOS:
+    serializedVersion: 2
+    m_Bits: 64
+  pounceDmg: 5
+  pounceBuildup: 0.3
+  pounceHitSpan: 0
+  pouceRecover: 0.5
+  pounceLength: 5
+  viewDistance: 20
+  attackDistance: 0.5
+  pather: {fileID: 8452435242415474}
+  destinationSetter: {fileID: 5671053994756828152}
+  pack: {fileID: 5707514154249966594}
+  thisGameObject: {fileID: 3544675255543312874}
+  hasAttacked: 0
+  isPackLeader: 0
+  baseWolfSMBState: 0
+  wanderSpeed: 0
+  approachSpeed: 0
+  observeSpeed: 0
+  rushSpeed: 0
+  pounceSpeed: 0
+  fleeSpeed: 0
+  patrolTargets: []
+  cyclicPatrol: 1
+  patrolWaitTime: 2
+  playerInSight: 0
+  playerInMemory: 0
+  isPlayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &8435469621624772068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6576,7 +7794,6 @@ MonoBehaviour:
   isInKnockback: 0
   dead: 0
   boundBox: {fileID: 8435469621624772090}
-  hurtBox: {fileID: 8435469621624772090}
   attackZone: {fileID: 8435469621624772090}
   SMB: {fileID: 8435469621624772070}
   animator: {fileID: 0}
@@ -6674,6 +7891,65 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
+--- !u!114 &8440293730460253835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076771819283616791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!1 &8652609394486160131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 940317415029095513}
+  - component: {fileID: 5707514154249966594}
+  m_Layer: 0
+  m_Name: Patrol Wolf Pack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &8918308265508252385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076771819283616791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  target: {fileID: 0}
 --- !u!1001 &9078135828382211378
 PrefabInstance:
   m_ObjectHideFlags: 0

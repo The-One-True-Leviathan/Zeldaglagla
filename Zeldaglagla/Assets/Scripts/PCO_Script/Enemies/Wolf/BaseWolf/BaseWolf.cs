@@ -73,4 +73,25 @@ public class BaseWolf : WolfRoot
         Debug.Log("oh no je suis un loup et je susi stun ouhlala");
         SMB.Play("Stunned");
     }
+
+    public void SetAnim(string anim, Vector3 direction)
+    {
+        if (direction.x > 0)
+        {
+            animator.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (direction.x < 0)
+        {
+            animator.transform.localScale = new Vector3(1, 1, 1);
+        }
+        if (direction.y > 0)
+        {
+            anim += "_Up";
+        }
+        else if (direction.y < 0)
+        {
+            anim += "_Down";
+        }
+        animator.Play(anim);
+    }
 }

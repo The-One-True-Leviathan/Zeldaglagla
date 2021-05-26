@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 424952926}
   - component: {fileID: 424952925}
   - component: {fileID: 424952924}
-  - component: {fileID: 6685243896739865791}
   m_Layer: 0
   m_Name: Range_walk_front_0
   m_TagString: Untagged
@@ -103,18 +102,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6685243896739865791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424952923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 734401a36e55349479f2c7aaa91fcf3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1576772520
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1576772521
 Transform:
   m_ObjectHideFlags: 0
@@ -227,7 +214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9078135828925262014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.48, y: 0.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1576772521}
@@ -264,7 +251,6 @@ MonoBehaviour:
   isInKnockback: 0
   dead: 0
   boundBox: {fileID: 9078135828925261987}
-  hurtBox: {fileID: 9078135828925261987}
   attackZone: {fileID: 9078135828925261987}
   SMB: {fileID: 9078135828925262015}
   animator: {fileID: 424952924}

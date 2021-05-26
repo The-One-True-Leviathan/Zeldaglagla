@@ -68,6 +68,7 @@ public class PatrolWolfSMBWander : StateMachineBehaviour
         }
         if (isCounting)
         {
+            //Debug.LogWarning("Is Counting");
             timeElapsed += Time.deltaTime;
             if (timeElapsed > baseWolf.patrolWaitTime)
             {

@@ -96,7 +96,7 @@ public class BaseShooter_SMBAttack : StateMachineBehaviour
 
     void Shoot()
     {
-        FindObjectOfType<AudioManager>().Play("ShooterShot");
+        //FindObjectOfType<AudioManager>().Play("ShooterShot");
 
         shotsFired++;
         Projectile_Behaviour projectile;

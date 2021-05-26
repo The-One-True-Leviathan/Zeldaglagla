@@ -218,8 +218,11 @@ public class HDO_Piolet : MonoBehaviour
             {
                 if (!freeezeFraming && !(ffed.Contains(e)))
                 {
-                    gamepad.SetMotorSpeeds(lowFrequency, highFrequency);
-                    StartCoroutine(Vibration());
+                    if (gamepad != null)
+                    {
+                        gamepad.SetMotorSpeeds(lowFrequency, highFrequency);
+                        StartCoroutine(Vibration());
+                    }
                     StartCoroutine(FreezeFrame());
                     ffed.Add(e);
                     freeezeFraming = true;

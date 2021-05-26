@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5012111567861721458}
   - component: {fileID: 3529771254196141545}
-  - component: {fileID: 4741888683249252761}
+  - component: {fileID: 6815879992968320453}
   m_Layer: 0
   m_Name: Tour
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3728210628977462634}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -1.8, y: -1.12, z: 0}
-  m_LocalScale: {x: 0.14584126, y: 0.14584126, z: 0.14584126}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4741888683249252761
-BoxCollider2D:
+--- !u!60 &6815879992968320453
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -96,16 +96,25 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.66744256, y: -11.042404}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 24.8, y: 35.08}
+    oldSize: {x: 3.1, y: 4.385}
     newSize: {x: 24.8, y: 35.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.7971416, y: 3.8797226}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.016831875, y: -1.7752082}
+      - {x: -0.06288028, y: -1.7380214}
+      - {x: -0.18121862, y: -1.8007355}
+      - {x: -0.32735848, y: -1.808819}
+      - {x: -0.3955766, y: -1.7564046}
+      - {x: -0.4030006, y: -1.6949911}
+      - {x: -0.3485725, y: -1.5864804}
+      - {x: -0.68034506, y: -1.3480742}
+      - {x: -0.2795818, y: -1.1683494}
+      - {x: 0.40630245, y: -1.5558269}

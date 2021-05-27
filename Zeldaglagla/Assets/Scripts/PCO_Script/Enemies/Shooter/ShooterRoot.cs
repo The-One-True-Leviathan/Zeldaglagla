@@ -7,9 +7,6 @@ using Pathfinding;
 
 public class ShooterRoot : MonsterRoot
 {
-
-    public AIPath pather;
-    public AIDestinationSetter destinationSetter;
     public LayerMask isPlayer;
 
     public float shotDmg, shotBuildup, shotRecover, shotKBStrength, shotKBSpeed, shotKBTime, shotSpeed, minAtkDistance, maxAtkDistance;

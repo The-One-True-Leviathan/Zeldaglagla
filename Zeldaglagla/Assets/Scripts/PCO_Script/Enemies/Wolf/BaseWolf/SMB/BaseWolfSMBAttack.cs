@@ -41,6 +41,7 @@ public class BaseWolfSMBAttack : StateMachineBehaviour
                 }
                 break;
             case CmbtState.BUILDUP:
+                baseWolf.SetAnim("Buildup", baseWolf.ToPlayer());
                 buildup += Time.deltaTime;
                 if (buildup >= buildupTime)
                 {
@@ -60,6 +61,7 @@ public class BaseWolfSMBAttack : StateMachineBehaviour
                 }
                 break;
             case CmbtState.HITSPAN:
+                baseWolf.SetAnim("Attack", baseWolf.ToPlayer());
                 baseWolf.isInAttack = true;
                 baseWolf.Attack();
                 if (baseWolf.pather.remainingDistance <= 0.5)

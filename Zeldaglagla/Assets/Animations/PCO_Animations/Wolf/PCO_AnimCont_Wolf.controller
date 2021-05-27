@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PCO_Wolf_Attack_Front
+  m_Name: Attack_Front
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -33,7 +33,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PCO_Wolf_Attack_Back
+  m_Name: Attack_Back
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -100,14 +100,14 @@ AnimatorStateMachine:
     m_State: {fileID: 329642810900969467}
     m_Position: {x: 400, y: 230, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 5244022120228651284}
-    m_Position: {x: 435, y: 295, z: 0}
-  - serializedVersion: 1
     m_State: {fileID: -8979955003313935835}
     m_Position: {x: 470, y: 360, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8373573125861238419}
     m_Position: {x: 505, y: 425, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 2193948249945852159}
+    m_Position: {x: 540, y: 490, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -173,7 +173,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PCO_Wolf_Buildup_Front
+  m_Name: Buildup_Front
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -186,20 +186,20 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 36891204d19aa9f45932d2aba01e2155, type: 2}
+  m_Motion: {fileID: 7400000, guid: d9bda003395fe8f4eb9f70ff1232331e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &5244022120228651284
+--- !u!1102 &2193948249945852159
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PCO_Wolf_Recover_Front
+  m_Name: Buildup_Back
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -212,7 +212,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4c9ab7df2517d284582e4c45b47226a8, type: 2}
+  m_Motion: {fileID: 7400000, guid: e963e48a7e7f1b74f95b3b0624bcb9b4, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

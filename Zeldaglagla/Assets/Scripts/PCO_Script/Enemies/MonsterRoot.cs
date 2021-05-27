@@ -4,6 +4,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 using Combat;
+using Pathfinding;
 
 namespace Monsters
 {
@@ -48,6 +49,9 @@ namespace Monsters
         public float kbThreshold = 0;
         public bool stunned, isInAttack, isInBuildup, isInRecover, isInHitSpan, isInKnockback, dead = false;
 
+        public AIPath pather;
+        public AIDestinationSetter destinationSetter;
+
         public Collider2D boundBox, attackZone;
         [NonSerialized]
         public GameObject player;
@@ -65,6 +69,9 @@ namespace Monsters
             player = GameObject.FindGameObjectWithTag("Player");
             playerCollider = player.GetComponent<Collider2D>();
             SMB = GetComponent<Animator>();
+            pather = GetComponent<AIPath>();
+            destinationSetter = GetComponent<AIDestinationSetter>();
+            SMB.GetBehaviour<PCO_MonsterStunned>().baseMonster = this;
 
             stunRecoveredEvent += ctx => GoBackToState();
         }
@@ -121,7 +128,7 @@ namespace Monsters
         {
             CombatEvents.monsterWasKilled.Invoke();
             dead = true;
-            Destroy(gameObject);
+            Destroy(gameObject, 2);
         }
 
         virtual public void Stun(StunStruct stunTaken)

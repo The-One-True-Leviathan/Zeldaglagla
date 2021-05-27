@@ -9,8 +9,6 @@ public class WolfRoot : MonsterRoot
 {
     public float pounceDmg, pounceBuildup, pounceHitSpan, pouceRecover, pounceLength, viewDistance = 20, attackDistance;
     public AttackProfile pounceAtk;
-    public AIPath pather;
-    public AIDestinationSetter destinationSetter;
     public PackManager pack;
     public GameObject thisGameObject;
     public bool hasAttacked;

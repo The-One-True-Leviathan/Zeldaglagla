@@ -7,8 +7,6 @@ using Combat;
 
 public class PCO_OrcaRoot : MonsterRoot
 {
-    public AIPath pather;
-    public AIDestinationSetter destinationSetter;
     public LayerMask isPlayer;
 
     public float atkDmg, atkBuildup, atkHitspan, atkRecover, atkKBStrength, atkKBSpeed, atkKBTime, atkRange, atkStunStr, atkStunTime;

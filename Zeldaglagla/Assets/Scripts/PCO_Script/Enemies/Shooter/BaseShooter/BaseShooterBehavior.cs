@@ -195,4 +195,8 @@ public class BaseShooterBehavior : ShooterRoot
         FindObjectOfType<AudioManager>().Play("ShooterShot");
     }
 
+    public override void Death()
+    {
+        base.Death();
+    }
 }

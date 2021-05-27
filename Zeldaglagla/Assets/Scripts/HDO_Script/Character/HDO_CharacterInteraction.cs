@@ -253,10 +253,20 @@ public class HDO_CharacterInteraction : MonoBehaviour
             MapEVent(inter);
         }
 
+        if(inter.interactionType == HDO_InteractionSO.InteractionType.dungeonshield)
+        {
+            DungeonShield(inter);
+        }
+
         if (inter.isUnique)
         {
             doneUniqueInteraction.Add(inter);
         }
+    }
+
+    void DungeonShield(HDO_InteractionSO inter)
+    {
+        inter.toDeactivate.GetComponent<HDO_Interactive>().activated.Add(inter);
     }
 
     void MapEVent(HDO_InteractionSO inter)

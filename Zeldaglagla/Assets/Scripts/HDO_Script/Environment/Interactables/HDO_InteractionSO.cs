@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Interaction", menuName = "Interaction", order = 0)]
 public class HDO_InteractionSO : ScriptableObject
 {
-    public enum InteractionType { dialog, enemyEvent, environmentEvent, item, bossEvent, characterImprovement, needItem, setSpawnPoint, mapEvent};
+    public enum InteractionType { dialog, enemyEvent, environmentEvent, item, bossEvent, characterImprovement, needItem, setSpawnPoint, mapEvent, dungeonshield};
     public enum dialogType { inner, EVAA };
     public enum dialogNum { one, several };
 
@@ -66,4 +66,6 @@ public class HDO_InteractionSO : ScriptableObject
     public enum LocationType { dungeon, heatPoint, monsterCamp};
     public LocationType locationType;
 
+    [Header("Dungeon Shield")]
+    public GameObject toDeactivate;
 }

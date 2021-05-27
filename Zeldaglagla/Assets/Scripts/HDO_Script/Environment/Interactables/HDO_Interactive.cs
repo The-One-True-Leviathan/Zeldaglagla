@@ -16,19 +16,45 @@ public class HDO_Interactive : MonoBehaviour
     GameObject goToPos;
     [SerializeField]
     float speed;
-    
 
-    // Start is called before the first frame update
-    /*void Start()
-    {
-        
-    }
+    [Header("Shield Dungeon 1")]
+    [SerializeField]
+    bool shieldD1;
+    [SerializeField]
+    List<HDO_InteractionSO> order = null;
+    [SerializeField]
+    public List<HDO_InteractionSO> activated = null;
+    
 
     // Update is called once per frame
     void Update()
     {
+        if (shieldD1)
+        {
+            CheckShielding();
+        }
         
-    }*/
+    }
+
+    void CheckShielding()
+    {
+        if(order == null)
+        {
+            Debug.Log("no order, risk of auto completion");
+        }
+
+        if(activated == order)
+        {
+            Debug.Log("order found, activation");
+            Shield();
+        }
+
+        if(activated.Count >= order.Count)
+        {
+            Debug.Log("wrong order");
+            activated.Clear();
+        }
+    }
 
     public void Action()
     {
@@ -37,6 +63,15 @@ public class HDO_Interactive : MonoBehaviour
         {
             Movement();
         }
+        if (shieldD1)
+        {
+
+        }
+    }
+
+    void Shield()
+    {
+        this.gameObject.SetActive(false);
     }
 
     void Movement()

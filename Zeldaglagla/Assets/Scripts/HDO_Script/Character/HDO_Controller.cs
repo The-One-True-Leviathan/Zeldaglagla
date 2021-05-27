@@ -46,6 +46,9 @@ public class HDO_Controller : MonoBehaviour
         controls.UsualControls.Map.performed += ctx => mapDisplay = !mapDisplay;
         controls.UsualControls.Map.performed += ctx => Map();
 
+        controls.KBControlsWASD.Map.performed += ctx => mapDisplay = !mapDisplay;
+        controls.KBControlsWASD.Map.performed += ctx => Map();
+
         controls.UsualControls.Dodge.performed += ctx => Dodge();
 
         controls.KBControlsWASD.Dodge.performed += ctx => Dodge();

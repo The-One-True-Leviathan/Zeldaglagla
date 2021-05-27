@@ -21,7 +21,7 @@ public class HDO_Piolet : MonoBehaviour
     public List<Collider2D> ffed = null;
 
     [SerializeField]
-    Animator animator;
+    Animator animator, playerAnim;
 
 
     HDO_UniversalEnemy ue;
@@ -114,6 +114,10 @@ public class HDO_Piolet : MonoBehaviour
         {
             Defend();
         }
+        else
+        {
+            playerAnim.SetBool("Parry", false);
+        }
 
         Positioning();
     }
@@ -172,6 +176,7 @@ public class HDO_Piolet : MonoBehaviour
         {
             shieldBox.enabled = true;
             shielding = true;
+            playerAnim.SetBool("Parry", true);
         }
         else
         {

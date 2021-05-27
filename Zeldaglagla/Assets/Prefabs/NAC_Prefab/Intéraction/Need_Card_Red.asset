@@ -26,7 +26,7 @@ MonoBehaviour:
   snowStorm: 0
   item: {fileID: 0}
   neededItem: {fileID: 11400000, guid: f98b7304f5100424fb1d161591882a51, type: 2}
-  consumesItem: 1
+  consumesItem: 0
   bossDialog: 0
   percentage: 0
   damageModifier: 0

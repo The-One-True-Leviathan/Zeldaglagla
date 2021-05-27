@@ -139,9 +139,9 @@ TextureImporter:
       name: "carte magn\xE9tique_0"
       rect:
         serializedVersion: 2
-        x: 2897
+        x: 2901
         y: 1582
-        width: 285
+        width: 281
         height: 524
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: "carte magn\xE9tique_1"
       rect:
         serializedVersion: 2
-        x: 4623
-        y: 1607
-        width: 284
-        height: 523
+        x: 4624
+        y: 1608
+        width: 282
+        height: 522
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,7 +183,7 @@ TextureImporter:
         serializedVersion: 2
         x: 5807
         y: 792
-        width: 736
+        width: 737
         height: 1629
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -201,7 +201,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 872b58fb3c6a71f4caa8bb1fafc89aea
+    spriteID: 8c501b6ddb00cec4f9d3359cde064ba4
     internalID: 0
     vertices: []
     indices: 

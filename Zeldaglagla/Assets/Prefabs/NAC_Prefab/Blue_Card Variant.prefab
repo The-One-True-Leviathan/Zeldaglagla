@@ -91,22 +91,5 @@ PrefabInstance:
       propertyPath: interactions.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 717bd9682bc7aca49aa5e31e73553efb, type: 2}
-    - target: {fileID: 5866323184000523275, guid: 2c177c0cdfe41df4d9825ce5726d8dc5, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 0.284
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866323184000523275, guid: 2c177c0cdfe41df4d9825ce5726d8dc5, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 0.523
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866323184000523275, guid: 2c177c0cdfe41df4d9825ce5726d8dc5, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.284
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866323184000523275, guid: 2c177c0cdfe41df4d9825ce5726d8dc5, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.523
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5866323184000523275, guid: 2c177c0cdfe41df4d9825ce5726d8dc5, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c177c0cdfe41df4d9825ce5726d8dc5, type: 3}

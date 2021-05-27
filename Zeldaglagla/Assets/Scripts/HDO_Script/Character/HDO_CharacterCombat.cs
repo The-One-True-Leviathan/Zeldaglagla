@@ -59,6 +59,8 @@ public class HDO_CharacterCombat : MonoBehaviour
     public bool torching;
     float torchCDElapsed;
 
+    public bool shallRespawn;
+
 
 
     private void Awake()
@@ -119,6 +121,10 @@ public class HDO_CharacterCombat : MonoBehaviour
             InstantiateTorch();
         }
 
+        if(currentHealth <= 0 && !animator.GetBool("Dead"))
+        {
+            Die();
+        }
         
     }
 
@@ -215,7 +221,8 @@ public class HDO_CharacterCombat : MonoBehaviour
 
     public void Die()
     {
-        transform.position = respawnPoint.transform.position;
+        animator.SetBool("Dead", true);
+        StartCoroutine(Respawn());
     }
 
     public void Immunity(float imunTime = immunityTime)
@@ -237,6 +244,15 @@ public class HDO_CharacterCombat : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(vibrationDuration);
         gamepad.ResetHaptics();
+    }
+
+    IEnumerator Respawn()
+    {
+        yield return new WaitUntil(() => shallRespawn);
+        shallRespawn = false;
+        animator.SetBool("Dead", false);
+        currentHealth = maxHealth;
+        transform.position = respawnPoint.transform.position;
     }
 
     private void OnDisable()

@@ -60,10 +60,10 @@ MonoBehaviour:
   avoidDistance: 5
   circleShrinkSpeed: 0.1
   rotationSpeed: 0.2
-  observeDistance: 8
-  observeTime: 10
-  maxObserveTime: 10
-  minObserveTime: 3
+  observeDistance: 5
+  observeTime: 4
+  maxObserveTime: 4
+  minObserveTime: 1
   isObserving: 0
   rushCircleSize: 4
   fleeDistance: 20
@@ -151,6 +151,8 @@ MonoBehaviour:
   isInHitSpan: 0
   isInKnockback: 0
   dead: 0
+  pather: {fileID: 8104079526342996943}
+  destinationSetter: {fileID: 4529178229615275333}
   boundBox: {fileID: 2640702137875379218}
   attackZone: {fileID: 0}
   SMB: {fileID: 5696803464653413096}
@@ -165,8 +167,6 @@ MonoBehaviour:
   pounceLength: 5
   viewDistance: 20
   attackDistance: 0.5
-  pather: {fileID: 8104079526342996943}
-  destinationSetter: {fileID: 4529178229615275333}
   pack: {fileID: 4565620843127345855}
   thisGameObject: {fileID: 4708593987993892695}
   hasAttacked: 0
@@ -387,6 +387,8 @@ MonoBehaviour:
   isInHitSpan: 0
   isInKnockback: 0
   dead: 0
+  pather: {fileID: 4029437982160401705}
+  destinationSetter: {fileID: 9140417700965233143}
   boundBox: {fileID: 892686541650764765}
   attackZone: {fileID: 0}
   SMB: {fileID: 5462337103545428566}
@@ -401,8 +403,6 @@ MonoBehaviour:
   pounceLength: 5
   viewDistance: 20
   attackDistance: 0.5
-  pather: {fileID: 4029437982160401705}
-  destinationSetter: {fileID: 9140417700965233143}
   pack: {fileID: 4565620843127345855}
   thisGameObject: {fileID: 5049277844880848526}
   hasAttacked: 0
@@ -623,6 +623,8 @@ MonoBehaviour:
   isInHitSpan: 0
   isInKnockback: 0
   dead: 0
+  pather: {fileID: 6109536905483371378}
+  destinationSetter: {fileID: 841412304311446620}
   boundBox: {fileID: 6923053425374528277}
   attackZone: {fileID: 0}
   SMB: {fileID: 1563334170502857915}
@@ -637,8 +639,6 @@ MonoBehaviour:
   pounceLength: 5
   viewDistance: 20
   attackDistance: 0.5
-  pather: {fileID: 6109536905483371378}
-  destinationSetter: {fileID: 841412304311446620}
   pack: {fileID: 4565620843127345855}
   thisGameObject: {fileID: 5258766525977186986}
   hasAttacked: 0
@@ -859,6 +859,8 @@ MonoBehaviour:
   isInHitSpan: 0
   isInKnockback: 0
   dead: 0
+  pather: {fileID: 1984478332842456304}
+  destinationSetter: {fileID: 1912861500241662451}
   boundBox: {fileID: 1511638067923676640}
   attackZone: {fileID: 0}
   SMB: {fileID: 4063223957133148988}
@@ -873,8 +875,6 @@ MonoBehaviour:
   pounceLength: 5
   viewDistance: 20
   attackDistance: 0.5
-  pather: {fileID: 1984478332842456304}
-  destinationSetter: {fileID: 1912861500241662451}
   pack: {fileID: 4565620843127345855}
   thisGameObject: {fileID: 5569080530514722710}
   hasAttacked: 0
@@ -1095,6 +1095,8 @@ MonoBehaviour:
   isInHitSpan: 0
   isInKnockback: 0
   dead: 0
+  pather: {fileID: 3430207564325902376}
+  destinationSetter: {fileID: 7857686914690373772}
   boundBox: {fileID: 1182084380163672979}
   attackZone: {fileID: 0}
   SMB: {fileID: 2110286200856318145}
@@ -1109,8 +1111,6 @@ MonoBehaviour:
   pounceLength: 5
   viewDistance: 20
   attackDistance: 0.5
-  pather: {fileID: 3430207564325902376}
-  destinationSetter: {fileID: 7857686914690373772}
   pack: {fileID: 4565620843127345855}
   thisGameObject: {fileID: 7012311999451699724}
   hasAttacked: 0
@@ -1331,6 +1331,8 @@ MonoBehaviour:
   isInHitSpan: 0
   isInKnockback: 0
   dead: 0
+  pather: {fileID: 8220701681209186950}
+  destinationSetter: {fileID: 5072529537017263837}
   boundBox: {fileID: 7796635318765512799}
   attackZone: {fileID: 0}
   SMB: {fileID: 8763156409304166812}
@@ -1345,8 +1347,6 @@ MonoBehaviour:
   pounceLength: 5
   viewDistance: 20
   attackDistance: 0.5
-  pather: {fileID: 8220701681209186950}
-  destinationSetter: {fileID: 5072529537017263837}
   pack: {fileID: 4565620843127345855}
   thisGameObject: {fileID: 7813015767582550831}
   hasAttacked: 0

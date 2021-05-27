@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3456087191986027424, guid: 6bda215055225da43911103e1cd2a6d7, type: 3}
       propertyPath: m_Name
-      value: Red_Card
+      value: Red_Card Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3456087191986027437, guid: 6bda215055225da43911103e1cd2a6d7, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -67,5 +67,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 450853173811926171, guid: ea47e74434131dd4baa71745e7d71293, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3456087191986027437, guid: 6bda215055225da43911103e1cd2a6d7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6bda215055225da43911103e1cd2a6d7, type: 3}

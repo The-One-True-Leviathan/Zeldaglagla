@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5866323184000523270, guid: 2c177c0cdfe41df4d9825ce5726d8dc5, type: 3}
       propertyPath: m_Name
-      value: Card_Reader_Red
+      value: Card_Reader_Red Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5866323184000523272, guid: 2c177c0cdfe41df4d9825ce5726d8dc5, type: 3}
       propertyPath: m_RootOrder
@@ -79,6 +79,22 @@ PrefabInstance:
       propertyPath: interactions.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: d160307f4cc12df48a5665d1733bc95a, type: 2}
+    - target: {fileID: 5866323184000523275, guid: 2c177c0cdfe41df4d9825ce5726d8dc5, type: 3}
+      propertyPath: m_Size.x
+      value: 0.17312717
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866323184000523275, guid: 2c177c0cdfe41df4d9825ce5726d8dc5, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3064289
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866323184000523275, guid: 2c177c0cdfe41df4d9825ce5726d8dc5, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.038911343
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866323184000523275, guid: 2c177c0cdfe41df4d9825ce5726d8dc5, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.026752472
+      objectReference: {fileID: 0}
     - target: {fileID: 5866323184000523275, guid: 2c177c0cdfe41df4d9825ce5726d8dc5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.738

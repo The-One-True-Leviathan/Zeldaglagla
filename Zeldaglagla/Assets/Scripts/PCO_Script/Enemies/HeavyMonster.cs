@@ -8,7 +8,7 @@ public class HeavyMonster : MonsterRoot
 {
     private void Start()
     {
-        stunnedEvent += ctx => DoSomethingWhenStunned();
+        stunnedEvent.AddListener(DoSomethingWhenStunned);
         CombatEvents.monsterWasHit += ctx => { Debug.Log("hit!"); };
     }
 

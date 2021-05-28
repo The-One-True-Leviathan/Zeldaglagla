@@ -61,11 +61,19 @@ namespace Monsters
         public Animator animator;
         public LayerMask blocksLOS;
 
-        public Action<CombatEvents.StunContext> stunnedEvent;
-        public Action<CombatEvents.StunContext> stunRecoveredEvent;
+        public UnityEvent stunnedEvent;
+        public UnityEvent stunRecoveredEvent;
+
+        //public Action<CombatEvents.StunContext> stunnedEvent;
+        //public Action<CombatEvents.StunContext> stunRecoveredEvent;
 
         public void AwakeDuPauvre()
         {
+            if (stunnedEvent == null)
+                stunnedEvent = new UnityEvent();
+            if (stunRecoveredEvent == null)
+                stunRecoveredEvent = new UnityEvent();
+
             player = GameObject.FindGameObjectWithTag("Player");
             playerCollider = player.GetComponent<Collider2D>();
             SMB = GetComponent<Animator>();
@@ -73,7 +81,7 @@ namespace Monsters
             destinationSetter = GetComponent<AIDestinationSetter>();
             SMB.GetBehaviour<PCO_MonsterStunned>().baseMonster = this;
 
-            stunRecoveredEvent += ctx => GoBackToState();
+            stunRecoveredEvent.AddListener(GoBackToState);
         }
 
         virtual public bool Damage(DamageStruct damageTaken)
@@ -131,7 +139,7 @@ namespace Monsters
         virtual public void Stun(StunStruct stunTaken)
         {
             stunned = true;
-            stunnedEvent.Invoke(CombatEvents.stunContext);
+            stunnedEvent.Invoke();
             CombatEvents.monsterWasStunned.Invoke();
             stunTaken.lgt /= stunResist;
             StartCoroutine(StunCoroutine(stunTaken));
@@ -142,7 +150,7 @@ namespace Monsters
         {
             yield return new WaitForSeconds(stunTaken.lgt);
             stunned = false;
-            stunRecoveredEvent.Invoke(CombatEvents.stunContext);
+            stunRecoveredEvent.Invoke();
         }
         public Vector3 ToPlayer()
         {

@@ -44,7 +44,8 @@ public class BaseWolfSMBFlee : StateMachineBehaviour
                 BaseWolf enemyWolf = enemy.GetComponent<BaseWolf>();
                 if (!enemyWolf.defeated) 
                 {
-                    enemyWolf.pack.wolves.Add(animator.GetComponent<WolfRoot>());
+                    enemyWolf.pack.wolves.Add(baseWolf);
+                    baseWolf.pack.wolves.Remove(baseWolf);
                     switch (enemyWolf.baseWolfSMBState)
                     {
                         case BaseWolf.BaseWolfSMBState.APPROACH:

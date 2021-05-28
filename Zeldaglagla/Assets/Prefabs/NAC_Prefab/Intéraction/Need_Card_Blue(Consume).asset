@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
   m_Name: Need_Card_Blue(Consume)
   m_EditorClassIdentifier: 
-  interactionType: 0
+  interactionType: 6
   interactionSound: {fileID: 0}
   isTrigger: 0
-  isUnique: 0
+  isUnique: 1
   needSpawnPoint: 0
   dialogSuite: 0
   number: 0
@@ -40,3 +40,4 @@ MonoBehaviour:
   specificLocation: 0
   specificLocationName: 
   locationType: 0
+  toDeactivate: {fileID: 0}

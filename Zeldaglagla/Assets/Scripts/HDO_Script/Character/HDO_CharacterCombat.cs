@@ -25,7 +25,9 @@ public class HDO_CharacterCombat : MonoBehaviour
     float deflectImmunityFactor = 1;
     bool isInImmunity = false;
     //Fin des bidouillages de Pierre ;3
-
+    [SerializeField]
+    GameObject healthBar;
+    RectTransform healthtransform;
 
     [Header("RespawnPoint")]
     public GameObject respawnPoint;
@@ -92,6 +94,7 @@ public class HDO_CharacterCombat : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        healthtransform = healthBar.GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
@@ -125,7 +128,8 @@ public class HDO_CharacterCombat : MonoBehaviour
         {
             Die();
         }
-        
+
+        healthtransform.localScale = new Vector3(healthBar.transform.localScale.x, currentHealth / maxHealth, 1);
     }
 
     void Deflect()

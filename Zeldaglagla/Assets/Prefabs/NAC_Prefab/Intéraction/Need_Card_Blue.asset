@@ -15,7 +15,7 @@ MonoBehaviour:
   interactionType: 6
   interactionSound: {fileID: 0}
   isTrigger: 0
-  isUnique: 0
+  isUnique: 1
   needSpawnPoint: 0
   dialogSuite: 0
   number: 0
@@ -40,3 +40,4 @@ MonoBehaviour:
   specificLocation: 0
   specificLocationName: 
   locationType: 0
+  toDeactivate: {fileID: 0}

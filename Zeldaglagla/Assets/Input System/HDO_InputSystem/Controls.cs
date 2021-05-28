@@ -87,7 +87,7 @@ public class @Controls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""inputVector"",
                     ""id"": ""8a08aa8f-ca49-4df5-8995-3602906a5cc5"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

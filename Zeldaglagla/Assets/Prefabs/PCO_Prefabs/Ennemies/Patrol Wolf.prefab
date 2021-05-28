@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 954309fb8117c8843a0a7b76a5ec4ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 5
+  currentHP: 5
   stunResist: 1
   stunThreshold: 0
   accumulatedStun: 0
@@ -91,6 +91,7 @@ MonoBehaviour:
   pack: {fileID: 0}
   thisGameObject: {fileID: 1483704343725120412}
   hasAttacked: 0
+  packCircle: {fileID: 0}
   isPackLeader: 0
   baseWolfSMBState: 0
   wanderSpeed: 5

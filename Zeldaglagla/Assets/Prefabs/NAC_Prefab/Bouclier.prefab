@@ -68,3 +68,4 @@ MonoBehaviour:
   shieldD1: 1
   order: []
   activated: []
+  selfDestroy: 0

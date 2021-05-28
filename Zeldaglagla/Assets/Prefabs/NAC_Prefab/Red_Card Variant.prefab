@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red_Card Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3456087191986027436, guid: 6bda215055225da43911103e1cd2a6d7, type: 3}
+      propertyPath: interactions.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4e5d8545a09564b45978bc0c32c8d33a, type: 2}
     - target: {fileID: 3456087191986027437, guid: 6bda215055225da43911103e1cd2a6d7, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.285

@@ -47,17 +47,33 @@ public class HDO_Interactive : MonoBehaviour
             Debug.Log("no order, risk of auto completion");
         }
 
-        if(activated == order)
+        if(activated.Count == order.Count)
         {
-            Debug.Log("order found, activation");
-            Shield();
+            Debug.Log("checking order");
+            CheckOrder();
+        }
+    }
+
+    void CheckOrder()
+    {
+        bool good = true;
+        for(int i = 0; i <= activated.Count; i++)
+        {
+            if(!(activated[i] == order[i]))
+            {
+                good = false;
+                Debug.Log("wrong order");
+                break;
+            }
         }
 
-        if(activated.Count >= order.Count)
+        if (!good)
         {
-            Debug.Log("wrong order");
-            activated.Clear();
+            return;
         }
+
+        Shield();
+
     }
 
     public void Action()

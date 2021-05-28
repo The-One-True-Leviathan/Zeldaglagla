@@ -266,7 +266,8 @@ public class HDO_CharacterInteraction : MonoBehaviour
 
     void DungeonShield(HDO_InteractionSO inter)
     {
-        inter.toDeactivate.GetComponent<HDO_Interactive>().activated.Add(inter);
+        interaction.interactives[0].activated.Add(inter);
+        Debug.Log("euh ouais de fou");
     }
 
     void MapEVent(HDO_InteractionSO inter)

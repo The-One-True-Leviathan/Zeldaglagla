@@ -24,6 +24,15 @@ public class BaseWolfSMBFlee : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (baseWolf.pather.velocity.magnitude > 0.05)
+        {
+            baseWolf.SetAnim("Walk", baseWolf.pather.velocity);
+        }
+        else
+        {
+            baseWolf.SetAnim("Idle", Vector3.down);
+        }
+
         timeSinceFleeBegins += Time.deltaTime;
         if(timeSinceFleeBegins >= maxFleeRate)
         {

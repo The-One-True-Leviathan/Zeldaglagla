@@ -2343,6 +2343,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df8551c4784105d468f6612018888e06, type: 3}
+--- !u!1 &1302357624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5003465789160769421, guid: f0f744040cb28f0419ed15b92d8884f9, type: 3}
+  m_PrefabInstance: {fileID: 1907804222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1334498226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2795,6 +2800,22 @@ PrefabInstance:
     - target: {fileID: 693671876588548344, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_LocalPosition.y
       value: 361.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 693671876588548349, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: lowFrequency
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 693671876588548349, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 1302357624}
+    - target: {fileID: 693671876588548349, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: highFrequency
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 693671876588548349, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: vibrationDuration
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6488109896675098630, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Name

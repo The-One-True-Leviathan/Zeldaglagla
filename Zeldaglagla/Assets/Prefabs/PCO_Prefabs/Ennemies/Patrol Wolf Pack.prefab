@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9035860917404891876}
   - component: {fileID: 4565620843127345855}
+  - component: {fileID: 1116112232767732247}
   m_Layer: 0
   m_Name: Patrol Wolf Pack
   m_TagString: Untagged
@@ -50,6 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wolves: []
+  packCircle: {fileID: 0}
   startingWolves: 0
   currentWolves: 0
   isInAttack: 0
@@ -67,6 +69,19 @@ MonoBehaviour:
   isObserving: 0
   rushCircleSize: 4
   fleeDistance: 20
+--- !u!114 &1116112232767732247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611715988091760062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d927fa8e01f87e4786721a65ccb4f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateRange: 60
 --- !u!1 &4708593987993892695
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,6 +191,7 @@ MonoBehaviour:
   pack: {fileID: 4565620843127345855}
   thisGameObject: {fileID: 4708593987993892695}
   hasAttacked: 0
+  packCircle: {fileID: 0}
   isPackLeader: 0
   baseWolfSMBState: 0
   wanderSpeed: 0
@@ -418,6 +434,7 @@ MonoBehaviour:
   pack: {fileID: 4565620843127345855}
   thisGameObject: {fileID: 5049277844880848526}
   hasAttacked: 0
+  packCircle: {fileID: 0}
   isPackLeader: 0
   baseWolfSMBState: 0
   wanderSpeed: 0
@@ -660,6 +677,7 @@ MonoBehaviour:
   pack: {fileID: 4565620843127345855}
   thisGameObject: {fileID: 5258766525977186986}
   hasAttacked: 0
+  packCircle: {fileID: 0}
   isPackLeader: 0
   baseWolfSMBState: 0
   wanderSpeed: 0
@@ -902,6 +920,7 @@ MonoBehaviour:
   pack: {fileID: 4565620843127345855}
   thisGameObject: {fileID: 5569080530514722710}
   hasAttacked: 0
+  packCircle: {fileID: 0}
   isPackLeader: 0
   baseWolfSMBState: 0
   wanderSpeed: 0
@@ -1144,6 +1163,7 @@ MonoBehaviour:
   pack: {fileID: 4565620843127345855}
   thisGameObject: {fileID: 7012311999451699724}
   hasAttacked: 0
+  packCircle: {fileID: 0}
   isPackLeader: 0
   baseWolfSMBState: 0
   wanderSpeed: 0
@@ -1386,6 +1406,7 @@ MonoBehaviour:
   pack: {fileID: 4565620843127345855}
   thisGameObject: {fileID: 7813015767582550831}
   hasAttacked: 0
+  packCircle: {fileID: 0}
   isPackLeader: 0
   baseWolfSMBState: 0
   wanderSpeed: 0

@@ -418,9 +418,13 @@ MonoBehaviour:
   result: []
   ffed: []
   animator: {fileID: 7695630634022016124}
+  playerAnim: {fileID: 5388419272970035235}
   ffScale: 0.9
   ffRealTimeDuration: 0.2
   resetFF: 0
+  lowFrequency: 0
+  highFrequency: 0
+  duration: 0
   shield: {fileID: 3174740917571747843}
   perfectShieldTiming: 0.4
   shieldDecreaseRate: 0.1
@@ -1010,6 +1014,8 @@ MonoBehaviour:
   toDoInteractions: []
   doneUniqueInteraction: []
   inventory: []
+  heatCacheTransfer: []
+  campCacheTransfer: []
 --- !u!114 &5311234934450637274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,6 +1031,7 @@ MonoBehaviour:
   collision: {fileID: 5311234934450637278}
   interact: {fileID: 5311234934450637276}
   gunPoint: {fileID: 5311234933482019644}
+  map: {fileID: 0}
   pioletSR: {fileID: 7808011128689221643}
   baseSpeed: 5
   dodgeSpeed: 15
@@ -1069,7 +1076,11 @@ MonoBehaviour:
   currentHealth: 20
   deflectImmunityFactor: 1
   respawnPoint: {fileID: 0}
+  lowFrequency: 0
+  highFrequency: 0
+  vibrationDuration: 0
   canStrike: 1
+  torchUnlocked: 0
   attackDamage: 3
   attackStun: 5
   attackStunDuration: 3
@@ -1082,6 +1093,7 @@ MonoBehaviour:
   torchHeatCost: 0
   torchCooldown: 1
   torching: 0
+  shallRespawn: 0
 --- !u!61 &5311234934450637279
 BoxCollider2D:
   m_ObjectHideFlags: 0

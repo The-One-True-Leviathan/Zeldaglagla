@@ -84,7 +84,6 @@ namespace Monsters
 
                 if (damageTaken.stn.str > stunThreshold)
                 {
-                    CombatEvents.monsterWasHit.Invoke(CombatEvents.hitStunned);
                     accumulatedStun = 0;
                     Stun(damageTaken.stn);
                 }
@@ -93,12 +92,10 @@ namespace Monsters
                     accumulatedStun += damageTaken.stn.str;
                     if (accumulatedStun > stunThreshold)
                     {
-                        CombatEvents.monsterWasHit.Invoke(CombatEvents.hitStunned);
                         accumulatedStun = 0;
                         Stun(damageTaken.stn);
                     } else
                     {
-                        CombatEvents.monsterWasHit.Invoke(CombatEvents.hitNotStunned);
                     }
                 }
             }

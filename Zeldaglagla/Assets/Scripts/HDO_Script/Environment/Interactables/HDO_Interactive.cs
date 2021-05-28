@@ -24,6 +24,10 @@ public class HDO_Interactive : MonoBehaviour
     List<HDO_InteractionSO> order = null;
     [SerializeField]
     public List<HDO_InteractionSO> activated = null;
+
+    [Header("Self Destroy")]
+    [SerializeField]
+    bool selfDestroy;
     
 
     // Update is called once per frame
@@ -63,9 +67,9 @@ public class HDO_Interactive : MonoBehaviour
         {
             Movement();
         }
-        if (shieldD1)
+        if (selfDestroy)
         {
-
+            Destroy(this.gameObject);
         }
     }
 

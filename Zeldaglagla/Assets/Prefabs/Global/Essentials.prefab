@@ -362,7 +362,9 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5999051898706208480, guid: 4cc44f4bb8c461943a3f6df4a42a0c7c, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8815634979635884073, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
+    - {fileID: 8815634979635884074, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
 --- !u!224 &8948522715792398772 stripped
 RectTransform:

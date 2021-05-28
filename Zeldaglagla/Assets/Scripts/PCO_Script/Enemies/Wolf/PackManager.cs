@@ -190,5 +190,7 @@ public class PackManager : MonoBehaviour
         isApproaching = false;
         isObserving = false;
         GoToState("Flee");
+        if (player.GetComponent<PlayerPackCircle>().pack == this)
+            player.GetComponent<PlayerPackCircle>().pack = null;
     }
 }

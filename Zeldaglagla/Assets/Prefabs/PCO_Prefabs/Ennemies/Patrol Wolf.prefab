@@ -81,12 +81,12 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
-  pounceDmg: 5
+  pounceDmg: 2
   pounceBuildup: 0.3
   pounceHitSpan: 0
   pouceRecover: 0.5
   pounceLength: 5
-  viewDistance: 20
+  viewDistance: 4
   attackDistance: 0.5
   pack: {fileID: 0}
   thisGameObject: {fileID: 1483704343725120412}

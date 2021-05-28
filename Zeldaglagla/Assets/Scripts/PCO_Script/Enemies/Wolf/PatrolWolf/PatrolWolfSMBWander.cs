@@ -7,9 +7,9 @@ public class PatrolWolfSMBWander : StateMachineBehaviour
 {
     public PatrolWolf baseWolf;
 
-
+    public float reactionTime = 1;
     bool cyclicPatrol, isCounting = false;
-    float timeElapsed;
+    float timeElapsed, reactionTimeElapsed;
     Transform currentTarget;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -51,14 +51,24 @@ public class PatrolWolfSMBWander : StateMachineBehaviour
 
         if (baseWolf.SightCast())
         {
-            if (baseWolf.packCircle.pack == null)
+            reactionTimeElapsed += Time.deltaTime;
+            if (reactionTimeElapsed > reactionTime)
             {
-                baseWolf.pack.AllGoToApproach();
+                if (baseWolf.packCircle.pack == null)
+                {
+                    baseWolf.pack.AllGoToApproach();
+                }
+                else if (baseWolf.packCircle.pack != baseWolf)
+                {
+                    baseWolf.pack.AllGoToFlee();
+                }
             }
-            else if (baseWolf.packCircle.pack != baseWolf)
-            {
-                baseWolf.pack.AllGoToFlee();
-            }
+        }
+        else
+        {
+            reactionTimeElapsed -= Time.deltaTime;
+            if (reactionTimeElapsed < 0)
+                reactionTimeElapsed = 0;
         }
 
         if ((baseWolf.transform.position - currentTarget.position).magnitude < 1 && !isCounting)

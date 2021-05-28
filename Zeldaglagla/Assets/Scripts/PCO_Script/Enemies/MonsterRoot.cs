@@ -133,7 +133,13 @@ namespace Monsters
         {
             CombatEvents.monsterWasKilled.Invoke();
             dead = true;
-            Destroy(gameObject, 2);
+            GameObject deathAnim = Instantiate(transform.GetChild(0).gameObject, transform.GetChild(0).position, Quaternion.identity);
+            deathAnim.transform.localScale = transform.GetChild(0).localScale;
+            if (deathAnim.GetComponent<Animator>())
+            {
+                deathAnim.GetComponent<Animator>().Play("Die");
+            }
+            Destroy(gameObject);
         }
 
         virtual public void Stun(StunStruct stunTaken)

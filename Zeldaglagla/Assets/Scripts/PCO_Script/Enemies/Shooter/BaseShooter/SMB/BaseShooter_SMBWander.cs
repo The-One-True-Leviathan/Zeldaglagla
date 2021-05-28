@@ -6,7 +6,8 @@ public class BaseShooter_SMBWander : StateMachineBehaviour
 {
     public BaseShooterBehavior shooter;
     bool cyclicPatrol, isCounting = false;
-    float timeElapsed;
+    public float reactionTime = 1;
+    float timeElapsed, reactionTimeElapsed;
     Transform currentTarget;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -39,7 +40,15 @@ public class BaseShooter_SMBWander : StateMachineBehaviour
     {
         if (shooter.SightCast())
         {
-            animator.Play("Approach");
+            reactionTimeElapsed += Time.deltaTime;
+            if (reactionTimeElapsed > reactionTime)
+                animator.Play("Approach");
+        }
+        else
+        {
+            reactionTimeElapsed -= Time.deltaTime;
+            if (reactionTimeElapsed < 0)
+                reactionTimeElapsed = 0;
         }
 
         if ((shooter.transform.position - currentTarget.position).magnitude < 1 && !isCounting)

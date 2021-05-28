@@ -52,8 +52,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30902c748eb090f4caf41126f0e3975c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 35
-  currentHP: 35
+  maxHP: 20
+  currentHP: 20
   stunResist: 1
   stunThreshold: 1
   accumulatedStun: 0

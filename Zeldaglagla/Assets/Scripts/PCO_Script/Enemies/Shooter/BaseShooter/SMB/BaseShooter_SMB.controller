@@ -43,7 +43,7 @@ MonoBehaviour:
   buildupTime: 0.5
   recoverTime: 0.5
   timeBetweenShots: 0.2
-  numberOfShots: 3
+  numberOfShots: 1
 --- !u!114 &-7691855848865257639
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57,6 +57,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shooter: {fileID: 0}
+  reactionTime: 1
 --- !u!1102 &-7087636264556173589
 AnimatorState:
   serializedVersion: 6

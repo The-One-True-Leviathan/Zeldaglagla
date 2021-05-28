@@ -171,8 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d393e7db8e6b54e498c9327410f06ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 5
+  currentHP: 5
   stunResist: 1
   stunThreshold: 0
   accumulatedStun: 0
@@ -202,7 +202,7 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
-  pounceDmg: 5
+  pounceDmg: 2
   pounceBuildup: 0.3
   pounceHitSpan: 0
   pouceRecover: 0.5
@@ -212,6 +212,7 @@ MonoBehaviour:
   pack: {fileID: 0}
   thisGameObject: {fileID: 6557071358892673246}
   hasAttacked: 0
+  packCircle: {fileID: 0}
   isPackLeader: 0
   baseWolfSMBState: 0
   wanderSpeed: 5

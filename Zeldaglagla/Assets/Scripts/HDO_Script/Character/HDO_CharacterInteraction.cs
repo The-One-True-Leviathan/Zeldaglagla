@@ -530,18 +530,29 @@ public class HDO_CharacterInteraction : MonoBehaviour
 
     void NeedItem(HDO_InteractionSO inter)
     {
-        if (inventory.Contains(inter.neededItem))
+        if(inter.neededItem != null)
         {
-            if(inter.consumesItem)
+            if (inventory.Contains(inter.neededItem))
             {
-                inventory.Remove(inter.neededItem);
-            }
+                if (inter.consumesItem)
+                {
+                    inventory.Remove(inter.neededItem);
+                }
 
-            foreach(HDO_Interactive interactive in interaction.interactives)
+                foreach (HDO_Interactive interactive in interaction.interactives)
+                {
+                    interactive.Action();
+                }
+            }
+        }
+        else
+        {
+            foreach (HDO_Interactive interactive in interaction.interactives)
             {
                 interactive.Action();
             }
         }
+        
     }
 
     void Detect()

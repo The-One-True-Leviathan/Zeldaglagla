@@ -140,7 +140,6 @@ namespace Monsters
         {
             stunned = true;
             stunnedEvent.Invoke();
-            CombatEvents.monsterWasStunned.Invoke();
             stunTaken.lgt /= stunResist;
             StartCoroutine(StunCoroutine(stunTaken));
             isInAttack = isInBuildup = isInHitSpan = isInRecover = false;

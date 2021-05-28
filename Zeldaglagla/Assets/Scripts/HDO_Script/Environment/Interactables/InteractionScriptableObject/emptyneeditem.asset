@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
-  m_Name: Need_Card_Blue
+  m_Name: emptyneeditem
   m_EditorClassIdentifier: 
   interactionType: 6
   interactionSound: {fileID: 0}
   isTrigger: 0
-  isUnique: 1
+  isUnique: 0
   needSpawnPoint: 0
   dialogSuite: 0
   number: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
   Environment: {fileID: 0}
   snowStorm: 0
   item: {fileID: 0}
-  neededItem: {fileID: 11400000, guid: a4288ce70096b004e91ffe99b82b7e2c, type: 2}
+  neededItem: {fileID: 0}
   consumesItem: 0
   bossDialog: 0
   percentage: 0

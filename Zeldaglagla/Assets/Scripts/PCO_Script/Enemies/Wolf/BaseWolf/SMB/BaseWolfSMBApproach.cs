@@ -14,7 +14,7 @@ public class BaseWolfSMBApproach : StateMachineBehaviour
         baseWolf.destinationSetter.enabled = true;
         baseWolf.pather.maxSpeed = baseWolf.approachSpeed;
         Debug.LogWarning("HEOOOO");
-        foreach (GameObject holder in baseWolf.player.GetComponent<PlayerPackCircle>().holders)
+        foreach (GameObject holder in baseWolf.packCircle.holders)
         {
             if (holder.GetComponent<WolfHolder>().wolf == baseWolf.gameObject)
             {
@@ -41,7 +41,7 @@ public class BaseWolfSMBApproach : StateMachineBehaviour
         if (baseWolf.destinationSetter.target == null)
         {
             baseWolf.destinationSetter.enabled = true;
-            foreach (GameObject holder in baseWolf.player.GetComponent<PlayerPackCircle>().holders)
+            foreach (GameObject holder in baseWolf.packCircle.holders)
             {
                 if (holder.GetComponent<WolfHolder>().wolf == baseWolf.gameObject)
                 {

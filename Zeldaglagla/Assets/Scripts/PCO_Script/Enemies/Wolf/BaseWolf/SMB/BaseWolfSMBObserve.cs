@@ -13,7 +13,7 @@ public class BaseWolfSMBObserve : StateMachineBehaviour
         baseWolf.baseWolfSMBState = BaseWolf.BaseWolfSMBState.OBSERVE;
         baseWolf.pather.maxSpeed = baseWolf.observeSpeed;
         Debug.LogWarning("HEOOOO");
-        foreach (GameObject holder in baseWolf.player.GetComponent<PlayerPackCircle>().holders)
+        foreach (GameObject holder in baseWolf.packCircle.holders)
         {
             if (holder.GetComponent<WolfHolder>().wolf == baseWolf.gameObject)
             {

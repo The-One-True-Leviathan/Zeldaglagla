@@ -12,6 +12,9 @@ public class WolfRoot : MonsterRoot
     public PackManager pack;
     public GameObject thisGameObject;
     public bool hasAttacked;
+    public PlayerPackCircle packCircle;
+    [System.NonSerialized]
+    public bool defeated = false;
 
     public bool isPackLeader;
     // Start is called before the first frame update
@@ -23,6 +26,7 @@ public class WolfRoot : MonsterRoot
         pather = GetComponent<AIPath>();
         destinationSetter = GetComponent<AIDestinationSetter>();
         player = GameObject.FindGameObjectWithTag("Player");
+        packCircle = player.GetComponent<PlayerPackCircle>();
 
         AwakeDuPauvre();
     }
@@ -45,6 +49,10 @@ public class WolfRoot : MonsterRoot
         if (pack.currentWolves <= pack.startingWolves / 2)
         {
             pack.AllGoToFlee();
+            foreach (WolfRoot wolf in pack.wolves)
+            {
+                wolf.defeated = true;
+            }
         }
     }
 

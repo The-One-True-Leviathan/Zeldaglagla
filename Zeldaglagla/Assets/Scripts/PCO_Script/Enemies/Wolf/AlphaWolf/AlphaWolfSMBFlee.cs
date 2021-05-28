@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Monsters;
 
-public class BaseWolfSMBFlee : StateMachineBehaviour
+public class AlphaWolfSMBFlee : StateMachineBehaviour
 {
 
-    public BaseWolf baseWolf;
+    public PCO_AlphaWolfBehavior baseWolf;
     Vector2 vectorEscape;
     public float maxFleeRate = 0.5f, deviationAngle = 5, fleeLenght;
     float timeSinceFleeBegins;
@@ -42,7 +42,7 @@ public class BaseWolfSMBFlee : StateMachineBehaviour
             if (enemy.GetComponent<WolfRoot>())
             {
                 BaseWolf enemyWolf = enemy.GetComponent<BaseWolf>();
-                if (!enemyWolf.defeated) 
+                if (enemyWolf.baseWolfSMBState != BaseWolf.BaseWolfSMBState.FLEE) 
                 {
                     enemyWolf.pack.wolves.Add(animator.GetComponent<WolfRoot>());
                     switch (enemyWolf.baseWolfSMBState)
@@ -128,7 +128,6 @@ public class BaseWolfSMBFlee : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        baseWolf.defeated = false;
         baseWolf.destinationSetter.enabled = true;
         baseWolf.pack.DetermineLeader();
     }

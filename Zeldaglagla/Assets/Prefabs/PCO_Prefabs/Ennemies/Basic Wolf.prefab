@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5580959409370263060}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6557071358892673241}
@@ -133,7 +133,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6557071358892673246}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.19, y: -3.58, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5242723000521037220}
@@ -187,6 +187,8 @@ MonoBehaviour:
   isInHitSpan: 0
   isInKnockback: 0
   dead: 0
+  pather: {fileID: 6557071358892673245}
+  destinationSetter: {fileID: 6557071358892673237}
   boundBox: {fileID: 6557071358892673238}
   attackZone: {fileID: 6557071358892673238}
   SMB: {fileID: 6557071358892673242}
@@ -194,6 +196,12 @@ MonoBehaviour:
   blocksLOS:
     serializedVersion: 2
     m_Bits: 64
+  stunnedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stunRecoveredEvent:
+    m_PersistentCalls:
+      m_Calls: []
   pounceDmg: 5
   pounceBuildup: 0.3
   pounceHitSpan: 0
@@ -201,8 +209,6 @@ MonoBehaviour:
   pounceLength: 5
   viewDistance: 20
   attackDistance: 0.5
-  pather: {fileID: 6557071358892673245}
-  destinationSetter: {fileID: 6557071358892673237}
   pack: {fileID: 0}
   thisGameObject: {fileID: 6557071358892673246}
   hasAttacked: 0

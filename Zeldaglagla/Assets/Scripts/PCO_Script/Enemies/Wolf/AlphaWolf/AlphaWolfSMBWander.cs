@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-public class BaseWolfSMBWander : StateMachineBehaviour
+public class AlphaWolfSMBWander : StateMachineBehaviour
 {
-    public BaseWolf baseWolf;
+    public PCO_AlphaWolfBehavior baseWolf;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -68,7 +68,8 @@ public class BaseWolfSMBWander : StateMachineBehaviour
                 baseWolf.pack.AllGoToApproach();
             } else if (baseWolf.packCircle.pack != baseWolf)
             {
-                baseWolf.pack.AllGoToFlee();
+                baseWolf.packCircle.pack.AllGoToFlee();
+                baseWolf.pack.AllGoToApproach();
             }
         }
     }
@@ -85,7 +86,12 @@ public class BaseWolfSMBWander : StateMachineBehaviour
         {
             rngy *= -1;
         }
-        baseWolf.pather.destination = new Vector2(baseWolf.transform.position.x + rngx, baseWolf.transform.position.y + rngy);
+
+        Vector3 newDestination = new Vector2(baseWolf.transform.position.x + rngx, baseWolf.transform.position.y + rngy);
+
+        newDestination = Vector3.ClampMagnitude((newDestination - baseWolf.wanderAreaCenter.position), baseWolf.wanderAreaRadius) + baseWolf.wanderAreaCenter.position;
+
+        baseWolf.pather.destination = newDestination;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

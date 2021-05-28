@@ -51,11 +51,11 @@ public class PatrolWolfSMBWander : StateMachineBehaviour
 
         if (baseWolf.SightCast())
         {
-            if (baseWolf.player.GetComponent<PlayerPackCircle>().pack == null)
+            if (baseWolf.packCircle.pack == null)
             {
                 baseWolf.pack.AllGoToApproach();
             }
-            else if (baseWolf.player.GetComponent<PlayerPackCircle>().pack != baseWolf)
+            else if (baseWolf.packCircle.pack != baseWolf)
             {
                 baseWolf.pack.AllGoToFlee();
             }

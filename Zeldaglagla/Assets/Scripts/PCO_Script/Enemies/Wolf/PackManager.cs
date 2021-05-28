@@ -9,6 +9,7 @@ public class PackManager : MonoBehaviour
     GameObject player, heatManagerGO;
 
     public List<WolfRoot> wolves;
+    public PlayerPackCircle packCircle;
     public int startingWolves, currentWolves;
     bool leaderIsAlive;
     bool isApproaching = false;
@@ -31,6 +32,7 @@ public class PackManager : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         heatManagerGO = GameObject.FindGameObjectWithTag("HeatManager");
+        packCircle = player.GetComponent<PlayerPackCircle>();
 
         if (heatManagerGO.GetComponent<HDO_HeatManager>())
         {
@@ -63,7 +65,7 @@ public class PackManager : MonoBehaviour
 
     public void StartHarassing()
     {
-        player.GetComponent<PlayerPackCircle>().SetCircleSize(rushCircleSize);
+        packCircle.SetCircleSize(rushCircleSize);
         GoToState("Harass");
     }
 
@@ -133,15 +135,29 @@ public class PackManager : MonoBehaviour
 
     public void DetermineLeader()
     {
+        bool alphaIsInPack = false;
+        int alphaID = 0;
         if (!leaderIsAlive)
         {
             foreach (WolfRoot wolf in wolves)
             {
                 wolf.isPackLeader = false;
+                if (wolf.GetComponent<PCO_AlphaWolfBehavior>())
+                {
+                    alphaIsInPack = true;
+                    return;
+                } else
+                {
+                    alphaID++;
+                }
             }
             int rng = Random.Range(0, wolves.Count);
             wolves[rng].isPackLeader = true;
             leader = wolves[rng];
+            if (alphaIsInPack)
+            {
+                leader = wolves[alphaID];
+            }
             leaderIsAlive = true;
         }
     }
@@ -190,7 +206,7 @@ public class PackManager : MonoBehaviour
         isApproaching = false;
         isObserving = false;
         GoToState("Flee");
-        if (player.GetComponent<PlayerPackCircle>().pack == this)
-            player.GetComponent<PlayerPackCircle>().pack = null;
+        if (packCircle.pack == this)
+            packCircle.ClearCircle();
     }
 }

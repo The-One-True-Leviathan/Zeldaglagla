@@ -18,10 +18,22 @@ public class HDO_TemperatureManager : MonoBehaviour
 
     HDO_TemperatureModifier tm;
 
+    [SerializeField]
+    Text text;
+
     // Update is called once per frame
     void Update()
     {
         CheckTemp();
+        DisplayTemperature();
+    }
+
+    void DisplayTemperature()
+    {
+        float disp = ambientTemperature;
+        disp *= 10;
+        disp = Mathf.RoundToInt(disp);
+        text.text = disp / 10 + "° C";
     }
 
     void CheckTemp()

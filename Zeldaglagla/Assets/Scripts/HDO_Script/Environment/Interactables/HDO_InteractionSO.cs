@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(fileName = "New Interaction", menuName = "Interaction", order = 0)]
 public class HDO_InteractionSO : ScriptableObject
 {
-    public enum InteractionType { dialog, enemyEvent, environmentEvent, item, bossEvent, characterImprovement, needItem, setSpawnPoint, mapEvent, dungeonshield};
+    public enum InteractionType { dialog, enemyEvent, environmentEvent, item, bossEvent, characterImprovement, needItem, setSpawnPoint, mapEvent, dungeonshield, sceneChange};
     public enum dialogType { inner, EVAA };
     public enum dialogNum { one, several };
 
@@ -68,4 +69,7 @@ public class HDO_InteractionSO : ScriptableObject
 
     [Header("Dungeon Shield")]
     public GameObject toDeactivate;
+
+    [Header("Scene")]
+    public Scene scene;
 }

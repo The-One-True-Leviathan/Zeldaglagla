@@ -28,6 +28,12 @@ public class HDO_Interactive : MonoBehaviour
     [Header("Self Destroy")]
     [SerializeField]
     bool selfDestroy;
+
+    [Header("Deactivate Turret")]
+    [SerializeField]
+    bool deactivateTurret;
+    [SerializeField]
+    HDO_Tourelle turret;
     
 
     // Update is called once per frame
@@ -86,6 +92,10 @@ public class HDO_Interactive : MonoBehaviour
         if (selfDestroy)
         {
             Destroy(this.gameObject);
+        }
+        if (deactivateTurret)
+        {
+            turret.activated = false;
         }
     }
 

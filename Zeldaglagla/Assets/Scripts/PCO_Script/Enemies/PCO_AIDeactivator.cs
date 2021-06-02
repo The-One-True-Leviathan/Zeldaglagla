@@ -35,6 +35,7 @@ public class PCO_AIDeactivator : MonoBehaviour
         }
 
         deactivatorManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PCO_AIDeactivatorManager>();
+        deactivatorManager.monsters.Add(this);
 
         Set(false);
     }

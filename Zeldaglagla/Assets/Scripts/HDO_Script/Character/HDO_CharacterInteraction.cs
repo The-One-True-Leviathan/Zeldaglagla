@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HDO_CharacterInteraction : MonoBehaviour
 {
@@ -258,10 +259,20 @@ public class HDO_CharacterInteraction : MonoBehaviour
             DungeonShield(inter);
         }
 
+        if(inter.interactionType == HDO_InteractionSO.InteractionType.sceneChange)
+        {
+            SceneChange(inter);
+        }
+
         if (inter.isUnique)
         {
             doneUniqueInteraction.Add(inter);
         }
+    }
+
+    void SceneChange(HDO_InteractionSO inter)
+    {
+        SceneManager.LoadScene(inter.scene.name);
     }
 
     void DungeonShield(HDO_InteractionSO inter)

@@ -21,7 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BossShield
-  m_Shader: {fileID: -6465566751694194690, guid: 30378902f8cf4bf4783be14d77bd2528, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: ddaea6b620c60f44abb1794b987b5b1d,
+    type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -34,6 +35,10 @@ Material:
     m_TexEnvs:
     - Texture2D_6382131:
         m_Texture: {fileID: 2800000, guid: d2b0436e6984eea4d8e3ef47d0a3d212, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_6e8af0e6f0664a8188c000b3415b7a9a:
+        m_Texture: {fileID: 2800000, guid: 8dbe1b2710fe1b2488ac16b36c07136d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_FC807BF9:
@@ -84,11 +89,12 @@ Material:
     - Vector1_3EF5B357: 1
     - Vector1_5796D55B: 3
     - Vector1_6C4B36A9: 0.25
-    - Vector1_82A4DD04: 7
+    - Vector1_82A4DD04: 0.1
     - Vector1_C4A27C36: 4
     - Vector1_C4DFFB1: 0.3
     - Vector1_E3D431E: 0
     - Vector1_FDDED723: 1
+    - Vector1_a912cdc6156249e2a4dec45c654dd896: 1.5
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -111,7 +117,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_A0B59D99: {r: 0.58431375, g: 0.16470589, b: 0.21690156, a: 0}
+    - Color_A0B59D99: {r: 0.130162, g: 0.6132076, b: 0.46691376, a: 0}
     - Vector2_18D2BF17: {r: 3, g: 3, b: 0, a: 0}
     - Vector2_374FCD99: {r: 10, g: 1, b: 0, a: 0}
     - Vector2_42EDE65C: {r: 0, g: 0, b: 0, a: 0}
@@ -119,5 +125,5 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _baseColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+    - _baseColor: {r: 0, g: 0.2735849, b: 0.20343496, a: 1}
   m_BuildTextureStacks: []

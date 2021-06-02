@@ -75,6 +75,7 @@ public class HDO_Interactive : MonoBehaviour
 
         if (!good)
         {
+            activated.Clear();
             return;
         }
 

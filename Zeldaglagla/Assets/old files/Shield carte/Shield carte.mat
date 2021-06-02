@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shield carte
-  m_Shader: {fileID: -6465566751694194690, guid: 30378902f8cf4bf4783be14d77bd2528,
+  m_Shader: {fileID: -6465566751694194690, guid: ddaea6b620c60f44abb1794b987b5b1d,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -35,6 +35,10 @@ Material:
     m_TexEnvs:
     - Texture2D_6382131:
         m_Texture: {fileID: 2800000, guid: d2b0436e6984eea4d8e3ef47d0a3d212, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_6e8af0e6f0664a8188c000b3415b7a9a:
+        m_Texture: {fileID: 2800000, guid: 08f4b3592f7ee4c4bb8836a156f39060, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_FC807BF9:
@@ -69,6 +73,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_3EF5B357: 0.1
     - Vector1_5796D55B: 3
@@ -78,6 +94,7 @@ Material:
     - Vector1_C4DFFB1: 0.1
     - Vector1_E3D431E: 0
     - Vector1_FDDED723: 1
+    - Vector1_a912cdc6156249e2a4dec45c654dd896: 0.5
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -100,7 +117,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_A0B59D99: {r: 0.6132076, g: 0.112807065, b: 0.13181518, a: 0}
+    - Color_A0B59D99: {r: 1.471698, g: 0.4009977, b: 0.21520111, a: 0}
     - Vector2_18D2BF17: {r: 3, g: 3, b: 0, a: 0}
     - Vector2_374FCD99: {r: 10, g: 1, b: 0, a: 0}
     - Vector2_42EDE65C: {r: 0, g: 0, b: 0, a: 0}
@@ -109,3 +126,4 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _baseColor: {r: 0.6039216, g: 0.05882352, b: 0.16925077, a: 1}
+  m_BuildTextureStacks: []

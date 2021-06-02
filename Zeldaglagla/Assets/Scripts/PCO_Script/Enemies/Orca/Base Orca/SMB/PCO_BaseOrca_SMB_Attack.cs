@@ -8,11 +8,11 @@ public class PCO_BaseOrca_SMB_Attack : StateMachineBehaviour
     enum State { BUILDUP, HITSPAN, RECOVER };
     State state;
     float maxBuildup, buildup, maxHitspan, hitspan, maxRecover, recover;
+    Vector3 orient;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        baseOrca.isInAttack = true;
         buildup = hitspan = recover;
         maxBuildup = baseOrca.atkBuildup;
         maxHitspan = baseOrca.atkHitspan;
@@ -38,6 +38,9 @@ public class PCO_BaseOrca_SMB_Attack : StateMachineBehaviour
                 }
                 break;
             case State.HITSPAN:
+                baseOrca.isInAttack = true;
+                orient = baseOrca.ToPlayer();
+                baseOrca.SetAnim("Attack", orient);
                 hitspan += Time.deltaTime;
                 Debug.LogWarning("Hitspan time so far : " + hitspan);
                 baseOrca.Attack();
@@ -48,6 +51,7 @@ public class PCO_BaseOrca_SMB_Attack : StateMachineBehaviour
                 }
                 break;
             case State.RECOVER:
+                baseOrca.SetAnim("Idle", orient);
                 recover += Time.deltaTime;
                 if (recover > maxRecover)
                 {

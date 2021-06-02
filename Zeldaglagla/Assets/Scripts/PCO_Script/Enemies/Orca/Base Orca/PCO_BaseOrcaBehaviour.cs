@@ -106,4 +106,28 @@ public class PCO_BaseOrcaBehaviour : PCO_OrcaRoot
         }
     }
 
+
+
+    public void SetAnim(string anim, Vector3 direction)
+    {
+        if (direction.x > 0)
+        {
+            animator.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (direction.x < 0)
+        {
+            animator.transform.localScale = new Vector3(1, 1, 1);
+        }
+        /*
+        if (direction.y > 0)
+        {
+            anim += "_Back";
+        }
+        else if (direction.y < 0)
+        {
+            anim += "_Front";
+        }*/
+        animator.Play(anim);
+    }
+
 }

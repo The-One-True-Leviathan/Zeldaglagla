@@ -19,6 +19,9 @@ public class PCO_BaseOrca_SMB_Wander : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
+        baseOrca.SetAnim("Swim", baseOrca.pather.velocity);
+
         if (baseOrca.pather.remainingDistance < 2)
         {
             Repath();

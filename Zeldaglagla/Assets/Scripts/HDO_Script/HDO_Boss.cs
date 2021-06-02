@@ -18,13 +18,16 @@ public class HDO_Boss : MonsterRoot
     GameObject currentAlly;
     MonsterRoot allyRoot;
 
+    GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
         counter = 0;
+        player = GameObject.FindGameObjectWithTag("Player");
 
         CallBackUp();
+        fightStarted = true;
     }
 
     // Update is called once per frame
@@ -62,6 +65,7 @@ public class HDO_Boss : MonsterRoot
 
     }
 
+
     void Shielding()
     {
         Shield.SetActive(shieldOn);
@@ -73,5 +77,6 @@ public class HDO_Boss : MonsterRoot
         currentAlly = GameObject.Instantiate(Allies[counter], SpawnAlly.transform.position, Quaternion.identity);
 
         allyRoot = currentAlly.GetComponent<MonsterRoot>();
+        player.transform.position = Vector3.MoveTowards(player.transform.position, new Vector3(player.transform.position.x, player.transform.position.y - 10, 0), 3);
     }
 }

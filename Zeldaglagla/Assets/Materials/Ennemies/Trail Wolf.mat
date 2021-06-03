@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4203340513057439844
+--- !u!114 &-7482893883550467543
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 1
+  version: 4
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
@@ -20,9 +20,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Alpha
-  m_Shader: {fileID: -6465566751694194690, guid: 146fd1475b16d7c4d9bb4940e386401b, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_Name: Trail Wolf
+  m_Shader: {fileID: -6465566751694194690, guid: 74d7acac367c2de4ab82f6af0e4af9d9,
+    type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -32,8 +33,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_81B5711A:
-        m_Texture: {fileID: 2800000, guid: 07aa04ea23971dd4fb2fae05823a8342, type: 3}
+    - Texture2D_4dcdd69b7ea64ad980c63a64a4e5bf44:
+        m_Texture: {fileID: 2800000, guid: d3a6a7c19dc98fc45b88bdfbbf105b6b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_904aed42081048e3a7c838e687db4353:
+        m_Texture: {fileID: 2800000, guid: 5a9583c03850ead4fa1fcbb040fa2649, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -41,6 +46,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -57,6 +74,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -77,18 +98,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_17FCDC4A: 20
-    - Vector1_23DEFD6D: -1
-    - Vector1_365FB544: 1.5
-    - Vector1_6C0F6537: 5
-    - Vector1_94CB9027: 3
-    - Vector1_96F3F23: -0.5
-    - Vector1_BB06939E: 10
+    - Vector1_7d412bdd4de3452b8f033fdb6a96ed9d: 0.99
+    - Vector1_b224b479bf064db49522958106c5dcfc: 1
+    - Vector1_b2db06abce094102917996d0101e8d41: 1.5
+    - Vector1_f0ff5fdc707b426cb232e2a1415c635e: 5
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
@@ -96,6 +118,7 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
+    - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -106,10 +129,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_6FE46453: {r: 2.6082377, g: 0.2594582, b: 0.34139237, a: 0}
-    - Vector2_9335BBBB: {r: 0.5, g: 2, b: 0, a: 0}
-    - Vector2_BF57B3CB: {r: 0.2, g: 0.2, b: 0.2, a: 0}
-    - Vector3_43A989F: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - Color_390911b821b341dcb6d58a47026fef12: {r: 10.176144, g: 1.1040158, b: 1.1040158,
+        a: 0}
+    - Vector2_2676a3f49e2d4aa48ec259dffae25cdd: {r: 1, g: 0, b: 0, a: 0}
+    - Vector2_2b0a4a55b37f4eacb33973147ac17fc3: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_a3f40c9a197641e8898502ec1c099aac: {r: -1, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

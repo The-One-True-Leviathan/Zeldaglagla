@@ -5,15 +5,16 @@ using UnityEngine;
 public class PCO_BaseOrca_SMB_Attack : StateMachineBehaviour
 {
     public PCO_BaseOrcaBehaviour baseOrca;
-    enum State { BUILDUP, HITSPAN, RECOVER };
+    enum State { BUILDUP, HITSPAN, RECOVER, FLEE };
     State state;
-    float maxBuildup, buildup, maxHitspan, hitspan, maxRecover, recover;
+    float maxBuildup, buildup, maxHitspan, hitspan, maxRecover, recover, flee;
+    public float maxFlee;
     Vector3 orient;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        buildup = hitspan = recover;
+        buildup = hitspan = recover = flee = 0;
         maxBuildup = baseOrca.atkBuildup;
         maxHitspan = baseOrca.atkHitspan;
         maxRecover = baseOrca.atkRecover;
@@ -54,6 +55,15 @@ public class PCO_BaseOrca_SMB_Attack : StateMachineBehaviour
                 baseOrca.SetAnim("Idle", orient);
                 recover += Time.deltaTime;
                 if (recover > maxRecover)
+                {
+                    state = State.FLEE;
+                    Debug.LogWarning("Orca is Going into Dig");
+                }
+                break;
+            case State.FLEE:
+                baseOrca.SetAnim("Dig", orient);
+                flee += Time.deltaTime;
+                if (flee > maxFlee)
                 {
                     Debug.LogWarning("Orca is Going into Circle");
                     animator.Play("Circle");

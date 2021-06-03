@@ -25,6 +25,10 @@ public class HDO_Interactive : MonoBehaviour
     [SerializeField]
     public List<HDO_InteractionSO> activated = null;
 
+    public List<GameObject> positionsForHint = null;
+    [SerializeField]
+    GameObject hint;
+
     [Header("Self Destroy")]
     [SerializeField]
     bool selfDestroy;
@@ -34,7 +38,12 @@ public class HDO_Interactive : MonoBehaviour
     bool deactivateTurret;
     [SerializeField]
     HDO_Tourelle turret;
-    
+
+
+    private void Start()
+    {
+        hint.transform.position = positionsForHint[0].transform.position;
+    }
 
     // Update is called once per frame
     void Update()
@@ -42,8 +51,38 @@ public class HDO_Interactive : MonoBehaviour
         if (shieldD1)
         {
             CheckShielding();
+            Hint();
         }
         
+    }
+
+    void Hint()
+    {
+        if(activated.Count != 0)
+        {
+            if(activated.Count == 1)
+            {
+                if(activated[0] == order[0])
+                {
+                    hint.transform.position = positionsForHint[1].transform.position;
+                }
+                else
+                {
+                    CheckOrder();
+                }
+            }
+            else if(activated.Count == 2)
+            {
+                if(activated[1] == order[1])
+                {
+                    hint.transform.position = positionsForHint[2].transform.position;
+                }
+                else
+                {
+                    CheckOrder();
+                }
+            }
+        }
     }
 
     void CheckShielding()
@@ -63,7 +102,7 @@ public class HDO_Interactive : MonoBehaviour
     void CheckOrder()
     {
         bool good = true;
-        for(int i = 0; i <= activated.Count; i++)
+        for(int i = 0; i <= activated.Count - 1; i++)
         {
             if(!(activated[i] == order[i]))
             {
@@ -73,8 +112,14 @@ public class HDO_Interactive : MonoBehaviour
             }
         }
 
+        if(activated.Count != order.Count)
+        {
+            good = false;
+        }
+
         if (!good)
         {
+            hint.transform.position = positionsForHint[0].transform.position;
             activated.Clear();
             return;
         }

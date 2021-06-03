@@ -100,7 +100,7 @@ public class HDO_Controller : MonoBehaviour
         if (freeMovement)
         {
             inputVector = ((new Vector3(movementVector.x, movementVector.y, 0) * actualSpeed * Time.deltaTime));
-            Debug.Log(inputVector);
+
         }
         else
         {
@@ -126,8 +126,7 @@ public class HDO_Controller : MonoBehaviour
 
         if(finalVector != Vector3.zero && knockbackVector == Vector3.zero)
         {
-            animator.SetFloat("speedY", finalVector.y);
-            animator.SetFloat("speedX", gunPoint.transform.localPosition.x);
+            
             if (finalVector.x >= 0 && finalVector.y <= 0)
             {
                 spriteRenderer.flipX = false;
@@ -158,6 +157,20 @@ public class HDO_Controller : MonoBehaviour
                 gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(-1, 1, 0));
             }
 
+        }
+        animator.SetFloat("speedY", finalVector.y * 20);
+        animator.SetFloat("speedX", finalVector.x * 20);
+
+        if(animator.GetFloat("speedY") == 0)
+        {
+            if(gunPoint.transform.position.y < transform.position.y)
+            {
+                animator.SetFloat("speedY", -0.01f);
+            }
+            else
+            {
+                animator.SetFloat("speedY", 0.01f);
+            }
         }
 
         transform.position = transform.position + finalVector;

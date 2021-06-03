@@ -43,8 +43,17 @@ public class HDO_TemperatureManager : MonoBehaviour
 
         if(result != 0)
         {
-            tm = results[0].GetComponent<HDO_TemperatureModifier>();
-            if(ambientTemperature != tm.newTemperature)
+            if(result == 0)
+            {
+                tm = results[0].GetComponent<HDO_TemperatureModifier>();
+            }
+            else
+            {
+                tm = results[results.Count - 1].GetComponent<HDO_TemperatureModifier>();
+                
+            }
+
+            if (ambientTemperature != tm.newTemperature)
             {
                 if(ambientTemperature < tm.newTemperature)
                 {

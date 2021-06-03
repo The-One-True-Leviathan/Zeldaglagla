@@ -67,6 +67,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  text: {fileID: 0}
 --- !u!61 &348949935
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165,7 +166,7 @@ GameObject:
   - component: {fileID: 1113747591}
   m_Layer: 0
   m_Name: HeatManager
-  m_TagString: Untagged
+  m_TagString: HeatManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -354,7 +355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4615988390100375719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.546, y: -0.335, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 5311234934450637272}
@@ -877,6 +878,7 @@ GameObject:
   - component: {fileID: 5311234934450637279}
   - component: {fileID: 1319476252139588231}
   - component: {fileID: 5388419272970035235}
+  - component: {fileID: 2085410623}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -947,10 +949,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 0
   m_Sprite: {fileID: 2910913707500306984, guid: 58a538ebe65b47c4281915fcf61e22be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -1075,12 +1077,14 @@ MonoBehaviour:
   maxHealth: 20
   currentHealth: 20
   deflectImmunityFactor: 1
+  healthBar: {fileID: 0}
   respawnPoint: {fileID: 0}
   lowFrequency: 0
   highFrequency: 0
   vibrationDuration: 0
   canStrike: 1
   torchUnlocked: 0
+  heatwaveUnlocked: 0
   attackDamage: 3
   attackStun: 5
   attackStunDuration: 3
@@ -1094,6 +1098,21 @@ MonoBehaviour:
   torchCooldown: 1
   torching: 0
   shallRespawn: 0
+  heatwaveEffect: {fileID: 0}
+  heatZone: {fileID: 0}
+  ppVolume: {fileID: 0}
+  baseTemperature: 0
+  wantedTemperature: 40
+  camZoom: {fileID: 0}
+  baseZoom: 0
+  heatwaveZoom: 80
+  heatwaveCost: 0
+  heatwaveCooldown: 1
+  heatwaving: 0
+  temperatureIncreaseRate: 1
+  temperatureDecreaseRate: 0.3
+  zoomIncreaseRate: 0.1
+  zoomDecreaseRate: 0.1
 --- !u!61 &5311234934450637279
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1151,6 +1170,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2085410623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5311234934450637275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04bd1708b8cf5214fb63f3abd039ff55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsters: []
 --- !u!1 &8992833850383718440
 GameObject:
   m_ObjectHideFlags: 0

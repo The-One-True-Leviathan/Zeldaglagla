@@ -36,7 +36,7 @@ public class HDO_Tourelle : MonoBehaviour
 
     IEnumerator Prepare()
     {
-        Debug.Log(counter);
+
         Shoot();
         counter++;
         yield return new WaitForSeconds(recover);

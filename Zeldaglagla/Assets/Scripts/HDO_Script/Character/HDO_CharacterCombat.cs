@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Combat;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using Cinemachine;
 
 public class HDO_CharacterCombat : MonoBehaviour
 {
@@ -41,7 +44,7 @@ public class HDO_CharacterCombat : MonoBehaviour
 
     [Header("Combat Statistics")]
     public bool canStrike;
-    public bool torchUnlocked;
+    public bool torchUnlocked, heatwaveUnlocked;
     public float attackDamage, attackStun, attackStunDuration;
     [SerializeField]
     float attackCooldown;
@@ -63,7 +66,34 @@ public class HDO_CharacterCombat : MonoBehaviour
 
     public bool shallRespawn;
 
+    [Header("Heatwave Statistics")]
+    [SerializeField]
+    GameObject heatwaveEffect;
+    [SerializeField]
+    GameObject heatZone;
+    [SerializeField]
+    Volume ppVolume;
+    [SerializeField]
+    float baseTemperature;
+    [SerializeField]
+    float wantedTemperature;
+    [SerializeField]
+    CinemachineFollowZoom camZoom;
+    [SerializeField]
+    float baseZoom;
+    [SerializeField]
+    float heatwaveZoom;
+    
+    public float heatwaveCost, heatwaveCooldown, heatwaveWaitTime;
+    public bool heatwaving;
 
+    bool temperatureReached, zoomReached;
+
+    float heatwaveElapsed;
+
+    public float temperatureIncreaseRate, temperatureDecreaseRate, zoomIncreaseRate, zoomDecreaseRate;
+
+    WhiteBalance wb;
 
     private void Awake()
     {
@@ -81,6 +111,9 @@ public class HDO_CharacterCombat : MonoBehaviour
         controls.UsualControls.Attack.performed += ctx => Strike();
         controls.KBControlsWASD.Attack.performed += ctx => Strike();
 
+        controls.UsualControls.Heatwave.performed += ctx => Heatwave();
+        controls.KBControlsWASD.Heatwave.performed += ctx => Heatwave();
+
         controls.UsualControls.Deflect.performed += ctx => Deflect();
         controls.KBControlsWASD.Deflect.performed += ctx => Deflect();
         controls.UsualControls.Deflect.canceled += ctx => piolet.shielding = false;
@@ -95,6 +128,11 @@ public class HDO_CharacterCombat : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         healthtransform = healthBar.GetComponent<RectTransform>();
+
+        ppVolume.profile.TryGet(out wb);
+        baseTemperature = wb.temperature.value;
+
+        baseZoom = camZoom.m_MaxFOV;
     }
 
     // Update is called once per frame
@@ -107,6 +145,15 @@ public class HDO_CharacterCombat : MonoBehaviour
         else
         {
             torchCDElapsed = 0;
+        }
+
+        if (heatwaveElapsed > 0)
+        {
+            heatwaveElapsed -= Time.deltaTime;
+        }
+        else
+        {
+            heatwaveElapsed = 0;
         }
 
         if (!canStrike)
@@ -131,6 +178,113 @@ public class HDO_CharacterCombat : MonoBehaviour
 
         healthtransform.localScale = new Vector3(healthBar.transform.localScale.x, currentHealth / maxHealth, 1);
     }
+
+
+    void Heatwave()
+    {
+        if(heatwaveElapsed > 0 || hm.heatValue < heatwaveCost || !heatwaveUnlocked)
+        {
+            return;
+        }
+
+        hm.heatValue -= heatwaveCost;
+
+        heatwaving = true;
+        heatwaveElapsed = heatwaveCooldown;
+
+        Instantiate(heatwaveEffect, transform.position, Quaternion.identity);
+        Instantiate(heatZone, transform.position, Quaternion.identity);
+
+        StartCoroutine(Heatwaving());
+    }
+
+    IEnumerator Heatwaving()
+    {
+        Debug.Log("Start Heatwaving");
+
+        if(wb.temperature.value < wantedTemperature)
+        {
+            wb.temperature.value = wb.temperature.value + temperatureIncreaseRate;
+            temperatureReached = false;
+        }
+        else
+        {
+            temperatureReached = true;
+            wb.temperature.value = wantedTemperature;
+        }
+
+        if(camZoom.m_MaxFOV < heatwaveZoom)
+        {
+            camZoom.m_MaxFOV = camZoom.m_MaxFOV + zoomIncreaseRate;
+            zoomReached = false;
+        }
+        else
+        {
+            zoomReached = true;
+            camZoom.m_MaxFOV = heatwaveZoom;
+        }
+
+        Debug.Log(camZoom.m_MaxFOV);
+        Debug.Log(wb.temperature.value);
+
+        yield return new WaitForEndOfFrame();
+
+        if(zoomReached && temperatureReached)
+        {
+            StartCoroutine(WaitPhaseTwo());
+            StopCoroutine(Heatwaving());
+        }
+        else
+        {
+            StartCoroutine(Heatwaving());
+        }
+    }
+
+    IEnumerator WaitPhaseTwo()
+    {
+        yield return new WaitForSeconds(heatwaveWaitTime);
+        StartCoroutine(BackToNormal());
+    }
+
+    IEnumerator BackToNormal()
+    {
+        Debug.Log("BackTonormal");
+        StopCoroutine(Heatwaving());
+
+        if (wb.temperature.value > baseTemperature)
+        {
+            wb.temperature.value = wb.temperature.value - temperatureDecreaseRate;
+            temperatureReached = false;
+        }
+        else
+        {
+            temperatureReached = true;
+            wb.temperature.value = baseTemperature;
+        }
+
+        if (camZoom.m_MaxFOV > baseZoom)
+        {
+            camZoom.m_MaxFOV = camZoom.m_MaxFOV - zoomDecreaseRate;
+            zoomReached = false;
+        }
+        else
+        {
+            zoomReached = true;
+            camZoom.m_MaxFOV = baseZoom;
+        }
+        yield return new WaitForEndOfFrame();
+
+        if(zoomReached && temperatureReached)
+        {
+            heatwaving = false;
+        }
+        else
+        {
+            StartCoroutine(BackToNormal());
+        }
+    }
+
+
 
     void Deflect()
     {

@@ -10,6 +10,8 @@ public class ShooterRoot : MonsterRoot
     public LayerMask isPlayer;
 
     public float shotDmg, shotBuildup, shotRecover, shotKBStrength, shotKBSpeed, shotKBTime, shotSpeed, minAtkDistance, maxAtkDistance;
+
+    public int shotNumber = 1;
     public float maxSight, timeSinceLastSeen;
     public bool playerInSight, playerInMemory;
 

@@ -9,9 +9,9 @@ public class PCO_AIDeactivator : MonoBehaviour
     MonsterRoot monster;
     Collider2D col2D;
     Animator SMB;
-    GameObject display;
+    GameObject display, circle;
     PackManager pack;
-    bool isPack = false;
+    bool isPack = false, isOrca = false;
 
     PCO_AIDeactivatorManager deactivatorManager;
 
@@ -32,6 +32,11 @@ public class PCO_AIDeactivator : MonoBehaviour
             col2D = GetComponent<Collider2D>();
             SMB = GetComponent<Animator>();
             display = transform.GetChild(0).gameObject;
+        }
+        if (GetComponent<PCO_OrcaRoot>())
+        {
+            isOrca = true;
+            circle = transform.GetChild(1).gameObject;
         }
 
         deactivatorManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PCO_AIDeactivatorManager>();
@@ -54,6 +59,10 @@ public class PCO_AIDeactivator : MonoBehaviour
         {
             aiPath.enabled = destinationSetter.enabled = monster.enabled = col2D.enabled = SMB.enabled = onOrOff;
             display.SetActive(onOrOff);
+            if (isOrca)
+            {
+                circle.SetActive(onOrOff);
+            }
         }
     }
 }

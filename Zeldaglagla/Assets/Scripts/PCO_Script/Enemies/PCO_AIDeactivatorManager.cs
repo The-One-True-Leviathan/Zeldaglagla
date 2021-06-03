@@ -10,15 +10,18 @@ public class PCO_AIDeactivatorManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (PCO_AIDeactivator monster in monsters)
+        if (monsters.Count > 0)
         {
-            if ((transform.position - monster.transform.position).sqrMagnitude < monster.activateRange * monster.activateRange)
+            foreach (PCO_AIDeactivator monster in monsters)
             {
-                monster.Set(true);
-            }
-            else if ((transform.position - monster.transform.position).sqrMagnitude < (monster.activateRange * 2) * (monster.activateRange * 2))
-            {
-                monster.Set(false);
+                if ((transform.position - monster.transform.position).sqrMagnitude < monster.activateRange * monster.activateRange)
+                {
+                    monster.Set(true);
+                }
+                else if ((transform.position - monster.transform.position).sqrMagnitude < (monster.activateRange * 2) * (monster.activateRange * 2))
+                {
+                    monster.Set(false);
+                }
             }
         }
     }

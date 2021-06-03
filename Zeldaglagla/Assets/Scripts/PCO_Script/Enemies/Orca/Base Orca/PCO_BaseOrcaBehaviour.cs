@@ -121,7 +121,7 @@ public class PCO_BaseOrcaBehaviour : PCO_OrcaRoot
 
         if (anim == "Swim")
         {
-            if (direction.y > 0)
+            if (direction.y >= 0)
             {
                 anim += "_Back";
             }
@@ -130,6 +130,7 @@ public class PCO_BaseOrcaBehaviour : PCO_OrcaRoot
                 anim += "_Front";
             }
         }
+        Debug.LogWarning(anim);
         animator.Play(anim);
     }
 

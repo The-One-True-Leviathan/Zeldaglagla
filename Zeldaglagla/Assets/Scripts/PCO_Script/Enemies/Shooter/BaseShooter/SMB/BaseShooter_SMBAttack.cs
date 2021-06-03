@@ -17,6 +17,7 @@ public class BaseShooter_SMBAttack : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        numberOfShots = shooter.shotNumber;
         buildup = recover = timeSinceLastShot = 0;
         shotsLeft = true;
         shooter.baseShooterSMBState = BaseShooterBehavior.BaseShooterSMBState.ATTACK;

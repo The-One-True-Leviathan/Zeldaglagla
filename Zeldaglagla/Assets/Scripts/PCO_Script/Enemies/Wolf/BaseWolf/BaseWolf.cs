@@ -92,6 +92,7 @@ public class BaseWolf : WolfRoot
         {
             anim += "_Front";
         }
+        Debug.LogWarning("Wolf :" + anim);
         animator.Play(anim);
     }
 }

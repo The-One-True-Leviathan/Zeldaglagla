@@ -272,7 +272,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
 
     void SceneChange(HDO_InteractionSO inter)
     {
-        SceneManager.LoadScene(inter.scene.name);
+        SceneManager.LoadScene(inter.scene);
     }
 
     void DungeonShield(HDO_InteractionSO inter)

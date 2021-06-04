@@ -122,63 +122,70 @@ public class HDO_Controller : MonoBehaviour
 
     void Movement()
     {
-        finalVector = collision.RecalculateVector(inputVector + knockbackVector);
-
-        if(finalVector != Vector3.zero && knockbackVector == Vector3.zero)
+        if (knockbackVector == Vector3.zero)
         {
-            
-            if (finalVector.x >= 0 && finalVector.y <= 0)
+            finalVector = collision.RecalculateVector(inputVector);
+
+            if (finalVector != Vector3.zero)
             {
-                spriteRenderer.flipX = false;
-                pioletSR.flipX = false;
-                gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(1, -1, 0));
+
+                if (finalVector.x >= 0 && finalVector.y <= 0)
+                {
+                    spriteRenderer.flipX = false;
+                    pioletSR.flipX = false;
+                    gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(1, -1, 0));
+                }
+                else if (finalVector.x > 0 && finalVector.y > 0)
+                {
+                    spriteRenderer.flipX = true;
+                    pioletSR.flipX = true;
+                    gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(1, 1, 0));
+                }
+                else if (finalVector.x < 0 && finalVector.y <= 0)
+                {
+                    spriteRenderer.flipX = true;
+                    pioletSR.flipX = true;
+                    gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(-1, -1, 0));
+                }
+                else if (finalVector.x <= 0 && finalVector.y > 0)
+                {
+                    spriteRenderer.flipX = false;
+                    pioletSR.flipX = false;
+                    gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(-1, 1, 0));
+                }
+
+                if (Mathf.Abs(finalVector.x) < 0.1f && Mathf.Abs(finalVector.y) > 0.75f)
+                {
+                    gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(-1, 1, 0));
+                }
+
             }
-            else if (finalVector.x > 0 && finalVector.y > 0)
+            animator.SetFloat("speedY", finalVector.y * 20);
+            animator.SetFloat("speedX", finalVector.x * 20);
+
+            if (animator.GetFloat("speedY") == 0)
             {
-                spriteRenderer.flipX = true;
-                pioletSR.flipX = true;
-                gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(1, 1, 0));
-            }
-            else if (finalVector.x < 0 && finalVector.y <= 0)
-            {
-                spriteRenderer.flipX = true;
-                pioletSR.flipX = true;
-                gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(-1, -1, 0));
-            }
-            else if (finalVector.x <= 0 && finalVector.y > 0)
-            {
-                spriteRenderer.flipX = false;
-                pioletSR.flipX = false;
-                gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(-1, 1, 0));
+                if (gunPoint.transform.position.y < transform.position.y)
+                {
+                    animator.SetFloat("speedY", -0.01f);
+                }
+                else
+                {
+                    animator.SetFloat("speedY", 0.01f);
+                }
             }
 
-            if(Mathf.Abs(finalVector.x) < 0.1f && Mathf.Abs(finalVector.y) > 0.75f)
-            {
-                gunPoint.transform.localPosition = Vector3.Normalize(new Vector3(-1, 1, 0));
-            }
-
-        }
-        animator.SetFloat("speedY", finalVector.y * 20);
-        animator.SetFloat("speedX", finalVector.x * 20);
-
-        if(animator.GetFloat("speedY") == 0)
+            transform.position = transform.position + finalVector;
+        } else
         {
-            if(gunPoint.transform.position.y < transform.position.y)
-            {
-                animator.SetFloat("speedY", -0.01f);
-            }
-            else
-            {
-                animator.SetFloat("speedY", 0.01f);
-            }
+            finalVector = collision.RecalculateVector(knockbackVector);
+            transform.position = transform.position + finalVector;
         }
-
-        transform.position = transform.position + finalVector;
     }
 
     public void Knockback(Vector3 knockback)
     {
-        knockbackVector = knockback;
+        knockbackVector = knockback*Time.deltaTime;
     }
 
     private void OnDisable()

@@ -13,6 +13,12 @@ public class BaseWolf : WolfRoot
     // Start is called before the first frame update
     void Start()
     {
+        Debug.LogWarning("Hey salut les potos je suis un loup oulala je start");
+        SMB = GetComponent<Animator>();
+        pather = GetComponent<AIPath>();
+        destinationSetter = GetComponent<AIDestinationSetter>();
+        //For some reason AIDeactivator breaks the baseWolf attribution ???
+        /*
         SMB.GetBehaviour<BaseWolfSMBWander>().baseWolf = this;
         SMB.GetBehaviour<BaseWolfSMBApproach>().baseWolf = this;
         SMB.GetBehaviour<BaseWolfSMBObserve>().baseWolf = this;
@@ -20,6 +26,7 @@ public class BaseWolf : WolfRoot
         SMB.GetBehaviour<BaseWolfSMBHarass>().baseWolf = this;
         SMB.GetBehaviour<BaseWolfSMBAttack>().baseWolf = this;
         SMB.GetBehaviour<BaseWolfSMBFlee>().baseWolf = this;
+        */
     }
 
     override public void GoBackToState()

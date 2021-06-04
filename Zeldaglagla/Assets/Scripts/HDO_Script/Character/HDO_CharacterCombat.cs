@@ -192,7 +192,7 @@ public class HDO_CharacterCombat : MonoBehaviour
         heatwaving = true;
         heatwaveElapsed = heatwaveCooldown;
 
-        Instantiate(heatwaveEffect, transform.position, Quaternion.identity);
+        Instantiate(heatwaveEffect, transform.position, heatwaveEffect.transform.rotation);
         Instantiate(heatZone, transform.position, Quaternion.identity);
 
         StartCoroutine(Heatwaving());
@@ -223,9 +223,6 @@ public class HDO_CharacterCombat : MonoBehaviour
             zoomReached = true;
             camZoom.m_MaxFOV = heatwaveZoom;
         }
-
-        Debug.Log(camZoom.m_MaxFOV);
-        Debug.Log(wb.temperature.value);
 
         yield return new WaitForEndOfFrame();
 

@@ -71,5 +71,5 @@ public class HDO_InteractionSO : ScriptableObject
     public GameObject toDeactivate;
 
     [Header("Scene")]
-    public Scene scene;
+    public string scene;
 }

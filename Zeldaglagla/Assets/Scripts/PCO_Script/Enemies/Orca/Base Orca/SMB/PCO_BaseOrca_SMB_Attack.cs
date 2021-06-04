@@ -31,6 +31,7 @@ public class PCO_BaseOrca_SMB_Attack : StateMachineBehaviour
         switch (state)
         {
             case State.BUILDUP:
+                baseOrca.SetAnim("Attack", orient);
                 buildup += Time.deltaTime;
                 if (buildup > maxBuildup)
                 {
@@ -41,7 +42,6 @@ public class PCO_BaseOrca_SMB_Attack : StateMachineBehaviour
             case State.HITSPAN:
                 baseOrca.isInAttack = true;
                 orient = baseOrca.ToPlayer();
-                baseOrca.SetAnim("Attack", orient);
                 hitspan += Time.deltaTime;
                 Debug.LogWarning("Hitspan time so far : " + hitspan);
                 baseOrca.Attack();

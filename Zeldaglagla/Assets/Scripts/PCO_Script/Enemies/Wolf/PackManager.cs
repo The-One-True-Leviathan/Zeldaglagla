@@ -27,7 +27,10 @@ public class PackManager : MonoBehaviour
     public float rushCircleSize;
     [Header("Flee")]
     public float fleeDistance = 20;
-
+    private void Awake()
+    {
+        CountWolves(true);
+    }
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -41,7 +44,6 @@ public class PackManager : MonoBehaviour
 
 
 
-        CountWolves(true);
 
         DetermineLeader();
     }

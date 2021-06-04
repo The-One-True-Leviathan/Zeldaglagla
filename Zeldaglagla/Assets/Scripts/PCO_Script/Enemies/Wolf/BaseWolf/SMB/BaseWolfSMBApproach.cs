@@ -10,6 +10,7 @@ public class BaseWolfSMBApproach : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        baseWolf = animator.GetComponent<BaseWolf>();
         baseWolf.baseWolfSMBState = BaseWolf.BaseWolfSMBState.APPROACH;
         baseWolf.destinationSetter.enabled = true;
         baseWolf.pather.maxSpeed = baseWolf.approachSpeed;

@@ -1990,6 +1990,8 @@ MonoBehaviour:
   shieldD1: 0
   order: []
   activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}
@@ -2578,6 +2580,8 @@ MonoBehaviour:
   shieldD1: 0
   order: []
   activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}
@@ -3527,6 +3531,8 @@ MonoBehaviour:
   shieldD1: 0
   order: []
   activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}
@@ -4590,6 +4596,8 @@ MonoBehaviour:
   shieldD1: 0
   order: []
   activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}
@@ -5450,6 +5458,8 @@ MonoBehaviour:
   shieldD1: 0
   order: []
   activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}
@@ -5583,6 +5593,8 @@ MonoBehaviour:
   shieldD1: 0
   order: []
   activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}

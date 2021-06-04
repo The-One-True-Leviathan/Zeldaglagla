@@ -4985,7 +4985,8 @@ GameObject:
   - component: {fileID: 249061507}
   - component: {fileID: 249061509}
   - component: {fileID: 249061508}
-  m_Layer: 0
+  - component: {fileID: 249061510}
+  m_Layer: 11
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11370,6 +11371,142 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!60 &249061510
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249061506}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 69.05336, y: 31.253815}
+      - {x: 66.25682, y: 32.91422}
+      - {x: 67.641335, y: 33.72614}
+      - {x: 62.12065, y: 37.031326}
+      - {x: 60.766182, y: 36.205643}
+      - {x: 57.952652, y: 37.87979}
+      - {x: 49.675346, y: 32.91308}
+      - {x: 51.043907, y: 32.0996}
+      - {x: 48.282433, y: 30.452663}
+      - {x: 49.728302, y: 29.62801}
+      - {x: 46.96319, y: 27.95175}
+      - {x: 48.31443, y: 27.139582}
+      - {x: 44.174744, y: 24.724688}
+      - {x: 38.656044, y: 27.971931}
+      - {x: 27.583391, y: 21.368711}
+      - {x: 22.100508, y: 24.668205}
+      - {x: 24.853376, y: 26.364872}
+      - {x: 26.274137, y: 25.504642}
+      - {x: 31.719397, y: 28.80494}
+      - {x: 26.236284, y: 32.087383}
+      - {x: 20.680815, y: 28.809757}
+      - {x: 22.065752, y: 27.953121}
+      - {x: 19.34197, y: 26.360933}
+      - {x: 17.951036, y: 27.127527}
+      - {x: 16.56743, y: 26.297274}
+      - {x: 13.870104, y: 27.954062}
+      - {x: 16.613274, y: 29.611477}
+      - {x: 11.077795, y: 32.95452}
+      - {x: -2.7167788, y: 24.68566}
+      - {x: 0.013206482, y: 22.986168}
+      - {x: -4.151926, y: 20.564156}
+      - {x: 2.7705517, y: 16.452745}
+      - {x: 0.028308868, y: 14.828287}
+      - {x: 6.895443, y: 10.7175255}
+      - {x: 15.192934, y: 15.573179}
+      - {x: 12.37715, y: 17.259916}
+      - {x: 20.743876, y: 22.242887}
+      - {x: 24.83721, y: 19.731014}
+      - {x: 22.127607, y: 18.115131}
+      - {x: 23.481138, y: 17.28164}
+      - {x: 20.769629, y: 15.613129}
+      - {x: 22.100527, y: 14.776508}
+      - {x: 19.292162, y: 13.206137}
+      - {x: 20.71382, y: 12.302355}
+      - {x: 19.283339, y: 11.447706}
+      - {x: 20.650095, y: 10.664827}
+      - {x: 19.372469, y: 9.871483}
+      - {x: 17.987543, y: 10.645641}
+      - {x: 12.441172, y: 7.398538}
+      - {x: 13.827108, y: 6.539845}
+      - {x: 11.0871315, y: 4.9603734}
+      - {x: 9.670809, y: 5.7567215}
+      - {x: 4.180416, y: 2.4439878}
+      - {x: 5.5357704, y: 1.6505847}
+      - {x: 2.857132, y: -0.021033287}
+      - {x: 5.507576, y: -1.6621699}
+      - {x: 8.325342, y: 0.017615318}
+      - {x: 9.730053, y: -0.8046794}
+      - {x: 15.227314, y: 2.4709387}
+      - {x: 13.844442, y: 3.2788277}
+      - {x: 16.528028, y: 4.970351}
+      - {x: 18.007433, y: 4.047622}
+      - {x: 23.450953, y: 7.4381166}
+      - {x: 22.108427, y: 8.226804}
+      - {x: 23.467875, y: 9.04175}
+      - {x: 24.85745, y: 8.220036}
+      - {x: 26.235956, y: 9.052269}
+      - {x: 27.634794, y: 8.172117}
+      - {x: 30.379328, y: 9.90629}
+      - {x: 31.74624, y: 9.057402}
+      - {x: 34.42366, y: 10.668808}
+      - {x: 31.739393, y: 12.348124}
+      - {x: 30.367792, y: 11.541649}
+      - {x: 28.987131, y: 12.344637}
+      - {x: 26.228045, y: 10.700123}
+      - {x: 23.461771, y: 12.344778}
+      - {x: 26.216684, y: 14.000376}
+      - {x: 24.834879, y: 14.838568}
+      - {x: 27.597258, y: 16.462206}
+      - {x: 26.207388, y: 17.278429}
+      - {x: 38.650078, y: 24.707949}
+      - {x: 46.924576, y: 19.71978}
+      - {x: 34.529427, y: 12.35001}
+      - {x: 33.134735, y: 13.187019}
+      - {x: 31.743765, y: 12.347816}
+      - {x: 35.852898, y: 9.794392}
+      - {x: 38.72119, y: 11.515146}
+      - {x: 42.778442, y: 9.064436}
+      - {x: 41.361984, y: 8.194345}
+      - {x: 46.986443, y: 4.923701}
+      - {x: 48.358505, y: 5.756269}
+      - {x: 51.075882, y: 4.0832686}
+      - {x: 48.27767, y: 2.4746943}
+      - {x: 56.63346, y: -2.5206416}
+      - {x: 52.461136, y: -9.934847}
+      - {x: 60.7555, y: -14.844129}
+      - {x: 70.41056, y: -13.994471}
+      - {x: 77.32475, y: -18.127422}
+      - {x: 75.94627, y: -22.206049}
+      - {x: 82.78818, y: -26.351383}
+      - {x: 98.08976, y: -17.313862}
+      - {x: 87.007805, y: -9.027475}
+      - {x: 93.88422, y: -4.878786}
+      - {x: 52.446495, y: 19.74927}
+      - {x: 46.956413, y: 23.047707}
+      - {x: 51.051178, y: 25.495018}
+      - {x: 52.431297, y: 24.66269}
+      - {x: 55.21895, y: 26.328924}
+      - {x: 56.56888, y: 25.522335}
+      - {x: 59.36902, y: 27.188145}
+      - {x: 60.706192, y: 26.328314}
 --- !u!1 &250891451
 GameObject:
   m_ObjectHideFlags: 0
@@ -12703,6 +12840,7 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  drops: []
   pounceDmg: 5
   pounceBuildup: 0.3
   pounceHitSpan: 0
@@ -13028,6 +13166,7 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  drops: []
   pounceDmg: 5
   pounceBuildup: 0.3
   pounceHitSpan: 0
@@ -15013,6 +15152,7 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  drops: []
   pounceDmg: 5
   pounceBuildup: 0.3
   pounceHitSpan: 0
@@ -15882,6 +16022,7 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  drops: []
   pounceDmg: 5
   pounceBuildup: 0.3
   pounceHitSpan: 0
@@ -18253,7 +18394,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &743432490
 Transform:
   m_ObjectHideFlags: 0
@@ -22632,6 +22773,7 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  drops: []
   pounceDmg: 5
   pounceBuildup: 0.3
   pounceHitSpan: 0
@@ -30386,6 +30528,7 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  drops: []
   Shield: {fileID: 590785103}
   Allies:
   - {fileID: 9078135828925262014, guid: 46293280de312954797e205b5f05196a, type: 3}
@@ -32623,6 +32766,7 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  drops: []
   pounceDmg: 5
   pounceBuildup: 0.3
   pounceHitSpan: 0
@@ -42177,6 +42321,7 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  drops: []
   pounceDmg: 5
   pounceBuildup: 0.3
   pounceHitSpan: 0
@@ -47159,6 +47304,7 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  drops: []
   pounceDmg: 5
   pounceBuildup: 0.3
   pounceHitSpan: 0
@@ -57503,6 +57649,7 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  drops: []
   pounceDmg: 5
   pounceBuildup: 0.3
   pounceHitSpan: 0
@@ -57961,6 +58108,7 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  drops: []
   isPlayer:
     serializedVersion: 2
     m_Bits: 8

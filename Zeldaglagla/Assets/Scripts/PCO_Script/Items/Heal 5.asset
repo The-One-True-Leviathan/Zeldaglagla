@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
-  m_Name: Heal
+  m_Name: Heal 5
   m_EditorClassIdentifier: 
-  interactionType: 0
+  interactionType: 11
   interactionSound: {fileID: 0}
   isTrigger: 0
   isUnique: 0
@@ -33,6 +33,8 @@ MonoBehaviour:
   torchDamageModifier: 0
   abilityUnlock: 0
   abilityUnlocked: 0
+  heatSegmentUnlock: 0
+  numberOfSegs: 0
   unlockMapPart: 0
   mapPartName: 
   redirectToLocation: 0
@@ -42,3 +44,7 @@ MonoBehaviour:
   locationType: 0
   toDeactivate: {fileID: 0}
   scene: 
+  reloadHealth: 1
+  healthAmount: 5
+  heatReload: 0
+  heatAmount: 0

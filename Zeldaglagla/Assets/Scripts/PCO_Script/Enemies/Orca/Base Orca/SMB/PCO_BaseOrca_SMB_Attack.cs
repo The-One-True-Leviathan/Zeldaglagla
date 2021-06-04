@@ -28,6 +28,10 @@ public class PCO_BaseOrca_SMB_Attack : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (baseOrca.VerifyFloor())
+        {
+            animator.Play("Circle");
+        }
         switch (state)
         {
             case State.BUILDUP:

@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 6557071358892673237}
   - component: {fileID: 6557071358892673236}
   m_Layer: 9
-  m_Name: Basic Wolf
+  m_Name: Wolf Basic
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -202,6 +202,11 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  drops:
+  - {fileID: 3238155590587372768, guid: 194545368c1e16a42b0e663196424fb8, type: 3}
+  - {fileID: 3238155590587372768, guid: 194545368c1e16a42b0e663196424fb8, type: 3}
+  - {fileID: 1278343199313297225, guid: 90c5ed2f851fbe741b7b6e84d48182ad, type: 3}
+  - {fileID: 4185606389509068896, guid: 1a13087491b458342b5cd1d596ff477b, type: 3}
   pounceDmg: 2
   pounceBuildup: 0.3
   pounceHitSpan: 0

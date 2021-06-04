@@ -9,15 +9,20 @@ public class HDO_HeatManager : MonoBehaviour
     [SerializeField]
     HDO_TemperatureManager temp;
 
-    public float heatValue;
+    public float heatValue, currentMaxHeat;
     public int maxHeat;
     public float heatModifierPerSecond;
+
+    [Header("Heat Segments")]
+    public List<float> heatSegments = null;
+    public int unlockedSeg;
 
     [Header("Modifiers")]
     [SerializeField]
     float noGainTemperature;
     [SerializeField]
     float heatMultiplier;
+
 
     // Update is called once per frame
     void Update()
@@ -30,13 +35,13 @@ public class HDO_HeatManager : MonoBehaviour
     {
         if (heatBar)
         {
-            heatBar.rectTransform.localScale = new Vector2(heatValue / maxHeat, heatBar.rectTransform.localScale.y);
+            heatBar.fillAmount = heatValue / maxHeat;
         }
         heatValue += heatModifierPerSecond * Time.deltaTime;
 
-        if (heatValue > maxHeat)
+        if (heatValue > currentMaxHeat)
         {
-            heatValue = maxHeat;
+            heatValue = currentMaxHeat;
         }
     }
 
@@ -46,5 +51,7 @@ public class HDO_HeatManager : MonoBehaviour
         {
             heatModifierPerSecond = (temp.ambientTemperature - noGainTemperature) * heatMultiplier;
         }
+
+        currentMaxHeat = heatSegments[unlockedSeg];
     }
 }

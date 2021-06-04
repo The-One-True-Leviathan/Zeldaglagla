@@ -57,6 +57,9 @@ public class HDO_CharacterInteraction : MonoBehaviour
     [SerializeField]
     List<GameObject> campCacheTransfer = null;
 
+    [SerializeField]
+    HDO_HeatManager heatManager;
+
     private void Start()
     {
         selectorSr = selector.GetComponent<SpriteRenderer>();
@@ -264,9 +267,26 @@ public class HDO_CharacterInteraction : MonoBehaviour
             SceneChange(inter);
         }
 
+        if(inter.interactionType == HDO_InteractionSO.InteractionType.reload)
+        {
+            Reload(inter);
+        }
+
         if (inter.isUnique)
         {
             doneUniqueInteraction.Add(inter);
+        }
+    }
+
+    void Reload(HDO_InteractionSO inter)
+    {
+        if (inter.reloadHealth)
+        {
+            GetComponent<HDO_CharacterCombat>().currentHealth += inter.healthAmount;
+        }
+        if (inter.heatReload)
+        {
+            heatManager.heatValue += inter.heatAmount;
         }
     }
 
@@ -441,6 +461,24 @@ public class HDO_CharacterInteraction : MonoBehaviour
             {
                 GetComponent<HDO_CharacterCombat>().torchUnlocked = true;
             }
+
+            if (inter.abilityUnlocked == HDO_InteractionSO.Ability.heatwave)
+            {
+                GetComponent<HDO_CharacterCombat>().heatwaveUnlocked = true;
+            }
+        }
+
+        if (inter.heatSegmentUnlock)
+        {
+            if(heatManager.unlockedSeg + inter.numberOfSegs > heatManager.heatSegments.Count)
+            {
+
+            }
+            else
+            {
+                heatManager.unlockedSeg += inter.numberOfSegs;
+            }
+
         }
     }
 

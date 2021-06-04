@@ -99,7 +99,7 @@ public class HDO_Controller : MonoBehaviour
 
         if (freeMovement)
         {
-            inputVector = ((new Vector3(movementVector.x, movementVector.y, 0) * actualSpeed * Time.deltaTime));
+            inputVector = Vector3.ClampMagnitude((new Vector3(movementVector.x, movementVector.y, 0) * actualSpeed * Time.deltaTime), 1);
 
         }
         else

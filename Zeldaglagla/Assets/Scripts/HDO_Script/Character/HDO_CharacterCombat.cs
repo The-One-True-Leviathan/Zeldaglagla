@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using Cinemachine;
+using UnityEngine.UI;
 
 public class HDO_CharacterCombat : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class HDO_CharacterCombat : MonoBehaviour
     //Fin des bidouillages de Pierre ;3
     [SerializeField]
     GameObject healthBar;
-    RectTransform healthtransform;
+    Image healthimage;
 
     [Header("RespawnPoint")]
     public GameObject respawnPoint;
@@ -127,7 +128,7 @@ public class HDO_CharacterCombat : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        healthtransform = healthBar.GetComponent<RectTransform>();
+        healthimage = healthBar.GetComponent<Image>();
 
         ppVolume.profile.TryGet(out wb);
         baseTemperature = wb.temperature.value;
@@ -176,7 +177,7 @@ public class HDO_CharacterCombat : MonoBehaviour
             Die();
         }
 
-        healthtransform.localScale = new Vector3(healthBar.transform.localScale.x, currentHealth / maxHealth, 1);
+        healthimage.fillAmount = currentHealth / maxHealth;
     }
 
 

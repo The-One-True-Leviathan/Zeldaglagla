@@ -1852,6 +1852,10 @@ PrefabInstance:
       propertyPath: temperatureDecreaseRate
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 4617639795010308519, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: heatMultiplier
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 6488109896675098630, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Name
       value: Essentials
@@ -26093,7 +26097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8249855415125781725, guid: 96cab6a8db0b585489296c8130bf6456, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8249855415285861885, guid: 96cab6a8db0b585489296c8130bf6456, type: 3}
       propertyPath: m_RenderMode

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(fileName = "New Interaction", menuName = "Interaction", order = 0)]
 public class HDO_InteractionSO : ScriptableObject
 {
-    public enum InteractionType { dialog, enemyEvent, environmentEvent, item, bossEvent, characterImprovement, needItem, setSpawnPoint, mapEvent, dungeonshield, sceneChange, reload};
+    public enum InteractionType { dialog, enemyEvent, environmentEvent, item, bossEvent, characterImprovement, needItem, setSpawnPoint, mapEvent, dungeonshield, sceneChange, reload, saveGame};
     public enum dialogType { inner, EVAA };
     public enum dialogNum { one, several };
 
@@ -54,6 +54,9 @@ public class HDO_InteractionSO : ScriptableObject
 
     public bool heatSegmentUnlock;
     public int numberOfSegs;
+
+    public bool AddMaxHealth;
+    public int healthToAdd;
 
     [Header("Map Event")]
     public bool unlockMapPart;

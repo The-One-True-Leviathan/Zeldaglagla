@@ -40,7 +40,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
     List<HDO_InteractionSO> toDoInteractions = null;
 
     [SerializeField]
-    List<HDO_InteractionSO> doneUniqueInteraction = null;
+    public List<HDO_InteractionSO> doneUniqueInteraction = null;
 
     public List<HDO_ItemSO> inventory = null;
 
@@ -59,6 +59,12 @@ public class HDO_CharacterInteraction : MonoBehaviour
 
     [SerializeField]
     HDO_HeatManager heatManager;
+
+    [SerializeField]
+    AudioManager sound;
+
+    [SerializeField]
+    HDO_SaveManager save;
 
     private void Start()
     {
@@ -272,10 +278,25 @@ public class HDO_CharacterInteraction : MonoBehaviour
             Reload(inter);
         }
 
+        if(inter.interactionType == HDO_InteractionSO.InteractionType.saveGame)
+        {
+            Save();
+        }
+
+        if(inter.interactionSound != null)
+        {
+            sound.Play(inter.interactionSound.name);
+        }
+
         if (inter.isUnique)
         {
             doneUniqueInteraction.Add(inter);
         }
+    }
+
+    void Save()
+    {
+        save.SaveGame();
     }
 
     void Reload(HDO_InteractionSO inter)
@@ -308,6 +329,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
         if (inter.unlockMapPart)
         {
             GameObject mapPart = GameObject.Find(inter.mapPartName);
+            map.caches.Remove(mapPart.GetComponent<Image>());
             Destroy(mapPart);
         }
 
@@ -479,6 +501,12 @@ public class HDO_CharacterInteraction : MonoBehaviour
                 heatManager.unlockedSeg += inter.numberOfSegs;
             }
 
+        }
+
+        if (inter.AddMaxHealth)
+        {
+            GetComponent<HDO_CharacterCombat>().maxHealth += inter.healthToAdd;
+            GetComponent<HDO_CharacterCombat>().currentHealth += inter.healthToAdd;
         }
     }
 

@@ -7,11 +7,14 @@ public class HDO_MapManager : MonoBehaviour
 {
 
     [SerializeField]
-    List<Image> caches = null;
+    public List<Image> caches = null;
+    
 
     bool statusLastFrame;
 
     Image self;
+    public List<Image> coloredCache = null;
+    public List<Color> coloredCacheColor;
 
     [SerializeField]
     List<Image> stocked = null;
@@ -41,7 +44,7 @@ public class HDO_MapManager : MonoBehaviour
             Activate();
 
             
-        }      
+        }
 
     }
 
@@ -66,12 +69,19 @@ public class HDO_MapManager : MonoBehaviour
                     im.color = heatPointColor;
                 }
 
+                coloredCache[i] = im;
+                coloredCacheColor[i] = im.color;
+
                 i++;
             }
+
+
 
             stocked.Clear();
             locations.Clear();
         }
+
+
     }
 
     void Activate()
@@ -94,5 +104,6 @@ public class HDO_MapManager : MonoBehaviour
     {
         stocked.Add(im);
         locations.Add(type);
+        Objective();
     }
 }

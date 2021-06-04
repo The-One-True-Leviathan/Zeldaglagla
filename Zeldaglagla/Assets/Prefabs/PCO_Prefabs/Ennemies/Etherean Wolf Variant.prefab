@@ -55,9 +55,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7415177049812464443, guid: c2307e6e3b4019142ae78ebfd8707e93, type: 3}
+      propertyPath: drops.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415177049812464443, guid: c2307e6e3b4019142ae78ebfd8707e93, type: 3}
+      propertyPath: drops.Array.data[0]
+      value: 
+      objectReference: {fileID: 1278343199313297225, guid: 90c5ed2f851fbe741b7b6e84d48182ad, type: 3}
+    - target: {fileID: 7415177049812464443, guid: c2307e6e3b4019142ae78ebfd8707e93, type: 3}
+      propertyPath: drops.Array.data[1]
+      value: 
+      objectReference: {fileID: 1278343199313297225, guid: 90c5ed2f851fbe741b7b6e84d48182ad, type: 3}
     - target: {fileID: 7415177049812464446, guid: c2307e6e3b4019142ae78ebfd8707e93, type: 3}
       propertyPath: m_Name
-      value: Etherean Wolf
+      value: Etherean Wolf Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2307e6e3b4019142ae78ebfd8707e93, type: 3}

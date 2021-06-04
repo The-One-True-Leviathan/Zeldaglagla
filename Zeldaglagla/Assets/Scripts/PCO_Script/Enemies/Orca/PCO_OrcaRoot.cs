@@ -7,7 +7,7 @@ using Combat;
 
 public class PCO_OrcaRoot : MonsterRoot
 {
-    public LayerMask isPlayer;
+    public LayerMask isPlayer, isFloor;
 
     public float atkDmg, atkBuildup, atkHitspan, atkRecover, atkKBStrength, atkKBSpeed, atkKBTime, atkRange, atkStunStr, atkStunTime;
     [System.NonSerialized]
@@ -35,6 +35,15 @@ public class PCO_OrcaRoot : MonsterRoot
             {
                 Debug.LogError("Player has no HDO_CharacterCombat");
             }
+            return true;
+        }
+        return false;
+    }
+
+    public bool VerifyFloor()
+    {
+        if (Physics2D.OverlapCircle(transform.position, pather.radius * 0.75f, isFloor))
+        {
             return true;
         }
         return false;

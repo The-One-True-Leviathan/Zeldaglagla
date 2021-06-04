@@ -64,6 +64,8 @@ namespace Monsters
         public UnityEvent stunnedEvent;
         public UnityEvent stunRecoveredEvent;
 
+        public List<GameObject> drops = new List<GameObject>();
+
         //public Action<CombatEvents.StunContext> stunnedEvent;
         //public Action<CombatEvents.StunContext> stunRecoveredEvent;
 
@@ -138,6 +140,11 @@ namespace Monsters
             if (deathAnim.GetComponent<Animator>())
             {
                 deathAnim.GetComponent<Animator>().Play("Die");
+            }
+            int rng = UnityEngine.Random.Range(0, drops.Count + 1);
+            if(drops[rng].name == "Empty")
+            {
+                Instantiate(drops[rng], transform.position, Quaternion.identity);
             }
             Destroy(gameObject);
         }

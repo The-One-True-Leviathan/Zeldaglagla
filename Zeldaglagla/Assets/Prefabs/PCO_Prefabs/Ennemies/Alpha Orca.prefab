@@ -263,6 +263,8 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  drops:
+  - {fileID: 0}
   isPlayer:
     serializedVersion: 2
     m_Bits: 8

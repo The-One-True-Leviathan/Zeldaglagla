@@ -100,6 +100,8 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  drops:
+  - {fileID: 0}
   pounceDmg: 4
   pounceBuildup: 0.3
   pounceHitSpan: 0

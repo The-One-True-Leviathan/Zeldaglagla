@@ -16,6 +16,7 @@ public class HDO_CharacterCombat : MonoBehaviour
     HDO_HeatManager hm;
     [SerializeField]
     HDO_Piolet piolet;
+    
 
     Gamepad gamepad;
 

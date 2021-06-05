@@ -42,7 +42,10 @@ public class HDO_Interactive : MonoBehaviour
 
     private void Start()
     {
-        hint.transform.position = positionsForHint[0].transform.position;
+        if (shieldD1)
+        {
+            hint.transform.position = positionsForHint[0].transform.position;
+        }
     }
 
     // Update is called once per frame

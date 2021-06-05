@@ -136,7 +136,7 @@ namespace Monsters
             CombatEvents.monsterWasKilled.Invoke();
             dead = true;
             GameObject deathAnim = Instantiate(transform.GetChild(0).gameObject, transform.GetChild(0).position, Quaternion.identity);
-            deathAnim.transform.localScale = transform.GetChild(0).localScale;
+            deathAnim.transform.localScale = new Vector3(transform.GetChild(0).localScale.x * transform.localScale.x, transform.localScale.y, transform.localScale.z);
             if (deathAnim.GetComponent<Animator>())
             {
                 deathAnim.GetComponent<Animator>().Play("Die");

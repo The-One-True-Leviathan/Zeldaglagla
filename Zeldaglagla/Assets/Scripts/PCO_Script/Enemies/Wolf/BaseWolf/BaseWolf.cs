@@ -13,6 +13,7 @@ public class BaseWolf : WolfRoot
     // Start is called before the first frame update
     void Start()
     {
+        pack = transform.parent.GetComponent<PackManager>();
         Debug.LogWarning("Hey salut les potos je suis un loup oulala je start");
         SMB = GetComponent<Animator>();
         pather = GetComponent<AIPath>();

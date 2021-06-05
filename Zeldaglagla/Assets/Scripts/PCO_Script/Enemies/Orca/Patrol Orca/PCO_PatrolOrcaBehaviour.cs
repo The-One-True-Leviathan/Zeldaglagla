@@ -8,7 +8,7 @@ using Pathfinding;
 public class PCO_PatrolOrcaBehaviour : PCO_BaseOrcaBehaviour
 {
     public List<Transform> patrolPoints;
-    public bool cyclicPatrol;
+    public bool cyclicPatrol, randomPatrol = false;
     public float patrolWaitTime;
     [Header("SightCast")]
     public bool playerInSight;

@@ -11,6 +11,10 @@ public class PCO_AlphaWolfBehavior : BaseWolf
     // Start is called before the first frame update
     void Start()
     {
+        pack = transform.parent.GetComponent<PackManager>();
+        SMB = GetComponent<Animator>();
+        pather = GetComponent<AIPath>();
+        destinationSetter = GetComponent<AIDestinationSetter>();
         SMB.GetBehaviour<BaseWolfSMBWander>().baseWolf = this;
         SMB.GetBehaviour<BaseWolfSMBApproach>().baseWolf = this;
         SMB.GetBehaviour<BaseWolfSMBObserve>().baseWolf = this;

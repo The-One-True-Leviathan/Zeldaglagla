@@ -138,28 +138,30 @@ public class PackManager : MonoBehaviour
     public void DetermineLeader()
     {
         bool alphaIsInPack = false;
-        int alphaID = 0;
+        foreach (WolfRoot wolf in wolves)
+        {
+            wolf.isPackLeader = false;
+            if (wolf.GetComponent<PCO_AlphaWolfBehavior>() || wolf.GetComponent<PCO_FleetingAlphaWolfBehavior>())
+            {
+                alphaIsInPack = true;
+                wolf.isPackLeader = true;
+                leader = wolf;
+                leaderIsAlive = true;
+            }
+        }
+        if (alphaIsInPack)
+        {
+            return;
+        }
         if (!leaderIsAlive)
         {
             foreach (WolfRoot wolf in wolves)
             {
                 wolf.isPackLeader = false;
-                if (wolf.GetComponent<PCO_AlphaWolfBehavior>())
-                {
-                    alphaIsInPack = true;
-                    return;
-                } else
-                {
-                    alphaID++;
-                }
             }
             int rng = Random.Range(0, wolves.Count);
             wolves[rng].isPackLeader = true;
             leader = wolves[rng];
-            if (alphaIsInPack)
-            {
-                leader = wolves[alphaID];
-            }
             leaderIsAlive = true;
         }
     }

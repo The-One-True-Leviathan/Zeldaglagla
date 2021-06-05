@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
-  m_Name: mapUnlock
+  m_Name: scenechangetest
   m_EditorClassIdentifier: 
-  interactionType: 8
+  interactionType: 10
   interactionSound: {fileID: 0}
-  isTrigger: 1
-  isUnique: 1
+  isTrigger: 0
+  isUnique: 0
   needSpawnPoint: 0
   dialogSuite: 0
   number: 0
@@ -37,15 +37,15 @@ MonoBehaviour:
   numberOfSegs: 0
   AddMaxHealth: 0
   healthToAdd: 0
-  unlockMapPart: 1
-  mapPartName: mapCache - Z1heatPoint_1
-  redirectToLocation: 1
+  unlockMapPart: 0
+  mapPartName: 
+  redirectToLocation: 0
   region: 0
   specificLocation: 0
   specificLocationName: 
-  locationType: 1
+  locationType: 0
   toDeactivate: {fileID: 0}
-  scene: 
+  scene: Map_Scene
   reloadHealth: 0
   healthAmount: 0
   heatReload: 0

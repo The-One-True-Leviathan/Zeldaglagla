@@ -8,12 +8,16 @@ public class HDO_MapManager : MonoBehaviour
 
     [SerializeField]
     public List<Image> caches = null;
+
+    [SerializeField]
+    Image contour, caption;
     
 
     bool statusLastFrame;
 
     Image self;
     public List<Image> coloredCache = null;
+    public List<Image> toShowCache = null;
     public List<Color> coloredCacheColor;
 
     [SerializeField]
@@ -69,6 +73,7 @@ public class HDO_MapManager : MonoBehaviour
                     im.color = heatPointColor;
                 }
 
+                toShowCache.Add(im);
                 coloredCache[i] = im;
                 coloredCacheColor[i] = im.color;
 
@@ -86,13 +91,16 @@ public class HDO_MapManager : MonoBehaviour
 
     void Activate()
     {
-        foreach(Image im in caches)
+        foreach(Image im in toShowCache)
         {
             if(im != null)
             {
                 im.enabled = self.enabled;
             }
         }
+
+        caption.enabled = self.enabled;
+        contour.enabled = self.enabled;
 
         if (self.enabled)
         {

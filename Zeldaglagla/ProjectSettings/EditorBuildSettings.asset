@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GB/GB_Scenes/GameOver.unity
     guid: a68f9e4292363e249adf56a0eec40cb5
+  - enabled: 1
+    path: Assets/_Scenes/HDO_Scenes/HDO_TestScene.unity
+    guid: df47764d667bfd34cbda35dee6e0285d
+  - enabled: 1
+    path: Assets/_Scenes/NAC_Scene/Map_Scene.unity
+    guid: 1b55d4fdf6118c34191a76622ecb1d28
+  - enabled: 1
+    path: Assets/_Scenes/NAC_Scene/LD1_Scene.unity
+    guid: 25c9730fed2e38240aed84a092efab4d
   m_configObjects: {}

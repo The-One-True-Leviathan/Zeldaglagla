@@ -69,6 +69,9 @@ public class HDO_CharacterInteraction : MonoBehaviour
     [SerializeField]
     GameObject essentials;
 
+    [SerializeField]
+    Image portrait;
+
     private void Start()
     {
         Object.DontDestroyOnLoad(essentials);
@@ -134,6 +137,10 @@ public class HDO_CharacterInteraction : MonoBehaviour
         if(interactObject != null)
         {
             interactobj = interactObject.gameObject;
+        }
+        else
+        {
+            portrait.sprite = null;
         }
 
         if (interactObject == null)
@@ -527,7 +534,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
 
     void SpawnDialog(HDO_InteractionSO inter)
     {
-
+        portrait.sprite = inter.portrait;
         if (inter.type == HDO_InteractionSO.dialogType.inner)
         {
             if (inter.number == HDO_InteractionSO.dialogNum.one)
@@ -590,7 +597,15 @@ public class HDO_CharacterInteraction : MonoBehaviour
                 interaction.spawnPoint = interaction.gameObject;
             }
 
-            Instantiate(inter.Environment, interaction.spawnPoint.transform);
+            if (inter.snowStorm)
+            {
+                Instantiate(inter.Environment, interaction.spawnPoint.transform).GetComponent<HDO_TemperatureModifier>().snowStorm = true;
+
+            }
+            else
+            {
+                Instantiate(inter.Environment, interaction.spawnPoint.transform);
+            }
         }
     }
 

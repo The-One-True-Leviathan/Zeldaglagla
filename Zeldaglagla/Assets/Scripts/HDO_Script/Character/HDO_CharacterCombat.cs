@@ -135,6 +135,8 @@ public class HDO_CharacterCombat : MonoBehaviour
         baseTemperature = wb.temperature.value;
 
         baseZoom = camZoom.m_MaxFOV;
+
+        transform.position = respawnPoint.transform.position;
     }
 
     // Update is called once per frame

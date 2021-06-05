@@ -6,7 +6,7 @@ public class HDO_TemperatureModifier : MonoBehaviour
 {
 
     public float newTemperature, bonusChange;
-    public bool canChange;
+    public bool canChange, snowStorm;
 
     public float originalTemperature;
 

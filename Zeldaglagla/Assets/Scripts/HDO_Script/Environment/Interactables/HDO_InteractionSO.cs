@@ -22,6 +22,7 @@ public class HDO_InteractionSO : ScriptableObject
     public bool dialogSuite;
     public dialogNum number;
     public dialogType type;
+    public Sprite portrait;
 
     public List<string> dialogs = null;
 

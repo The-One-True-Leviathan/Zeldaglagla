@@ -21,6 +21,13 @@ public class HDO_TemperatureManager : MonoBehaviour
     [SerializeField]
     Text text;
 
+    [SerializeField]
+    GameObject snowStormEffect;
+    [SerializeField]
+    HDO_CharacterCombat comb;
+
+    bool effectActivated;
+
     // Update is called once per frame
     void Update()
     {
@@ -70,6 +77,21 @@ public class HDO_TemperatureManager : MonoBehaviour
                 }
                 
             }
+
+            if (tm.snowStorm && !comb.heatwaving)
+            {
+                effectActivated = true;
+                snowStormEffect.SetActive(true);
+            }
+            else
+            {
+                if (effectActivated)
+                {
+                    effectActivated = false;
+                }
+
+                snowStormEffect.SetActive(false);           
+            }
         }
         else
         {
@@ -89,6 +111,13 @@ public class HDO_TemperatureManager : MonoBehaviour
                     ambientTemperature = baseTemperature;
                 }
             }
+
+            if (effectActivated)
+            {
+                effectActivated = false;
+            }
+
+            snowStormEffect.SetActive(false);
         }
 
     }

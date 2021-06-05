@@ -25,11 +25,11 @@ public class HDO_Controller : MonoBehaviour
     public int baseSpeed, dodgeSpeed;
     public float dodgeTime, dodgeSpeedDecreasePerFrame, dodgeCooldown;
     int actualSpeed, bonusSpeed, dodgeDivider;
-    float dodgeElapse, dodgeCdElapsed;
+    public float dodgeElapse, dodgeCdElapsed;
     Vector2 movementVector;
     Vector3 inputVector, dodgeVector, finalVector, knockbackVector;
 
-    bool dodging;
+    public bool dodging;
     public bool freeMovement;
     bool mapDisplay;
 
@@ -69,7 +69,15 @@ public class HDO_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dodgeCdElapsed > 0) dodgeCdElapsed -= Time.deltaTime;
+        if (dodgeCdElapsed > 0) 
+        { 
+            dodgeCdElapsed -= Time.deltaTime;
+            if (freeMovement)
+            {
+                dodging = false;
+            }
+        }
+
         Input();
         Movement();
     }
@@ -90,6 +98,7 @@ public class HDO_Controller : MonoBehaviour
         dodgeElapse = dodgeTime;
         dodgeDivider = 0;
         freeMovement = false;
+        dodging = true;
         dodgeVector = new Vector3(movementVector.x, movementVector.y);
     }
 

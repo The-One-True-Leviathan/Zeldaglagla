@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionType: 11
   interactionSound: {fileID: 0}
-  isTrigger: 0
+  isTrigger: 1
   isUnique: 0
   needSpawnPoint: 0
   dialogSuite: 0
@@ -35,6 +35,8 @@ MonoBehaviour:
   abilityUnlocked: 0
   heatSegmentUnlock: 0
   numberOfSegs: 0
+  AddMaxHealth: 0
+  healthToAdd: 0
   unlockMapPart: 0
   mapPartName: 
   redirectToLocation: 0

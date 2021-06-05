@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
-  m_Name: Heal 5
+  m_Name: Z3heatPoint_1
   m_EditorClassIdentifier: 
-  interactionType: 11
+  interactionType: 8
   interactionSound: {fileID: 0}
-  isTrigger: 1
+  isTrigger: 0
   isUnique: 0
   needSpawnPoint: 0
   dialogSuite: 0
@@ -37,16 +37,16 @@ MonoBehaviour:
   numberOfSegs: 0
   AddMaxHealth: 0
   healthToAdd: 0
-  unlockMapPart: 0
-  mapPartName: 
-  redirectToLocation: 0
-  region: 0
+  unlockMapPart: 1
+  mapPartName: mapCache - Z3heatPoint_1
+  redirectToLocation: 1
+  region: 2
   specificLocation: 0
   specificLocationName: 
-  locationType: 0
+  locationType: 2
   toDeactivate: {fileID: 0}
   scene: 
-  reloadHealth: 1
-  healthAmount: 5
+  reloadHealth: 0
+  healthAmount: 0
   heatReload: 0
   heatAmount: 0

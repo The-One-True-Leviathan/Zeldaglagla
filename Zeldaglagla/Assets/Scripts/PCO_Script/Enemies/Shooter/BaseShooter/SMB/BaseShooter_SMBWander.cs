@@ -76,6 +76,19 @@ public class BaseShooter_SMBWander : StateMachineBehaviour
 
     void NewDestinationCoroutine()
     {
+        if (shooter.randomPatrol)
+        {
+            List<Transform> possiblePoints = new List<Transform>();
+            foreach (Transform point in shooter.patrolTargets)
+            {
+                if ((point.position - shooter.transform.position).magnitude < shooter.maxSight)
+                {
+                    possiblePoints.Add(point);
+                }
+            }
+            int rng = UnityEngine.Random.Range(0, possiblePoints.Count);
+            currentTarget = possiblePoints[rng];
+        }
         if (shooter.patrolTargets.IndexOf(currentTarget) >= (shooter.patrolTargets.Count - 1))
         {
             //Debug.LogWarning("reached end of list");

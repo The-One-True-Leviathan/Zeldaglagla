@@ -11,6 +11,7 @@ public class BaseWolfSMBWander : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         baseWolf = animator.GetComponent<BaseWolf>();
+        baseWolf.pack = animator.transform.parent.GetComponent<PackManager>();
         baseWolf.destinationSetter.enabled = true;
         baseWolf.baseWolfSMBState = BaseWolf.BaseWolfSMBState.WANDER;
         baseWolf.pather.maxSpeed = baseWolf.wanderSpeed;
@@ -19,7 +20,10 @@ public class BaseWolfSMBWander : StateMachineBehaviour
             Repath();
         } else
         {
-            baseWolf.destinationSetter.target = baseWolf.pack.leader.transform;
+            if (baseWolf.pack.leader != null)
+            {
+                baseWolf.destinationSetter.target = baseWolf.pack.leader.transform;
+            }
         }
     }
 
@@ -44,6 +48,7 @@ public class BaseWolfSMBWander : StateMachineBehaviour
         else
         {
             bool tooclose = false;
+            
             foreach (WolfRoot other in baseWolf.pack.wolves)
             {
                 if (other != this.baseWolf)

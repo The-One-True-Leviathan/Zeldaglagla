@@ -10,6 +10,7 @@ public class PCO_MonsterStunned : StateMachineBehaviour
     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        baseMonster = animator.GetComponent<MonsterRoot>();
         baseMonster.pather.enabled = false;
         baseMonster.pather.enabled = false;
     }

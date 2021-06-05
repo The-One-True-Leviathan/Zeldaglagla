@@ -81,23 +81,40 @@ public class PCO_PatrolOrca_SMB_Wander : StateMachineBehaviour
 
     void NewDestinationCoroutine()
     {
-        if (baseOrca.patrolPoints.IndexOf(currentTarget) >= (baseOrca.patrolPoints.Count - 1))
+        if (baseOrca.randomPatrol)
         {
-            //Debug.LogWarning("reached end of list");
-            if (cyclicPatrol)
+            List<Transform> possiblePoints = new List<Transform>();
+            foreach (Transform point in baseOrca.patrolPoints)
             {
-                currentTarget = baseOrca.patrolPoints[0];
+                if ((point.position-baseOrca.transform.position).magnitude < baseOrca.viewDistance)
+                {
+                    possiblePoints.Add(point);
+                }
             }
-            else
-            {
-                baseOrca.patrolPoints.Reverse();
-                currentTarget = baseOrca.patrolPoints[0];
-            }
+            int rng = UnityEngine.Random.Range(0, possiblePoints.Count);
+            currentTarget = possiblePoints[rng];
         }
         else
         {
-            currentTarget = baseOrca.patrolPoints[baseOrca.patrolPoints.IndexOf(currentTarget) + 1];
 
+            if (baseOrca.patrolPoints.IndexOf(currentTarget) >= (baseOrca.patrolPoints.Count - 1))
+            {
+                //Debug.LogWarning("reached end of list");
+                if (cyclicPatrol)
+                {
+                    currentTarget = baseOrca.patrolPoints[0];
+                }
+                else
+                {
+                    baseOrca.patrolPoints.Reverse();
+                    currentTarget = baseOrca.patrolPoints[0];
+                }
+            }
+            else
+            {
+                currentTarget = baseOrca.patrolPoints[baseOrca.patrolPoints.IndexOf(currentTarget) + 1];
+
+            }
         }
         baseOrca.destinationSetter.target = currentTarget;
         //Debug.LogWarning(baseOrca.patrolPoints.IndexOf(currentTarget));

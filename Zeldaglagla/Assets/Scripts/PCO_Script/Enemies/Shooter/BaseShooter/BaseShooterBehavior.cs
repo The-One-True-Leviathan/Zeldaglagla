@@ -8,7 +8,7 @@ public class BaseShooterBehavior : ShooterRoot
     public BaseShooterSMBState baseShooterSMBState;
 
     public float walkSpeed, runSpeed, patrolWaitTime, pauseTime;
-    public bool cyclicPatrol;
+    public bool cyclicPatrol, randomPatrol = false;
     public List<Transform> patrolTargets = new List<Transform>();
     int animationIndex; //0 = Idle, 1 = Idle up, 2 = Walk, 3 = Walk up, 4 = Buildup, 5 = Buildup up, 6 = Shoot, 7 = Shoot up, 8 = Recover, 9 = Recover up
     bool isUp, isRight;

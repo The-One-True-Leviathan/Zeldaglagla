@@ -61,7 +61,7 @@ AnimatorStateMachine:
     m_Position: {x: 400, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3603259876913532709}
-    m_Position: {x: 491.47766, y: 207.78677, z: 0}
+    m_Position: {x: 490, y: 210, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -169,6 +169,9 @@ MonoBehaviour:
   maxFleeRate: 0.5
   deviationAngle: 5
   fleeLenght: 6
+  isEnemies:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &-197895622184289222
 MonoBehaviour:
   m_ObjectHideFlags: 1

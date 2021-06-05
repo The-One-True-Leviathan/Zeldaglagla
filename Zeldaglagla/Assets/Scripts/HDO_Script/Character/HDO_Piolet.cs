@@ -11,6 +11,10 @@ public class HDO_Piolet : MonoBehaviour
     HDO_CharacterCombat cc;
     [SerializeField]
     HDO_GunPoint gp;
+    [SerializeField]
+    GameObject hitEffect;
+    [SerializeField]
+    float waitForEffect;
 
     [SerializeField]
     BoxCollider2D box;
@@ -228,20 +232,35 @@ public class HDO_Piolet : MonoBehaviour
                         gamepad.SetMotorSpeeds(lowFrequency, highFrequency);
                         StartCoroutine(Vibration());
                     }
-                    StartCoroutine(FreezeFrame());
                     ffed.Add(e);
                     freeezeFraming = true;
                     mr = e.gameObject.GetComponent<MonsterRoot>();
                     mr.Damage(dam);
+                    StartCoroutine(DmgEffectFF());
+
                 }
                 else if (!(ffed.Contains(e)))
                 {
                     mr = e.gameObject.GetComponent<MonsterRoot>();
                     mr.Damage(dam);
                     ffed.Add(e);
+                    StartCoroutine(DmgEffect());
                 }
             }
         }
+    }
+
+    IEnumerator DmgEffectFF()
+    {
+        yield return new WaitForSecondsRealtime(waitForEffect);
+        StartCoroutine(FreezeFrame());
+        Instantiate(hitEffect, this.transform.position, hitEffect.transform.rotation);
+    }
+
+    IEnumerator DmgEffect()
+    {
+        yield return new WaitForSecondsRealtime(waitForEffect);
+        Instantiate(hitEffect, this.transform.position, hitEffect.transform.rotation);
     }
 
     IEnumerator Vibration()

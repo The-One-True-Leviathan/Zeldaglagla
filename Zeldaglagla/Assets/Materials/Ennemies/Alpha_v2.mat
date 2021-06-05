@@ -21,8 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Alpha_v2
-  m_Shader: {fileID: -6465566751694194690, guid: 09b667632ca932f4f8a4ee76dfd08f81,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 09b667632ca932f4f8a4ee76dfd08f81, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -119,6 +118,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_174819817ab5466d83b7059ed9ceb53d: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 0}
     - Color_6FE46453: {r: 2.6082377, g: 0.2594582, b: 0.34139237, a: 0}
     - Color_E38AD640: {r: 10.176144, g: 1.1040158, b: 1.1040158, a: 0}
     - Vector2_9335BBBB: {r: 0.5, g: 2, b: 0, a: 0}

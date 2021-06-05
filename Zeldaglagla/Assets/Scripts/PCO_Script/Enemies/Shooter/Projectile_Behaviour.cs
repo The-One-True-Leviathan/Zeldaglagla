@@ -9,6 +9,9 @@ public class Projectile_Behaviour : MonoBehaviour
     DamageStruct atk;
     public Vector3 direction;
     GameObject player;
+    [SerializeField]
+    GameObject hitEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,7 @@ public class Projectile_Behaviour : MonoBehaviour
             if (player.GetComponent<HDO_CharacterCombat>())
             {
                 player.GetComponent<HDO_CharacterCombat>().TakeDamage(atk, transform);
+                Instantiate(hitEffect, transform.position, new Quaternion(transform.rotation.x, hitEffect.transform.rotation.z, 0, 0));
             } else
             {
                 Debug.LogError("Player has no HDO_CharacterCombat");

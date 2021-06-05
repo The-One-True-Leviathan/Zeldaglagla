@@ -284,7 +284,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 8
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5164,7 +5164,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 7
+      scalar: 3.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -10035,7 +10035,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 11
+      scalar: 6.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -15340,8 +15340,7 @@ ParticleSystem:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-    m_Mesh: {fileID: -951608786083511892, guid: 74ab904e13409044a86053f65f558eea,
-      type: 3}
+    m_Mesh: {fileID: -951608786083511892, guid: 74ab904e13409044a86053f65f558eea, type: 3}
     m_MeshRenderer: {fileID: 0}
     m_SkinnedMeshRenderer: {fileID: 0}
     m_Sprite: {fileID: 0}
@@ -19760,7 +19759,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 13
+      scalar: 6.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -24622,7 +24621,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 7
+      scalar: 3.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -29211,6 +29210,7 @@ GameObject:
   - component: {fileID: 2324829648526853442}
   - component: {fileID: 2324829648526853441}
   - component: {fileID: 2324829648526853440}
+  - component: {fileID: -5934898318390386454}
   m_Layer: 0
   m_Name: Hit slash
   m_TagString: Untagged
@@ -34010,3 +34010,17 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &-5934898318390386454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2324829648526853311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62d91d1df93657498448e706d028cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 1.4
+  elapsedTime: 0

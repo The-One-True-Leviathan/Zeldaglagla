@@ -10,21 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
-  m_Name: FrozenRoomDialog
+  m_Name: dial1
   m_EditorClassIdentifier: 
   interactionType: 0
   interactionSound: {fileID: 0}
-  isTrigger: 1
-  isUnique: 1
+  isTrigger: 0
+  isUnique: 0
   needSpawnPoint: 0
   dialogSuite: 1
   number: 1
   type: 1
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: eca26128cb36f45429f8ddd33d52d9ec, type: 3}
   dialogs:
-  - This room is filled with a gaz.
-  - "It is maintained at -183.53\xB0C."
-  - Opening the door without cutting the gaz arrival is suicidal.
+  - wsh wsh
+  - bien ou bien ?
   enemiesToSpawn: []
   Environment: {fileID: 0}
   snowStorm: 0

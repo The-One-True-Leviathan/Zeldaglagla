@@ -715,6 +715,11 @@ public class HDO_CharacterInteraction : MonoBehaviour
 
         }
 
+        if(interaction == null)
+        {
+            Debug.Log("euh wtf ???");
+            return;
+        }
         if (interaction.severalInteractions)
         {
 
@@ -778,6 +783,10 @@ public class HDO_CharacterInteraction : MonoBehaviour
         if (!(it >= list.Count))
         {
             StartCoroutine(dialogSuite(list));
+        }
+        else
+        {
+            it = 0;
         }
 
     }

@@ -25,7 +25,6 @@ public class Disable_Wall : MonoBehaviour
         if(result != 0)
         {
             int alpha = Mathf.RoundToInt(30 * Vector2.Distance(transform.position, results[0].transform.position));
-            Debug.Log(alpha);
             //sr.color = new Vector4(sr.color.r, sr.color.g, sr.color.b, 0.1f);
             sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0.1f);
         }

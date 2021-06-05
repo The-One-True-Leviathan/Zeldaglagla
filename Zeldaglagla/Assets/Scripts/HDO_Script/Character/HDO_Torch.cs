@@ -42,6 +42,9 @@ public class HDO_Torch : MonoBehaviour
 
     bool vibrating;
 
+    [SerializeField]
+    GameObject particleEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -94,6 +97,7 @@ public class HDO_Torch : MonoBehaviour
 
     void CheckExplosion()
     {
+        particleEffect.SetActive(true);
         Debug.Log("boom");
         ExplosionCollider.enabled = true;
         Collider2D[] exploCaught = new Collider2D[0];

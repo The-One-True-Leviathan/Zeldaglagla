@@ -53,7 +53,7 @@ public class HDO_Tourelle : MonoBehaviour
 
     void Shoot()
     {
-        pb = Instantiate(bulletTemplate, this.transform).GetComponent<Projectile_Behaviour>();
+        pb = Instantiate(bulletTemplate, this.transform.position, Quaternion.identity).GetComponent<Projectile_Behaviour>();
         pb.direction =  Vector3.Normalize(direction.transform.position - transform.position);
         pb.speed = speed;
         pb.damage = damage;

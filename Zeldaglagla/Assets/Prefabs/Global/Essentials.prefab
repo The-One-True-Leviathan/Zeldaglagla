@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121033158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.9, y: -14.01, z: -10}
+  m_LocalPosition: {x: 94.05, y: -0.86, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 559439591}
@@ -206,7 +206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828931767}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -38.999775, y: -12.094315, z: -10}
+  m_LocalPosition: {x: 94.05, y: -0.86, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8036298405979945407}
@@ -351,6 +351,8 @@ MonoBehaviour:
   heatSeg: 0
   maxHealth: 0
   remainingMapCaches: []
+  coloredCaches: []
+  cCachesColors: []
   playerPosition: {x: 0, y: 0, z: 0}
   uniqueDoneInteractions: []
   player: {fileID: 693671876588548347}
@@ -907,11 +909,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5311234934450637272, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.9
+      value: 94.05
       objectReference: {fileID: 0}
     - target: {fileID: 5311234934450637272, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.01
+      value: -0.86
       objectReference: {fileID: 0}
     - target: {fileID: 5311234934450637272, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1012,6 +1014,14 @@ PrefabInstance:
     - target: {fileID: 5311234934450637277, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
       propertyPath: temperatureIncreaseRate
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275461240802376916, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
+      propertyPath: hitEffect
+      value: 
+      objectReference: {fileID: 2324829648526853311, guid: cd5ec1fcafb34304181470b95787c209, type: 3}
+    - target: {fileID: 8275461240802376916, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
+      propertyPath: waitForEffect
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}

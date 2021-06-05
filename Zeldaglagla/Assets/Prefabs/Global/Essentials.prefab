@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121033158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 94.05, y: -0.86, z: -10}
+  m_LocalPosition: {x: 94.05, y: -0.86000013, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 559439591}
@@ -206,7 +206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828931767}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 94.05, y: -0.86, z: -10}
+  m_LocalPosition: {x: 94.05, y: -0.86000013, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8036298405979945407}
@@ -963,6 +963,10 @@ PrefabInstance:
       propertyPath: EVAADialog
       value: 
       objectReference: {fileID: 3868686878400670325}
+    - target: {fileID: 5311234934450637276, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
+      propertyPath: essentials
+      value: 
+      objectReference: {fileID: 6488109896675098630}
     - target: {fileID: 5311234934450637276, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
       propertyPath: heatManager
       value: 

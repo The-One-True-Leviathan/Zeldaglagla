@@ -16,6 +16,8 @@ public class CoolTextScript : MonoBehaviour
     int currentChar = 0;
     string currentText;
     bool reading;
+    [SerializeField]
+    float waitBetweenLetters = 0.02f;
     Text text;
     // Start is called before the first frame update
     void Start()
@@ -69,7 +71,7 @@ public class CoolTextScript : MonoBehaviour
         {
             reading = true;
             //Si vous voulez émettre un son lorsqu'une lettre apparaît, ajoutez-le par ici !
-            yield return new WaitForSeconds(0.075f);
+            yield return new WaitForSeconds(waitBetweenLetters);
             text.text += textToRead[currentChar];
             currentChar++;
             StartCoroutine(ReadCoroutine(textToRead));

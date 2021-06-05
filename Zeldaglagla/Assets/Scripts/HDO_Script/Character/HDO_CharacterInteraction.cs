@@ -66,8 +66,13 @@ public class HDO_CharacterInteraction : MonoBehaviour
     [SerializeField]
     HDO_SaveManager save;
 
+    [SerializeField]
+    GameObject essentials;
+
     private void Start()
     {
+        Object.DontDestroyOnLoad(essentials);
+
         selectorSr = selector.GetComponent<SpriteRenderer>();
         combat = GetComponent<HDO_CharacterCombat>();
         map = GameObject.FindGameObjectWithTag("Map").GetComponent<HDO_MapManager>();
@@ -313,6 +318,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
 
     void SceneChange(HDO_InteractionSO inter)
     {
+        Debug.Log("Try to load" + inter.scene);
         SceneManager.LoadScene(inter.scene);
     }
 
@@ -330,7 +336,11 @@ public class HDO_CharacterInteraction : MonoBehaviour
         {
             GameObject mapPart = GameObject.Find(inter.mapPartName);
             map.caches.Remove(mapPart.GetComponent<Image>());
-            Destroy(mapPart);
+            mapPart.GetComponent<Image>().color = Color.white;
+            if (!(map.toShowCache.Contains(mapPart.GetComponent<Image>())))
+            {
+                map.toShowCache.Add(mapPart.GetComponent<Image>());
+            }
         }
 
         if (inter.redirectToLocation && !inter.specificLocation)
@@ -756,5 +766,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
         }
 
     }
+
+    
 
 }

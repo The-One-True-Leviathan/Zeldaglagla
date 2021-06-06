@@ -97,16 +97,17 @@ MonoBehaviour:
   minAtkDistance: 8
   maxAtkDistance: 15
   shotNumber: 3
-  maxSight: 20
+  maxSight: 16
   timeSinceLastSeen: 0
   playerInSight: 0
   playerInMemory: 0
   baseShooterSMBState: 0
-  walkSpeed: 3
-  runSpeed: 6
+  walkSpeed: 4
+  runSpeed: 5
   patrolWaitTime: 1
-  pauseTime: 0
+  pauseTime: 0.5
   cyclicPatrol: 0
+  randomPatrol: 1
   patrolTargets:
   - {fileID: 0}
   - {fileID: 0}
@@ -260,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d927fa8e01f87e4786721a65ccb4f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateRange: 60
+  activateRange: 400
 --- !u!1 &6112845142385947492
 GameObject:
   m_ObjectHideFlags: 0

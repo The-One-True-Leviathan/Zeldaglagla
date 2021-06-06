@@ -6,6 +6,9 @@ using Pathfinding;
 public class BaseWolfSMBWander : StateMachineBehaviour
 {
     public BaseWolf baseWolf;
+    public bool isAlpha = false;
+    public float wanderSize;
+    public Transform wanderCenter;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -81,17 +84,30 @@ public class BaseWolfSMBWander : StateMachineBehaviour
 
     void Repath()
     {
-        float rngx = (Random.Range(10f, 20f) + Random.Range(10f, 20f)) / 2;
-        if (Random.Range(0f, 1f) < 0.5)
+        float rngx, rngy;
+        if (isAlpha)
         {
-            rngx *= -1;
+            rngx = Random.Range(-1, 1);
+            rngy = Random.Range(-1, 1);
+            Vector3 rngVect = new Vector3(rngx, rngy, 0).normalized;
+            rngVect *= Random.Range(wanderSize * 0.2f, wanderSize);
+
+            baseWolf.pather.destination = wanderCenter.position + rngVect;
         }
-        float rngy = (Random.Range(10f, 20f) + Random.Range(10f, 20f)) / 2;
-        if (Random.Range(0f, 1f) < 0.5)
+        else
         {
-            rngy *= -1;
+            rngx = (Random.Range(10f, 20f) + Random.Range(10f, 20f)) / 2;
+            if (Random.Range(0f, 1f) < 0.5)
+            {
+                rngx *= -1;
+            }
+            rngy = (Random.Range(10f, 20f) + Random.Range(10f, 20f)) / 2;
+            if (Random.Range(0f, 1f) < 0.5)
+            {
+                rngy *= -1;
+            }
+            baseWolf.pather.destination = new Vector2(baseWolf.transform.position.x + rngx, baseWolf.transform.position.y + rngy);
         }
-        baseWolf.pather.destination = new Vector2(baseWolf.transform.position.x + rngx, baseWolf.transform.position.y + rngy);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

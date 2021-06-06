@@ -59,13 +59,9 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7812211014251820297, guid: ec476a5a4048c9c42bbdc02f7709c7b9, type: 3}
-    - target: {fileID: 1561771507729342955, guid: 28ccd30e648c82c4dac5ac3ccd1e34e6, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2919175803904556737, guid: 28ccd30e648c82c4dac5ac3ccd1e34e6, type: 3}
       propertyPath: m_Name
-      value: Batiment_3
+      value: Batiment_3 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8304010099673053961, guid: 28ccd30e648c82c4dac5ac3ccd1e34e6, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x

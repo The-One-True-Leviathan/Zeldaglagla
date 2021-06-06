@@ -363,10 +363,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 551000913439866903}
     m_Modifications:
-    - target: {fileID: 3529771254196141545, guid: b3f638417f67e104eb0cdf10d9fd4d8e, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 3728210628977462634, guid: b3f638417f67e104eb0cdf10d9fd4d8e, type: 3}
       propertyPath: m_Name
       value: Tour
@@ -429,10 +425,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 551000913439866903}
     m_Modifications:
-    - target: {fileID: 1815014661787440881, guid: 07a49a966bc6dfa47bb3a3bb37de44e1, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6267809358689259824, guid: 07a49a966bc6dfa47bb3a3bb37de44e1, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -499,10 +491,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Batiment_4
       objectReference: {fileID: 0}
-    - target: {fileID: 5573704519562815206, guid: 79eef4ac6cef24d45b403435b8d512f4, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9128224666547183674, guid: 79eef4ac6cef24d45b403435b8d512f4, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -561,10 +549,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 551000913439866903}
     m_Modifications:
-    - target: {fileID: 1815014661787440881, guid: 07a49a966bc6dfa47bb3a3bb37de44e1, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6267809358689259824, guid: 07a49a966bc6dfa47bb3a3bb37de44e1, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -689,10 +673,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 551000913439866903}
     m_Modifications:
-    - target: {fileID: 1216169934772689623, guid: bc48af880cd7b9940afc869dee9d2f25, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2663758225261200346, guid: bc48af880cd7b9940afc869dee9d2f25, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -762,10 +742,6 @@ PrefabInstance:
     - target: {fileID: 5958953957995431431, guid: a9785c913c0e7744081c3c41f1d5be48, type: 3}
       propertyPath: m_Name
       value: Batiment_3 Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 8042317369920723245, guid: a9785c913c0e7744081c3c41f1d5be48, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8715299973609736216, guid: a9785c913c0e7744081c3c41f1d5be48, type: 3}
       propertyPath: m_RootOrder
@@ -1114,10 +1090,6 @@ PrefabInstance:
     - target: {fileID: 7504685142136675399, guid: 933e732e41f903443ae82f4e4e3a5e5a, type: 3}
       propertyPath: m_Name
       value: Batiment_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504685142136675418, guid: 933e732e41f903443ae82f4e4e3a5e5a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 933e732e41f903443ae82f4e4e3a5e5a, type: 3}

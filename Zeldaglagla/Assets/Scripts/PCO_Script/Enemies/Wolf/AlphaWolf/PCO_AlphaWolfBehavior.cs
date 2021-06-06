@@ -16,6 +16,9 @@ public class PCO_AlphaWolfBehavior : BaseWolf
         pather = GetComponent<AIPath>();
         destinationSetter = GetComponent<AIDestinationSetter>();
         SMB.GetBehaviour<BaseWolfSMBWander>().baseWolf = this;
+        SMB.GetBehaviour<BaseWolfSMBWander>().isAlpha = true;
+        SMB.GetBehaviour<BaseWolfSMBWander>().wanderCenter = wanderAreaCenter;
+        SMB.GetBehaviour<BaseWolfSMBWander>().wanderSize = wanderAreaRadius;
         SMB.GetBehaviour<BaseWolfSMBApproach>().baseWolf = this;
         SMB.GetBehaviour<BaseWolfSMBObserve>().baseWolf = this;
         SMB.GetBehaviour<BaseWolfSMBRush>().baseWolf = this;

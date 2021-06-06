@@ -10,7 +10,7 @@ public class HDO_InteractionSO : ScriptableObject
     public enum dialogType { inner, EVAA };
     public enum dialogNum { one, several };
 
-    public enum CardType { blue, red };
+    public enum CardType { blue, red, lever };
 
     public InteractionType interactionType;
 

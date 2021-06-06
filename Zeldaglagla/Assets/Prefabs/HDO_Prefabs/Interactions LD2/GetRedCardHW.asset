@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
-  m_Name: Need_Card_Blue
+  m_Name: GetRedCardHW
   m_EditorClassIdentifier: 
-  interactionType: 6
+  interactionType: 3
   interactionSound: {fileID: 0}
   isTrigger: 0
   isUnique: 0
@@ -25,10 +25,10 @@ MonoBehaviour:
   enemiesToSpawn: []
   Environment: {fileID: 0}
   snowStorm: 0
-  item: {fileID: 0}
-  cardType: 0
-  neededItem: {fileID: 11400000, guid: a4288ce70096b004e91ffe99b82b7e2c, type: 2}
-  consumesItem: 1
+  item: {fileID: 11400000, guid: d7997513d2a2159428246f05be04bab8, type: 2}
+  cardType: 1
+  neededItem: {fileID: 0}
+  consumesItem: 0
   neededItemType: 0
   bossDialog: 0
   TorchV2: 0

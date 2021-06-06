@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
-  m_Name: Spawn_Alpha_Donjon_1
+  m_Name: Scene_Change_Donjon_1
   m_EditorClassIdentifier: 
-  interactionType: 1
+  interactionType: 10
   interactionSound: {fileID: 0}
-  isTrigger: 1
-  isUnique: 1
-  needSpawnPoint: 1
+  isTrigger: 0
+  isUnique: 0
+  needSpawnPoint: 0
   dialogSuite: 0
   number: 0
   type: 0
   portrait: {fileID: 0}
   dialogs: []
-  enemiesToSpawn:
-  - {fileID: 3120716480695726615, guid: c71de637929712940bf074fa31c90868, type: 3}
+  enemiesToSpawn: []
   Environment: {fileID: 0}
   snowStorm: 0
   item: {fileID: 0}
@@ -48,7 +47,7 @@ MonoBehaviour:
   specificLocationName: 
   locationType: 0
   toDeactivate: {fileID: 0}
-  scene: 
+  scene: LD1_Scene
   reloadHealth: 0
   healthAmount: 0
   heatReload: 0

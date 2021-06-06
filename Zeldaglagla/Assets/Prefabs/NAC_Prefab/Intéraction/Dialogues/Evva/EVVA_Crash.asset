@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionType: 0
   interactionSound: {fileID: 0}
-  isTrigger: 0
-  isUnique: 0
+  isTrigger: 1
+  isUnique: 1
   needSpawnPoint: 0
   dialogSuite: 1
   number: 1
@@ -37,9 +37,8 @@ MonoBehaviour:
   consumesItem: 0
   neededItemType: 0
   bossDialog: 0
-  percentage: 0
-  damageModifier: 0
-  torchDamageModifier: 0
+  TorchV2: 0
+  HeatwaveV2: 0
   abilityUnlock: 0
   abilityUnlocked: 0
   heatSegmentUnlock: 0

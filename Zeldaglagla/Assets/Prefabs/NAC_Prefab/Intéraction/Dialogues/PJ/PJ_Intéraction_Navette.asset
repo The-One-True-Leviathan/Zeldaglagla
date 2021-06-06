@@ -10,26 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
-  m_Name: Need_Card_Red
+  m_Name: "PJ_Int\xE9raction_Navette"
   m_EditorClassIdentifier: 
-  interactionType: 6
+  interactionType: 0
   interactionSound: {fileID: 0}
   isTrigger: 0
   isUnique: 0
   needSpawnPoint: 0
-  dialogSuite: 0
-  number: 0
-  type: 0
-  portrait: {fileID: 0}
-  dialogs: []
+  dialogSuite: 1
+  number: 1
+  type: 1
+  portrait: {fileID: 21300000, guid: 71c02edfc0e5ff34685a6abe2516dba6, type: 3}
+  dialogs:
+  - "Ok, on va faire \xE7a."
   enemiesToSpawn: []
   Environment: {fileID: 0}
   snowStorm: 0
   item: {fileID: 0}
   cardType: 0
-  neededItem: {fileID: 11400000, guid: f98b7304f5100424fb1d161591882a51, type: 2}
+  neededItem: {fileID: 0}
   consumesItem: 0
-  neededItemType: 1
+  neededItemType: 0
   bossDialog: 0
   percentage: 0
   damageModifier: 0

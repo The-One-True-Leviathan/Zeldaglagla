@@ -4857,7 +4857,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4290076886878712645}
   serializedVersion: 7
-  lengthInSec: 60
+  lengthInSec: 100000
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -5101,7 +5101,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 6
+      scalar: 13
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9775,9 +9775,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.03703308, y: 0}
   serializedVersion: 2
-  m_Radius: 5.3
+  m_Radius: 12.669422
 --- !u!1 &8089825075330930011
 GameObject:
   m_ObjectHideFlags: 0
@@ -9790,6 +9790,7 @@ GameObject:
   - component: {fileID: 8089825075330930012}
   - component: {fileID: 8089825075330930013}
   - component: {fileID: 8089825075330930010}
+  - component: {fileID: 8020753091310090538}
   m_Layer: 9
   m_Name: BOSS
   m_TagString: Untagged
@@ -9832,7 +9833,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 46ceb162d6ed3f845bb2881f3564421a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9853,7 +9854,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1053212325734317806, guid: 8a289bfb18599ae408882cc22870b4c0, type: 3}
+  m_Sprite: {fileID: 1876431336838819012, guid: 665e6031907016140bae77092ab9b317, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9871,7 +9872,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8089825075330930011}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67920c417c44830449aea1f74d6f9f36, type: 3}
   m_Name: 
@@ -9933,3 +9934,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3.53
+--- !u!95 &8020753091310090538
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8089825075330930011}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

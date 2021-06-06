@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
+  m_Name: "EVVA_Terminal_Donjon_3_levr\xE9"
+  m_EditorClassIdentifier: 
+  interactionType: 0
+  interactionSound: {fileID: 0}
+  isTrigger: 0
+  isUnique: 0
+  needSpawnPoint: 0
+  dialogSuite: 1
+  number: 1
+  type: 1
+  portrait: {fileID: 21300000, guid: 62553065a5f175b45b62dd888e76f40b, type: 3}
+  dialogs:
+  - "C'est bon, j'ai acc\xE8s aux donn\xE9es du terminal. D'apr\xE8s ce que j'ai
+    pu r\xE9cup\xE9rer, le projet de l'arme \"Gadal Peh'esh\" serait en r\xE9alit\xE9
+    une cr\xE9ation biologique des pionniers."
+  - "De ce que j'arrive \xE0 comprendre, ils auraient r\xE9cup\xE9r\xE9 plusieurs
+    A.D.N. de cr\xE9atures \xE0 travers la galaxie pour les combiner et en faire
+    une cr\xE9ature indestructible."
+  - "Cette derni\xE8re serait sous leur contr\xF4le et ils pourraient l'envoyer sur
+    diff\xE9rentes plan\xE8tes pour an\xE9antir leurs ennemis. Ils ont nomm\xE9 la
+    cr\xE9ature le \"Gadal Peh'esh\", et j'ai la traduction. Ce mot signifie \"l'Ultime
+    Salut\" dans la langue des pionniers."
+  - "D'apr\xE8s le journal de bord du complexe, le projet \xE0 \xE9t\xE9 abandonn\xE9
+    pour cause \"d'extinction massive\". Apparemment, la race des Pionniers souffrait
+    de ce qu'ils appelaient \"l'Infection\". Il est \xE9crit qu'ils ont quitt\xE9
+    la plan\xE8te pour rejoindre leur monde natal. Apr\xE8s \xE7a il n'y a aucune
+    autre donn\xE9e, partenaire."
+  - "Cependant, j'ai trouv\xE9 les contr\xF4les des syst\xE8mes de d\xE9fense, devrais-je
+    les d\xE9sactiver ? Tr\xE8s bien, D\xC9SACTIVATION ! Nous sommes d\xE9sormais
+    libres de quitter cette plan\xE8te. Rejoignons le vaisseau !"
+  enemiesToSpawn: []
+  Environment: {fileID: 0}
+  snowStorm: 0
+  item: {fileID: 0}
+  cardType: 0
+  neededItem: {fileID: 0}
+  consumesItem: 0
+  neededItemType: 0
+  bossDialog: 0
+  percentage: 0
+  damageModifier: 0
+  torchDamageModifier: 0
+  abilityUnlock: 0
+  abilityUnlocked: 0
+  heatSegmentUnlock: 0
+  numberOfSegs: 0
+  AddMaxHealth: 0
+  healthToAdd: 0
+  unlockMapPart: 0
+  mapPartName: 
+  redirectToLocation: 0
+  region: 0
+  specificLocation: 0
+  specificLocationName: 
+  locationType: 0
+  toDeactivate: {fileID: 0}
+  scene: 
+  reloadHealth: 0
+  healthAmount: 0
+  heatReload: 0
+  heatAmount: 0

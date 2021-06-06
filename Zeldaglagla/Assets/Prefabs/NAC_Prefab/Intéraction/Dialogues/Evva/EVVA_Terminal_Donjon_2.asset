@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
+  m_Name: EVVA_Terminal_Donjon_2
+  m_EditorClassIdentifier: 
+  interactionType: 0
+  interactionSound: {fileID: 0}
+  isTrigger: 0
+  isUnique: 0
+  needSpawnPoint: 0
+  dialogSuite: 1
+  number: 1
+  type: 1
+  portrait: {fileID: 21300000, guid: 62553065a5f175b45b62dd888e76f40b, type: 3}
+  dialogs:
+  - "Bien, j'ai trouv\xE9 des informations sur le projet \"Gadal Peh'esh\". D'apr\xE8s
+    les donn\xE9es de ce terminal, ce projet serait d'ordre militaire, il se trouverais
+    \xE0 l'int\xE9rieur m\xEAme de la plan\xE8te, sous la glace."
+  - "Les pionniers aurait cr\xE9er une arme biologique permettant... \"d\xE9radiquer
+    toute formes de vie d'une plan\xE8te\" d'apr\xE8s ce que je peux lire. "
+  - "Cependant il est \xE9crit dans le journal de bord de la base que celle-ci \xE0
+    du \xEAtre abandonn\xE9e par ces habitants \xE0 cause de ce qu'il nomme \"l'infection\"
+    dans notre langue."
+  - "J'ai aussi r\xE9ussi \xE0 trouver l'emplacement de la structure alien qui semble
+    \xEAtre le complexe principal de la zone ainsi que l'emplacement d'un point de
+    chaleur non loin d'ici. Je ne trouve aucune autre information int\xE9r\xE9ssante
+    dans ce terminal concernant le projet militaire ou les syst\xE8mes de d\xE9fense."
+  - "Cependant, je pense que ce complexe pourrait contenir toutes les informations
+    sur le projet  \"Gadal Peh'esh\" ainsi qu'un moyen de d\xE9sactiver les syst\xE8mes
+    de d\xE9fense de la plan\xE8te. Nous devrions nous y rendre. "
+  enemiesToSpawn: []
+  Environment: {fileID: 0}
+  snowStorm: 0
+  item: {fileID: 0}
+  cardType: 0
+  neededItem: {fileID: 0}
+  consumesItem: 0
+  neededItemType: 0
+  bossDialog: 0
+  percentage: 0
+  damageModifier: 0
+  torchDamageModifier: 0
+  abilityUnlock: 0
+  abilityUnlocked: 0
+  heatSegmentUnlock: 0
+  numberOfSegs: 0
+  AddMaxHealth: 0
+  healthToAdd: 0
+  unlockMapPart: 0
+  mapPartName: 
+  redirectToLocation: 0
+  region: 0
+  specificLocation: 0
+  specificLocationName: 
+  locationType: 0
+  toDeactivate: {fileID: 0}
+  scene: 
+  reloadHealth: 0
+  healthAmount: 0
+  heatReload: 0
+  heatAmount: 0

@@ -10,6 +10,8 @@ public class HDO_InteractionSO : ScriptableObject
     public enum dialogType { inner, EVAA };
     public enum dialogNum { one, several };
 
+    public enum CardType { blue, red };
+
     public InteractionType interactionType;
 
     [Header("General")]
@@ -35,19 +37,19 @@ public class HDO_InteractionSO : ScriptableObject
 
     [Header("Item")]
     public HDO_ItemSO item;
+    public CardType cardType;
 
     [Header("need Item")]
     public HDO_ItemSO neededItem;
     public bool consumesItem;
+    public CardType neededItemType;
 
     [Header("Boss Event")]
     public bool bossDialog;
 
     [Header("Character Improvement (must be Unique !!!)")]
-    public bool percentage;
-
-    public float damageModifier;
-    public float torchDamageModifier;
+    public bool TorchV2;
+    public bool HeatwaveV2;
 
     public bool abilityUnlock;
     public enum Ability { none, torch, heatwave};

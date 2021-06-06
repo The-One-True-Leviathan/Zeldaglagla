@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 3707250099335005160}
   - component: {fileID: 3707250099335005161}
   - component: {fileID: 4927979078974483355}
+  - component: {fileID: 5823579428154228872}
   m_Layer: 7
   m_Name: Coffre
   m_TagString: Untagged
@@ -179,3 +180,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.7205
+--- !u!114 &5823579428154228872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3707250099335005163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45caafc053daed41895825d87fa9a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  severalInteractions: 0
+  interactions:
+  - {fileID: 11400000, guid: 26e4a11ad3f97544ab1cc50e7a42d39a, type: 2}
+  waitTimeBetweenInteractions: []
+  spawnPoint: {fileID: 0}
+  isFullTrigger: 0
+  interactives: []

@@ -72,6 +72,9 @@ public class HDO_CharacterInteraction : MonoBehaviour
     [SerializeField]
     Image portrait;
 
+    [SerializeField]
+    Image redCard, blueCard;
+
 
     private void Start()
     {
@@ -535,6 +538,16 @@ public class HDO_CharacterInteraction : MonoBehaviour
             GetComponent<HDO_CharacterCombat>().maxHealth += inter.healthToAdd;
             GetComponent<HDO_CharacterCombat>().currentHealth += inter.healthToAdd;
         }
+
+        if (inter.HeatwaveV2)
+        {
+            combat.HeatwaveV2 = true;
+        }
+
+        if (inter.TorchV2)
+        {
+            combat.TorchV2 = true;
+        }
     }
 
     void SetSpawn(HDO_InteractionSO inter)
@@ -644,6 +657,14 @@ public class HDO_CharacterInteraction : MonoBehaviour
     void GetItem(HDO_InteractionSO inter)
     {
         inventory.Add(inter.item);
+        if(inter.cardType == HDO_InteractionSO.CardType.red)
+        {
+            redCard.enabled = true;
+        }
+        if(inter.cardType == HDO_InteractionSO.CardType.blue)
+        {
+            blueCard.enabled = true;
+        }
     }
 
     void NeedItem(HDO_InteractionSO inter)
@@ -655,6 +676,14 @@ public class HDO_CharacterInteraction : MonoBehaviour
                 if (inter.consumesItem)
                 {
                     inventory.Remove(inter.neededItem);
+                    if(inter.neededItemType == HDO_InteractionSO.CardType.red)
+                    {
+                        redCard.enabled = false;
+                    }
+                    if(inter.neededItemType == HDO_InteractionSO.CardType.blue)
+                    {
+                        blueCard.enabled = false;
+                    }
                 }
 
                 foreach (HDO_Interactive interactive in interaction.interactives)

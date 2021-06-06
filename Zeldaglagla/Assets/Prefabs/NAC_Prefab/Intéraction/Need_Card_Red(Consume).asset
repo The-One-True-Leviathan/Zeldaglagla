@@ -20,19 +20,26 @@ MonoBehaviour:
   dialogSuite: 0
   number: 0
   type: 0
+  portrait: {fileID: 0}
   dialogs: []
   enemiesToSpawn: []
   Environment: {fileID: 0}
   snowStorm: 0
   item: {fileID: 0}
+  cardType: 0
   neededItem: {fileID: 11400000, guid: f98b7304f5100424fb1d161591882a51, type: 2}
   consumesItem: 1
+  neededItemType: 1
   bossDialog: 0
   percentage: 0
   damageModifier: 0
   torchDamageModifier: 0
   abilityUnlock: 0
   abilityUnlocked: 0
+  heatSegmentUnlock: 0
+  numberOfSegs: 0
+  AddMaxHealth: 0
+  healthToAdd: 0
   unlockMapPart: 0
   mapPartName: 
   redirectToLocation: 0
@@ -41,3 +48,8 @@ MonoBehaviour:
   specificLocationName: 
   locationType: 0
   toDeactivate: {fileID: 0}
+  scene: 
+  reloadHealth: 0
+  healthAmount: 0
+  heatReload: 0
+  heatAmount: 0

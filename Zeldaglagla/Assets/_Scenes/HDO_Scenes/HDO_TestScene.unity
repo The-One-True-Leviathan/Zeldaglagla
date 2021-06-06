@@ -2363,54 +2363,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 121033160, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.8400006
-      objectReference: {fileID: 0}
-    - target: {fileID: 121033160, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 398361177, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
-      propertyPath: timeToWaitBeforeFade
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 398361178, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
-      propertyPath: portrait
-      value: 
-      objectReference: {fileID: 1525408413}
-    - target: {fileID: 1828931770, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.8400006
-      objectReference: {fileID: 0}
-    - target: {fileID: 1828931770, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 693671876588548344, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.84
-      objectReference: {fileID: 0}
-    - target: {fileID: 693671876588548344, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 693671876588548349, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
-      propertyPath: heatwaveCost
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 693671876588548349, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 556327517}
-    - target: {fileID: 693671876588548349, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
-      propertyPath: torchHeatCost
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 693671878152556600, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6488109896675098630, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Name
       value: Essentials
@@ -48893,17 +48849,6 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   isFullTrigger: 0
   interactives: []
---- !u!114 &1525408413 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 662869520099747690, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
-  m_PrefabInstance: {fileID: 99596625}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1526493356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50264,7 +50209,7 @@ MonoBehaviour:
   direction: {fileID: 256198940}
   recover: 0.5
   cooldown: 5
-  speed: 4
+  speed: 8
   shotNumber: 3
   damage: 3
   activated: 1

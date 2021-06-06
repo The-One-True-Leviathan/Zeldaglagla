@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
+  m_Name: PJ_Changement_Zone_(+Froid)_2
+  m_EditorClassIdentifier: 
+  interactionType: 0
+  interactionSound: {fileID: 0}
+  isTrigger: 0
+  isUnique: 0
+  needSpawnPoint: 0
+  dialogSuite: 1
+  number: 1
+  type: 1
+  portrait: {fileID: 21300000, guid: 71c02edfc0e5ff34685a6abe2516dba6, type: 3}
+  dialogs:
+  - "Ah ouais, on se les g\xE8le un peu."
+  enemiesToSpawn: []
+  Environment: {fileID: 0}
+  snowStorm: 0
+  item: {fileID: 0}
+  cardType: 0
+  neededItem: {fileID: 0}
+  consumesItem: 0
+  neededItemType: 0
+  bossDialog: 0
+  percentage: 0
+  damageModifier: 0
+  torchDamageModifier: 0
+  abilityUnlock: 0
+  abilityUnlocked: 0
+  heatSegmentUnlock: 0
+  numberOfSegs: 0
+  AddMaxHealth: 0
+  healthToAdd: 0
+  unlockMapPart: 0
+  mapPartName: 
+  redirectToLocation: 0
+  region: 0
+  specificLocation: 0
+  specificLocationName: 
+  locationType: 0
+  toDeactivate: {fileID: 0}
+  scene: 
+  reloadHealth: 0
+  healthAmount: 0
+  heatReload: 0
+  heatAmount: 0

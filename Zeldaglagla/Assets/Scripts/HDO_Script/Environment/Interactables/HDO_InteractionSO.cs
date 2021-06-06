@@ -48,10 +48,8 @@ public class HDO_InteractionSO : ScriptableObject
     public bool bossDialog;
 
     [Header("Character Improvement (must be Unique !!!)")]
-    public bool percentage;
-
-    public float damageModifier;
-    public float torchDamageModifier;
+    public bool TorchV2;
+    public bool HeatwaveV2;
 
     public bool abilityUnlock;
     public enum Ability { none, torch, heatwave};

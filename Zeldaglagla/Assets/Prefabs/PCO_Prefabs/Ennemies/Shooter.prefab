@@ -184,7 +184,11 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
-  drops: []
+  drops:
+  - {fileID: 3238155590587372768, guid: 194545368c1e16a42b0e663196424fb8, type: 3}
+  - {fileID: 3238155590587372768, guid: 194545368c1e16a42b0e663196424fb8, type: 3}
+  - {fileID: 1278343199313297225, guid: 90c5ed2f851fbe741b7b6e84d48182ad, type: 3}
+  - {fileID: 4185606389509068896, guid: 1a13087491b458342b5cd1d596ff477b, type: 3}
   isPlayer:
     serializedVersion: 2
     m_Bits: 8

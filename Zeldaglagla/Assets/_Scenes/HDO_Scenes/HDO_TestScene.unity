@@ -933,6 +933,88 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9078135828925261985, guid: 46293280de312954797e205b5f05196a, type: 3}
   m_PrefabInstance: {fileID: 31730376}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &35259668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 35259669}
+  - component: {fileID: 35259670}
+  m_Layer: 0
+  m_Name: asset_donjon_ancienne_civj_vvvaaad_12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &35259669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35259668}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 54.34, y: -8.46, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 216928213}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &35259670
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35259668}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 5044231677002861900, guid: a3a59957f8d7592468fb4c3fba080872, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.082, y: 2.568}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &35632676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1542,6 +1624,7 @@ GameObject:
   - component: {fileID: 72180051}
   - component: {fileID: 72180050}
   - component: {fileID: 72180052}
+  - component: {fileID: 72180053}
   m_Layer: 7
   m_Name: FinalDoorOpener
   m_TagString: Untagged
@@ -1635,6 +1718,7 @@ MonoBehaviour:
   isFullTrigger: 0
   interactives:
   - {fileID: 1470709471}
+  - {fileID: 72180053}
 --- !u!58 &72180052
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1651,6 +1735,35 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.817
+--- !u!114 &72180053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72180048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249b2381c1338ac42adf8078122ca562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitSound: 0
+  soundToPlay: {fileID: 0}
+  movement: 0
+  goToPos: {fileID: 0}
+  speed: 0
+  shieldD1: 0
+  order: []
+  activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
+  selfDestroy: 0
+  deactivateTurret: 0
+  turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 1
+  inter: {fileID: 72180051}
 --- !u!1001 &76003090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2250,10 +2363,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 121033160, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.8400006
+      objectReference: {fileID: 0}
+    - target: {fileID: 121033160, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 398361177, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: timeToWaitBeforeFade
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 398361178, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 1525408413}
+    - target: {fileID: 1828931770, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.8400006
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828931770, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 693671876588548344, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 693671876588548344, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 693671876588548349, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: heatwaveCost
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 693671876588548349, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 556327517}
+    - target: {fileID: 693671876588548349, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: torchHeatCost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 693671878152556600, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6488109896675098630, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Name
       value: Essentials
@@ -4284,6 +4441,10 @@ MonoBehaviour:
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 0
+  inter: {fileID: 0}
 --- !u!60 &198592872
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4326,6 +4487,7 @@ GameObject:
   - component: {fileID: 200728564}
   - component: {fileID: 200728566}
   - component: {fileID: 200728565}
+  - component: {fileID: 200728567}
   m_Layer: 7
   m_Name: Roue Interactible
   m_TagString: Untagged
@@ -4419,7 +4581,9 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   isFullTrigger: 0
   interactives:
-  - {fileID: 1417568205}
+  - {fileID: 2011705978}
+  - {fileID: 1292902100}
+  - {fileID: 200728567}
 --- !u!58 &200728566
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4436,6 +4600,35 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.6908397
+--- !u!114 &200728567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200728562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249b2381c1338ac42adf8078122ca562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitSound: 0
+  soundToPlay: {fileID: 0}
+  movement: 0
+  goToPos: {fileID: 0}
+  speed: 0
+  shieldD1: 0
+  order: []
+  activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
+  selfDestroy: 0
+  deactivateTurret: 0
+  turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 1
+  inter: {fileID: 200728565}
 --- !u!1 &204455808
 GameObject:
   m_ObjectHideFlags: 0
@@ -4649,6 +4842,8 @@ Transform:
   - {fileID: 1427542633}
   - {fileID: 138272877}
   - {fileID: 1807057807}
+  - {fileID: 1205203309}
+  - {fileID: 35259669}
   m_Father: {fileID: 743432490}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19280,6 +19475,10 @@ MonoBehaviour:
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 0
+  inter: {fileID: 0}
 --- !u!1001 &390980170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28709,6 +28908,7 @@ GameObject:
   - component: {fileID: 678027014}
   - component: {fileID: 678027013}
   - component: {fileID: 678027015}
+  - component: {fileID: 678027016}
   m_Layer: 7
   m_Name: FinalDoorOpener_1
   m_TagString: Untagged
@@ -28802,6 +29002,7 @@ MonoBehaviour:
   isFullTrigger: 0
   interactives:
   - {fileID: 2068808447}
+  - {fileID: 678027016}
 --- !u!58 &678027015
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -28818,6 +29019,35 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.817
+--- !u!114 &678027016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678027011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249b2381c1338ac42adf8078122ca562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitSound: 0
+  soundToPlay: {fileID: 0}
+  movement: 0
+  goToPos: {fileID: 0}
+  speed: 0
+  shieldD1: 0
+  order: []
+  activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
+  selfDestroy: 0
+  deactivateTurret: 0
+  turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 1
+  inter: {fileID: 678027014}
 --- !u!1001 &678456917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29716,6 +29946,10 @@ MonoBehaviour:
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 0
+  inter: {fileID: 0}
 --- !u!60 &740637370
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -29880,7 +30114,6 @@ Transform:
   - {fileID: 750963709}
   - {fileID: 1719789232}
   - {fileID: 865264581}
-  - {fileID: 2011705975}
   - {fileID: 1370338175}
   - {fileID: 1524111906}
   m_Father: {fileID: 0}
@@ -30015,7 +30248,9 @@ PolygonCollider2D:
       - {x: 66.31592, y: -8.235721}
       - {x: 69.01888, y: -9.886078}
       - {x: 60.681427, y: -14.779905}
-      - {x: 52.54605, y: -9.833553}
+      - {x: 53.466293, y: -10.320742}
+      - {x: 54.78884, y: -9.410336}
+      - {x: 54.83159, y: -8.567126}
       - {x: 60.719543, y: -4.953145}
       - {x: 63.443993, y: -6.576042}
       - {x: 66.30088, y: -4.930477}
@@ -30353,6 +30588,8 @@ GameObject:
   - component: {fileID: 750963712}
   - component: {fileID: 750963711}
   - component: {fileID: 750963710}
+  - component: {fileID: 750963714}
+  - component: {fileID: 750963713}
   m_Layer: 7
   m_Name: LevierPorteRefrigerante
   m_TagString: Untagged
@@ -30394,7 +30631,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   isFullTrigger: 0
   interactives:
-  - {fileID: 865264582}
+  - {fileID: 798689274}
+  - {fileID: 750963714}
 --- !u!212 &750963711
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30462,6 +30700,54 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.2603855}
   serializedVersion: 2
   m_Radius: 0.7603855
+--- !u!95 &750963713
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750963708}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d193adc90d6c653448a4ec06ed01e4d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &750963714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750963708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249b2381c1338ac42adf8078122ca562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitSound: 0
+  soundToPlay: {fileID: 0}
+  movement: 0
+  goToPos: {fileID: 0}
+  speed: 0
+  shieldD1: 0
+  order: []
+  activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
+  selfDestroy: 0
+  deactivateTurret: 0
+  turret: {fileID: 0}
+  animate: 1
+  animator: {fileID: 750963713}
+  nullify: 1
+  inter: {fileID: 750963710}
 --- !u!1 &757362369
 GameObject:
   m_ObjectHideFlags: 0
@@ -37314,6 +37600,10 @@ MonoBehaviour:
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 0
+  inter: {fileID: 0}
 --- !u!60 &798689275
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -38595,6 +38885,10 @@ MonoBehaviour:
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 0
+  inter: {fileID: 0}
 --- !u!60 &865264583
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -40744,6 +41038,10 @@ MonoBehaviour:
   selfDestroy: 0
   deactivateTurret: 0
   turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 0
+  inter: {fileID: 0}
 --- !u!61 &1014650853
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41463,6 +41761,8 @@ GameObject:
   - component: {fileID: 1072499870}
   - component: {fileID: 1072499872}
   - component: {fileID: 1072499871}
+  - component: {fileID: 1072499874}
+  - component: {fileID: 1072499873}
   m_Layer: 6
   m_Name: DeactivateTurret
   m_TagString: Untagged
@@ -41505,6 +41805,7 @@ MonoBehaviour:
   isFullTrigger: 0
   interactives:
   - {fileID: 1599835973}
+  - {fileID: 1072499874}
 --- !u!212 &1072499872
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41556,6 +41857,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1072499873
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072499869}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d193adc90d6c653448a4ec06ed01e4d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1072499874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072499869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249b2381c1338ac42adf8078122ca562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitSound: 0
+  soundToPlay: {fileID: 0}
+  movement: 0
+  goToPos: {fileID: 0}
+  speed: 0
+  shieldD1: 0
+  order: []
+  activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
+  selfDestroy: 0
+  deactivateTurret: 0
+  turret: {fileID: 0}
+  animate: 1
+  animator: {fileID: 1072499873}
+  nullify: 1
+  inter: {fileID: 1072499871}
 --- !u!1001 &1092487753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42929,6 +43278,88 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2030053440206496348, guid: fd38881c026b1e546a3b2ba3c633e321, type: 3}
   m_PrefabInstance: {fileID: 1203775204}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1205203308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1205203309}
+  - component: {fileID: 1205203310}
+  m_Layer: 0
+  m_Name: asset_donjon_ancienne_civj_vvvaaad_11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1205203309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205203308}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 53.49, y: -8.97, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 216928213}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1205203310
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205203308}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 5044231677002861900, guid: a3a59957f8d7592468fb4c3fba080872, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.082, y: 2.568}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1206007737
 GameObject:
   m_ObjectHideFlags: 0
@@ -44438,6 +44869,7 @@ GameObject:
   - component: {fileID: 1292902097}
   - component: {fileID: 1292902099}
   - component: {fileID: 1292902098}
+  - component: {fileID: 1292902100}
   m_Layer: 10
   m_Name: FrozenRoom
   m_TagString: Untagged
@@ -44457,7 +44889,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1726610501}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1292902098
 MonoBehaviour:
@@ -44521,6 +44953,35 @@ PolygonCollider2D:
       - {x: -6.4915137, y: -1.0886668}
       - {x: -0.65510404, y: -4.460005}
       - {x: 4.835086, y: -1.3222752}
+--- !u!114 &1292902100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292902096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249b2381c1338ac42adf8078122ca562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitSound: 0
+  soundToPlay: {fileID: 0}
+  movement: 0
+  goToPos: {fileID: 0}
+  speed: 0
+  shieldD1: 0
+  order: []
+  activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
+  selfDestroy: 1
+  deactivateTurret: 0
+  turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 0
+  inter: {fileID: 0}
 --- !u!1001 &1297106896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45858,7 +46319,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 743432490}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1370338176
 PolygonCollider2D:
@@ -46058,67 +46519,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2030053440206496348, guid: fd38881c026b1e546a3b2ba3c633e321, type: 3}
   m_PrefabInstance: {fileID: 1384002883}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1403806819
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1403806820}
-  - component: {fileID: 1403806821}
-  m_Layer: 6
-  m_Name: Porte
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1403806820
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403806819}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1417568202}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1403806821
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403806819}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -1.7616453, y: -0.14041731}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.99709475, y: -1.796171}
-      - {x: 2.9173346, y: -0.5336743}
 --- !u!1001 &1404042697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46251,115 +46651,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2030053440206496348, guid: fd38881c026b1e546a3b2ba3c633e321, type: 3}
   m_PrefabInstance: {fileID: 1413580421}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1417568201
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1417568202}
-  - component: {fileID: 1417568205}
-  - component: {fileID: 1417568204}
-  - component: {fileID: 1417568203}
-  m_Layer: 7
-  m_Name: TriggerDialoguePorteFroid
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1417568202
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417568201}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.85, y: 11.46, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1403806820}
-  m_Father: {fileID: 1726610501}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1417568203
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417568201}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -2.4120078, y: -0.5631999}
-      - {x: 0.1867119, y: -2.2192304}
-      - {x: 2.2318907, y: -0.60956204}
---- !u!114 &1417568204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417568201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e45caafc053daed41895825d87fa9a7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  severalInteractions: 0
-  interactions:
-  - {fileID: 11400000, guid: a40886d8dc7fe8345b11bf822253d707, type: 2}
-  waitTimeBetweenInteractions:
-  - 0
-  spawnPoint: {fileID: 0}
-  isFullTrigger: 1
-  interactives: []
---- !u!114 &1417568205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417568201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 249b2381c1338ac42adf8078122ca562, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emitSound: 0
-  soundToPlay: {fileID: 0}
-  movement: 0
-  goToPos: {fileID: 0}
-  speed: 0
-  shieldD1: 0
-  order: []
-  activated: []
-  positionsForHint: []
-  hint: {fileID: 0}
-  selfDestroy: 1
-  deactivateTurret: 0
-  turret: {fileID: 0}
 --- !u!1001 &1419475223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47656,6 +47947,10 @@ MonoBehaviour:
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 0
+  inter: {fileID: 0}
 --- !u!60 &1470709472
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -48546,7 +48841,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 743432490}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1524111907
 PolygonCollider2D:
@@ -48598,6 +48893,17 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   isFullTrigger: 0
   interactives: []
+--- !u!114 &1525408413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 662869520099747690, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+  m_PrefabInstance: {fileID: 99596625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1526493356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50038,6 +50344,10 @@ MonoBehaviour:
   selfDestroy: 0
   deactivateTurret: 1
   turret: {fileID: 1599835971}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 0
+  inter: {fileID: 0}
 --- !u!1001 &1600909872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50335,6 +50645,10 @@ MonoBehaviour:
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 0
+  inter: {fileID: 0}
 --- !u!1001 &1607802902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52153,6 +52467,8 @@ GameObject:
   - component: {fileID: 1719789235}
   - component: {fileID: 1719789234}
   - component: {fileID: 1719789233}
+  - component: {fileID: 1719789237}
+  - component: {fileID: 1719789236}
   m_Layer: 7
   m_Name: LevierPorteRefrigerante_1
   m_TagString: Untagged
@@ -52195,6 +52511,7 @@ MonoBehaviour:
   isFullTrigger: 0
   interactives:
   - {fileID: 865264582}
+  - {fileID: 1719789236}
 --- !u!212 &1719789234
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -52262,6 +52579,54 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.2603855}
   serializedVersion: 2
   m_Radius: 0.7603855
+--- !u!114 &1719789236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719789231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249b2381c1338ac42adf8078122ca562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitSound: 0
+  soundToPlay: {fileID: 0}
+  movement: 0
+  goToPos: {fileID: 0}
+  speed: 0
+  shieldD1: 0
+  order: []
+  activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
+  selfDestroy: 0
+  deactivateTurret: 0
+  turret: {fileID: 0}
+  animate: 1
+  animator: {fileID: 1719789237}
+  nullify: 1
+  inter: {fileID: 1719789233}
+--- !u!95 &1719789237
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719789231}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d193adc90d6c653448a4ec06ed01e4d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1721295718
 GameObject:
   m_ObjectHideFlags: 0
@@ -52459,8 +52824,8 @@ Transform:
   - {fileID: 1813357071}
   - {fileID: 1526948754}
   - {fileID: 250891452}
-  - {fileID: 1417568202}
   - {fileID: 1292902097}
+  - {fileID: 2011705975}
   - {fileID: 1604357970}
   m_Father: {fileID: 743432490}
   m_RootOrder: 3
@@ -66676,6 +67041,8 @@ GameObject:
   - component: {fileID: 1970519775}
   - component: {fileID: 1970519774}
   - component: {fileID: 1970519773}
+  - component: {fileID: 1970519776}
+  - component: {fileID: 1970519777}
   m_Layer: 7
   m_Name: LevierDoorRed
   m_TagString: Untagged
@@ -66718,6 +67085,7 @@ MonoBehaviour:
   isFullTrigger: 0
   interactives:
   - {fileID: 198592871}
+  - {fileID: 1970519777}
 --- !u!58 &1970519774
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -66774,7 +67142,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3552835208123693775, guid: 50d249b38eb1c6545a62f51593bee3ce, type: 3}
+  m_Sprite: {fileID: 4176430773056801502, guid: 50d249b38eb1c6545a62f51593bee3ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -66785,6 +67153,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1970519776
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970519771}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d193adc90d6c653448a4ec06ed01e4d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1970519777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970519771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249b2381c1338ac42adf8078122ca562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitSound: 0
+  soundToPlay: {fileID: 0}
+  movement: 0
+  goToPos: {fileID: 0}
+  speed: 0
+  shieldD1: 0
+  order: []
+  activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
+  selfDestroy: 0
+  deactivateTurret: 0
+  turret: {fileID: 0}
+  animate: 1
+  animator: {fileID: 1970519776}
+  nullify: 1
+  inter: {fileID: 1970519773}
 --- !u!1001 &1972772537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67770,6 +68186,7 @@ GameObject:
   - component: {fileID: 2011705975}
   - component: {fileID: 2011705977}
   - component: {fileID: 2011705976}
+  - component: {fileID: 2011705978}
   m_Layer: 7
   m_Name: FrozenRoomDialog
   m_TagString: Untagged
@@ -67784,12 +68201,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011705974}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.39, y: 25.31, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.080001, y: 10.209999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 743432490}
-  m_RootOrder: 21
+  m_Father: {fileID: 1726610501}
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &2011705976
 PolygonCollider2D:
@@ -67841,6 +68258,35 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   isFullTrigger: 1
   interactives: []
+--- !u!114 &2011705978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011705974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249b2381c1338ac42adf8078122ca562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitSound: 0
+  soundToPlay: {fileID: 0}
+  movement: 0
+  goToPos: {fileID: 0}
+  speed: 0
+  shieldD1: 0
+  order: []
+  activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
+  selfDestroy: 1
+  deactivateTurret: 0
+  turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 0
+  inter: {fileID: 0}
 --- !u!1001 &2018636859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68965,6 +69411,10 @@ MonoBehaviour:
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 0
+  inter: {fileID: 0}
 --- !u!1 &2068808446
 GameObject:
   m_ObjectHideFlags: 0
@@ -69008,6 +69458,10 @@ MonoBehaviour:
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 0
+  inter: {fileID: 0}
 --- !u!60 &2068808448
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -69532,6 +69986,7 @@ GameObject:
   - component: {fileID: 2102252802}
   - component: {fileID: 2102252801}
   - component: {fileID: 2102252800}
+  - component: {fileID: 2102252803}
   m_Layer: 7
   m_Name: FirstDoorOpener
   m_TagString: Untagged
@@ -69641,6 +70096,36 @@ MonoBehaviour:
   isFullTrigger: 0
   interactives:
   - {fileID: 740637369}
+  - {fileID: 2102252803}
+--- !u!114 &2102252803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102252798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249b2381c1338ac42adf8078122ca562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitSound: 0
+  soundToPlay: {fileID: 0}
+  movement: 0
+  goToPos: {fileID: 0}
+  speed: 0
+  shieldD1: 0
+  order: []
+  activated: []
+  positionsForHint: []
+  hint: {fileID: 0}
+  selfDestroy: 0
+  deactivateTurret: 0
+  turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 1
+  inter: {fileID: 2102252802}
 --- !u!1001 &2102827877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90600,6 +91085,10 @@ MonoBehaviour:
   selfDestroy: 1
   deactivateTurret: 0
   turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 0
+  inter: {fileID: 0}
 --- !u!114 &4582154035794311832
 MonoBehaviour:
   m_ObjectHideFlags: 0

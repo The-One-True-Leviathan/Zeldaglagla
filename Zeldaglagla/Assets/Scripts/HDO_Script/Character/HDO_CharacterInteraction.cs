@@ -26,6 +26,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
     bool fullManual;
     [SerializeField]
     float addPos;
+    bool failed;
 
     HDO_Interaction interaction, triggerInteracted;
     HDO_InteractionSO currentInteraction;
@@ -306,10 +307,11 @@ public class HDO_CharacterInteraction : MonoBehaviour
             sound.Play(inter.interactionSound.name);
         }
 
-        if (inter.isUnique)
+        if (inter.isUnique && !failed)
         {
             doneUniqueInteraction.Add(inter);
         }
+        failed = false;
     }
 
     void Save()
@@ -331,14 +333,46 @@ public class HDO_CharacterInteraction : MonoBehaviour
 
     void SceneChange(HDO_InteractionSO inter)
     {
+        int protector = combat.spawnPoints.Count;
+
         combat.spawnPoints.Add(combat.respawnPoint.transform.position);
         combat.crossedScenes.Add(SceneManager.GetActiveScene().name);
+
+        StartCoroutine(LoadScene(inter, protector));
+    }
+
+    IEnumerator LoadScene(HDO_InteractionSO inter , int prot)
+    {
+        yield return new WaitUntil(() => prot != combat.spawnPoints.Count);
+
         Debug.Log("Try to load" + inter.scene);
         SceneManager.LoadScene(inter.scene);
+        StartCoroutine(WaitForSceneToBeLoaded(inter));
+        
+    }
 
+    IEnumerator WaitForSceneToBeLoaded(HDO_InteractionSO inter)
+    {
+        yield return new WaitUntil(() => SceneManager.GetActiveScene().name == inter.scene);
+
+        Debug.Log("yspassdétruc");
         if (combat.crossedScenes.Contains(SceneManager.GetActiveScene().name))
         {
+            Debug.Log(SceneManager.GetActiveScene().name);
             transform.position = combat.spawnPoints[combat.crossedScenes.IndexOf(SceneManager.GetActiveScene().name)];
+        }
+
+        Scene sc = SceneManager.GetActiveScene();
+        string nameSc = sc.name;
+        if (combat.crossedScenes.Contains(nameSc))
+        {
+            Debug.Log("wtf");
+            transform.position = combat.spawnPoints[combat.crossedScenes.IndexOf(nameSc)];
+        }
+        else
+        {
+            Debug.Log("oyeyeyeyeye");
+            transform.position = GameObject.Find("First").transform.position;
         }
     }
 
@@ -689,6 +723,13 @@ public class HDO_CharacterInteraction : MonoBehaviour
                 foreach (HDO_Interactive interactive in interaction.interactives)
                 {
                     interactive.Action();
+                }
+            }
+            else
+            {
+                if (inter.isUnique)
+                {
+                    failed = true;
                 }
             }
         }

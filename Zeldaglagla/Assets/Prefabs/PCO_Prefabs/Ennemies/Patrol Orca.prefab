@@ -175,7 +175,7 @@ MonoBehaviour:
   boundBox: {fileID: 8217038802357782634}
   attackZone: {fileID: 8217038802357782634}
   SMB: {fileID: 8217038802357782638}
-  animator: {fileID: 0}
+  animator: {fileID: 5956103769193877085}
   blocksLOS:
     serializedVersion: 2
     m_Bits: 64
@@ -187,13 +187,13 @@ MonoBehaviour:
       m_Calls: []
   drops:
   - {fileID: 1278343199313297225, guid: 90c5ed2f851fbe741b7b6e84d48182ad, type: 3}
-  - {fileID: 1278343199313297225, guid: 90c5ed2f851fbe741b7b6e84d48182ad, type: 3}
+  - {fileID: 4185606389509068896, guid: 1a13087491b458342b5cd1d596ff477b, type: 3}
   isPlayer:
     serializedVersion: 2
     m_Bits: 8
   isFloor:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   atkDmg: 3
   atkBuildup: 0.4
   atkHitspan: 0.1
@@ -212,7 +212,10 @@ MonoBehaviour:
   circleDistance: 8
   attackDistance: 0.8
   circleCenter: {fileID: 8217038802866815723}
-  patrolPoints: []
+  patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   cyclicPatrol: 1
   randomPatrol: 0
   patrolWaitTime: 0.5

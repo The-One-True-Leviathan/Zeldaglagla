@@ -75,7 +75,12 @@ public class PackManager : MonoBehaviour
     {
         if (time == 0)
         {
-
+            if (wolves.Count == 1)
+            {
+                wolfInAttack = wolfInAttack;
+                wolfInAttack.SMB.Play("Attack");
+                return;
+            }
             int rng = Random.Range(0, wolves.Count);
             if (wolfInAttack != wolves[rng] || wolves.Count == 1)
             {

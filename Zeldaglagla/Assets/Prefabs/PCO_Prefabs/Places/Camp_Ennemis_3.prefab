@@ -411,10 +411,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9189454358537840577}
     m_Modifications:
-    - target: {fileID: 1216169934772689623, guid: bc48af880cd7b9940afc869dee9d2f25, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2663758225261200346, guid: bc48af880cd7b9940afc869dee9d2f25, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -529,10 +525,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 8264051615055812966, guid: 9c4cecdec7d72ed4bb3811f53f9fc9a8, type: 3}
-    - target: {fileID: 1561771507729342955, guid: 28ccd30e648c82c4dac5ac3ccd1e34e6, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2919175803904556737, guid: 28ccd30e648c82c4dac5ac3ccd1e34e6, type: 3}
       propertyPath: m_Name
       value: Batiment_2
@@ -699,10 +691,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9189454358537840577}
     m_Modifications:
-    - target: {fileID: 3529771254196141545, guid: b3f638417f67e104eb0cdf10d9fd4d8e, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 3728210628977462634, guid: b3f638417f67e104eb0cdf10d9fd4d8e, type: 3}
       propertyPath: m_Name
       value: Tour

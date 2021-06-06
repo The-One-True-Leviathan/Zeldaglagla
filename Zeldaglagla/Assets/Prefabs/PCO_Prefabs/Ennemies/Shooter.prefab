@@ -184,6 +184,7 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  drops: []
   isPlayer:
     serializedVersion: 2
     m_Bits: 8
@@ -196,6 +197,7 @@ MonoBehaviour:
   shotSpeed: 16
   minAtkDistance: 8
   maxAtkDistance: 15
+  shotNumber: 1
   maxSight: 20
   timeSinceLastSeen: 0
   playerInSight: 0
@@ -206,6 +208,7 @@ MonoBehaviour:
   patrolWaitTime: 1
   pauseTime: 0
   cyclicPatrol: 0
+  randomPatrol: 0
   patrolTargets:
   - {fileID: 0}
   - {fileID: 0}
@@ -359,4 +362,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d927fa8e01f87e4786721a65ccb4f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateRange: 60
+  activateRange: 20

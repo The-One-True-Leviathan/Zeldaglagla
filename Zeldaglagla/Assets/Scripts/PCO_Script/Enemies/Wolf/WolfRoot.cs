@@ -43,7 +43,6 @@ public class WolfRoot : MonsterRoot
 
     public override void Death()
     {
-        base.Death();
         pack.wolves.Remove(this);
         pack.currentWolves--;
         if (pack.currentWolves <= pack.startingWolves / 2)
@@ -54,6 +53,7 @@ public class WolfRoot : MonsterRoot
                 wolf.defeated = true;
             }
         }
+        base.Death();
     }
 
 

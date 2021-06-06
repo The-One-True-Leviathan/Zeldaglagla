@@ -128,6 +128,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5866323184000523273, guid: 2c177c0cdfe41df4d9825ce5726d8dc5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5866323184000523274, guid: 2c177c0cdfe41df4d9825ce5726d8dc5, type: 3}
       propertyPath: interactions.Array.data[0]
       value: 

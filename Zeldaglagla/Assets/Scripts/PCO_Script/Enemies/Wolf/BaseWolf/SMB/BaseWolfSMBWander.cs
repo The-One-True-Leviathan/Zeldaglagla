@@ -72,12 +72,28 @@ public class BaseWolfSMBWander : StateMachineBehaviour
         }
         if(baseWolf.ToPlayer().magnitude < baseWolf.viewDistance)
         {
-            if (baseWolf.packCircle.pack == null)
+            if (baseWolf.pack.leader.GetComponent<PCO_AlphaWolfBehavior>())
             {
-                baseWolf.pack.AllGoToApproach();
-            } else if (baseWolf.packCircle.pack != baseWolf)
+                if (baseWolf.packCircle.pack != null && baseWolf.packCircle.pack != baseWolf.pack)
+                {
+                    baseWolf.packCircle.pack.AllGoToFlee();
+                    baseWolf.pack.AllGoToApproach();
+                }
+                else
+                {
+                    baseWolf.pack.AllGoToApproach();
+                }
+            }
+            else
             {
-                baseWolf.pack.AllGoToFlee();
+                if (baseWolf.packCircle.pack == null)
+                {
+                    baseWolf.pack.AllGoToApproach();
+                }
+                else if (baseWolf.packCircle.pack != baseWolf)
+                {
+                    baseWolf.pack.AllGoToFlee();
+                }
             }
         }
     }

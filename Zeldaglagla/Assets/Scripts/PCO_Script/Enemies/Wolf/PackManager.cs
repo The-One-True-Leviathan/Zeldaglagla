@@ -77,12 +77,12 @@ public class PackManager : MonoBehaviour
         {
             if (wolves.Count == 1)
             {
-                wolfInAttack = wolfInAttack;
+                wolfInAttack = wolves[0];
                 wolfInAttack.SMB.Play("Attack");
                 return;
             }
             int rng = Random.Range(0, wolves.Count);
-            if (wolfInAttack != wolves[rng] || wolves.Count == 1)
+            if (wolfInAttack != wolves[rng])
             {
                 wolfInAttack = wolves[rng];
             }
@@ -110,6 +110,7 @@ public class PackManager : MonoBehaviour
         Debug.LogWarning("Next Attack Waiting");
         yield return new WaitForSeconds(time);
         Debug.LogWarning("Next Attack Launched");
+        CountWolves();
         SetNextAttack();
     }
 

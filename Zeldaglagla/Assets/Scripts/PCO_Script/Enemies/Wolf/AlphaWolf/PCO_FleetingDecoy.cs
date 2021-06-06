@@ -33,9 +33,8 @@ public class PCO_FleetingDecoy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pather.remainingDistance < 0.5f)
+        if (pather.remainingDistance < 0.1f)
         {
-            Instantiate(alphaWolf, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
         else
@@ -47,15 +46,8 @@ public class PCO_FleetingDecoy : MonoBehaviour
     void Animate(Vector2 direct)
     {
         string anim;
-        if (direct.sqrMagnitude < 0.1f)
-        {
             anim = "Walk";
             direct.Normalize();
-        }
-        else
-        {
-            anim = "Idle";
-        }
         if (direct.x > 0)
         {
             animator.transform.localScale = new Vector3(-1, 1, 1);

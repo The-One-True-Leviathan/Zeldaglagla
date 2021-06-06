@@ -82,6 +82,7 @@ public class BaseWolf : WolfRoot
         SMB.Play("Stunned");
     }
 
+
     public void SetAnim(string anim, Vector3 direction)
     {
         if (direction.x > 0)

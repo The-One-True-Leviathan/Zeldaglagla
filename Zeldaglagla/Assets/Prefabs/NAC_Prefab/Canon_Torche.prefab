@@ -129,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4412867201998325733}
-  - component: {fileID: 3364072515102841176}
+  - component: {fileID: 5803934082370557442}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -145,14 +145,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9095606321867166215}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.196, y: -0.545, z: 0}
+  m_LocalScale: {x: 1.3683, y: 1.3683, z: 1.3683}
   m_Children: []
   m_Father: {fileID: 4724306910869836916}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &3364072515102841176
-EdgeCollider2D:
+--- !u!58 &5803934082370557442
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -164,15 +164,6 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.3584417, y: -0.5785146}
-  - {x: -0.89341235, y: -1.4307356}
-  - {x: -0.6789902, y: -1.5223205}
-  - {x: 0.8535557, y: -0.88732845}
-  - {x: 0.3611034, y: -0.57576835}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+  m_Offset: {x: -0.06369172, y: -0.40603498}
+  serializedVersion: 2
+  m_Radius: 0.44426942

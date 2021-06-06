@@ -35,9 +35,8 @@ MonoBehaviour:
   consumesItem: 0
   neededItemType: 0
   bossDialog: 0
-  percentage: 0
-  damageModifier: 0
-  torchDamageModifier: 0
+  TorchV2: 0
+  HeatwaveV2: 0
   abilityUnlock: 0
   abilityUnlocked: 0
   heatSegmentUnlock: 0

@@ -4809,6 +4809,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 693671876588548348, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: blueCard
+      value: 
+      objectReference: {fileID: 1662520821}
+    - target: {fileID: 693671876588548348, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: portrait
       value: 
       objectReference: {fileID: 759917869}
@@ -9043,6 +9047,17 @@ MonoBehaviour:
   spawnPoint: {fileID: 11912857}
   isFullTrigger: 1
   interactives: []
+--- !u!114 &1662520821 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 213306854395905364, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+  m_PrefabInstance: {fileID: 940111279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1708907098
 GameObject:
   m_ObjectHideFlags: 0

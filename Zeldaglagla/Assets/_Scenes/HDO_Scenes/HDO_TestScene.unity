@@ -2365,11 +2365,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 121033160, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.8400006
+      value: -36.3
       objectReference: {fileID: 0}
     - target: {fileID: 121033160, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.62
+      value: 15.5
       objectReference: {fileID: 0}
     - target: {fileID: 398361177, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: timeToWaitBeforeFade
@@ -2379,21 +2379,37 @@ PrefabInstance:
       propertyPath: portrait
       value: 
       objectReference: {fileID: 1525408413}
+    - target: {fileID: 1828931769, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1828931770, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.8400006
+      value: -36.3
       objectReference: {fileID: 0}
     - target: {fileID: 1828931770, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.62
+      value: 15.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 327977468585835453, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_Color.b
+      value: 0.83137256
+      objectReference: {fileID: 0}
+    - target: {fileID: 327977468585835453, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_Color.g
+      value: 0.21960784
+      objectReference: {fileID: 0}
+    - target: {fileID: 327977468585835453, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 693671876588548344, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.84
+      value: -36.3
       objectReference: {fileID: 0}
     - target: {fileID: 693671876588548344, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.62
+      value: 15.5
       objectReference: {fileID: 0}
     - target: {fileID: 693671876588548349, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: heatwaveCost
@@ -2408,6 +2424,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 693671878152556600, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326728584932367140, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -2458,6 +2478,10 @@ PrefabInstance:
     - target: {fileID: 8036298405979945407, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218845312858861410, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_Name
+      value: BlueCard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: daf20059518b88d499a9c292b256d3ce, type: 3}

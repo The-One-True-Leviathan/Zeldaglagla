@@ -7,6 +7,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using Cinemachine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HDO_CharacterCombat : MonoBehaviour
 {
@@ -97,6 +98,9 @@ public class HDO_CharacterCombat : MonoBehaviour
 
     WhiteBalance wb;
 
+    public List<string> crossedScenes = null;
+    public List<Vector3> spawnPoints = null;
+
     private void Awake()
     {
         if (deflectImmunityFactor == 0)
@@ -136,7 +140,12 @@ public class HDO_CharacterCombat : MonoBehaviour
 
         baseZoom = camZoom.m_MaxFOV;
 
-        transform.position = respawnPoint.transform.position;
+        Scene sc = SceneManager.GetActiveScene();
+        string nameSc = sc.name;
+        if (crossedScenes.Contains(nameSc))
+        {
+            transform.position = spawnPoints[crossedScenes.IndexOf(nameSc)];
+        }
     }
 
     // Update is called once per frame

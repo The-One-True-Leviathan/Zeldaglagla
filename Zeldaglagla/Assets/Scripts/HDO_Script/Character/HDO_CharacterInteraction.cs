@@ -72,6 +72,10 @@ public class HDO_CharacterInteraction : MonoBehaviour
     [SerializeField]
     Image portrait;
 
+    [SerializeField]
+    Image redCard, blueCard;
+
+
     private void Start()
     {
         Object.DontDestroyOnLoad(essentials);
@@ -81,6 +85,11 @@ public class HDO_CharacterInteraction : MonoBehaviour
         map = GameObject.FindGameObjectWithTag("Map").GetComponent<HDO_MapManager>();
 
         Invoke("GetMap", 1.5f);
+
+        if(it == 0)
+        {
+            portrait.sprite = null;
+        }
 
     }
 
@@ -138,10 +147,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
         {
             interactobj = interactObject.gameObject;
         }
-        else
-        {
-            portrait.sprite = null;
-        }
+        
 
         if (interactObject == null)
         {
@@ -325,8 +331,15 @@ public class HDO_CharacterInteraction : MonoBehaviour
 
     void SceneChange(HDO_InteractionSO inter)
     {
+        combat.spawnPoints.Add(combat.respawnPoint.transform.position);
+        combat.crossedScenes.Add(SceneManager.GetActiveScene().name);
         Debug.Log("Try to load" + inter.scene);
         SceneManager.LoadScene(inter.scene);
+
+        if (combat.crossedScenes.Contains(SceneManager.GetActiveScene().name))
+        {
+            transform.position = combat.spawnPoints[combat.crossedScenes.IndexOf(SceneManager.GetActiveScene().name)];
+        }
     }
 
     void DungeonShield(HDO_InteractionSO inter)
@@ -535,6 +548,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
     void SpawnDialog(HDO_InteractionSO inter)
     {
         portrait.sprite = inter.portrait;
+
         if (inter.type == HDO_InteractionSO.dialogType.inner)
         {
             if (inter.number == HDO_InteractionSO.dialogNum.one)
@@ -549,7 +563,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
                 {
                     cts = innerDialog.GetComponent<CoolTextScript>();
                     List<string> list = inter.dialogs;
-                    StartCoroutine(dialogSuite(list));
+                    StartCoroutine(dialogSuite(list, inter));
                 }
                 else
                 {
@@ -574,12 +588,16 @@ public class HDO_CharacterInteraction : MonoBehaviour
                 {
                     cts = EVAADialog.GetComponent<CoolTextScript>();
                     List<string> list = inter.dialogs;
-                    StartCoroutine(dialogSuite(list));
+                    it = 0;
+                    StopCoroutine(dialogSuite(list, inter));
+                    portrait.sprite = inter.portrait;
+                    StartCoroutine(dialogSuite(list, inter));
                 }
                 else
                 {
                     cts = EVAADialog.GetComponent<CoolTextScript>();
                     cts.defaultText = inter.dialogs[Random.Range(0, inter.dialogs.Count)];
+                    portrait.sprite = inter.portrait;
                     cts.Read();
                 }
                 
@@ -629,6 +647,14 @@ public class HDO_CharacterInteraction : MonoBehaviour
     void GetItem(HDO_InteractionSO inter)
     {
         inventory.Add(inter.item);
+        if(inter.cardType == HDO_InteractionSO.CardType.red)
+        {
+            redCard.enabled = true;
+        }
+        if(inter.cardType == HDO_InteractionSO.CardType.blue)
+        {
+            blueCard.enabled = true;
+        }
     }
 
     void NeedItem(HDO_InteractionSO inter)
@@ -640,6 +666,14 @@ public class HDO_CharacterInteraction : MonoBehaviour
                 if (inter.consumesItem)
                 {
                     inventory.Remove(inter.neededItem);
+                    if(inter.neededItemType == HDO_InteractionSO.CardType.red)
+                    {
+                        redCard.enabled = false;
+                    }
+                    if(inter.neededItemType == HDO_InteractionSO.CardType.blue)
+                    {
+                        blueCard.enabled = false;
+                    }
                 }
 
                 foreach (HDO_Interactive interactive in interaction.interactives)
@@ -715,6 +749,11 @@ public class HDO_CharacterInteraction : MonoBehaviour
 
         }
 
+        if(interaction == null)
+        {
+            Debug.Log("euh wtf ???");
+            return;
+        }
         if (interaction.severalInteractions)
         {
 
@@ -767,17 +806,22 @@ public class HDO_CharacterInteraction : MonoBehaviour
     }
 
   
-    IEnumerator dialogSuite(List<string> list)
+    IEnumerator dialogSuite(List<string> list, HDO_InteractionSO inter)
     {
-        
         
         cts.defaultText = list[it];
         cts.Read();
         it++;
+        
+
         yield return new WaitUntil(() => cts.defaultText == "");
         if (!(it >= list.Count))
         {
-            StartCoroutine(dialogSuite(list));
+            StartCoroutine(dialogSuite(list, inter));
+        }
+        else
+        {
+            it = 0;
         }
 
     }

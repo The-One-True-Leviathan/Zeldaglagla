@@ -187,8 +187,10 @@ MonoBehaviour:
   severalInteractions: 1
   interactions:
   - {fileID: 11400000, guid: 8ba9b64bd49d79c448a47a1d1c28d26c, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: bbd1181e045f4d64abeaec956c156f2b, type: 2}
   waitTimeBetweenInteractions:
+  - 0
   - 0
   - 0
   spawnPoint: {fileID: 0}

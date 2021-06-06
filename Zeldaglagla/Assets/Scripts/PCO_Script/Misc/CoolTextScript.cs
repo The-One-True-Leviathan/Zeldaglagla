@@ -19,10 +19,19 @@ public class CoolTextScript : MonoBehaviour
     [SerializeField]
     float waitBetweenLetters = 0.02f;
     Text text;
+
+    [SerializeField]
+    Image portrait;
+
     // Start is called before the first frame update
     void Start()
     {
         text = GetComponent<Text>();
+    }
+
+    private void Update()
+    {
+        
     }
 
     public void Read()
@@ -78,6 +87,7 @@ public class CoolTextScript : MonoBehaviour
         } else
         {
             reading = false;
+
         }
 
     }

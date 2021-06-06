@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d927fa8e01f87e4786721a65ccb4f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateRange: 60
+  activateRange: 400
 --- !u!1001 &4571589901787645018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -218,6 +218,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4571589900832546614}
     m_Modifications:
+    - target: {fileID: 4836939944173719339, guid: c2307e6e3b4019142ae78ebfd8707e93, type: 3}
+      propertyPath: wanderAreaRadius
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 7415177049812464441, guid: c2307e6e3b4019142ae78ebfd8707e93, type: 3}
       propertyPath: m_RootOrder
       value: 0

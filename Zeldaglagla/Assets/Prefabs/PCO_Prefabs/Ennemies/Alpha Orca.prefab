@@ -268,6 +268,9 @@ MonoBehaviour:
   isPlayer:
     serializedVersion: 2
     m_Bits: 8
+  isFloor:
+    serializedVersion: 2
+    m_Bits: 2048
   atkDmg: 5
   atkBuildup: 0.4
   atkHitspan: 0.1
@@ -287,8 +290,9 @@ MonoBehaviour:
   attackDistance: 0.8
   circleCenter: {fileID: 787137821221738107}
   patrolPoints: []
-  cyclicPatrol: 1
-  patrolWaitTime: 0
+  cyclicPatrol: 0
+  randomPatrol: 1
+  patrolWaitTime: 0.2
   playerInSight: 0
   playerInMemory: 0
 --- !u!58 &787137821527448826
@@ -439,4 +443,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d927fa8e01f87e4786721a65ccb4f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateRange: 60
+  activateRange: 400

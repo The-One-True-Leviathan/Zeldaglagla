@@ -215,7 +215,7 @@ MonoBehaviour:
   patrolPoints: []
   cyclicPatrol: 1
   randomPatrol: 0
-  patrolWaitTime: 0
+  patrolWaitTime: 0.5
   playerInSight: 0
   playerInMemory: 0
 --- !u!58 &8217038802357782634

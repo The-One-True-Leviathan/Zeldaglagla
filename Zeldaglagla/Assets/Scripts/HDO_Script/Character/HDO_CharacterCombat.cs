@@ -57,19 +57,22 @@ public class HDO_CharacterCombat : MonoBehaviour
     Animator animator;
 
     [Header("Torch Statistics")]
+    public bool TorchV2;
     [SerializeField]
     GameObject shot;
     [SerializeField]
     GameObject gunPoint;
-    public int torchDirectDamage;
-    public int torchExplosionDamage;
+    public int torchDirectDamage, torchDirectDamageV2;
+    public int torchExplosionDamage, torchExplosionDamageV2;
     public float torchHeatCost, torchCooldown;
+    public float torchHeatCostV2, torchCooldownV2;
     public bool torching;
     float torchCDElapsed;
 
     public bool shallRespawn;
 
     [Header("Heatwave Statistics")]
+    public bool HeatwaveV2;
     [SerializeField]
     GameObject heatwaveEffect;
     [SerializeField]
@@ -79,22 +82,30 @@ public class HDO_CharacterCombat : MonoBehaviour
     [SerializeField]
     float baseTemperature;
     [SerializeField]
-    float wantedTemperature;
+    float wantedTemperature, wantedTemperatureV2;
     [SerializeField]
     CinemachineFollowZoom camZoom;
     [SerializeField]
     float baseZoom;
     [SerializeField]
-    float heatwaveZoom;
+    float heatwaveZoom, heatwaveZoomV2;
+    [SerializeField]
+    public List<GameObject> snowstormRings = null;
+    [SerializeField]
+    float baseRingDistance, newRingDistance, newRingDistanceV2;
     
     public float heatwaveCost, heatwaveCooldown, heatwaveWaitTime;
+    [Header("V2")]
+    public float heatwaveCostV2, heatwaveCooldownV2, heatwaveWaitTimeV2;
     public bool heatwaving;
 
-    bool temperatureReached, zoomReached;
+    bool temperatureReached, zoomReached, ringReached;
 
     float heatwaveElapsed;
 
-    public float temperatureIncreaseRate, temperatureDecreaseRate, zoomIncreaseRate, zoomDecreaseRate;
+    public float temperatureIncreaseRate, temperatureDecreaseRate, zoomIncreaseRate, zoomDecreaseRate, ringIncreaseRate, ringDecreaseRate;
+    [Header("V2")]
+    public float temperatureIncreaseRateV2, temperatureDecreaseRateV2, zoomIncreaseRateV2, zoomDecreaseRateV2, ringIncreaseRateV2, ringDecreaseRateV2;
 
     WhiteBalance wb;
 
@@ -195,15 +206,31 @@ public class HDO_CharacterCombat : MonoBehaviour
 
     void Heatwave()
     {
-        if(heatwaveElapsed > 0 || hm.heatValue < heatwaveCost || !heatwaveUnlocked)
+        if (HeatwaveV2)
         {
-            return;
+            if (heatwaveElapsed > 0 || hm.heatValue < heatwaveCostV2 || !heatwaveUnlocked)
+            {
+                return;
+            }
+
+            hm.heatValue -= heatwaveCostV2;
+
+            heatwaving = true;
+            heatwaveElapsed = heatwaveCooldownV2;
         }
+        else
+        {
+            if (heatwaveElapsed > 0 || hm.heatValue < heatwaveCost || !heatwaveUnlocked)
+            {
+                return;
+            }
 
-        hm.heatValue -= heatwaveCost;
+            hm.heatValue -= heatwaveCost;
 
-        heatwaving = true;
-        heatwaveElapsed = heatwaveCooldown;
+            heatwaving = true;
+            heatwaveElapsed = heatwaveCooldown;
+        }
+        
 
         Instantiate(heatwaveEffect, transform.position, heatwaveEffect.transform.rotation);
         Instantiate(heatZone, transform.position, Quaternion.identity);
@@ -213,35 +240,99 @@ public class HDO_CharacterCombat : MonoBehaviour
 
     IEnumerator Heatwaving()
     {
-        Debug.Log("Start Heatwaving");
 
-        if(wb.temperature.value < wantedTemperature)
+
+        if (HeatwaveV2)
         {
-            wb.temperature.value = wb.temperature.value + temperatureIncreaseRate;
-            temperatureReached = false;
+            if (wb.temperature.value < wantedTemperatureV2)
+            {
+                wb.temperature.value = wb.temperature.value + temperatureIncreaseRateV2;
+                temperatureReached = false;
+            }
+            else
+            {
+                temperatureReached = true;
+                wb.temperature.value = wantedTemperatureV2;
+            }
+
+            if (camZoom.m_MaxFOV < heatwaveZoomV2)
+            {
+                camZoom.m_MaxFOV = camZoom.m_MaxFOV + zoomIncreaseRateV2;
+                zoomReached = false;
+            }
+            else
+            {
+                zoomReached = true;
+                camZoom.m_MaxFOV = heatwaveZoomV2;
+            }
+
+            if (snowstormRings[0].transform.position.y < newRingDistanceV2)
+            {
+                foreach (GameObject go in snowstormRings)
+                {
+                    go.transform.localPosition = new Vector3(0, go.transform.localPosition.y + ringIncreaseRateV2, 0);
+                }
+                ringReached = false;
+            }
+            else
+            {
+                ringReached = true;
+                foreach (GameObject go in snowstormRings)
+                {
+                    go.transform.localPosition = new Vector3(0, newRingDistanceV2, 0);
+                }
+            }
         }
         else
         {
-            temperatureReached = true;
-            wb.temperature.value = wantedTemperature;
-        }
+            if (wb.temperature.value < wantedTemperature)
+            {
+                wb.temperature.value = wb.temperature.value + temperatureIncreaseRate;
+                temperatureReached = false;
+            }
+            else
+            {
+                temperatureReached = true;
+                wb.temperature.value = wantedTemperature;
+            }
 
-        if(camZoom.m_MaxFOV < heatwaveZoom)
-        {
-            camZoom.m_MaxFOV = camZoom.m_MaxFOV + zoomIncreaseRate;
-            zoomReached = false;
+            if (camZoom.m_MaxFOV < heatwaveZoom)
+            {
+                camZoom.m_MaxFOV = camZoom.m_MaxFOV + zoomIncreaseRate;
+                zoomReached = false;
+            }
+            else
+            {
+                zoomReached = true;
+                camZoom.m_MaxFOV = heatwaveZoom;
+            }
+
+            if (snowstormRings[0].transform.position.y < newRingDistance)
+            {
+                foreach (GameObject go in snowstormRings)
+                {
+                    go.transform.localPosition = new Vector3(0, go.transform.localPosition.y + ringIncreaseRate, 0);
+                }
+                ringReached = false;
+            }
+            else
+            {
+                ringReached = true;
+                foreach (GameObject go in snowstormRings)
+                {
+                    go.transform.localPosition = new Vector3(0, newRingDistance, 0);
+                }
+            }
         }
-        else
-        {
-            zoomReached = true;
-            camZoom.m_MaxFOV = heatwaveZoom;
-        }
+        
 
         yield return new WaitForEndOfFrame();
 
-        if(zoomReached && temperatureReached)
+        if(zoomReached && temperatureReached && ringReached)
         {
             StartCoroutine(WaitPhaseTwo());
+            ringReached = false;
+
             StopCoroutine(Heatwaving());
         }
         else
@@ -258,33 +349,100 @@ public class HDO_CharacterCombat : MonoBehaviour
 
     IEnumerator BackToNormal()
     {
-        Debug.Log("BackTonormal");
         StopCoroutine(Heatwaving());
 
-        if (wb.temperature.value > baseTemperature)
-        {
-            wb.temperature.value = wb.temperature.value - temperatureDecreaseRate;
-            temperatureReached = false;
-        }
-        else
-        {
-            temperatureReached = true;
-            wb.temperature.value = baseTemperature;
-        }
 
-        if (camZoom.m_MaxFOV > baseZoom)
+        if (HeatwaveV2)
         {
-            camZoom.m_MaxFOV = camZoom.m_MaxFOV - zoomDecreaseRate;
-            zoomReached = false;
+            if (wb.temperature.value > baseTemperature)
+            {
+                wb.temperature.value = wb.temperature.value - temperatureDecreaseRateV2;
+                temperatureReached = false;
+            }
+            else
+            {
+                temperatureReached = true;
+                wb.temperature.value = baseTemperature;
+            }
+
+            if (camZoom.m_MaxFOV > baseZoom)
+            {
+                camZoom.m_MaxFOV = camZoom.m_MaxFOV - zoomDecreaseRateV2;
+                zoomReached = false;
+            }
+            else
+            {
+                zoomReached = true;
+                camZoom.m_MaxFOV = baseZoom;
+            }
+
+            if (snowstormRings[0].transform.localPosition.y > baseRingDistance)
+            {
+                foreach (GameObject go in snowstormRings)
+                {
+                    go.transform.localPosition = new Vector3(0, go.transform.localPosition.y - ringDecreaseRateV2, 0);
+                }
+                ringReached = false;
+            }
+            else
+            {
+                ringReached = true;
+                foreach (GameObject go in snowstormRings)
+                {
+                    go.transform.localPosition = new Vector3(0, -30, 0);
+                }
+            }
         }
         else
         {
-            zoomReached = true;
-            camZoom.m_MaxFOV = baseZoom;
+            if (wb.temperature.value > baseTemperature)
+            {
+                wb.temperature.value = wb.temperature.value - temperatureDecreaseRate;
+                temperatureReached = false;
+            }
+            else
+            {
+                temperatureReached = true;
+                wb.temperature.value = baseTemperature;
+            }
+
+            if (camZoom.m_MaxFOV > baseZoom)
+            {
+                camZoom.m_MaxFOV = camZoom.m_MaxFOV - zoomDecreaseRate;
+                zoomReached = false;
+            }
+            else
+            {
+                zoomReached = true;
+                camZoom.m_MaxFOV = baseZoom;
+            }
+
+            if (snowstormRings[0].transform.localPosition.y > baseRingDistance)
+            {
+                foreach (GameObject go in snowstormRings)
+                {
+                    go.transform.localPosition = new Vector3(0, go.transform.localPosition.y - ringDecreaseRate, 0);
+                }
+                ringReached = false;
+            }
+            else
+            {
+                ringReached = true;
+                Debug.Log("ahah");
+                foreach (GameObject go in snowstormRings)
+                {
+                    go.transform.localPosition = new Vector3(0, -30, 0);
+                }
+            }
         }
+        
+
+
+
+       
         yield return new WaitForEndOfFrame();
 
-        if(zoomReached && temperatureReached)
+        if(zoomReached && temperatureReached && ringReached)
         {
             heatwaving = false;
         }
@@ -325,12 +483,26 @@ public class HDO_CharacterCombat : MonoBehaviour
 
     void Torch()
     {
-        if(hm.heatValue < torchHeatCost || torchCDElapsed > 0 || !torchUnlocked)
+
+        if (TorchV2)
         {
-            return;
+            if (hm.heatValue < torchHeatCostV2 || torchCDElapsed > 0 || !torchUnlocked)
+            {
+                return;
+            }
+            hm.heatValue -= torchHeatCostV2;
+            torchCDElapsed = torchCooldownV2;
         }
-        hm.heatValue -= torchHeatCost;
-        torchCDElapsed = torchCooldown;
+        else
+        {
+            if (hm.heatValue < torchHeatCost || torchCDElapsed > 0 || !torchUnlocked)
+            {
+                return;
+            }
+            hm.heatValue -= torchHeatCost;
+            torchCDElapsed = torchCooldown;
+        }
+        
 
         animator.SetTrigger("Torch");
 
@@ -347,9 +519,19 @@ public class HDO_CharacterCombat : MonoBehaviour
 
         torch = Instantiate(shot, transform.position, Quaternion.identity).GetComponent<HDO_Torch>();
 
-        torch.torchDamage = torchDirectDamage;
-        torch.explosionDamage = torchExplosionDamage;
-        torch.movement = Vector3.Normalize(gunPoint.transform.position - transform.position);
+        if (TorchV2)
+        {
+            torch.torchDamage = torchDirectDamageV2;
+            torch.explosionDamage = torchExplosionDamageV2;
+            torch.movement = Vector3.Normalize(gunPoint.transform.position - transform.position);
+        }
+        else
+        {
+            torch.torchDamage = torchDirectDamage;
+            torch.explosionDamage = torchExplosionDamage;
+            torch.movement = Vector3.Normalize(gunPoint.transform.position - transform.position);
+        }
+        
     }
 
     //De la part de Pierre

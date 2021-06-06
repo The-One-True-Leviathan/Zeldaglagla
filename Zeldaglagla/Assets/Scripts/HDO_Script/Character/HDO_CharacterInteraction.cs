@@ -538,6 +538,16 @@ public class HDO_CharacterInteraction : MonoBehaviour
             GetComponent<HDO_CharacterCombat>().maxHealth += inter.healthToAdd;
             GetComponent<HDO_CharacterCombat>().currentHealth += inter.healthToAdd;
         }
+
+        if (inter.HeatwaveV2)
+        {
+            combat.HeatwaveV2 = true;
+        }
+
+        if (inter.TorchV2)
+        {
+            combat.TorchV2 = true;
+        }
     }
 
     void SetSpawn(HDO_InteractionSO inter)

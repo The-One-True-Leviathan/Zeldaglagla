@@ -74,8 +74,8 @@ public class HDO_MapManager : MonoBehaviour
                 }
 
                 toShowCache.Add(im);
-                coloredCache[i] = im;
-                coloredCacheColor[i] = im.color;
+                coloredCache.Add(im);
+                coloredCacheColor.Add(im.color);
 
                 i++;
             }

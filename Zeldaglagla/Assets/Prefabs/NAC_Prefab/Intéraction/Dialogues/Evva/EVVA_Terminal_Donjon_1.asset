@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
+  m_Name: EVVA_Terminal_Donjon_1
+  m_EditorClassIdentifier: 
+  interactionType: 0
+  interactionSound: {fileID: 0}
+  isTrigger: 0
+  isUnique: 0
+  needSpawnPoint: 0
+  dialogSuite: 1
+  number: 1
+  type: 1
+  portrait: {fileID: 21300000, guid: 62553065a5f175b45b62dd888e76f40b, type: 3}
+  dialogs:
+  - "Int\xE9ressant, gr\xE2ce \xE0 ce terminal j'ai pu obtenir quelques informations
+    qui requierent votre attention."
+  - " D\xE9j\xE0, il se trouve que il y a plusieurs milliers d'ann\xE9es cette plan\xE8te
+    a \xE9t\xE9 colonis\xE9e par une race d'humano\xEFde se faisant appeler... Dans
+    votre langue cela signifie \"pionnier\"."
+  - "Ils seraient venus sur cette plan\xE8te pour r\xE9cup\xE9rer le pr\xE9cieux
+    minerai que la premi\xE8re exp\xE9dition est venue chercher pour votre corporation."
+  - " Cependant ce n'est pas tout, d'apr\xE8s les donn\xE9es ils avaient un second
+    projet qui semble beaucoup plus important... Je n'arrive pas \xE0 acc\xE9der
+    au donn\xE9es concernant ce projet."
+  - "Elles sont cod\xE9es et je n'arrive pas a les d\xE9crypter. J'ai juste un nom
+    : \"Gadal Peh'esh\", il n'y a aucun \xE9quivalent dans votre langue."
+  - "Cependant je n'ai rien trouv\xE9 sur les syst\xE8mes de d\xE9fense de la plan\xE8te.
+    Pour finir, j'ai aussi trouv\xE9 des signatures thermiques comparables \xE0 une
+    structure alien ainsi qu'un point de chaleur non loin d'ici, je vous recommande
+    de poursuivre vers cette destination."
+  enemiesToSpawn: []
+  Environment: {fileID: 0}
+  snowStorm: 0
+  item: {fileID: 0}
+  cardType: 0
+  neededItem: {fileID: 0}
+  consumesItem: 0
+  neededItemType: 0
+  bossDialog: 0
+  percentage: 0
+  damageModifier: 0
+  torchDamageModifier: 0
+  abilityUnlock: 0
+  abilityUnlocked: 0
+  heatSegmentUnlock: 0
+  numberOfSegs: 0
+  AddMaxHealth: 0
+  healthToAdd: 0
+  unlockMapPart: 0
+  mapPartName: 
+  redirectToLocation: 0
+  region: 0
+  specificLocation: 0
+  specificLocationName: 
+  locationType: 0
+  toDeactivate: {fileID: 0}
+  scene: 
+  reloadHealth: 0
+  healthAmount: 0
+  heatReload: 0
+  heatAmount: 0

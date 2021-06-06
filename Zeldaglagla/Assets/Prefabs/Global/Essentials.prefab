@@ -608,6 +608,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8036298405979945407}
     m_Modifications:
+    - target: {fileID: 327977468585835453, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491421246228271274, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928989849527041845, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969311462067914320, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8815634979563153245, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -698,6 +714,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
+--- !u!114 &213306854395905364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 327977468585835453, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
+  m_PrefabInstance: {fileID: 466374010982072041}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7879980361206836239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7720213001684832998, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
+  m_PrefabInstance: {fileID: 466374010982072041}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7886733522161654079 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7713446714766731222, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
@@ -720,7 +752,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 466374010982072041}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -763,22 +795,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8815634979563153245, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
   m_PrefabInstance: {fileID: 466374010982072041}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &213306854395905364 stripped
+--- !u!114 &7557121796689803449 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 327977468585835453, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7969311462067914320, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
   m_PrefabInstance: {fileID: 466374010982072041}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &7879980361206836239 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7720213001684832998, guid: 340601b48158a9e46b4d6eed1600cf5a, type: 3}
-  m_PrefabInstance: {fileID: 466374010982072041}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4617639796048558368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -794,10 +821,6 @@ PrefabInstance:
       propertyPath: heatBar
       value: 
       objectReference: {fileID: 8948522715971323782}
-    - target: {fileID: 2719464588810126425, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5311234934450637272, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -850,6 +873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5311234934450637276, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
+      propertyPath: lever
+      value: 
+      objectReference: {fileID: 7557121796689803449}
     - target: {fileID: 5311234934450637276, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
       propertyPath: redCard
       value: 

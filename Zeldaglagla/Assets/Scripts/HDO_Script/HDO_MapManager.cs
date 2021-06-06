@@ -37,6 +37,7 @@ public class HDO_MapManager : MonoBehaviour
     {
         self = GetComponent<Image>();
         statusLastFrame = self.enabled;
+        Activate();
     }
 
     // Update is called once per frame

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
-  m_Name: Sortie
+  m_Name: Scene_Change_Donjon_2
   m_EditorClassIdentifier: 
-  interactionType: 10
+  interactionType: 0
   interactionSound: {fileID: 0}
   isTrigger: 0
   isUnique: 0
@@ -20,19 +20,25 @@ MonoBehaviour:
   dialogSuite: 0
   number: 0
   type: 0
+  portrait: {fileID: 0}
   dialogs: []
   enemiesToSpawn: []
   Environment: {fileID: 0}
   snowStorm: 0
   item: {fileID: 0}
+  cardType: 0
   neededItem: {fileID: 0}
   consumesItem: 0
+  neededItemType: 0
   bossDialog: 0
-  percentage: 0
-  damageModifier: 0
-  torchDamageModifier: 0
+  TorchV2: 0
+  HeatwaveV2: 0
   abilityUnlock: 0
   abilityUnlocked: 0
+  heatSegmentUnlock: 0
+  numberOfSegs: 0
+  AddMaxHealth: 0
+  healthToAdd: 0
   unlockMapPart: 0
   mapPartName: 
   redirectToLocation: 0
@@ -41,5 +47,8 @@ MonoBehaviour:
   specificLocationName: 
   locationType: 0
   toDeactivate: {fileID: 0}
-  scene:
-    m_Handle: 0
+  scene: LD2_HeatWave
+  reloadHealth: 0
+  healthAmount: 0
+  heatReload: 0
+  heatAmount: 0

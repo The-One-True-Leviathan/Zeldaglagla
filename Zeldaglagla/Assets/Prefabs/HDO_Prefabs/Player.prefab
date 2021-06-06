@@ -1107,6 +1107,7 @@ MonoBehaviour:
   portrait: {fileID: 0}
   redCard: {fileID: 0}
   blueCard: {fileID: 0}
+  lever: {fileID: 0}
 --- !u!114 &5311234934450637274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,6 +1171,7 @@ MonoBehaviour:
   currentHealth: 20
   deflectImmunityFactor: 1
   healthBar: {fileID: 0}
+  bossFogEffect: {fileID: 2719464588810126425}
   respawnPoint: {fileID: 0}
   lowFrequency: 0.25
   highFrequency: 0.75
@@ -1678,6 +1680,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss fog
       objectReference: {fileID: 0}
+    - target: {fileID: 5406295906413387278, guid: a057018d4a0d85f40b819de4c0c193cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5406295906502226790, guid: a057018d4a0d85f40b819de4c0c193cd, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 115
@@ -1692,6 +1698,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a057018d4a0d85f40b819de4c0c193cd, type: 3}
+--- !u!1 &2719464588810126425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5406295906413387278, guid: a057018d4a0d85f40b819de4c0c193cd, type: 3}
+  m_PrefabInstance: {fileID: 7978830260749933143}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2719464588810126428 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5406295906413387275, guid: a057018d4a0d85f40b819de4c0c193cd, type: 3}

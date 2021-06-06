@@ -74,7 +74,7 @@ public class HDO_CharacterInteraction : MonoBehaviour
     Image portrait;
 
     [SerializeField]
-    Image redCard, blueCard;
+    Image redCard, blueCard, lever;
 
 
     private void Start()
@@ -346,6 +346,10 @@ public class HDO_CharacterInteraction : MonoBehaviour
         yield return new WaitUntil(() => prot != combat.spawnPoints.Count);
 
         Debug.Log("Try to load" + inter.scene);
+        if(inter.scene != "LD2_HeatWave")
+        {
+            lever.enabled = false;
+        }
         SceneManager.LoadScene(inter.scene);
         StartCoroutine(WaitForSceneToBeLoaded(inter));
         
@@ -699,6 +703,10 @@ public class HDO_CharacterInteraction : MonoBehaviour
         {
             blueCard.enabled = true;
         }
+        if (inter.cardType == HDO_InteractionSO.CardType.lever)
+        {
+            lever.enabled = true;
+        }
     }
 
     void NeedItem(HDO_InteractionSO inter)
@@ -717,6 +725,14 @@ public class HDO_CharacterInteraction : MonoBehaviour
                     if(inter.neededItemType == HDO_InteractionSO.CardType.blue)
                     {
                         blueCard.enabled = false;
+                    }
+                    if(inter.neededItemType == HDO_InteractionSO.CardType.lever)
+                    {
+                        if(inventory.Count == 0)
+                        {
+                            lever.enabled = false;
+                        }
+                        
                     }
                 }
 

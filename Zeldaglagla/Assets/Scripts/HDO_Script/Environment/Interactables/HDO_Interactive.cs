@@ -53,6 +53,12 @@ public class HDO_Interactive : MonoBehaviour
     Collider2D self;
 
 
+    [Header("Get Heatwave")]
+    [SerializeField]
+    bool heatwave;
+    int activations = 0;
+
+
     private void Start()
     {
         self = GetComponent<Collider2D>();
@@ -173,6 +179,15 @@ public class HDO_Interactive : MonoBehaviour
         {
             inter.enabled = false;
             self.enabled = false;
+        }
+        if (heatwave)
+        {
+            activations++;
+        }
+
+        if(heatwave && activations == 4)
+        {
+            self.enabled = true;
         }
     }
 

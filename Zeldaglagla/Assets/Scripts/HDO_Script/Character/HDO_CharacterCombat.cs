@@ -188,6 +188,10 @@ public class HDO_CharacterCombat : MonoBehaviour
             heatwaveElapsed = 0;
         }
 
+        if(respawnPoint == null)
+        {
+            respawnPoint = GameObject.Find("First");
+        }
         if (!canStrike)
         {
             elapsedTimeA -= Time.deltaTime;

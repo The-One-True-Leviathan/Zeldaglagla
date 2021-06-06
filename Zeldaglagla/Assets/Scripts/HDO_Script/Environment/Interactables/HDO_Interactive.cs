@@ -39,9 +39,23 @@ public class HDO_Interactive : MonoBehaviour
     [SerializeField]
     HDO_Tourelle turret;
 
+    [Header("Animation")]
+    [SerializeField]
+    bool animate;
+    [SerializeField]
+    Animator animator;
+
+    [Header("Nullify Interaction")]
+    [SerializeField]
+    bool nullify;
+    [SerializeField]
+    HDO_Interaction inter;
+    Collider2D self;
+
 
     private void Start()
     {
+        self = GetComponent<Collider2D>();
         if (shieldD1)
         {
             hint.transform.position = positionsForHint[0].transform.position;
@@ -145,6 +159,16 @@ public class HDO_Interactive : MonoBehaviour
         if (deactivateTurret)
         {
             turret.activated = false;
+        }
+        if (animate)
+        {
+            animator.enabled = true;
+            animator.SetTrigger("Animate");
+        }
+        if (nullify)
+        {
+            inter.enabled = false;
+            self.enabled = false;
         }
     }
 

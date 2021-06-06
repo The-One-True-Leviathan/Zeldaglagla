@@ -68,8 +68,8 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   text: {fileID: 0}
-  snowStormEffect: {fileID: 0}
-  comb: {fileID: 0}
+  snowStormEffect: {fileID: 6944293064429691396}
+  comb: {fileID: 5311234934450637277}
 --- !u!61 &348949935
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -749,7 +749,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5311234933867964703
 RectTransform:
   m_ObjectHideFlags: 0
@@ -805,6 +805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultText: 
   waitBetweenLetters: 0.02
+  portrait: {fileID: 0}
 --- !u!114 &5311234933867964702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,6 +1103,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   save: {fileID: 0}
   essentials: {fileID: 0}
+  portrait: {fileID: 0}
 --- !u!114 &5311234934450637274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1201,6 +1203,8 @@ MonoBehaviour:
   temperatureDecreaseRate: 0.05
   zoomIncreaseRate: 0.05
   zoomDecreaseRate: 0.02
+  crossedScenes: []
+  spawnPoints: []
 --- !u!61 &5311234934450637279
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1447,6 +1451,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d03ffc86f82a964f8bccfca785ecca4, type: 3}
+--- !u!1 &6944293064429691396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2326728586605780297, guid: 0d03ffc86f82a964f8bccfca785ecca4, type: 3}
+  m_PrefabInstance: {fileID: 4617639794517229389}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6944293064429691399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2326728586605780298, guid: 0d03ffc86f82a964f8bccfca785ecca4, type: 3}

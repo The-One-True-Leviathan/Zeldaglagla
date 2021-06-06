@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/NAC_Scene/LD1_Scene.unity
     guid: 25c9730fed2e38240aed84a092efab4d
+  - enabled: 1
+    path: Assets/_Scenes/HDO_Scenes/HDO_BossScene.unity
+    guid: 2da8e2064f82eca44a80560523d657e1
   m_configObjects: {}

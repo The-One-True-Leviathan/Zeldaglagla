@@ -35,6 +35,9 @@ public class HDO_CharacterCombat : MonoBehaviour
     GameObject healthBar;
     Image healthimage;
 
+    [SerializeField]
+    GameObject bossFogEffect;
+
     [Header("RespawnPoint")]
     public GameObject respawnPoint;
 
@@ -151,11 +154,16 @@ public class HDO_CharacterCombat : MonoBehaviour
 
         baseZoom = camZoom.m_MaxFOV;
 
-        Scene sc = SceneManager.GetActiveScene();
-        string nameSc = sc.name;
-        if (crossedScenes.Contains(nameSc))
+        
+
+        if(SceneManager.GetActiveScene().name == "HDO_BossScene")
         {
-            transform.position = spawnPoints[crossedScenes.IndexOf(nameSc)];
+            bossFogEffect.SetActive(true);
+        }
+        else
+        {
+            bossFogEffect.SetActive(false);
+
         }
     }
 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
   m_Name: Ajout_Map (Donjon1)
   m_EditorClassIdentifier: 
-  interactionType: 0
+  interactionType: 8
   interactionSound: {fileID: 0}
   isTrigger: 0
   isUnique: 0
@@ -26,12 +26,13 @@ MonoBehaviour:
   Environment: {fileID: 0}
   snowStorm: 0
   item: {fileID: 0}
+  cardType: 0
   neededItem: {fileID: 0}
   consumesItem: 0
+  neededItemType: 0
   bossDialog: 0
-  percentage: 0
-  damageModifier: 0
-  torchDamageModifier: 0
+  TorchV2: 0
+  HeatwaveV2: 0
   abilityUnlock: 0
   abilityUnlocked: 0
   heatSegmentUnlock: 0

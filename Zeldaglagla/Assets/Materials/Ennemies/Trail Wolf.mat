@@ -21,8 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Trail Wolf
-  m_Shader: {fileID: -6465566751694194690, guid: 74d7acac367c2de4ab82f6af0e4af9d9,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 74d7acac367c2de4ab82f6af0e4af9d9, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -129,8 +128,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_390911b821b341dcb6d58a47026fef12: {r: 10.176144, g: 1.1040158, b: 1.1040158,
-        a: 0}
+    - Color_390911b821b341dcb6d58a47026fef12: {r: 1.1188427, g: 10.176143, b: 9.909838, a: 0}
     - Vector2_2676a3f49e2d4aa48ec259dffae25cdd: {r: 1, g: 0, b: 0, a: 0}
     - Vector2_2b0a4a55b37f4eacb33973147ac17fc3: {r: 1, g: 1, b: 0, a: 0}
     - Vector2_a3f40c9a197641e8898502ec1c099aac: {r: -1, g: 0, b: 0, a: 0}

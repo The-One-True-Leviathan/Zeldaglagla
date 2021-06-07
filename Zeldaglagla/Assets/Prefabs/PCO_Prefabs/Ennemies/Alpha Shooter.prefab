@@ -83,7 +83,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   drops:
-  - {fileID: 1278343199313297225, guid: 90c5ed2f851fbe741b7b6e84d48182ad, type: 3}
+  - {fileID: 4185606389509068896, guid: e8319be0738a2594abe29e1eb421f9ea, type: 3}
   isPlayer:
     serializedVersion: 2
     m_Bits: 8
@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d927fa8e01f87e4786721a65ccb4f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deactivatorManager: {fileID: 0}
   activateRange: 400
 --- !u!1 &6112845142385947492
 GameObject:

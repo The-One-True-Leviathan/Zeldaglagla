@@ -146,6 +146,11 @@ namespace Monsters
             {
                 Instantiate(drops[rng], transform.position, Quaternion.identity);
             }
+            if (GetComponent<PCO_AIDeactivator>())
+            {
+                PCO_AIDeactivator deactivator = GetComponent<PCO_AIDeactivator>();
+                deactivator.deactivatorManager.monsters.Remove(deactivator);
+            }
             Destroy(gameObject);
         }
 

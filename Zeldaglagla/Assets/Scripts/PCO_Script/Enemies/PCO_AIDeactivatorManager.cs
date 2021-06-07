@@ -14,6 +14,11 @@ public class PCO_AIDeactivatorManager : MonoBehaviour
         {
             foreach (PCO_AIDeactivator monster in monsters)
             {
+                if (monster == null)
+                {
+                    monsters.Remove(monster);
+                    return;
+                }
                 if ((transform.position - monster.transform.position).sqrMagnitude < monster.activateRange * monster.activateRange)
                 {
                     monster.Set(true);

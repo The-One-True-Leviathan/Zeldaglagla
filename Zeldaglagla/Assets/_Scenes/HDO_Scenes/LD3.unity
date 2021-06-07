@@ -2154,6 +2154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d927fa8e01f87e4786721a65ccb4f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deactivatorManager: {fileID: 0}
   activateRange: 20
 --- !u!4 &1791735977938831328
 Transform:
@@ -36436,6 +36437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d927fa8e01f87e4786721a65ccb4f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deactivatorManager: {fileID: 0}
   activateRange: 20
 --- !u!114 &1791735978836148313
 MonoBehaviour:
@@ -48754,6 +48756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d927fa8e01f87e4786721a65ccb4f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deactivatorManager: {fileID: 0}
   activateRange: 20
 --- !u!60 &1791735979168836156
 PolygonCollider2D:
@@ -55386,6 +55389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d927fa8e01f87e4786721a65ccb4f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deactivatorManager: {fileID: 0}
   activateRange: 20
 --- !u!114 &1791735979522548206
 MonoBehaviour:
@@ -77707,6 +77711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d927fa8e01f87e4786721a65ccb4f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deactivatorManager: {fileID: 0}
   activateRange: 20
 --- !u!114 &1791735979977761329
 MonoBehaviour:
@@ -95680,6 +95685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d927fa8e01f87e4786721a65ccb4f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deactivatorManager: {fileID: 0}
   activateRange: 20
 --- !u!114 &4889524676998370034
 MonoBehaviour:
@@ -95693,6 +95699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d927fa8e01f87e4786721a65ccb4f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deactivatorManager: {fileID: 0}
   activateRange: 20
 --- !u!58 &5060776597592674667
 CircleCollider2D:
@@ -97815,6 +97822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d927fa8e01f87e4786721a65ccb4f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deactivatorManager: {fileID: 0}
   activateRange: 20
 --- !u!95 &8640937513474448854
 Animator:

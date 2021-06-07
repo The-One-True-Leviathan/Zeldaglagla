@@ -13,7 +13,7 @@ public class PCO_AIDeactivator : MonoBehaviour
     PackManager pack;
     bool isPack = false, isOrca = false;
 
-    PCO_AIDeactivatorManager deactivatorManager;
+    public PCO_AIDeactivatorManager deactivatorManager;
 
     public float activateRange;
     

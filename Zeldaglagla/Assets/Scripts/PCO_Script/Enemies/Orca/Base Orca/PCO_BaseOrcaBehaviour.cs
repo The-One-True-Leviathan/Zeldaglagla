@@ -69,7 +69,6 @@ public class PCO_BaseOrcaBehaviour : PCO_OrcaRoot
 
             if (damageTaken.stn.str > stunThreshold)
             {
-                CombatEvents.monsterWasHit.Invoke(CombatEvents.hitStunned);
                 accumulatedStun = 0;
                 Stun(damageTaken.stn);
             }
@@ -78,13 +77,11 @@ public class PCO_BaseOrcaBehaviour : PCO_OrcaRoot
                 accumulatedStun += damageTaken.stn.str;
                 if (accumulatedStun > stunThreshold)
                 {
-                    CombatEvents.monsterWasHit.Invoke(CombatEvents.hitStunned);
                     accumulatedStun = 0;
                     Stun(damageTaken.stn);
                 }
                 else
                 {
-                    CombatEvents.monsterWasHit.Invoke(CombatEvents.hitNotStunned);
                 }
             }
         }
@@ -106,17 +103,23 @@ public class PCO_BaseOrcaBehaviour : PCO_OrcaRoot
         }
     }
 
+    public override void Death()
+    {
+        Destroy(circleCenter);
+        base.Death();
+    }
+
 
 
     public void SetAnim(string anim, Vector3 direction)
     {
         if (direction.x > 0)
         {
-            animator.transform.localScale = new Vector3(-1, 1, 1);
+            animator.transform.localScale = new Vector3(1, 1, 1);
         }
         else if (direction.x < 0)
         {
-            animator.transform.localScale = new Vector3(1, 1, 1);
+            animator.transform.localScale = new Vector3(-1, 1, 1);
         }
 
         if (anim == "Swim")

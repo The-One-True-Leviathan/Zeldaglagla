@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 1859731}
   - component: {fileID: 1859730}
   - component: {fileID: 1859729}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 8280893}
   - component: {fileID: 8280892}
   - component: {fileID: 8280891}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 8433999}
   - component: {fileID: 8433998}
   - component: {fileID: 8433997}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 11433865}
   - component: {fileID: 11433864}
   - component: {fileID: 11433863}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 15903909}
   - component: {fileID: 15903911}
   - component: {fileID: 15903910}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "D\xE9bris_3"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 20555471}
   - component: {fileID: 20555470}
   - component: {fileID: 20555469}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_57
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1055,7 +1055,7 @@ GameObject:
   - component: {fileID: 39064181}
   - component: {fileID: 39064180}
   - component: {fileID: 39064179}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 41204818}
   - component: {fileID: 41204817}
   - component: {fileID: 41204816}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_79
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1247,7 +1247,7 @@ GameObject:
   - component: {fileID: 42098046}
   - component: {fileID: 42098045}
   - component: {fileID: 42098044}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1373,7 +1373,7 @@ GameObject:
   - component: {fileID: 67965588}
   - component: {fileID: 67965587}
   - component: {fileID: 67965586}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_80
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1469,7 +1469,7 @@ GameObject:
   - component: {fileID: 68938092}
   - component: {fileID: 68938091}
   - component: {fileID: 68938090}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2018,63 +2018,6 @@ Transform:
   m_Father: {fileID: 1890141717}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &91050543
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 91050544}
-  - component: {fileID: 91050545}
-  m_Layer: 0
-  m_Name: Box collider Haut
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &91050544
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91050543}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -290.48822, y: 52.363205, z: 0}
-  m_LocalScale: {x: 478.97433, y: 11.587028, z: 4.904562}
-  m_Children: []
-  m_Father: {fileID: 715189060}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &91050545
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91050543}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &91955803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,7 +2090,7 @@ GameObject:
   - component: {fileID: 95956889}
   - component: {fileID: 95956888}
   - component: {fileID: 95956887}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2824,7 +2767,7 @@ GameObject:
   - component: {fileID: 109517032}
   - component: {fileID: 109517031}
   - component: {fileID: 109517030}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2920,7 +2863,7 @@ GameObject:
   - component: {fileID: 110886539}
   - component: {fileID: 110886538}
   - component: {fileID: 110886537}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3016,7 +2959,7 @@ GameObject:
   - component: {fileID: 117624824}
   - component: {fileID: 117624823}
   - component: {fileID: 117624822}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3112,7 +3055,7 @@ GameObject:
   - component: {fileID: 124557347}
   - component: {fileID: 124557346}
   - component: {fileID: 124557345}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_78
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3208,7 +3151,7 @@ GameObject:
   - component: {fileID: 135334021}
   - component: {fileID: 135334020}
   - component: {fileID: 135334019}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_86
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3364,7 +3307,7 @@ GameObject:
   - component: {fileID: 143815341}
   - component: {fileID: 143815340}
   - component: {fileID: 143815339}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_74
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3460,7 +3403,7 @@ GameObject:
   - component: {fileID: 149956558}
   - component: {fileID: 149956557}
   - component: {fileID: 149956556}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3709,7 +3652,7 @@ GameObject:
   - component: {fileID: 163081299}
   - component: {fileID: 163081298}
   - component: {fileID: 163081297}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_79
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3805,7 +3748,7 @@ GameObject:
   - component: {fileID: 163591616}
   - component: {fileID: 163591615}
   - component: {fileID: 163591614}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_85
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3889,6 +3832,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163591612}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &167252136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 167252137}
+  - component: {fileID: 167252138}
+  m_Layer: 6
+  m_Name: Wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &167252137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167252136}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 318859746}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &167252138
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167252136}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.0031876564, y: 11.460702}
+      - {x: -5.7431192, y: 9.814711}
+      - {x: -11.9607525, y: 3.275136}
+      - {x: -16.682055, y: -8.921558}
+      - {x: -12.612066, y: -12.952367}
+      - {x: 2.968843, y: -8.606944}
+      - {x: 8.991936, y: -12.830449}
+      - {x: 10.354037, y: -10.906368}
+      - {x: 9.142717, y: -3.889741}
+      - {x: 12.02317, y: -2.7457895}
+      - {x: 14.328162, y: -1.5105398}
+      - {x: 14.743939, y: 1.9103787}
+      - {x: 11.351701, y: 10.319647}
 --- !u!1 &167615007
 GameObject:
   m_ObjectHideFlags: 0
@@ -3931,7 +3943,7 @@ GameObject:
   - component: {fileID: 169355817}
   - component: {fileID: 169355816}
   - component: {fileID: 169355815}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_67
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4027,7 +4039,7 @@ GameObject:
   - component: {fileID: 182754366}
   - component: {fileID: 182754365}
   - component: {fileID: 182754364}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4123,7 +4135,7 @@ GameObject:
   - component: {fileID: 191188785}
   - component: {fileID: 191188784}
   - component: {fileID: 191188783}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_67
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4219,7 +4231,7 @@ GameObject:
   - component: {fileID: 191604084}
   - component: {fileID: 191604083}
   - component: {fileID: 191604082}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4375,7 +4387,7 @@ GameObject:
   - component: {fileID: 197277888}
   - component: {fileID: 197277887}
   - component: {fileID: 197277886}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4501,7 +4513,7 @@ GameObject:
   - component: {fileID: 203145507}
   - component: {fileID: 203145506}
   - component: {fileID: 203145505}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4597,7 +4609,7 @@ GameObject:
   - component: {fileID: 209484852}
   - component: {fileID: 209484851}
   - component: {fileID: 209484850}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_72
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4693,7 +4705,7 @@ GameObject:
   - component: {fileID: 212732606}
   - component: {fileID: 212732605}
   - component: {fileID: 212732604}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4789,7 +4801,7 @@ GameObject:
   - component: {fileID: 217297142}
   - component: {fileID: 217297141}
   - component: {fileID: 217297140}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_82
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4915,7 +4927,7 @@ GameObject:
   - component: {fileID: 222767618}
   - component: {fileID: 222767617}
   - component: {fileID: 222767616}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5011,7 +5023,7 @@ GameObject:
   - component: {fileID: 225297535}
   - component: {fileID: 225297534}
   - component: {fileID: 225297533}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5110,7 +5122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &227482877
 Transform:
   m_ObjectHideFlags: 0
@@ -5312,7 +5324,7 @@ GameObject:
   - component: {fileID: 245404478}
   - component: {fileID: 245404477}
   - component: {fileID: 245404476}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_70
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5438,7 +5450,7 @@ GameObject:
   - component: {fileID: 253430153}
   - component: {fileID: 253430152}
   - component: {fileID: 253430151}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5706,7 +5718,7 @@ GameObject:
   - component: {fileID: 265416926}
   - component: {fileID: 265416925}
   - component: {fileID: 265416924}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_75
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5802,7 +5814,7 @@ GameObject:
   - component: {fileID: 266144582}
   - component: {fileID: 266144581}
   - component: {fileID: 266144580}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5898,7 +5910,7 @@ GameObject:
   - component: {fileID: 271041329}
   - component: {fileID: 271041328}
   - component: {fileID: 271041327}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6012,63 +6024,6 @@ Transform:
   m_Father: {fileID: 84637547}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &274677106
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 274677107}
-  - component: {fileID: 274677108}
-  m_Layer: 0
-  m_Name: Box collider Bas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &274677107
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274677106}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -290.48822, y: -184.6368, z: 0}
-  m_LocalScale: {x: 478.97433, y: 11.587028, z: 4.904562}
-  m_Children: []
-  m_Father: {fileID: 715189060}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &274677108
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274677106}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &276931260
 GameObject:
   m_ObjectHideFlags: 0
@@ -6081,7 +6036,7 @@ GameObject:
   - component: {fileID: 276931264}
   - component: {fileID: 276931263}
   - component: {fileID: 276931262}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6195,63 +6150,6 @@ Transform:
   m_Father: {fileID: 1244241419}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &277785558
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 277785559}
-  - component: {fileID: 277785560}
-  m_Layer: 0
-  m_Name: Box collider Gauche
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &277785559
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277785558}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -539.4882, y: -66.636795, z: 0}
-  m_LocalScale: {x: 40.547558, y: 238.72081, z: 0.6387722}
-  m_Children: []
-  m_Father: {fileID: 715189060}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &277785560
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277785558}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &278240350
 GameObject:
   m_ObjectHideFlags: 0
@@ -6354,7 +6252,7 @@ GameObject:
   - component: {fileID: 286112183}
   - component: {fileID: 286112182}
   - component: {fileID: 286112181}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6450,7 +6348,7 @@ GameObject:
   - component: {fileID: 286473203}
   - component: {fileID: 286473202}
   - component: {fileID: 286473201}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_88
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6582,7 +6480,7 @@ GameObject:
   - component: {fileID: 297752521}
   - component: {fileID: 297752520}
   - component: {fileID: 297752519}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6745,7 +6643,7 @@ GameObject:
   - component: {fileID: 302067291}
   - component: {fileID: 302067290}
   - component: {fileID: 302067289}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7052,7 +6950,7 @@ Transform:
   m_LocalPosition: {x: -91, y: -76, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.15960276}
   m_Children:
-  - {fileID: 1896589922}
+  - {fileID: 167252137}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7243,11 +7141,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1249216933405197084, guid: 32a50211eca35764ab55f1aa1879aca2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 173
+      value: 27.5
       objectReference: {fileID: 0}
     - target: {fileID: 1249216933405197084, guid: 32a50211eca35764ab55f1aa1879aca2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -174
+      value: -63.3
       objectReference: {fileID: 0}
     - target: {fileID: 1249216933405197084, guid: 32a50211eca35764ab55f1aa1879aca2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7480,7 +7378,7 @@ GameObject:
   - component: {fileID: 324277718}
   - component: {fileID: 324277717}
   - component: {fileID: 324277716}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7576,7 +7474,7 @@ GameObject:
   - component: {fileID: 330755712}
   - component: {fileID: 330755711}
   - component: {fileID: 330755710}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7672,7 +7570,7 @@ GameObject:
   - component: {fileID: 332596679}
   - component: {fileID: 332596678}
   - component: {fileID: 332596677}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_63
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7768,7 +7666,7 @@ GameObject:
   - component: {fileID: 345893626}
   - component: {fileID: 345893625}
   - component: {fileID: 345893624}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7864,7 +7762,7 @@ GameObject:
   - component: {fileID: 356242565}
   - component: {fileID: 356242564}
   - component: {fileID: 356242563}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7995,7 +7893,7 @@ GameObject:
   - component: {fileID: 361190705}
   - component: {fileID: 361190704}
   - component: {fileID: 361190703}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8121,7 +8019,7 @@ GameObject:
   - component: {fileID: 366509000}
   - component: {fileID: 366508999}
   - component: {fileID: 366508998}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_61
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8217,7 +8115,7 @@ GameObject:
   - component: {fileID: 367386847}
   - component: {fileID: 367386846}
   - component: {fileID: 367386845}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_55
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8343,7 +8241,7 @@ GameObject:
   - component: {fileID: 376359907}
   - component: {fileID: 376359906}
   - component: {fileID: 376359905}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8439,7 +8337,7 @@ GameObject:
   - component: {fileID: 381524326}
   - component: {fileID: 381524325}
   - component: {fileID: 381524324}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_63
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8565,7 +8463,7 @@ GameObject:
   - component: {fileID: 384794017}
   - component: {fileID: 384794016}
   - component: {fileID: 384794015}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8661,7 +8559,7 @@ GameObject:
   - component: {fileID: 387842211}
   - component: {fileID: 387842210}
   - component: {fileID: 387842209}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8933,7 +8831,7 @@ GameObject:
   - component: {fileID: 399520008}
   - component: {fileID: 399520007}
   - component: {fileID: 399520006}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_86
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9059,7 +8957,7 @@ GameObject:
   - component: {fileID: 402190426}
   - component: {fileID: 402190425}
   - component: {fileID: 402190424}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9155,7 +9053,7 @@ GameObject:
   - component: {fileID: 402606294}
   - component: {fileID: 402606293}
   - component: {fileID: 402606292}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_64
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9358,7 +9256,7 @@ GameObject:
   - component: {fileID: 411061925}
   - component: {fileID: 411061924}
   - component: {fileID: 411061923}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9454,7 +9352,7 @@ GameObject:
   - component: {fileID: 415081622}
   - component: {fileID: 415081621}
   - component: {fileID: 415081620}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9607,7 +9505,7 @@ GameObject:
   - component: {fileID: 417416715}
   - component: {fileID: 417416714}
   - component: {fileID: 417416713}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9849,7 +9747,7 @@ GameObject:
   - component: {fileID: 434824647}
   - component: {fileID: 434824646}
   - component: {fileID: 434824645}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_87
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10147,7 +10045,7 @@ GameObject:
   - component: {fileID: 454626000}
   - component: {fileID: 454625999}
   - component: {fileID: 454625998}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_66
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10303,7 +10201,7 @@ GameObject:
   - component: {fileID: 459132184}
   - component: {fileID: 459132183}
   - component: {fileID: 459132182}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10399,7 +10297,7 @@ GameObject:
   - component: {fileID: 461544925}
   - component: {fileID: 461544924}
   - component: {fileID: 461544923}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10494,7 +10392,7 @@ GameObject:
   - component: {fileID: 463360772}
   - component: {fileID: 463360774}
   - component: {fileID: 463360773}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "D\xE9bris"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10909,7 +10807,7 @@ GameObject:
   - component: {fileID: 484298374}
   - component: {fileID: 484298373}
   - component: {fileID: 484298372}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11095,7 +10993,7 @@ GameObject:
   - component: {fileID: 503019964}
   - component: {fileID: 503019963}
   - component: {fileID: 503019962}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11250,7 +11148,7 @@ GameObject:
   - component: {fileID: 515284576}
   - component: {fileID: 515284578}
   - component: {fileID: 515284577}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "D\xE9bris_8"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11360,7 +11258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 515358516}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ice_Ground_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11465,7 +11363,7 @@ GameObject:
   - component: {fileID: 518336085}
   - component: {fileID: 518336084}
   - component: {fileID: 518336083}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11558,7 +11456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 520656351}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ice_Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11657,7 +11555,7 @@ GameObject:
   - component: {fileID: 521100350}
   - component: {fileID: 521100349}
   - component: {fileID: 521100348}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11785,7 +11683,7 @@ GameObject:
   - component: {fileID: 523227830}
   - component: {fileID: 523227829}
   - component: {fileID: 523227828}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11911,7 +11809,7 @@ GameObject:
   - component: {fileID: 531553623}
   - component: {fileID: 531553622}
   - component: {fileID: 531553621}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12037,7 +11935,7 @@ GameObject:
   - component: {fileID: 546570485}
   - component: {fileID: 546570484}
   - component: {fileID: 546570483}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12133,7 +12031,7 @@ GameObject:
   - component: {fileID: 554035093}
   - component: {fileID: 554035092}
   - component: {fileID: 554035091}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12229,7 +12127,7 @@ GameObject:
   - component: {fileID: 554367913}
   - component: {fileID: 554367912}
   - component: {fileID: 554367911}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12355,7 +12253,7 @@ GameObject:
   - component: {fileID: 564582179}
   - component: {fileID: 564582178}
   - component: {fileID: 564582177}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12451,7 +12349,7 @@ GameObject:
   - component: {fileID: 569881849}
   - component: {fileID: 569881848}
   - component: {fileID: 569881847}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_73
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12547,7 +12445,7 @@ GameObject:
   - component: {fileID: 572215492}
   - component: {fileID: 572215491}
   - component: {fileID: 572215490}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_86
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13108,7 +13006,7 @@ GameObject:
   - component: {fileID: 612141327}
   - component: {fileID: 612141326}
   - component: {fileID: 612141325}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13294,7 +13192,7 @@ GameObject:
   - component: {fileID: 622157826}
   - component: {fileID: 622157825}
   - component: {fileID: 622157824}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13390,7 +13288,7 @@ GameObject:
   - component: {fileID: 623053381}
   - component: {fileID: 623053380}
   - component: {fileID: 623053379}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13486,7 +13384,7 @@ GameObject:
   - component: {fileID: 632972229}
   - component: {fileID: 632972228}
   - component: {fileID: 632972227}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13582,7 +13480,7 @@ GameObject:
   - component: {fileID: 641088377}
   - component: {fileID: 641088376}
   - component: {fileID: 641088375}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13678,7 +13576,7 @@ GameObject:
   - component: {fileID: 647591209}
   - component: {fileID: 647591208}
   - component: {fileID: 647591207}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13774,7 +13672,7 @@ GameObject:
   - component: {fileID: 648023917}
   - component: {fileID: 648023916}
   - component: {fileID: 648023915}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13870,7 +13768,7 @@ GameObject:
   - component: {fileID: 652982475}
   - component: {fileID: 652982474}
   - component: {fileID: 652982473}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14111,7 +14009,7 @@ GameObject:
   - component: {fileID: 660629304}
   - component: {fileID: 660629303}
   - component: {fileID: 660629302}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14270,7 +14168,7 @@ GameObject:
   - component: {fileID: 664748672}
   - component: {fileID: 664748671}
   - component: {fileID: 664748670}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14503,7 +14401,7 @@ GameObject:
   - component: {fileID: 683478405}
   - component: {fileID: 683478404}
   - component: {fileID: 683478403}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14599,7 +14497,7 @@ GameObject:
   - component: {fileID: 687280351}
   - component: {fileID: 687280350}
   - component: {fileID: 687280349}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14683,63 +14581,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687280347}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &687741359
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 687741360}
-  - component: {fileID: 687741361}
-  m_Layer: 0
-  m_Name: Box collider Gauche Droite
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &687741360
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 687741359}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -50.48822, y: -66.636795, z: 0}
-  m_LocalScale: {x: 40.547558, y: 238.72081, z: 0.6387722}
-  m_Children: []
-  m_Father: {fileID: 715189060}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &687741361
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 687741359}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &691332615
 GameObject:
   m_ObjectHideFlags: 0
@@ -14898,7 +14739,7 @@ GameObject:
   - component: {fileID: 695122043}
   - component: {fileID: 695122042}
   - component: {fileID: 695122041}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15024,7 +14865,7 @@ GameObject:
   - component: {fileID: 697294615}
   - component: {fileID: 697294614}
   - component: {fileID: 697294613}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15150,7 +14991,7 @@ GameObject:
   - component: {fileID: 698442646}
   - component: {fileID: 698442645}
   - component: {fileID: 698442644}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15246,7 +15087,7 @@ GameObject:
   - component: {fileID: 702846733}
   - component: {fileID: 702846732}
   - component: {fileID: 702846731}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_89
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15424,7 +15265,7 @@ GameObject:
   - component: {fileID: 705934729}
   - component: {fileID: 705934728}
   - component: {fileID: 705934727}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15520,7 +15361,7 @@ GameObject:
   - component: {fileID: 706262446}
   - component: {fileID: 706262445}
   - component: {fileID: 706262444}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15690,13 +15531,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715189059}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 384.48822, y: 118.636795, z: 0}
+  m_LocalPosition: {x: -127, y: -114, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 274677107}
-  - {fileID: 91050544}
-  - {fileID: 277785559}
-  - {fileID: 687741360}
+  - {fileID: 1965136475}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15712,7 +15550,7 @@ GameObject:
   - component: {fileID: 715442959}
   - component: {fileID: 715442958}
   - component: {fileID: 715442957}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15838,7 +15676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 724812732}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ice_Ground_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16051,7 +15889,7 @@ GameObject:
   - component: {fileID: 733541023}
   - component: {fileID: 733541022}
   - component: {fileID: 733541021}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_73
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16207,7 +16045,7 @@ GameObject:
   - component: {fileID: 749673756}
   - component: {fileID: 749673755}
   - component: {fileID: 749673754}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_58
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16303,7 +16141,7 @@ GameObject:
   - component: {fileID: 752762637}
   - component: {fileID: 752762636}
   - component: {fileID: 752762635}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_77
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16399,7 +16237,7 @@ GameObject:
   - component: {fileID: 754566011}
   - component: {fileID: 754566010}
   - component: {fileID: 754566009}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_61
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16495,7 +16333,7 @@ GameObject:
   - component: {fileID: 755998122}
   - component: {fileID: 755998121}
   - component: {fileID: 755998120}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16591,7 +16429,7 @@ GameObject:
   - component: {fileID: 757780687}
   - component: {fileID: 757780686}
   - component: {fileID: 757780685}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_72
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16687,7 +16525,7 @@ GameObject:
   - component: {fileID: 758734824}
   - component: {fileID: 758734823}
   - component: {fileID: 758734822}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_80
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16783,7 +16621,7 @@ GameObject:
   - component: {fileID: 763039616}
   - component: {fileID: 763039615}
   - component: {fileID: 763039614}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_66
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16909,7 +16747,7 @@ GameObject:
   - component: {fileID: 773998335}
   - component: {fileID: 773998334}
   - component: {fileID: 773998333}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17209,7 +17047,7 @@ GameObject:
   - component: {fileID: 792099857}
   - component: {fileID: 792099856}
   - component: {fileID: 792099855}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17335,7 +17173,7 @@ GameObject:
   - component: {fileID: 799618481}
   - component: {fileID: 799618480}
   - component: {fileID: 799618479}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17543,7 +17381,7 @@ GameObject:
   - component: {fileID: 807885576}
   - component: {fileID: 807885575}
   - component: {fileID: 807885574}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_70
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17964,7 +17802,7 @@ GameObject:
   - component: {fileID: 837481720}
   - component: {fileID: 837481719}
   - component: {fileID: 837481718}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_87
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18450,7 +18288,7 @@ GameObject:
   - component: {fileID: 849291774}
   - component: {fileID: 849291773}
   - component: {fileID: 849291772}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18660,7 +18498,7 @@ GameObject:
   - component: {fileID: 850973636}
   - component: {fileID: 850973635}
   - component: {fileID: 850973634}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19066,7 +18904,7 @@ GameObject:
   - component: {fileID: 876076575}
   - component: {fileID: 876076574}
   - component: {fileID: 876076573}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19342,7 +19180,7 @@ GameObject:
   - component: {fileID: 905537123}
   - component: {fileID: 905537122}
   - component: {fileID: 905537121}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19895,7 +19733,7 @@ GameObject:
   - component: {fileID: 923663601}
   - component: {fileID: 923663600}
   - component: {fileID: 923663599}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20187,7 +20025,7 @@ GameObject:
   - component: {fileID: 932324660}
   - component: {fileID: 932324659}
   - component: {fileID: 932324658}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20313,7 +20151,7 @@ GameObject:
   - component: {fileID: 940168038}
   - component: {fileID: 940168037}
   - component: {fileID: 940168036}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20499,7 +20337,7 @@ GameObject:
   - component: {fileID: 952669312}
   - component: {fileID: 952669311}
   - component: {fileID: 952669310}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20595,7 +20433,7 @@ GameObject:
   - component: {fileID: 956193176}
   - component: {fileID: 956193175}
   - component: {fileID: 956193174}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_64
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20768,7 +20606,7 @@ GameObject:
   - component: {fileID: 959752949}
   - component: {fileID: 959752948}
   - component: {fileID: 959752947}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21088,7 +20926,7 @@ GameObject:
   - component: {fileID: 975250908}
   - component: {fileID: 975250907}
   - component: {fileID: 975250906}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21430,7 +21268,7 @@ GameObject:
   - component: {fileID: 993614806}
   - component: {fileID: 993614805}
   - component: {fileID: 993614804}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21556,7 +21394,7 @@ GameObject:
   - component: {fileID: 996737343}
   - component: {fileID: 996737342}
   - component: {fileID: 996737341}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21712,7 +21550,7 @@ GameObject:
   - component: {fileID: 1007110685}
   - component: {fileID: 1007110684}
   - component: {fileID: 1007110683}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21808,7 +21646,7 @@ GameObject:
   - component: {fileID: 1009552162}
   - component: {fileID: 1009552161}
   - component: {fileID: 1009552160}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22051,7 +21889,7 @@ GameObject:
   - component: {fileID: 1015126004}
   - component: {fileID: 1015126003}
   - component: {fileID: 1015126002}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22177,7 +22015,7 @@ GameObject:
   - component: {fileID: 1021667389}
   - component: {fileID: 1021667388}
   - component: {fileID: 1021667387}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22303,7 +22141,7 @@ GameObject:
   - component: {fileID: 1030046918}
   - component: {fileID: 1030046917}
   - component: {fileID: 1030046916}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22429,7 +22267,7 @@ GameObject:
   - component: {fileID: 1034113534}
   - component: {fileID: 1034113533}
   - component: {fileID: 1034113532}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22525,7 +22363,7 @@ GameObject:
   - component: {fileID: 1035062916}
   - component: {fileID: 1035062915}
   - component: {fileID: 1035062914}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22728,7 +22566,7 @@ GameObject:
   - component: {fileID: 1061626167}
   - component: {fileID: 1061626166}
   - component: {fileID: 1061626165}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22909,7 +22747,7 @@ GameObject:
   - component: {fileID: 1066978545}
   - component: {fileID: 1066978544}
   - component: {fileID: 1066978543}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23265,7 +23103,7 @@ GameObject:
   - component: {fileID: 1083430996}
   - component: {fileID: 1083430995}
   - component: {fileID: 1083430994}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23361,7 +23199,7 @@ GameObject:
   - component: {fileID: 1087214979}
   - component: {fileID: 1087214978}
   - component: {fileID: 1087214977}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23456,7 +23294,7 @@ GameObject:
   - component: {fileID: 1087511257}
   - component: {fileID: 1087511259}
   - component: {fileID: 1087511258}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "D\xE9bris_10"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23572,7 +23410,7 @@ GameObject:
   - component: {fileID: 1087665544}
   - component: {fileID: 1087665543}
   - component: {fileID: 1087665542}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23750,7 +23588,7 @@ GameObject:
   - component: {fileID: 1091221937}
   - component: {fileID: 1091221936}
   - component: {fileID: 1091221935}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23846,7 +23684,7 @@ GameObject:
   - component: {fileID: 1092208654}
   - component: {fileID: 1092208653}
   - component: {fileID: 1092208652}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_82
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24183,7 +24021,7 @@ GameObject:
   - component: {fileID: 1107690824}
   - component: {fileID: 1107690823}
   - component: {fileID: 1107690822}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24459,7 +24297,7 @@ GameObject:
   - component: {fileID: 1134622889}
   - component: {fileID: 1134622888}
   - component: {fileID: 1134622887}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_74
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24555,7 +24393,7 @@ GameObject:
   - component: {fileID: 1140221057}
   - component: {fileID: 1140221056}
   - component: {fileID: 1140221055}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24773,7 +24611,7 @@ GameObject:
   - component: {fileID: 1148273119}
   - component: {fileID: 1148273118}
   - component: {fileID: 1148273117}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24869,7 +24707,7 @@ GameObject:
   - component: {fileID: 1149590007}
   - component: {fileID: 1149590006}
   - component: {fileID: 1149590005}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_73
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25025,7 +24863,7 @@ GameObject:
   - component: {fileID: 1160755146}
   - component: {fileID: 1160755145}
   - component: {fileID: 1160755144}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_71
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25181,7 +25019,7 @@ GameObject:
   - component: {fileID: 1167856696}
   - component: {fileID: 1167856695}
   - component: {fileID: 1167856694}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25324,7 +25162,7 @@ GameObject:
   - component: {fileID: 1174303257}
   - component: {fileID: 1174303256}
   - component: {fileID: 1174303255}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_84
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25420,7 +25258,7 @@ GameObject:
   - component: {fileID: 1178609907}
   - component: {fileID: 1178609906}
   - component: {fileID: 1178609905}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_77
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25550,7 +25388,7 @@ GameObject:
   - component: {fileID: 1180759841}
   - component: {fileID: 1180759840}
   - component: {fileID: 1180759839}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25881,7 +25719,7 @@ GameObject:
   - component: {fileID: 1207141195}
   - component: {fileID: 1207141194}
   - component: {fileID: 1207141193}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25977,7 +25815,7 @@ GameObject:
   - component: {fileID: 1211238771}
   - component: {fileID: 1211238770}
   - component: {fileID: 1211238769}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26073,7 +25911,7 @@ GameObject:
   - component: {fileID: 1215317488}
   - component: {fileID: 1215317487}
   - component: {fileID: 1215317486}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_65
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26259,7 +26097,7 @@ GameObject:
   - component: {fileID: 1227701931}
   - component: {fileID: 1227701930}
   - component: {fileID: 1227701929}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26385,7 +26223,7 @@ GameObject:
   - component: {fileID: 1231360015}
   - component: {fileID: 1231360014}
   - component: {fileID: 1231360013}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26511,7 +26349,7 @@ GameObject:
   - component: {fileID: 1234307425}
   - component: {fileID: 1234307424}
   - component: {fileID: 1234307423}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26637,7 +26475,7 @@ GameObject:
   - component: {fileID: 1238232056}
   - component: {fileID: 1238232055}
   - component: {fileID: 1238232054}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26807,7 +26645,7 @@ GameObject:
   - component: {fileID: 1246366720}
   - component: {fileID: 1246366719}
   - component: {fileID: 1246366718}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_69
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27040,7 +26878,7 @@ GameObject:
   - component: {fileID: 1254795570}
   - component: {fileID: 1254795569}
   - component: {fileID: 1254795568}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_59
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27136,7 +26974,7 @@ GameObject:
   - component: {fileID: 1264711768}
   - component: {fileID: 1264711767}
   - component: {fileID: 1264711766}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27232,7 +27070,7 @@ GameObject:
   - component: {fileID: 1266051751}
   - component: {fileID: 1266051750}
   - component: {fileID: 1266051749}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27328,7 +27166,7 @@ GameObject:
   - component: {fileID: 1270622037}
   - component: {fileID: 1270622036}
   - component: {fileID: 1270622035}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27514,7 +27352,7 @@ GameObject:
   - component: {fileID: 1280416491}
   - component: {fileID: 1280416490}
   - component: {fileID: 1280416489}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_82
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27850,7 +27688,7 @@ GameObject:
   - component: {fileID: 1299759968}
   - component: {fileID: 1299759967}
   - component: {fileID: 1299759966}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_83
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27946,7 +27784,7 @@ GameObject:
   - component: {fileID: 1304737350}
   - component: {fileID: 1304737349}
   - component: {fileID: 1304737348}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_78
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28042,7 +27880,7 @@ GameObject:
   - component: {fileID: 1305754151}
   - component: {fileID: 1305754150}
   - component: {fileID: 1305754149}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28168,7 +28006,7 @@ GameObject:
   - component: {fileID: 1310071369}
   - component: {fileID: 1310071368}
   - component: {fileID: 1310071367}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28264,7 +28102,7 @@ GameObject:
   - component: {fileID: 1311219665}
   - component: {fileID: 1311219664}
   - component: {fileID: 1311219663}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28360,7 +28198,7 @@ GameObject:
   - component: {fileID: 1313283404}
   - component: {fileID: 1313283403}
   - component: {fileID: 1313283402}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_55
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28456,7 +28294,7 @@ GameObject:
   - component: {fileID: 1314500025}
   - component: {fileID: 1314500024}
   - component: {fileID: 1314500023}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28808,7 +28646,7 @@ GameObject:
   - component: {fileID: 1328542365}
   - component: {fileID: 1328542367}
   - component: {fileID: 1328542366}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "D\xE9bris_5"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29000,7 +28838,7 @@ GameObject:
   - component: {fileID: 1335883487}
   - component: {fileID: 1335883486}
   - component: {fileID: 1335883485}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29126,7 +28964,7 @@ GameObject:
   - component: {fileID: 1339609551}
   - component: {fileID: 1339609550}
   - component: {fileID: 1339609549}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29304,7 +29142,7 @@ GameObject:
   - component: {fileID: 1355039485}
   - component: {fileID: 1355039484}
   - component: {fileID: 1355039483}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29570,7 +29408,7 @@ GameObject:
   - component: {fileID: 1377086986}
   - component: {fileID: 1377086985}
   - component: {fileID: 1377086984}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29666,7 +29504,7 @@ GameObject:
   - component: {fileID: 1380141688}
   - component: {fileID: 1380141687}
   - component: {fileID: 1380141686}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29789,13 +29627,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1385539105}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ice_Ground_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1385539105
 Transform:
   m_ObjectHideFlags: 0
@@ -29900,7 +29738,7 @@ GameObject:
   - component: {fileID: 1386439769}
   - component: {fileID: 1386439768}
   - component: {fileID: 1386439767}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_62
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30063,7 +29901,7 @@ GameObject:
   - component: {fileID: 1401952149}
   - component: {fileID: 1401952148}
   - component: {fileID: 1401952147}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30159,7 +29997,7 @@ GameObject:
   - component: {fileID: 1406149274}
   - component: {fileID: 1406149273}
   - component: {fileID: 1406149272}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_83
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30526,7 +30364,7 @@ GameObject:
   - component: {fileID: 1434661190}
   - component: {fileID: 1434661192}
   - component: {fileID: 1434661191}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "D\xE9bris_6"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30644,7 +30482,7 @@ GameObject:
   - component: {fileID: 1435957475}
   - component: {fileID: 1435957474}
   - component: {fileID: 1435957473}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30947,7 +30785,7 @@ GameObject:
   - component: {fileID: 1439377072}
   - component: {fileID: 1439377071}
   - component: {fileID: 1439377070}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31043,7 +30881,7 @@ GameObject:
   - component: {fileID: 1445639371}
   - component: {fileID: 1445639370}
   - component: {fileID: 1445639369}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31139,7 +30977,7 @@ GameObject:
   - component: {fileID: 1446309268}
   - component: {fileID: 1446309267}
   - component: {fileID: 1446309266}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_88
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31235,7 +31073,7 @@ GameObject:
   - component: {fileID: 1449473184}
   - component: {fileID: 1449473183}
   - component: {fileID: 1449473182}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31366,7 +31204,7 @@ GameObject:
   - component: {fileID: 1459143641}
   - component: {fileID: 1459143640}
   - component: {fileID: 1459143639}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31462,7 +31300,7 @@ GameObject:
   - component: {fileID: 1460502177}
   - component: {fileID: 1460502176}
   - component: {fileID: 1460502175}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31558,7 +31396,7 @@ GameObject:
   - component: {fileID: 1472976451}
   - component: {fileID: 1472976450}
   - component: {fileID: 1472976449}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31684,7 +31522,7 @@ GameObject:
   - component: {fileID: 1476106162}
   - component: {fileID: 1476106161}
   - component: {fileID: 1476106160}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32018,7 +31856,7 @@ GameObject:
   - component: {fileID: 1497711133}
   - component: {fileID: 1497711132}
   - component: {fileID: 1497711131}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32144,7 +31982,7 @@ GameObject:
   - component: {fileID: 1499398809}
   - component: {fileID: 1499398808}
   - component: {fileID: 1499398807}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32408,7 +32246,7 @@ GameObject:
   - component: {fileID: 1516672888}
   - component: {fileID: 1516672887}
   - component: {fileID: 1516672886}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32504,7 +32342,7 @@ GameObject:
   - component: {fileID: 1519504008}
   - component: {fileID: 1519504007}
   - component: {fileID: 1519504006}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_83
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32682,7 +32520,7 @@ GameObject:
   - component: {fileID: 1521747968}
   - component: {fileID: 1521747967}
   - component: {fileID: 1521747966}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33027,7 +32865,7 @@ GameObject:
   - component: {fileID: 1574491646}
   - component: {fileID: 1574491645}
   - component: {fileID: 1574491644}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33122,7 +32960,7 @@ GameObject:
   - component: {fileID: 1576563664}
   - component: {fileID: 1576563666}
   - component: {fileID: 1576563665}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "D\xE9bris_7"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33434,7 +33272,7 @@ GameObject:
   - component: {fileID: 1580549450}
   - component: {fileID: 1580549449}
   - component: {fileID: 1580549448}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33697,7 +33535,7 @@ GameObject:
   - component: {fileID: 1591511881}
   - component: {fileID: 1591511880}
   - component: {fileID: 1591511879}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33793,7 +33631,7 @@ GameObject:
   - component: {fileID: 1591578794}
   - component: {fileID: 1591578793}
   - component: {fileID: 1591578792}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33919,7 +33757,7 @@ GameObject:
   - component: {fileID: 1600581125}
   - component: {fileID: 1600581124}
   - component: {fileID: 1600581123}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_77
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34015,7 +33853,7 @@ GameObject:
   - component: {fileID: 1603790069}
   - component: {fileID: 1603790068}
   - component: {fileID: 1603790067}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_62
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34141,7 +33979,7 @@ GameObject:
   - component: {fileID: 1607469668}
   - component: {fileID: 1607469667}
   - component: {fileID: 1607469666}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34237,7 +34075,7 @@ GameObject:
   - component: {fileID: 1608176912}
   - component: {fileID: 1608176911}
   - component: {fileID: 1608176910}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34532,7 +34370,7 @@ GameObject:
   - component: {fileID: 1640677321}
   - component: {fileID: 1640677320}
   - component: {fileID: 1640677319}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34627,7 +34465,7 @@ GameObject:
   - component: {fileID: 1641287182}
   - component: {fileID: 1641287184}
   - component: {fileID: 1641287183}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "D\xE9bris_2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34779,7 +34617,7 @@ GameObject:
   - component: {fileID: 1645258442}
   - component: {fileID: 1645258441}
   - component: {fileID: 1645258440}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_69
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34875,7 +34713,7 @@ GameObject:
   - component: {fileID: 1645781891}
   - component: {fileID: 1645781890}
   - component: {fileID: 1645781889}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34971,7 +34809,7 @@ GameObject:
   - component: {fileID: 1645842663}
   - component: {fileID: 1645842662}
   - component: {fileID: 1645842661}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_73
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35134,7 +34972,7 @@ GameObject:
   - component: {fileID: 1657282756}
   - component: {fileID: 1657282755}
   - component: {fileID: 1657282754}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35583,7 +35421,7 @@ GameObject:
   - component: {fileID: 1678605168}
   - component: {fileID: 1678605167}
   - component: {fileID: 1678605166}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35709,7 +35547,7 @@ GameObject:
   - component: {fileID: 1680726942}
   - component: {fileID: 1680726941}
   - component: {fileID: 1680726940}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35917,7 +35755,7 @@ GameObject:
   - component: {fileID: 1682927160}
   - component: {fileID: 1682927159}
   - component: {fileID: 1682927158}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_85
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36013,7 +35851,7 @@ GameObject:
   - component: {fileID: 1685399833}
   - component: {fileID: 1685399832}
   - component: {fileID: 1685399831}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_87
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36109,7 +35947,7 @@ GameObject:
   - component: {fileID: 1685675908}
   - component: {fileID: 1685675907}
   - component: {fileID: 1685675906}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_68
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36205,7 +36043,7 @@ GameObject:
   - component: {fileID: 1688877138}
   - component: {fileID: 1688877137}
   - component: {fileID: 1688877136}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36413,7 +36251,7 @@ GameObject:
   - component: {fileID: 1694605417}
   - component: {fileID: 1694605416}
   - component: {fileID: 1694605415}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36669,7 +36507,7 @@ GameObject:
   - component: {fileID: 1700359391}
   - component: {fileID: 1700359390}
   - component: {fileID: 1700359389}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36825,7 +36663,7 @@ GameObject:
   - component: {fileID: 1708606479}
   - component: {fileID: 1708606478}
   - component: {fileID: 1708606477}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_72
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36921,7 +36759,7 @@ GameObject:
   - component: {fileID: 1714150413}
   - component: {fileID: 1714150412}
   - component: {fileID: 1714150411}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37017,7 +36855,7 @@ GameObject:
   - component: {fileID: 1717121361}
   - component: {fileID: 1717121360}
   - component: {fileID: 1717121359}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37113,7 +36951,7 @@ GameObject:
   - component: {fileID: 1719238498}
   - component: {fileID: 1719238497}
   - component: {fileID: 1719238496}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37209,7 +37047,7 @@ GameObject:
   - component: {fileID: 1723055505}
   - component: {fileID: 1723055504}
   - component: {fileID: 1723055503}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37305,7 +37143,7 @@ GameObject:
   - component: {fileID: 1727277277}
   - component: {fileID: 1727277276}
   - component: {fileID: 1727277275}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37437,7 +37275,7 @@ GameObject:
   - component: {fileID: 1729740423}
   - component: {fileID: 1729740422}
   - component: {fileID: 1729740421}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_58
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37563,7 +37401,7 @@ GameObject:
   - component: {fileID: 1733948289}
   - component: {fileID: 1733948288}
   - component: {fileID: 1733948287}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37741,7 +37579,7 @@ GameObject:
   - component: {fileID: 1738661519}
   - component: {fileID: 1738661518}
   - component: {fileID: 1738661517}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37867,7 +37705,7 @@ GameObject:
   - component: {fileID: 1739122300}
   - component: {fileID: 1739122299}
   - component: {fileID: 1739122298}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37963,7 +37801,7 @@ GameObject:
   - component: {fileID: 1739986671}
   - component: {fileID: 1739986670}
   - component: {fileID: 1739986669}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38089,7 +37927,7 @@ GameObject:
   - component: {fileID: 1741670723}
   - component: {fileID: 1741670722}
   - component: {fileID: 1741670721}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38185,7 +38023,7 @@ GameObject:
   - component: {fileID: 1753645758}
   - component: {fileID: 1753645757}
   - component: {fileID: 1753645756}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38281,7 +38119,7 @@ GameObject:
   - component: {fileID: 1762920210}
   - component: {fileID: 1762920209}
   - component: {fileID: 1762920208}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_81
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38582,7 +38420,7 @@ GameObject:
   - component: {fileID: 1775984417}
   - component: {fileID: 1775984416}
   - component: {fileID: 1775984415}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38678,7 +38516,7 @@ GameObject:
   - component: {fileID: 1779068178}
   - component: {fileID: 1779068177}
   - component: {fileID: 1779068176}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38774,7 +38612,7 @@ GameObject:
   - component: {fileID: 1782685256}
   - component: {fileID: 1782685255}
   - component: {fileID: 1782685254}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38870,7 +38708,7 @@ GameObject:
   - component: {fileID: 1787495418}
   - component: {fileID: 1787495417}
   - component: {fileID: 1787495416}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_84
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39228,7 +39066,7 @@ GameObject:
   - component: {fileID: 1792482775}
   - component: {fileID: 1792482774}
   - component: {fileID: 1792482773}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39324,7 +39162,7 @@ GameObject:
   - component: {fileID: 1792869998}
   - component: {fileID: 1792869997}
   - component: {fileID: 1792869996}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39450,7 +39288,7 @@ GameObject:
   - component: {fileID: 1807643671}
   - component: {fileID: 1807643670}
   - component: {fileID: 1807643669}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_56
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39546,7 +39384,7 @@ GameObject:
   - component: {fileID: 1808497315}
   - component: {fileID: 1808497314}
   - component: {fileID: 1808497313}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_75
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39642,7 +39480,7 @@ GameObject:
   - component: {fileID: 1813017354}
   - component: {fileID: 1813017353}
   - component: {fileID: 1813017352}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39809,7 +39647,7 @@ GameObject:
   - component: {fileID: 1815020171}
   - component: {fileID: 1815020170}
   - component: {fileID: 1815020169}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_59
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39905,7 +39743,7 @@ GameObject:
   - component: {fileID: 1826207384}
   - component: {fileID: 1826207383}
   - component: {fileID: 1826207382}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40001,7 +39839,7 @@ GameObject:
   - component: {fileID: 1837775664}
   - component: {fileID: 1837775663}
   - component: {fileID: 1837775662}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_84
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40097,7 +39935,7 @@ GameObject:
   - component: {fileID: 1837997051}
   - component: {fileID: 1837997050}
   - component: {fileID: 1837997049}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_81
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40420,7 +40258,7 @@ GameObject:
   - component: {fileID: 1848939979}
   - component: {fileID: 1848939978}
   - component: {fileID: 1848939977}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_74
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40632,7 +40470,7 @@ GameObject:
   - component: {fileID: 1851419105}
   - component: {fileID: 1851419104}
   - component: {fileID: 1851419103}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40728,7 +40566,7 @@ GameObject:
   - component: {fileID: 1851631455}
   - component: {fileID: 1851631454}
   - component: {fileID: 1851631453}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41137,7 +40975,7 @@ GameObject:
   - component: {fileID: 1861016240}
   - component: {fileID: 1861016239}
   - component: {fileID: 1861016238}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41420,7 +41258,7 @@ GameObject:
   - component: {fileID: 1871017885}
   - component: {fileID: 1871017884}
   - component: {fileID: 1871017883}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41724,7 +41562,7 @@ GameObject:
   - component: {fileID: 1877340760}
   - component: {fileID: 1877340759}
   - component: {fileID: 1877340758}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_48
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41820,7 +41658,7 @@ GameObject:
   - component: {fileID: 1879879758}
   - component: {fileID: 1879879757}
   - component: {fileID: 1879879756}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41916,7 +41754,7 @@ GameObject:
   - component: {fileID: 1882880855}
   - component: {fileID: 1882880854}
   - component: {fileID: 1882880853}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_55
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42012,7 +41850,7 @@ GameObject:
   - component: {fileID: 1884331312}
   - component: {fileID: 1884331311}
   - component: {fileID: 1884331310}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42108,7 +41946,7 @@ GameObject:
   - component: {fileID: 1885238255}
   - component: {fileID: 1885238254}
   - component: {fileID: 1885238253}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42242,7 +42080,7 @@ GameObject:
   - component: {fileID: 1893782370}
   - component: {fileID: 1893782369}
   - component: {fileID: 1893782368}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42356,50 +42194,6 @@ Transform:
   m_Father: {fileID: 791553868}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1896589921
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1896589922}
-  - component: {fileID: 1896589923}
-  m_Layer: 6
-  m_Name: collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1896589922
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896589921}
-  m_LocalRotation: {x: -0, y: -0, z: 0.3263653, w: 0.9452437}
-  m_LocalPosition: {x: -1.6, y: 0.7, z: 0}
-  m_LocalScale: {x: 30.72005, y: 7.5981526, z: 22.43946}
-  m_Children: []
-  m_Father: {fileID: 318859746}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 38.097}
---- !u!65 &1896589923
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1896589921}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1899977139
 GameObject:
   m_ObjectHideFlags: 0
@@ -42452,7 +42246,7 @@ GameObject:
   - component: {fileID: 1900222449}
   - component: {fileID: 1900222448}
   - component: {fileID: 1900222447}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_81
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42548,7 +42342,7 @@ GameObject:
   - component: {fileID: 1903625056}
   - component: {fileID: 1903625055}
   - component: {fileID: 1903625054}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42644,7 +42438,7 @@ GameObject:
   - component: {fileID: 1904613836}
   - component: {fileID: 1904613835}
   - component: {fileID: 1904613834}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_89
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42740,7 +42534,7 @@ GameObject:
   - component: {fileID: 1905012687}
   - component: {fileID: 1905012686}
   - component: {fileID: 1905012685}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_48
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42836,7 +42630,7 @@ GameObject:
   - component: {fileID: 1906863508}
   - component: {fileID: 1906863507}
   - component: {fileID: 1906863506}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42932,7 +42726,7 @@ GameObject:
   - component: {fileID: 1910363518}
   - component: {fileID: 1910363517}
   - component: {fileID: 1910363516}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_65
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43090,7 +42884,7 @@ GameObject:
   - component: {fileID: 1921909816}
   - component: {fileID: 1921909815}
   - component: {fileID: 1921909814}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43263,7 +43057,7 @@ GameObject:
   - component: {fileID: 1932966511}
   - component: {fileID: 1932966510}
   - component: {fileID: 1932966509}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43419,7 +43213,7 @@ GameObject:
   - component: {fileID: 1934728382}
   - component: {fileID: 1934728381}
   - component: {fileID: 1934728380}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_75
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43575,7 +43369,7 @@ GameObject:
   - component: {fileID: 1946388131}
   - component: {fileID: 1946388130}
   - component: {fileID: 1946388129}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43701,7 +43495,7 @@ GameObject:
   - component: {fileID: 1961476298}
   - component: {fileID: 1961476297}
   - component: {fileID: 1961476296}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43815,6 +43609,93 @@ Transform:
   m_Father: {fileID: 822174443}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1965136474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1965136475}
+  - component: {fileID: 1965136476}
+  m_Layer: 6
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1965136475
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965136474}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 715189060}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1965136476
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965136474}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -50.393417, y: -42.537186}
+      - {x: -89.05384, y: -45.627842}
+      - {x: -53.380898, y: -68.685875}
+      - {x: 98.61818, y: -78.63339}
+      - {x: 284.60352, y: -52.125076}
+      - {x: 426.06345, y: 71.16745}
+      - {x: 464.68484, y: 227.64754}
+      - {x: 386.48383, y: 317.97556}
+      - {x: 141.04198, y: 356.2613}
+      - {x: -175.69662, y: 240.08418}
+      - {x: -109.839554, y: -79.34195}
+      - {x: -88.39838, y: -42.485657}
+      - {x: -50.449005, y: -42.495667}
+      - {x: -46.381165, y: 51.2285}
+      - {x: -76.90254, y: 114.11569}
+      - {x: -50.175064, y: 239.60233}
+      - {x: 11.683395, y: 253.35617}
+      - {x: 55.961975, y: 287.28104}
+      - {x: 129.0862, y: 289.2175}
+      - {x: 227.4195, y: 293.74527}
+      - {x: 289.3791, y: 254.01007}
+      - {x: 344.20746, y: 207.45949}
+      - {x: 341.9767, y: 120.89629}
+      - {x: 333.25095, y: 72.69379}
+      - {x: 299.02548, y: 51.87731}
+      - {x: 299.1482, y: 18.706337}
+      - {x: 273.55533, y: -7.1697845}
+      - {x: 226.3606, y: -5.694336}
+      - {x: 149.63649, y: 18.314507}
+      - {x: 102.711685, y: 1.134079}
+      - {x: 35.575104, y: -50.770023}
 --- !u!1 &1967226597
 GameObject:
   m_ObjectHideFlags: 0
@@ -43827,7 +43708,7 @@ GameObject:
   - component: {fileID: 1967226601}
   - component: {fileID: 1967226600}
   - component: {fileID: 1967226599}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44030,7 +43911,7 @@ GameObject:
   - component: {fileID: 1973615454}
   - component: {fileID: 1973615453}
   - component: {fileID: 1973615452}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44267,7 +44148,7 @@ GameObject:
   - component: {fileID: 1986243478}
   - component: {fileID: 1986243480}
   - component: {fileID: 1986243479}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "D\xE9bris_9"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44378,7 +44259,7 @@ GameObject:
   - component: {fileID: 1998554712}
   - component: {fileID: 1998554711}
   - component: {fileID: 1998554710}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44679,6 +44560,10 @@ PrefabInstance:
       value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 1828931769, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_Depth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828931769, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: orthographic
       value: 0
       objectReference: {fileID: 0}
@@ -44689,6 +44574,10 @@ PrefabInstance:
     - target: {fileID: 1828931769, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_FocalLength
       value: 17.137775
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828931769, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1828931769, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_projectionMatrixMode
@@ -44708,7 +44597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 181414383100762994, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 423837126230441944, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -44728,11 +44617,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1689508592071100073, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1872778913607445073, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2510408592406536643, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
@@ -44740,39 +44629,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3064781109258401684, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3132965059875717857, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3382579313936291554, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3654659850149695008, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4081983356805067559, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4152086081619967717, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4419278433237124558, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4579836189826003230, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6118158422037243328, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6488109896675098630, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Name
@@ -44782,9 +44671,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6858434194436779293, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7063429578152265225, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8036298405979945407, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_RootOrder
@@ -44832,23 +44725,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8471239125806878747, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8471239125910897573, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8471239126147623205, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8471239126873502089, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8471239126900140932, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8948522715792398728, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_IsActive
@@ -45217,7 +45110,7 @@ GameObject:
   - component: {fileID: 2008713361}
   - component: {fileID: 2008713360}
   - component: {fileID: 2008713359}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45753,7 +45646,7 @@ GameObject:
   - component: {fileID: 2027657819}
   - component: {fileID: 2027657818}
   - component: {fileID: 2027657817}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_57
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45849,7 +45742,7 @@ GameObject:
   - component: {fileID: 2029591776}
   - component: {fileID: 2029591775}
   - component: {fileID: 2029591774}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46060,7 +45953,7 @@ GameObject:
   - component: {fileID: 2034153664}
   - component: {fileID: 2034153663}
   - component: {fileID: 2034153662}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_56
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46161,7 +46054,7 @@ GameObject:
   - component: {fileID: 2037564379}
   - component: {fileID: 2037564378}
   - component: {fileID: 2037564377}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46372,7 +46265,7 @@ GameObject:
   - component: {fileID: 2045652082}
   - component: {fileID: 2045652081}
   - component: {fileID: 2045652080}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_82
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46541,7 +46434,7 @@ GameObject:
   - component: {fileID: 2049561828}
   - component: {fileID: 2049561827}
   - component: {fileID: 2049561826}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_68
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46667,7 +46560,7 @@ GameObject:
   - component: {fileID: 2054784455}
   - component: {fileID: 2054784454}
   - component: {fileID: 2054784453}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46941,7 +46834,7 @@ GameObject:
   - component: {fileID: 2067325999}
   - component: {fileID: 2067326001}
   - component: {fileID: 2067326000}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "D\xE9bris_4"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47058,7 +46951,7 @@ GameObject:
   - component: {fileID: 2068735101}
   - component: {fileID: 2068735100}
   - component: {fileID: 2068735099}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47154,7 +47047,7 @@ GameObject:
   - component: {fileID: 2070330628}
   - component: {fileID: 2070330627}
   - component: {fileID: 2070330626}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47380,7 +47273,7 @@ GameObject:
   - component: {fileID: 2080382705}
   - component: {fileID: 2080382704}
   - component: {fileID: 2080382703}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47476,7 +47369,7 @@ GameObject:
   - component: {fileID: 2088639969}
   - component: {fileID: 2088639968}
   - component: {fileID: 2088639967}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_71
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47602,7 +47495,7 @@ GameObject:
   - component: {fileID: 2097041710}
   - component: {fileID: 2097041709}
   - component: {fileID: 2097041708}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47788,7 +47681,7 @@ GameObject:
   - component: {fileID: 2100179875}
   - component: {fileID: 2100179874}
   - component: {fileID: 2100179873}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47884,7 +47777,7 @@ GameObject:
   - component: {fileID: 2106841196}
   - component: {fileID: 2106841195}
   - component: {fileID: 2106841194}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_85
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47979,7 +47872,7 @@ GameObject:
   - component: {fileID: 2111830792}
   - component: {fileID: 2111830794}
   - component: {fileID: 2111830793}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "D\xE9bris_1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48125,7 +48018,7 @@ GameObject:
   - component: {fileID: 2117715301}
   - component: {fileID: 2117715300}
   - component: {fileID: 2117715299}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48345,7 +48238,7 @@ GameObject:
   - component: {fileID: 2125984668}
   - component: {fileID: 2125984667}
   - component: {fileID: 2125984666}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48471,7 +48364,7 @@ GameObject:
   - component: {fileID: 2140134994}
   - component: {fileID: 2140134993}
   - component: {fileID: 2140134992}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48644,7 +48537,7 @@ GameObject:
   - component: {fileID: 2144842076}
   - component: {fileID: 2144842075}
   - component: {fileID: 2144842074}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Ground_Glace_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}

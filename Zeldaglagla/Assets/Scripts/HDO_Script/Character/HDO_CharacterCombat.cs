@@ -115,6 +115,8 @@ public class HDO_CharacterCombat : MonoBehaviour
     public List<string> crossedScenes = null;
     public List<Vector3> spawnPoints = null;
 
+    bool effectActive;
+
     private void Awake()
     {
         if (deflectImmunityFactor == 0)
@@ -156,15 +158,7 @@ public class HDO_CharacterCombat : MonoBehaviour
 
         
 
-        if(SceneManager.GetActiveScene().name == "HDO_BossScene")
-        {
-            bossFogEffect.SetActive(true);
-        }
-        else
-        {
-            bossFogEffect.SetActive(false);
-
-        }
+       
     }
 
     // Update is called once per frame
@@ -213,6 +207,25 @@ public class HDO_CharacterCombat : MonoBehaviour
         }
 
         healthimage.fillAmount = currentHealth / maxHealth;
+
+        if (!effectActive)
+        {
+            if (SceneManager.GetActiveScene().name == "HDO_BossScene")
+            {
+                bossFogEffect.SetActive(true);
+                effectActive = true;
+            }
+            else
+            {
+                bossFogEffect.SetActive(false);
+
+            }
+        }
+
+        if (!bossFogEffect.activeSelf)
+        {
+            effectActive = false;
+        }
     }
 
 

@@ -21,7 +21,7 @@ public class CoolTextScript : MonoBehaviour
     Text text;
 
     [SerializeField]
-    Image portrait;
+    public Image portrait;
 
     // Start is called before the first frame update
     void Start()

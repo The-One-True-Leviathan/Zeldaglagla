@@ -71,5 +71,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Etherean Orca Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7758891862477452585, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 263397f516f9d714eb187e9baa5a465d, type: 2}
+    - target: {fileID: 8797139775906983162, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 263397f516f9d714eb187e9baa5a465d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}

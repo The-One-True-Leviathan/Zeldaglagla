@@ -18,16 +18,6 @@ public class BaseWolf : WolfRoot
         SMB = GetComponent<Animator>();
         pather = GetComponent<AIPath>();
         destinationSetter = GetComponent<AIDestinationSetter>();
-        //For some reason AIDeactivator breaks the baseWolf attribution ???
-        /*
-        SMB.GetBehaviour<BaseWolfSMBWander>().baseWolf = this;
-        SMB.GetBehaviour<BaseWolfSMBApproach>().baseWolf = this;
-        SMB.GetBehaviour<BaseWolfSMBObserve>().baseWolf = this;
-        SMB.GetBehaviour<BaseWolfSMBRush>().baseWolf = this;
-        SMB.GetBehaviour<BaseWolfSMBHarass>().baseWolf = this;
-        SMB.GetBehaviour<BaseWolfSMBAttack>().baseWolf = this;
-        SMB.GetBehaviour<BaseWolfSMBFlee>().baseWolf = this;
-        */
     }
 
     override public void GoBackToState()

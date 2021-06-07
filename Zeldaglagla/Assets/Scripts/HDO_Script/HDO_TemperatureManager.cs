@@ -80,8 +80,8 @@ public class HDO_TemperatureManager : MonoBehaviour
 
             if (tm.snowStorm && !comb.heatwaving)
             {
-                //effectActivated = true;
-                //snowStormEffect.SetActive(true);
+                effectActivated = true;
+                snowStormEffect.SetActive(true);
             }
             else
             {
@@ -90,7 +90,7 @@ public class HDO_TemperatureManager : MonoBehaviour
                     effectActivated = false;
                 }
 
-                //snowStormEffect.SetActive(false);           
+                snowStormEffect.SetActive(false);           
             }
         }
         else

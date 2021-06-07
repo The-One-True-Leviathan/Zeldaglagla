@@ -10,20 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
-  m_Name: EVVA_Ennemis_Cible
+  m_Name: Ajout_Map (Donjon2)
   m_EditorClassIdentifier: 
-  interactionType: 0
+  interactionType: 8
   interactionSound: {fileID: 0}
   isTrigger: 0
   isUnique: 0
   needSpawnPoint: 0
-  dialogSuite: 1
-  number: 1
-  type: 1
-  portrait: {fileID: 21300000, guid: 0a6f19b05f8849543af8484a60687297, type: 3}
-  dialogs:
-  - "Il semblerait nous soyons traqu\xE9s par un pr\xE9dateur local. Avancez avec
-    prudence."
+  dialogSuite: 0
+  number: 0
+  type: 0
+  portrait: {fileID: 0}
+  dialogs: []
   enemiesToSpawn: []
   Environment: {fileID: 0}
   snowStorm: 0
@@ -43,11 +41,11 @@ MonoBehaviour:
   healthToAdd: 0
   unlockMapPart: 0
   mapPartName: 
-  redirectToLocation: 0
-  region: 0
+  redirectToLocation: 1
+  region: 2
   specificLocation: 0
   specificLocationName: 
-  locationType: 0
+  locationType: 1
   toDeactivate: {fileID: 0}
   scene: 
   reloadHealth: 0

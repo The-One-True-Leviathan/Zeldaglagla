@@ -28,7 +28,7 @@ MonoBehaviour:
   item: {fileID: 0}
   cardType: 0
   neededItem: {fileID: 11400000, guid: a4288ce70096b004e91ffe99b82b7e2c, type: 2}
-  consumesItem: 1
+  consumesItem: 0
   neededItemType: 0
   bossDialog: 0
   TorchV2: 0

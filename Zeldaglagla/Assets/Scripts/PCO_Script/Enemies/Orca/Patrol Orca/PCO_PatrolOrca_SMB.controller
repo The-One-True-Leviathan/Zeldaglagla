@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseOrca: {fileID: 0}
+  reactionTime: 1
 --- !u!1107 &-2139069707026518725
 AnimatorStateMachine:
   serializedVersion: 6
@@ -168,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseOrca: {fileID: 0}
+  maxFlee: 0.8
 --- !u!114 &-1130984336522207108
 MonoBehaviour:
   m_ObjectHideFlags: 1

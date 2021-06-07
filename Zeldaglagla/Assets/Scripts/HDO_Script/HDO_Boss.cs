@@ -15,7 +15,9 @@ public class HDO_Boss : MonsterRoot
 
     public bool shieldOn;
 
+    [SerializeField]
     GameObject currentAlly;
+    [SerializeField]
     MonsterRoot allyRoot;
 
     GameObject player;
@@ -33,6 +35,7 @@ public class HDO_Boss : MonsterRoot
     // Update is called once per frame
     void Update()
     {
+        /*
         if (fightStarted)
         {
             if (allyRoot.dead)
@@ -40,7 +43,7 @@ public class HDO_Boss : MonsterRoot
                 currentAlly = null;
                 shieldOn = false;
             }
-        }
+        }*/
         
         if(currentHP <= callSecAlly && counter == 0)
         {
@@ -54,6 +57,15 @@ public class HDO_Boss : MonsterRoot
         }
 
         Shielding();
+    }
+
+    void AllyDead()
+    {
+        if (fightStarted)
+        {
+            currentAlly = null;
+            shieldOn = false;
+        }
     }
 
     public override void Death()
@@ -74,9 +86,14 @@ public class HDO_Boss : MonsterRoot
     void CallBackUp()
     {
         shieldOn = true;
-        currentAlly = GameObject.Instantiate(Allies[counter], SpawnAlly.transform.position, Quaternion.identity);
+        currentAlly = Instantiate(Allies[counter], SpawnAlly.transform.position, Quaternion.identity);
 
+        if (currentAlly.GetComponent<PackManager>())
+        {
+            currentAlly = currentAlly.transform.GetChild(0).gameObject;
+        }
         allyRoot = currentAlly.GetComponent<MonsterRoot>();
         player.transform.position = Vector3.MoveTowards(player.transform.position, new Vector3(player.transform.position.x, player.transform.position.y - 10, 0), 3);
+        allyRoot.diedEvent.AddListener(AllyDead);
     }
 }

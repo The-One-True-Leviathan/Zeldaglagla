@@ -37,6 +37,10 @@ public class BaseWolfSMBHarass : StateMachineBehaviour
         {
             baseWolf.SetAnim("Idle", Vector3.down);
         }
+        if (baseWolf.pack.wolves.Count == 1)
+        {
+            animator.Play("Attack");
+        }
 
     }
 

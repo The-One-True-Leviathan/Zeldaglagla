@@ -85,6 +85,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6099926524500680521}
     m_Modifications:
+    - target: {fileID: 1098222070731432357, guid: 62115a715e1827048a15acec0f4bae23, type: 3}
+      propertyPath: wanderAreaCenter
+      value: 
+      objectReference: {fileID: 7860858022583602117}
     - target: {fileID: 3095635793450687920, guid: 62115a715e1827048a15acec0f4bae23, type: 3}
       propertyPath: m_Name
       value: Etherean Wolf Variant
@@ -95,11 +99,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3095635793450687927, guid: 62115a715e1827048a15acec0f4bae23, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.85
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3095635793450687927, guid: 62115a715e1827048a15acec0f4bae23, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.96
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3095635793450687927, guid: 62115a715e1827048a15acec0f4bae23, type: 3}
       propertyPath: m_LocalPosition.z
@@ -131,6 +135,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3095635793450687927, guid: 62115a715e1827048a15acec0f4bae23, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435973005038499890, guid: 62115a715e1827048a15acec0f4bae23, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

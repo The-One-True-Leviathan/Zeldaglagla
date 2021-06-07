@@ -159,7 +159,7 @@ TrailRenderer:
     shadowBias: 0.5
     generateLightingData: 0
   m_MinVertexDistance: 0.1
-  m_Autodestruct: 1
+  m_Autodestruct: 0
   m_Emitting: 1
 --- !u!1 &6865612731511593393
 GameObject:
@@ -342,6 +342,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   stunRecoveredEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  diedEvent:
     m_PersistentCalls:
       m_Calls: []
   drops:

@@ -222,9 +222,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.3
       objectReference: {fileID: 0}
+    - target: {fileID: 693671876588548346, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: dodgeCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 693671876588548349, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: attackCooldown
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6488109896675098630, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_Name
       value: Essentials
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325206290360597881, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8036298405979945407, guid: daf20059518b88d499a9c292b256d3ce, type: 3}
       propertyPath: m_RootOrder
@@ -279,6 +291,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4290076886878712642, guid: 43163035b5b7d0047928fe03c9937e95, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290076886878712642, guid: 43163035b5b7d0047928fe03c9937e95, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290076886878712642, guid: 43163035b5b7d0047928fe03c9937e95, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290076886878712642, guid: 43163035b5b7d0047928fe03c9937e95, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 0.0005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290076886878712645, guid: 43163035b5b7d0047928fe03c9937e95, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8089825074615513400, guid: 43163035b5b7d0047928fe03c9937e95, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.24
@@ -294,6 +326,18 @@ PrefabInstance:
     - target: {fileID: 8089825075330930013, guid: 43163035b5b7d0047928fe03c9937e95, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8089825075330930013, guid: 43163035b5b7d0047928fe03c9937e95, type: 3}
+      propertyPath: blocksLOS.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8089825075330930013, guid: 43163035b5b7d0047928fe03c9937e95, type: 3}
+      propertyPath: Allies.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8089825075330930013, guid: 43163035b5b7d0047928fe03c9937e95, type: 3}
+      propertyPath: Allies.Array.data[3]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8089825075330930015, guid: 43163035b5b7d0047928fe03c9937e95, type: 3}
       propertyPath: m_RootOrder
@@ -507,36 +551,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1149369349
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1149369350}
-  m_Layer: 0
-  m_Name: Alpha Wolf Territory Center
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1149369350
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149369349}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.61, y: -0.39, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2038293131
 PrefabInstance:

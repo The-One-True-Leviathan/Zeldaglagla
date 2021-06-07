@@ -20,6 +20,7 @@ public class PCO_BaseOrca_SMB_Attack : StateMachineBehaviour
         maxRecover = baseOrca.atkRecover;
         baseOrca.destinationSetter.enabled = false;
         baseOrca.pather.enabled = false;
+        baseOrca.pather.maxSpeed = 0;
         state = State.BUILDUP;
         baseOrca.baseOrcaSMBState = PCO_BaseOrcaBehaviour.BaseOrcaSMBState.ATTACK;
         baseOrca.pather.maxSpeed = baseOrca.runSpeed;
@@ -79,5 +80,6 @@ public class PCO_BaseOrca_SMB_Attack : StateMachineBehaviour
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         baseOrca.isInAttack = false;
+        baseOrca.pather.maxSpeed = baseOrca.runSpeed;
     }
 }

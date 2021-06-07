@@ -82,6 +82,7 @@ public class PackManager : MonoBehaviour
             if (wolves.Count == 1)
             {
                 wolfInAttack = wolves[0];
+                wolfInAttack.SMB.Play("Harass");
                 wolfInAttack.SMB.Play("Attack");
                 return;
             }

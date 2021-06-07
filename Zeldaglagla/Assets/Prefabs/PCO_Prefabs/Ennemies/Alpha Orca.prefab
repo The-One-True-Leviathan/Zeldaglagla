@@ -255,7 +255,7 @@ MonoBehaviour:
   boundBox: {fileID: 787137821527448826}
   attackZone: {fileID: 787137821527448826}
   SMB: {fileID: 787137821527448830}
-  animator: {fileID: 0}
+  animator: {fileID: 787137821236517645}
   blocksLOS:
     serializedVersion: 2
     m_Bits: 64
@@ -263,6 +263,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   stunRecoveredEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  diedEvent:
     m_PersistentCalls:
       m_Calls: []
   drops:
@@ -275,7 +278,7 @@ MonoBehaviour:
     m_Bits: 2048
   atkDmg: 5
   atkBuildup: 0.4
-  atkHitspan: 0.1
+  atkHitspan: 0.2
   atkRecover: 1
   atkKBStrength: 2
   atkKBSpeed: 4

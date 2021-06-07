@@ -56,6 +56,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 787137821527448827, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
+      propertyPath: maxHP
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 787137821527448827, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
+      propertyPath: currentHP
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 787137821527448827, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
+      propertyPath: atkHitspan
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 787137821527448827, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
       propertyPath: drops.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -67,6 +79,14 @@ PrefabInstance:
       propertyPath: drops.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 787137821527448827, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
+      propertyPath: patrolPoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 787137821527448827, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
+      propertyPath: patrolPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1171229679670999200}
     - target: {fileID: 787137821527448828, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
       propertyPath: m_Name
       value: Etherean Orca Variant
@@ -93,3 +113,8 @@ PrefabInstance:
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
+--- !u!4 &1171229679670999200 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 787137821527448820, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
+  m_PrefabInstance: {fileID: 1922318636979332180}
+  m_PrefabAsset: {fileID: 0}

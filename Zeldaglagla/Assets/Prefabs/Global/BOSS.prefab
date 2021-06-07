@@ -4932,7 +4932,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 60
+      scalar: 100000
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -9908,7 +9908,11 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
-  drops: []
+  diedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  drops:
+  - {fileID: 3238155590587372768, guid: 194545368c1e16a42b0e663196424fb8, type: 3}
   Shield: {fileID: 8089825074647358870}
   Allies:
   - {fileID: 2431900954614466579, guid: 120cf38dc8ebfc14a8ace77f358bc4e9, type: 3}
@@ -9918,6 +9922,8 @@ MonoBehaviour:
   callThirdAlly: 20
   SpawnAlly: {fileID: 8089825074615513401}
   shieldOn: 0
+  currentAlly: {fileID: 0}
+  allyRoot: {fileID: 0}
 --- !u!58 &8089825075330930010
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -63,6 +63,7 @@ namespace Monsters
 
         public UnityEvent stunnedEvent;
         public UnityEvent stunRecoveredEvent;
+        public UnityEvent diedEvent;
 
         public List<GameObject> drops = new List<GameObject>();
 
@@ -75,6 +76,8 @@ namespace Monsters
                 stunnedEvent = new UnityEvent();
             if (stunRecoveredEvent == null)
                 stunRecoveredEvent = new UnityEvent();
+            if (diedEvent == null)
+                diedEvent = new UnityEvent();
 
             player = GameObject.FindGameObjectWithTag("Player");
             playerCollider = player.GetComponent<Collider2D>();
@@ -133,10 +136,11 @@ namespace Monsters
 
         virtual public void Death()
         {
-            CombatEvents.monsterWasKilled.Invoke();
+            diedEvent.Invoke();
             dead = true;
             GameObject deathAnim = Instantiate(transform.GetChild(0).gameObject, transform.GetChild(0).position, Quaternion.identity);
             deathAnim.transform.localScale = new Vector3(transform.GetChild(0).localScale.x * transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            deathAnim.transform.position = new Vector3(deathAnim.transform.position.x, deathAnim.transform.position.y, 0);
             if (deathAnim.GetComponent<Animator>())
             {
                 deathAnim.GetComponent<Animator>().Play("Die");

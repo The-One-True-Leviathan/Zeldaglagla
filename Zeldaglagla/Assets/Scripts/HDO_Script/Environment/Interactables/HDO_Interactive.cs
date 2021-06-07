@@ -153,7 +153,11 @@ public class HDO_Interactive : MonoBehaviour
 
     public void Action()
     {
-        Debug.Log("called action on " + gameObject.name + " object");
+        if (gameObject == null)
+        {
+            return;
+        }
+        //Debug.Log("called action on " + gameObject.name + " object");
         if (movement)
         {
             Movement();

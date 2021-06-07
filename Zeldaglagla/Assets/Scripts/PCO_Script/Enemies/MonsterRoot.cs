@@ -141,7 +141,7 @@ namespace Monsters
             {
                 deathAnim.GetComponent<Animator>().Play("Die");
             }
-            int rng = UnityEngine.Random.Range(0, drops.Count + 1);
+            int rng = UnityEngine.Random.Range(0, drops.Count);
             if(drops[rng].name == "Empty")
             {
                 Instantiate(drops[rng], transform.position, Quaternion.identity);

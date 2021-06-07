@@ -93,7 +93,7 @@ public class HDO_Boss : MonsterRoot
             currentAlly = currentAlly.transform.GetChild(0).gameObject;
         }
         allyRoot = currentAlly.GetComponent<MonsterRoot>();
-        player.transform.position = Vector3.MoveTowards(player.transform.position, new Vector3(player.transform.position.x, player.transform.position.y - 10, 0), 3);
+        player.transform.position = new Vector3(player.transform.position.x, transform.position.y - 10, 0);
         allyRoot.diedEvent.AddListener(AllyDead);
     }
 }

@@ -31,6 +31,11 @@ public class WolfRoot : MonsterRoot
         AwakeDuPauvre();
     }
 
+    private void Update()
+    {
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+    }
+
     public void GoToApproach()
     {
         Debug.LogWarning("Moving to Approach"); 

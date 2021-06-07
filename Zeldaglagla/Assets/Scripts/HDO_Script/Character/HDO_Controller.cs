@@ -14,6 +14,7 @@ public class HDO_Controller : MonoBehaviour
     HDO_CharacterInteraction interact;
     [SerializeField]
     GameObject gunPoint, map;
+    HDO_CharacterCombat combat;
 
     Animator animator;
     [SerializeField]
@@ -64,6 +65,7 @@ public class HDO_Controller : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        combat = GetComponent<HDO_CharacterCombat>();
     }
 
     // Update is called once per frame
@@ -95,6 +97,8 @@ public class HDO_Controller : MonoBehaviour
             return;
         }
 
+
+        combat.Immunity(dodgeTime);
         dodgeElapse = dodgeTime;
         dodgeDivider = 0;
         freeMovement = false;

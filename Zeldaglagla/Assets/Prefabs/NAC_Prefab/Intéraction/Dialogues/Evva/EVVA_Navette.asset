@@ -20,7 +20,7 @@ MonoBehaviour:
   dialogSuite: 1
   number: 1
   type: 1
-  portrait: {fileID: 21300000, guid: 62553065a5f175b45b62dd888e76f40b, type: 3}
+  portrait: {fileID: 21300000, guid: 0a6f19b05f8849543af8484a60687297, type: 3}
   dialogs:
   - "Il semblerait que cette technologie me soit inconnue, ce vaisseau a d\xFB appartenir
     \xE0 une civilisation ant\xE9rieure qui vivait sur cette plan\xE8te."

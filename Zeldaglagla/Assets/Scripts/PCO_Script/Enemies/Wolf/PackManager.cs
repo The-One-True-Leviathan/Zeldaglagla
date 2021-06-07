@@ -50,6 +50,10 @@ public class PackManager : MonoBehaviour
 
     private void Update()
     {
+        if (currentWolves <= 0)
+        {
+            Destroy(gameObject);
+        }
         if (isObserving)
         {
 

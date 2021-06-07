@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2bb040bfbe1f21047bbc0ff00999b9f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -172,6 +172,11 @@ MonoBehaviour:
   selfDestroy: 0
   deactivateTurret: 0
   turret: {fileID: 0}
+  animate: 0
+  animator: {fileID: 0}
+  nullify: 0
+  inter: {fileID: 0}
+  heatwave: 0
 --- !u!114 &3152325373964140027
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -131,6 +131,10 @@ public class PackManager : MonoBehaviour
         {
             wolves.Add(wolf);
         }
+        if (wolves.Count == 0)
+        {
+            Destroy(gameObject);
+        }
         if (resetStartingNumber)
         {
             startingWolves = wolves.Count;

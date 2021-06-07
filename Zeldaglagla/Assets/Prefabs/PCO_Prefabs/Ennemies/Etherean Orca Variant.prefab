@@ -72,12 +72,24 @@ PrefabInstance:
       value: Etherean Orca Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7758891862477452585, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 7758891862477452585, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8521295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7758891862477452585, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
+      propertyPath: m_Color.r
+      value: 0.11764705
+      objectReference: {fileID: 0}
+    - target: {fileID: 7758891862477452585, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 2100000, guid: 263397f516f9d714eb187e9baa5a465d, type: 2}
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 8797139775906983162, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 2100000, guid: 263397f516f9d714eb187e9baa5a465d, type: 2}
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d62edebd11c93f439e70c26befc7ca4, type: 3}

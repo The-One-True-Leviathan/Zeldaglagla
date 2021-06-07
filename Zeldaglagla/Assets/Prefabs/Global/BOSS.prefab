@@ -9911,7 +9911,7 @@ MonoBehaviour:
   drops: []
   Shield: {fileID: 8089825074647358870}
   Allies:
-  - {fileID: 3095635793450687920, guid: 62115a715e1827048a15acec0f4bae23, type: 3}
+  - {fileID: 2431900954614466579, guid: 120cf38dc8ebfc14a8ace77f358bc4e9, type: 3}
   - {fileID: 6458403830928126326, guid: 1c191de9c269d0e4dbd4e221b0eb7cd4, type: 3}
   - {fileID: 1171229679670999208, guid: 0459bacd407210a4c892e59654207923, type: 3}
   callSecAlly: 40

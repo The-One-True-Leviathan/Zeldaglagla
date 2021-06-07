@@ -13,7 +13,8 @@ public class PCO_HealthBarScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        monster = transform.parent.GetComponent<MonsterRoot>();
+        bar = GetComponent<Image>();
+        monster = transform.parent.parent.parent.GetComponent<MonsterRoot>();
     }
 
     // Update is called once per frame

@@ -208,23 +208,13 @@ public class HDO_CharacterCombat : MonoBehaviour
 
         healthimage.fillAmount = currentHealth / maxHealth;
 
-        if (!effectActive)
+        if (GameObject.Find("BOSS"))
         {
-            if (SceneManager.GetActiveScene().name == "HDO_BossScene")
-            {
-                bossFogEffect.SetActive(true);
-                effectActive = true;
-            }
-            else
-            {
-                bossFogEffect.SetActive(false);
-
-            }
+            bossFogEffect.SetActive(true);
         }
-
-        if (!bossFogEffect.activeSelf)
+        else
         {
-            effectActive = false;
+            bossFogEffect.SetActive(false);
         }
     }
 

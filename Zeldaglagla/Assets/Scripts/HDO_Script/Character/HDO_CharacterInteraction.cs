@@ -312,6 +312,8 @@ public class HDO_CharacterInteraction : MonoBehaviour
             doneUniqueInteraction.Add(inter);
         }
         failed = false;
+
+        
     }
 
     void Save()

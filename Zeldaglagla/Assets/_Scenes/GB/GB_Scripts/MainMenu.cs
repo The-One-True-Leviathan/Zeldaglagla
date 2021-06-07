@@ -29,8 +29,9 @@ public class MainMenu : MonoBehaviour
         optionsMenu.SetActive(false);
         creditsMenu.SetActive(false);
         mainMenu.SetActive(true);
-        FindObjectOfType<AudioManager>().StopPlaying("PlayMusic");
-        FindObjectOfType<AudioManager>().StopPlaying("OptionsMusic");
+        FindObjectOfType<AudioManager>().StopPlaying("OutsideMusic");
+        FindObjectOfType<AudioManager>().StopPlaying("DungeonMusic");
+        FindObjectOfType<AudioManager>().StopPlaying("BossMusic");
         FindObjectOfType<AudioManager>().Play("MenuMusic");
     }
 
@@ -39,8 +40,7 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(playGame);
         FindObjectOfType<AudioManager>().StopPlaying("MenuMusic");
-        FindObjectOfType<AudioManager>().StopPlaying("OptionsMusic");
-        FindObjectOfType<AudioManager>().Play("PlayMusic");
+        FindObjectOfType<AudioManager>().Play("OutsideMusic");
     }
 
     public void OptionsMenu()
@@ -48,10 +48,6 @@ public class MainMenu : MonoBehaviour
         optionsMenu.SetActive(true);
         creditsMenu.SetActive(false);
         mainMenu.SetActive(false);
-        FindObjectOfType<AudioManager>().StopPlaying("MenuMusic");
-        FindObjectOfType<AudioManager>().StopPlaying("PlayMusic");
-        FindObjectOfType<AudioManager>().Play("OptionsMusic");
-
     }
 
     public void CreditsMenu()
@@ -92,5 +88,21 @@ public class MainMenu : MonoBehaviour
     public void SetFullScreen(bool _fullscreen)
     {
         Screen.fullScreen = _fullscreen;
+    }
+    public void Scroll()
+    {
+        FindObjectOfType<AudioManager>().Play("Scroll");
+    }
+    public void Pause()
+    {
+        FindObjectOfType<AudioManager>().Play("Pause");
+    }
+    public void Ok()
+    {
+        FindObjectOfType<AudioManager>().Play("Ok");
+    }
+    public void Play()
+    {
+        FindObjectOfType<AudioManager>().Play("Play");
     }
 }

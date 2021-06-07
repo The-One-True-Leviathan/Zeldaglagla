@@ -44,45 +44,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
+  - name: Scroll
+    clip: {fileID: 8300000, guid: 4a558dc8248286a459c128ed10406998, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pause
+    clip: {fileID: 8300000, guid: 4b22a2ad6c4fa2746911777d5f349377, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ok
+    clip: {fileID: 8300000, guid: 389f6597ab191a74d8eeb63f74f67fb5, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Back
+    clip: {fileID: 8300000, guid: 3013c54fb76da1a4ea3fb6ca40eebf83, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Play
+    clip: {fileID: 8300000, guid: 3f59a1796bf2f734ab5508d1ef6c13df, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   - name: MenuMusic
-    clip: {fileID: 8300000, guid: eaf93f89ac791e440b24393d04344b90, type: 3}
-    volume: 0.05
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: PlayMusic
-    clip: {fileID: 8300000, guid: 2cdc984ae2a810f4896a1400d10f017d, type: 3}
+    clip: {fileID: 8300000, guid: 78b3960181141c74182673b38d2a74c9, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: OptionsMusic
-    clip: {fileID: 8300000, guid: 138cb95fe8bde9e4ba7adc641f846f03, type: 3}
+  - name: OutsideMusic
+    clip: {fileID: 8300000, guid: 979535a31c4f41c408f4f82b59bf3aa8, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: Footstep Snow
-    clip: {fileID: 8300000, guid: 902a17dfd9dba6840878c5373289f432, type: 3}
-    volume: 0
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Ice Axe
-    clip: {fileID: 8300000, guid: 254446ef80ce3244e9daff3928a96bf2, type: 3}
-    volume: 0.3
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Torch
-    clip: {fileID: 8300000, guid: 5ad35b6c3a96a564b877efc0c1d60115, type: 3}
+  - name: DungeonMusic
+    clip: {fileID: 8300000, guid: cdc0a637d963ee94bba20053a6d6c2b9, type: 3}
     volume: 1
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
-  - name: ShooterShot
-    clip: {fileID: 8300000, guid: d7f1c31d406be9745883fe4d3e92e4e4, type: 3}
-    volume: 0.75
+  - name: BossMusic
+    clip: {fileID: 8300000, guid: 4d100fcf23f79744ba9ce994f3b87bc3, type: 3}
+    volume: 1
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}

@@ -14,6 +14,7 @@ TagManager:
   - CampCacheZ2
   - CampCacheZ3
   - DungeonCache
+  - MapCache_Heat
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Enemy
   - Weather
   - Floor
-  - 
+  - Ice
   - 
   - 
   - 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Monsters;
+using UnityEngine.SceneManagement;
 
 public class HDO_Boss : MonsterRoot
 {
@@ -72,6 +73,8 @@ public class HDO_Boss : MonsterRoot
     {
 
         Debug.Log("boss defeated");
+        Destroy(GameObject.Find("Essentials"));
+        SceneManager.LoadScene("MainMenu");
         base.Death();
 
 

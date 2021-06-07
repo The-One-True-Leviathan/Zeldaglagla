@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
-  m_Name: Ajout_Map (Donjon2) 2
+  m_Name: Map_Unlock_CampCache
   m_EditorClassIdentifier: 
   interactionType: 8
   interactionSound: {fileID: 0}
@@ -39,13 +39,13 @@ MonoBehaviour:
   numberOfSegs: 0
   AddMaxHealth: 0
   healthToAdd: 0
-  unlockMapPart: 1
-  mapPartName: mapCache - HeatwaveDungeon
+  unlockMapPart: 0
+  mapPartName: 
   redirectToLocation: 1
-  region: 2
-  specificLocation: 1
-  specificLocationName: mapCache - FinalDungeon
-  locationType: 0
+  region: 0
+  specificLocation: 0
+  specificLocationName: 
+  locationType: 2
   toDeactivate: {fileID: 0}
   scene: 
   reloadHealth: 0

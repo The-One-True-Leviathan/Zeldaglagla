@@ -286,6 +286,9 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  diedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   drops:
   - {fileID: 3238155590587372768, guid: 194545368c1e16a42b0e663196424fb8, type: 3}
   - {fileID: 3238155590587372768, guid: 194545368c1e16a42b0e663196424fb8, type: 3}

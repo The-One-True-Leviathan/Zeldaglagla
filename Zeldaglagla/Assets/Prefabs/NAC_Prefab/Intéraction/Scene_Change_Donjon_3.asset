@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
   m_Name: Scene_Change_Donjon_3
   m_EditorClassIdentifier: 
-  interactionType: 0
+  interactionType: 10
   interactionSound: {fileID: 0}
   isTrigger: 0
   isUnique: 0

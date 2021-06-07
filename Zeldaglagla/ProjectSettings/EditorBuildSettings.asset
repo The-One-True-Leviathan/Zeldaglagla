@@ -8,16 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/GB/GB_Scenes/GB_TestScene.unity
     guid: 9fa2a495be400f145b254198638441e2
   - enabled: 1
     path: Assets/_Scenes/GB/GB_Scenes/MainMenu.unity
     guid: 5d4b880dbbc543546b442dc5675e6def
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/GB/GB_Scenes/GameOver.unity
     guid: a68f9e4292363e249adf56a0eec40cb5
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/HDO_Scenes/HDO_TestScene.unity
     guid: df47764d667bfd34cbda35dee6e0285d
   - enabled: 1
@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/HDO_Scenes/HDO_BossScene.unity
     guid: 2da8e2064f82eca44a80560523d657e1
+  - enabled: 1
+    path: Assets/_Scenes/GB/GB_Scenes/LD2_HeatWave.unity
+    guid: 6994f355ebe460c48ac09b05bcbb498f
+  - enabled: 1
+    path: Assets/_Scenes/HDO_Scenes/LD3.unity
+    guid: d3f21b83be3cbe847927d35de408d454
   m_configObjects: {}

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
-  m_Name: Ajout_Map (Donjon2) 2
+  m_Name: Red_Card_D2
   m_EditorClassIdentifier: 
-  interactionType: 8
+  interactionType: 3
   interactionSound: {fileID: 0}
   isTrigger: 0
   isUnique: 0
@@ -25,11 +25,11 @@ MonoBehaviour:
   enemiesToSpawn: []
   Environment: {fileID: 0}
   snowStorm: 0
-  item: {fileID: 0}
-  cardType: 0
+  item: {fileID: 11400000, guid: 6d480d3ce7e6a1f4d8eafe5e2e62ac11, type: 2}
+  cardType: 1
   neededItem: {fileID: 0}
   consumesItem: 0
-  neededItemType: 0
+  neededItemType: 1
   bossDialog: 0
   TorchV2: 0
   HeatwaveV2: 0
@@ -39,12 +39,12 @@ MonoBehaviour:
   numberOfSegs: 0
   AddMaxHealth: 0
   healthToAdd: 0
-  unlockMapPart: 1
-  mapPartName: mapCache - HeatwaveDungeon
-  redirectToLocation: 1
-  region: 2
-  specificLocation: 1
-  specificLocationName: mapCache - FinalDungeon
+  unlockMapPart: 0
+  mapPartName: 
+  redirectToLocation: 0
+  region: 0
+  specificLocation: 0
+  specificLocationName: 
   locationType: 0
   toDeactivate: {fileID: 0}
   scene: 

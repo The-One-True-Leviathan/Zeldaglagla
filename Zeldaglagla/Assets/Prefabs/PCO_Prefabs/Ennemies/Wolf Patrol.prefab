@@ -81,6 +81,9 @@ MonoBehaviour:
   stunRecoveredEvent:
     m_PersistentCalls:
       m_Calls: []
+  diedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   drops:
   - {fileID: 3238155590587372768, guid: 194545368c1e16a42b0e663196424fb8, type: 3}
   - {fileID: 3238155590587372768, guid: 194545368c1e16a42b0e663196424fb8, type: 3}
@@ -453,7 +456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5276652578158469256
 Transform:
   m_ObjectHideFlags: 0
@@ -497,7 +500,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7076688633184153788}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -594,5 +597,5 @@ TrailRenderer:
     shadowBias: 0.5
     generateLightingData: 0
   m_MinVertexDistance: 0.1
-  m_Autodestruct: 1
+  m_Autodestruct: 0
   m_Emitting: 1

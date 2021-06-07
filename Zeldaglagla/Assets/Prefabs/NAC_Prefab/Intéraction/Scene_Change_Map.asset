@@ -47,7 +47,7 @@ MonoBehaviour:
   specificLocationName: 
   locationType: 0
   toDeactivate: {fileID: 0}
-  scene: 'Map_Scene '
+  scene: Map_Scene
   reloadHealth: 0
   healthAmount: 0
   heatReload: 0

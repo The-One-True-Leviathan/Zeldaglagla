@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionType: 0
   interactionSound: {fileID: 0}
-  isTrigger: 0
-  isUnique: 0
+  isTrigger: 1
+  isUnique: 1
   needSpawnPoint: 0
   dialogSuite: 1
   number: 1
   type: 1
-  portrait: {fileID: 21300000, guid: 62553065a5f175b45b62dd888e76f40b, type: 3}
+  portrait: {fileID: 21300000, guid: 0a6f19b05f8849543af8484a60687297, type: 3}
   dialogs:
   - "D'apr\xE8s mon scan la pi\xE8ce est remplie d'un gaz r\xE9frig\xE9rant. Ouvrir
     la porte s'apparentrait \xE0 du suicide."
@@ -33,9 +33,8 @@ MonoBehaviour:
   consumesItem: 0
   neededItemType: 0
   bossDialog: 0
-  percentage: 0
-  damageModifier: 0
-  torchDamageModifier: 0
+  TorchV2: 0
+  HeatwaveV2: 0
   abilityUnlock: 0
   abilityUnlocked: 0
   heatSegmentUnlock: 0

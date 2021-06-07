@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a2e3cd648a3df48b12f8d22fdb54d2, type: 3}
+  m_Name: testSceneChangeMap
+  m_EditorClassIdentifier: 
+  interactionType: 10
+  interactionSound: {fileID: 0}
+  isTrigger: 0
+  isUnique: 0
+  needSpawnPoint: 0
+  dialogSuite: 0
+  number: 0
+  type: 0
+  portrait: {fileID: 0}
+  dialogs: []
+  enemiesToSpawn: []
+  Environment: {fileID: 0}
+  snowStorm: 0
+  item: {fileID: 0}
+  cardType: 0
+  neededItem: {fileID: 0}
+  consumesItem: 0
+  neededItemType: 0
+  bossDialog: 0
+  TorchV2: 0
+  HeatwaveV2: 0
+  abilityUnlock: 0
+  abilityUnlocked: 0
+  heatSegmentUnlock: 0
+  numberOfSegs: 0
+  AddMaxHealth: 0
+  healthToAdd: 0
+  unlockMapPart: 0
+  mapPartName: 
+  redirectToLocation: 0
+  region: 0
+  specificLocation: 0
+  specificLocationName: 
+  locationType: 0
+  toDeactivate: {fileID: 0}
+  scene: Map_Scene
+  reloadHealth: 0
+  healthAmount: 0
+  heatReload: 0
+  heatAmount: 0

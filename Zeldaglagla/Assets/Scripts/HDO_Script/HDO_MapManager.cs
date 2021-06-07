@@ -10,7 +10,12 @@ public class HDO_MapManager : MonoBehaviour
     public List<Image> caches = null;
 
     [SerializeField]
-    Image contour, caption;
+    Image contour, caption, indicator;
+
+    [SerializeField]
+    Vector2 selfBoundaries, mapBoundaries;
+    [SerializeField]
+    GameObject player;
     
 
     bool statusLastFrame;
@@ -32,6 +37,9 @@ public class HDO_MapManager : MonoBehaviour
     [SerializeField]
     Color dungeonColor, monsterCampColor;
 
+    [SerializeField]
+    RectTransform indicatorTrans;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,10 +54,10 @@ public class HDO_MapManager : MonoBehaviour
         if(statusLastFrame != self.enabled)
         {
             statusLastFrame = self.enabled;
-            Activate();
-
-            
+            Activate();           
         }
+
+        indicatorTrans.anchoredPosition = player.transform.position * 3; 
 
     }
 
@@ -102,6 +110,7 @@ public class HDO_MapManager : MonoBehaviour
 
         caption.enabled = self.enabled;
         contour.enabled = self.enabled;
+        indicator.enabled = self.enabled;
 
         if (self.enabled)
         {

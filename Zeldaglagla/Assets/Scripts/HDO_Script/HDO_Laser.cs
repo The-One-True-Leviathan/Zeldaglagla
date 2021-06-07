@@ -20,11 +20,17 @@ public class HDO_Laser : MonoBehaviour
     HDO_CharacterCombat comb;
     [SerializeField]
     HDO_Controller cont;
+
+    GameObject playerz;
     // Start is called before the first frame update
     void Start()
     {
         dam = new DamageStruct(damage);
         self = GetComponent<Collider2D>();
+        playerz = GameObject.FindGameObjectWithTag("Player");
+        comb = playerz.GetComponent<HDO_CharacterCombat>();
+        cont = playerz.GetComponent<HDO_Controller>();
+
     }
 
     // Update is called once per frame

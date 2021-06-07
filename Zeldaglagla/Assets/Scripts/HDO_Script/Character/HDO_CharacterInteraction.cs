@@ -92,6 +92,12 @@ public class HDO_CharacterInteraction : MonoBehaviour
             portrait.sprite = null;
         }
 
+        GameObject[] playeurz = GameObject.FindGameObjectsWithTag("Player");
+        if(playeurz.Length > 1)
+        {
+            Destroy(essentials);
+        }
+
     }
 
     void GetMap()
@@ -312,6 +318,8 @@ public class HDO_CharacterInteraction : MonoBehaviour
             doneUniqueInteraction.Add(inter);
         }
         failed = false;
+
+        
     }
 
     void Save()

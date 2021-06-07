@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionType: 10
   interactionSound: {fileID: 0}
-  isTrigger: 1
+  isTrigger: 0
   isUnique: 1
   needSpawnPoint: 0
   dialogSuite: 0

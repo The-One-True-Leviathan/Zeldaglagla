@@ -16,6 +16,10 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 198858526261932254, guid: 28ccd30e648c82c4dac5ac3ccd1e34e6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198858526261932254, guid: 28ccd30e648c82c4dac5ac3ccd1e34e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.06
       objectReference: {fileID: 0}
@@ -58,18 +62,22 @@ PrefabInstance:
     - target: {fileID: 1561771507729342955, guid: 28ccd30e648c82c4dac5ac3ccd1e34e6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7812211014251820297, guid: ec476a5a4048c9c42bbdc02f7709c7b9, type: 3}
+      objectReference: {fileID: 21300000, guid: 4d45e851e159acd4683832ba189eea87, type: 3}
     - target: {fileID: 2919175803904556737, guid: 28ccd30e648c82c4dac5ac3ccd1e34e6, type: 3}
       propertyPath: m_Name
       value: Batiment_3 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8304010099673053961, guid: 28ccd30e648c82c4dac5ac3ccd1e34e6, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.27235198
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304010099673053961, guid: 28ccd30e648c82c4dac5ac3ccd1e34e6, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 5.281
+      value: 7.805
       objectReference: {fileID: 0}
     - target: {fileID: 8304010099673053961, guid: 28ccd30e648c82c4dac5ac3ccd1e34e6, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.509
+      value: 3.712
       objectReference: {fileID: 0}
     - target: {fileID: 8304010099673053961, guid: 28ccd30e648c82c4dac5ac3ccd1e34e6, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[1].Array.size

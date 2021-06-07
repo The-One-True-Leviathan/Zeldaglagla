@@ -57,7 +57,7 @@ public class HDO_MapManager : MonoBehaviour
             Activate();           
         }
 
-        indicatorTrans.anchoredPosition = player.transform.position * 2; 
+        indicatorTrans.anchoredPosition = player.transform.position * 3; 
 
     }
 
@@ -110,6 +110,7 @@ public class HDO_MapManager : MonoBehaviour
 
         caption.enabled = self.enabled;
         contour.enabled = self.enabled;
+        indicator.enabled = self.enabled;
 
         if (self.enabled)
         {

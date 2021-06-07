@@ -66,6 +66,7 @@ public class HDO_TextFade : MonoBehaviour
             text.text = "";
             cts.defaultText = "";
             fadeStarted = false;
+            cts.portrait.sprite = null;
         }
     }
 }

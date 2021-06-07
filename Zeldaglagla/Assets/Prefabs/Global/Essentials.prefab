@@ -208,7 +208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828931767}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.44, y: 8.54, z: -10}
+  m_LocalPosition: {x: -36.3, y: 15.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4691278308154664095}
@@ -1114,6 +1114,30 @@ PrefabInstance:
       propertyPath: heatBar
       value: 
       objectReference: {fileID: 8948522715971323782}
+    - target: {fileID: 2719464588462893361, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719464588716036288, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719464588810126425, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719464589189252966, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719464589719885060, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719464590383221064, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 46
+      objectReference: {fileID: 0}
     - target: {fileID: 5311234934450637272, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1206,6 +1230,22 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 7879980361206836239}
+    - target: {fileID: 6944293062677905542, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944293062769756818, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944293062923424834, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944293063604705337, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 46
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23c922e3e2f11dc42913622e3224d7be, type: 3}
 --- !u!4 &693671876588548344 stripped
